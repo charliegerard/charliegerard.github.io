@@ -1,0 +1,36 @@
+body{
+	font-family: Arial;
+	margin: 0;
+	top: 0;
+}
+
+#navbar{
+	background-color: #bbb;
+	display: block;
+	height: 30px;
+	padding-top: 7px;
+	margin: 0;
+	top: 0;
+	text-align: center;
+}
+
+#container{
+	max-width: 80%;
+	margin: auto;
+	border: 1px solid black;
+	text-align: center;
+	display: block;
+	margin-top: 50px;
+}
+
+h1{
+	font-weight: normal;
+}
+
+a{
+	display: inline-block;
+	max-width: auto;
+	margin: auto 5px;
+	color: black;
+	width: auto;
+}
