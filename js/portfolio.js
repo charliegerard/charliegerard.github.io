@@ -45,4 +45,23 @@ $(document).ready(function(){
 		}
 	});
 
+	//Trying to display text on hover for projects
+
+	$('#loople2').hover(function(){
+		$('#loople2 #bloc').slideDown(300);
+	}, function(){
+		$('#loople2 #bloc').slideUp(200);
+	});
+
+	$('#readr').hover(function(){
+		$('#readr #bloc').slideDown(300);
+	}, function(){
+		$('#readr #bloc').slideUp(200);
+	});
+
 });
+
+
+
+
+
