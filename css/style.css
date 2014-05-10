@@ -1,14 +1,14 @@
 body{
-	font-family: Arial;
+	font-family: 'Lato', sans-serif;
 	margin: 0;
 	top: 0;
 }
 
 #navbar{
-	background-color: #bbb;
+	background-color: black;
 	display: block;
 	height: 30px;
-	padding-top: 7px;
+	padding-top: 10px;
 	margin: 0;
 	top: 0;
 	text-align: center;
@@ -17,7 +17,7 @@ body{
 #container{
 	max-width: 80%;
 	margin: auto;
-	border: 1px solid black;
+	height: 800px;
 	text-align: center;
 	display: block;
 	margin-top: 50px;
@@ -31,6 +31,99 @@ a{
 	display: inline-block;
 	max-width: auto;
 	margin: auto 5px;
-	color: black;
+	color: white;
 	width: auto;
+	text-decoration: none;
+	font-weight: 200;
+}
+
+a:hover{
+	color: grey;
+}
+
+#container img{
+	border-radius: 50%;
+	max-width: 15%;
+	opacity: 0.8;
+}
+
+/*------------------------SECTION PROJECTS ------------------*/
+
+section{
+	height: 800px;
+	padding: 2% 10%;
+}
+
+section h1{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+/*----------------------- CONTACT SECTION -------------------- */
+
+#social{
+	display: block;
+	width: 45%;
+}
+#social a{
+	color: black;
+	font-weight: 300;
+	display: inline-block;
+	max-width: 30%;
+	margin: 20px 0;
+	text-align: center;
+}
+
+#social a img{
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+#contact p{
+	display: inline-block;
+	max-width: 40%;
+}
+
+#shellDiv{
+	background-color: black;
+	height:300px;
+	width:500px;
+	border:1px solid;
+	overflow:auto;
+	display: inline-block;
+	right: 10%;
+	position: absolute;
+	margin-top: -7% ;
+	padding: 1%;
+}
+
+#shellIn{
+	background-color: black;
+	/*border: 1px solid white;*/
+	color: white;
+	font-family: Courier New;
+	font-size: 15px;
+	outline-width: 0;
+}
+
+input{
+	border-style: none;
+}
+
+span#shellOut{
+	color: lawngreen;
+	font-family: Courier New;
+}
+
+#shellOut{
+	color: white;
+}
+
+#answer{
+	color: white;
+	display: block;
+	font-family: Courier New;
 }

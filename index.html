@@ -3,19 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'> <!-- Lato font -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'> <!-- PT Mono font -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/portfolio.js"></script>
 </head>
 <body>
-	
+
 	<div id="navbar">
-		<a href="http://github.com/charliegerard">Github</a>
-		<a href="http://twitter.com/charlie__gerard">Twitter</a>
+		<a href="#projects">Projects</a>
+		<a href="#skills">Skills</a>
+		<a href="#experience">Experience</a>
+		<a href="#contact">Contact</a>
 	</div>	
 
 	<div id="container">
+		<p>Under construction at the moment but should hopefully be finished soon.</p>
+		<img src="images/Portfolio-photo.png">
 		<h1>Hey there! I'm Charlie Gerard and you're on my portfolio.</h1>
-		<h3>Under construction at the moment but should hopefully be finished soon.</h3>
 	</div>
+
+	<section id="projects">
+		<h1> PROJECTS </h1>
+	</section>
+
+	<section id="skills">
+		<h1> SKILLS </h1>
+	</section>
+
+	<section id="experience">
+		<h1> EXPERIENCE </h1>
+	</section>
+
+	<section id="contact">
+		<h1> CONTACT </h1>
+		<div id="social">
+			<a href="http://github.com/charliegerard"><img src="images/github-logo.png">Github</a>
+			<a href="http://twitter.com/charlie__gerard"><img src="images/twitter-logo.png">Twitter</a>
+			<a href="http://au.linkedin.com/in/charliegerard/en"><img src="images/linkedin-logo.png">LinkedIn</a>
+		</div>
+		<p>Don't hesitate to contact me if you have any question or if you just wanna chat about anything around a coffee (or a beer!).</p>
+
+		<!-- Fake Shell -->
+		<div id="shellDiv">
+			<span id="shellOut">>>> Want to know more about me? Type a number between 1 and 3 to get some bonus info!  </span>
+			<input id="shellIn" type="text" name="shellIn" size="55"/>
+			<span id="answer"></span>
+		</div>
+	</section>
 	
 </body>
 </html>
