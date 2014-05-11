@@ -60,13 +60,18 @@ section h1{
 	font-weight: 300;
 }
 
+section #contact{
+	height: auto;
+}
+
 /*----------------------- PROJECTS SECTION --------------------*/
 
 #readr{
-	width: 47%;
+	width: 45%;
 	height: 25%;
-	display: block;
-	margin: 20px 1%;
+	display: inline-block;
+	position: relative;
+	margin: 0 2% 2% 2%;
 	background-color: rgb(241,241,241);
 	padding: 2%;
 	background-image: url(../images/readr_homepage.png);
@@ -76,10 +81,11 @@ section h1{
 }
 
 #loople2{
-	width: 47%;
+	width: 45%;
 	height: 25%;
-	display: block;
-	margin: 10px 1%;
+	position: relative;
+	display: inline-block;
+	margin: 0 2% 2% 2%;
 	background-image: url(../images/loople_homepage.png);
 	background-size: cover;
 	padding: 0;
@@ -88,11 +94,18 @@ section h1{
 
 #loople2 p{
 	color: black;
+	font-weight: 300;
+}
+
+#readr p{
+	font-weight: 300;
 }
 
 #loople2 #bloc{
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	position: absolute;
+	display: inline-block;
+	height: 82%;
 	background-color: white;
 	opacity: 0.9;
 	padding: 5%;
@@ -117,16 +130,139 @@ section h1{
 
 #readr #bloc{
 	width: 90%;
-	height: 85%;
+	height: 82%;
+	position: absolute;
 	background-color: white;
+	display: inline-block;
 	opacity: 0.9;
 	padding: 5%;	
+}
+
+#dancingcats{
+	width: 47%;
+	height: 25%;
+	display: block;
+	margin: 20px 1%;
+	padding: 2%;
+	background-image: url(../images/dancingcats_img.png);
+	background-size: cover;
+	padding: 0;
+	box-shadow: 0px 1px 20px 0px grey;
+}
+
+#dancingcats #bloc{
+	width: 90%;
+	height: 90%;
+	background-color: white;
+	opacity: 0.9;
+	padding: 5%;
+}
+
+#dancingcats p{
+	color: black;
+	font-weight: 300;
+}
+
+#dancingcats h2{
+	color: black;
 }
 
 /*----------------------- SKILLS SECTION --------------------- */
 
 #skills h2{
 	
+}
+
+#bar {
+	width:0px;
+	height:1%;
+/*    border:0,5px solid black;*/
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#log{
+	display: inline-block;
+}
+
+#bar2 {
+	width:0px;
+	height:1%;
+/*    border:0,5px solid black;*/
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#log2{
+	display: inline-block;
+}
+
+#bar3 {
+	width:0px;
+	height:1%;
+/*    border:0,5px solid black;*/
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#log3{
+	display: inline-block;
+}
+
+#bar4 {
+	width:0px;
+	height:1%;
+/*    border:0,5px solid black;*/
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#log4{
+	display: inline-block;
+}
+
+#bar5 {
+	width:0px;
+	height:1%;
+/*    border:0,5px solid black;*/
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#log5{
+	display: inline-block;
+}
+
+#bar6 {
+	width:0px;
+	height:1%;
+/*    border:0,5px solid black;*/
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#log6{
+	display: inline-block;
+}
+
+#skills li{
+	display: inline-block;
+}
+
+.ui-widget-header{
+	background: blue;
 }
 
 /*----------------------- CONTACT SECTION -------------------- */
