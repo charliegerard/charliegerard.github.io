@@ -12,12 +12,20 @@ body{
 	margin: 0;
 	top: 0;
 	text-align: center;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
 }
 
 #network{
-	position: absolute;
+	position: fixed;
 	z-index: -1;
+	top: 0;
+	height: 100%;
+	opacity: 0.9;
+	left: 0;
 }
+
 #container{
 	max-width: 80%;
 	margin: auto;
@@ -96,6 +104,43 @@ section #contact{
 	box-shadow: 0px 1px 20px 0px grey;
 }
 
+#spectrm{
+	width: 45%;
+	height: 25%;
+	position: relative;
+	display: inline-block;
+	margin: 0 2% 2% 2%;
+	background-image: url(../images/Spectrm.png);
+	background-size: cover;
+	padding: 0;
+	box-shadow: 0px 1px 20px 0px grey;
+}
+
+#spectrm p{
+	color: black;
+	font-weight: 300;
+}
+
+#spectrm #bloc{
+	width: 90%;
+	position: absolute;
+	display: inline-block;
+	height: 82%;
+	background-color: white;
+	opacity: 0.9;
+	padding: 5%;
+}
+
+
+#spectrm #bloc p{
+	padding: 1% 9%;
+}
+
+#spectrm #bloc h2{
+	margin: 0;
+}
+
+
 #loople2 p{
 	color: black;
 	font-weight: 300;
@@ -123,7 +168,7 @@ section #contact{
 	margin: 0;
 }
 
-#readr a, #loople2 a{
+#readr a, #loople2 a, #spectrm a{
 	color: black;
 	font-weight: 400;
 }

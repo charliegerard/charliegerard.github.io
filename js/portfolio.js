@@ -59,6 +59,12 @@ $(document).ready(function(){
 		$('#readr #bloc').slideUp(200);
 	});
 
+	$('#spectrm').hover(function(){
+		$('#spectrm #bloc').slideDown(300);
+	}, function(){
+		$('#spectrm #bloc').slideUp(200);
+	});
+
 
 	$('#dancingcats').hover(function(){
 		$('#dancingcats #bloc').slideDown(200);
