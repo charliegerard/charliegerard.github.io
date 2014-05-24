@@ -265,6 +265,38 @@ section #contact{
 	background: blue;
 }
 
+/*----------------------- LAB SECTION ------------------------ */
+
+#lab p{
+	text-align: center;
+	font-weight: 300;
+}
+
+#threejs img{
+	width: 100%;
+	height: 30%;
+	border-radius: 3%;
+}
+
+#butterflies_flight{
+	width: 40%;
+}
+
+#butterflies_flight h4{
+	text-align: center;
+	font-weight: 300;
+}
+
+#butterflies_flight #button{
+	width: 40%;
+	padding: 3% 2%;
+	border-radius: 5%;
+	background-color: #bbb;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 200;
+}
+
 /*----------------------- CONTACT SECTION -------------------- */
 
 #social{
@@ -331,4 +363,20 @@ span#shellOut{
 	color: white;
 	display: block;
 	font-family: Courier New;
+}
+
+#footer{
+	display: block;
+	width: 100%;
+	bottom: 0;
+	position: relative;
+	background-color: black;
+	height: 30px;
+	padding-bottom: 0.2%;
+}
+
+#footer p{
+	color: white;
+	text-align: center;
+	font-weight: 300;
 }
