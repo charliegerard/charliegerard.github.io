@@ -12,6 +12,27 @@ $(document).ready(function(){
 		event.preventDefault();
 	});
 
+	/*
+	LIST OF THINGS I LIKE. RENDERING ONE WORD AT A TIME
+	*/
+
+	var words = ["Programming", "Post-rock", "LEGO", "Fractals", 
+				"Robots", "Creative Innovations", "Coffee", 
+				"Generative Art", "Learning"]
+	var counter = 0;
+	var element = document.getElementById('words');
+
+	var change = function(){
+		element.innerHTML = words[counter];
+		counter++;
+		if(counter >= words.length){
+			counter = 0;
+		}
+	}
+
+	window.setInterval(change, 1500);
+
+
 
 	/*----------------
 	Trying to create a kind of javascript shell

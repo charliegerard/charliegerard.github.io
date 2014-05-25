@@ -27,16 +27,51 @@ body{
 }
 
 #container{
-	max-width: 80%;
+	width: 80%;
 	margin: auto;
-	height: 800px;
+	height: 600px;
 	text-align: center;
 	display: block;
-	margin-top: 50px;
+	margin-top: 10%;
 }
 
-h1{
-	font-weight: normal;
+span#intro_title{
+	font-weight: 400;
+	font-size: 30px;
+	color: white;
+	background-color: rgb(26,26,26);
+	padding: 1%;
+	margin: 0;
+}
+
+span#intro, h2#intro{
+	color: white;
+	background-color: rgb(26,26,26);
+	padding: 1%;
+	margin: 0;
+}
+
+h2#intro{
+	font-weight: 300;
+	width: 50%;
+	margin: 0 auto;
+}
+
+span#intro{
+	font-weight: 200; 
+	display: inline-block;
+	font-size: 20px;
+} 
+
+
+#words{
+	background-color: black;
+	color: lawngreen;
+	font-weight: 200;
+	display: inline-block;
+	padding: 1%;
+	font-size: 20px;
+	margin-top: 2%;
 }
 
 a{
@@ -78,42 +113,54 @@ section #contact{
 
 /*----------------------- PROJECTS SECTION --------------------*/
 
+#project_tiles{
+	margin: 0 auto;
+	display: block;
+	width: 80%;
+}
+
 #readr{
-	width: 45%;
-	height: 25%;
+	width: 31%;
 	display: inline-block;
 	position: relative;
-	margin: 0 2% 2% 2%;
-	background-color: rgb(241,241,241);
+	margin: 1%;
+	/*background-color: rgb(241,241,241);*/
 	padding: 2%;
-	background-image: url(../images/readr_homepage.png);
-	background-size: cover;
+/*	background-image: url(../images/readr_homepage.png);
+	background-size: cover;*/
 	padding: 0;
-	box-shadow: 0px 1px 20px 0px grey;
+}
+
+#readr_tile{
+	width: 100%;
+	display: inline-block;
+}
+
+#loople_tile, #spectrm_tile{
+	display: inline-block;
+	width: 100%;
 }
 
 #loople2{
-	width: 45%;
-	height: 25%;
+	width: 31%;
 	position: relative;
 	display: inline-block;
-	margin: 0 2% 2% 2%;
-	background-image: url(../images/loople_homepage.png);
-	background-size: cover;
+	margin: 1%;
+/*	background-image: url(../images/loople_homepage.png);
+	background-size: cover;*/
 	padding: 0;
-	box-shadow: 0px 1px 20px 0px grey;
+/*	box-shadow: 0px 1px 20px 0px grey;*/
 }
 
 #spectrm{
-	width: 45%;
-	height: 25%;
+	width: 31%;
 	position: relative;
 	display: inline-block;
-	margin: 0 2% 2% 2%;
-	background-image: url(../images/Spectrm.png);
-	background-size: cover;
+	margin: 1%;
+/*	background-image: url(../images/spectrm.png);
+	background-size: cover;*/
 	padding: 0;
-	box-shadow: 0px 1px 20px 0px grey;
+/*	box-shadow: 0px 1px 20px 0px grey;*/
 }
 
 #spectrm p{

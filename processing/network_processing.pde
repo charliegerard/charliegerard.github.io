@@ -1,17 +1,17 @@
-int fc, num = 300, edge = 100; //num was originally 200
+int fc, num = 500, edge = 50; //num was originally 200
 ArrayList ballCollection;
 boolean save = false;
 float scal, theta;
  
 void setup() {
   size(1280, 500);
-  background(255);
+  background(229);
   ballCollection = new ArrayList();
   createStuff();
 }
  
 void draw() {
-  background(255);
+  background(229);
   for (int i=0; i<ballCollection.size(); i++) {
     Ball mb = (Ball) ballCollection.get(i);
     mb.run();
@@ -91,8 +91,8 @@ class Ball {
       //println(countC);
       if (distance >0 && distance < d) {
       //Changed second value to 100 but was 1 originally.
-        a = map(countC, 1, 20, 10, 150);
-        stroke(#bbbbbb, a);
+        a = map(countC, 100, 20, 10, 150);
+        stroke(#ffffff, a);
         //Color of the lines. Original:  stroke(#ffffff, a);
         //strokeWeight(c);
         line(loc.x, loc.y, other.loc.x, other.loc.y);
