@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 	var words = ["Programming", "Post-rock", "LEGO", "Fractals", 
 				"Robots", "Creative Innovations", "Coffee", 
-				"Generative Art", "Learning"]
+				"Generative Art", "Learning", "Nerds"]
 	var counter = 0;
 	var element = document.getElementById('words');
 
