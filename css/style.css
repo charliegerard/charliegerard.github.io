@@ -114,15 +114,11 @@ section #contact{
 /*----------------------- PROJECTS SECTION --------------------*/
 
 #project_tiles{
-	margin: 5% auto 7% auto;
+	position: relative;
+	margin: 3% auto 7% auto;
 	display: block;
-	width: 70%;
-}
-
-#project_tiles img{
-	width: 90%;
-	display: block;
-	margin: 0 auto;
+	width: 80%;
+	height: 40%;
 	border: 10px solid white;
 }
 
@@ -131,187 +127,63 @@ button.slick-prev::before, button.slick-next::before{
 	font-size: 30px;
 }
 
-/*#readr{
-	/*width: 31%;
-	display: inline-block;
-/*	position: relative;
-	margin: 1%;
-	background-color: rgb(241,241,241);
-	padding: 2%;
-/*	background-image: url(../images/readr_homepage.png);
-	background-size: cover;
-	padding: 0;
-}*/
+button.slick-prev::before{
+	margin-left: -50px;
+}
 
-/*#readr_tile{
-	width: 50%;
-	display: inline-block;
-}*/
+button.slick-next::before{
+	margin-left: 20px;
+}
 
-/*#loople_tile, #spectrm_tile{
-	display: inline-block;
-	width: 100%;
-}*/
-
-/*#loople2{
-	width: 31%;
-position: relative;
-	display: inline-block;
-	margin: 1%;
-	background-image: url(../images/loople_homepage.png);
-	background-size: cover;
-	padding: 0;
-	box-shadow: 0px 1px 20px 0px grey;
-}*/
-
-
-/*#spectrm{
-	/*width: 31%;
-	/*position: relative;
-	display: inline-block;
-	margin: 1%;
-	background-image: url(../images/spectrm.png);
-	background-size: cover;
-	padding: 0;
-/*	box-shadow: 0px 1px 20px 0px grey;
-}*/
-
-
-
-/*#spectrm p{
-	color: black;
-	font-weight: 300;
-}*/
-
-/*#spectrm #bloc{
+#readr, #loople, #spectrm{
+	position: relative;
+	height: 100%;
 	width: 80%;
-	position: absolute;
-	margin: -30% auto 0 auto;
-	display: block;
-	height: auto;
-	background-color: white;
-	opacity: 0.9;
-	padding: 5%;
-}*/
-
-
-/*#spectrm #bloc p{
-	padding: 1% 9%;
 }
 
-#spectrm #bloc h2{
-	margin: 0;
-}*/
-
-/*#spectrm_catch{
-	background-color: grey;
-	position: absolute;
-	margin-top: -12%;
-	right: 5%;
-	color: white;
-	padding: 2% 5% 2% 1%;
-	font-weight: 200;
-	display: block;
-}
-
-#spectrm_img{
-	position: absolute;
-}*/
-/*
-#spectrm_catch span{
-	position: absolute;
-	font-weight: 400;
-	bottom: 0;
-	font-size: 20px;
-}*/
-#readr{
-	background-image: url(../images/readr_homepage.png);
-	background-size: cover;
-	height: 400px;
+#readr a, #loople a, #spectrm a{
 	width: 100%;
+	height: 100%;
+	margin: 0;
 }
 
-#readr h3{
+img#readr_img, img#loople_img, img#spectrm_img{
+	width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#readr h3, #loople h3, #spectrm h3{
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	background-color: pink;
+	background-color: grey;
 	padding: 2%;
+	font-weight: 300;
+	color: white;
 	display: block;
 }
 
-#readr_content{
-	bottom: 0;
+#readr_content, #loople_content, #spectrm_content{
+	bottom: 0px;
 	position: absolute;
-	height: 100px;
+	height: 25%;
 	display: none;
-	background-color: white;
+	background-color: black;
+	color: white;
+	padding: 1%;
 }
 
-#readr_content p{
+#readr_content p, #loople_content p, #spectrm_content p{
 	display: block;
-}
-
-#spectrm{
-	background-image: url(../images/spectrm.png);
-	background-size: cover;
-	width: 300px;
-	height: 350px;
-}
-
-
-
-
-
-
-
-
-
-#loople2 p{
-	color: black;
-	font-weight: 300;
-}
-
-#readr p{
-	font-weight: 300;
-}
-
-#loople2 #bloc{
-	width: 90%;
-	position: absolute;
-	display: inline-block;
-	height: 82%;
-	background-color: white;
-	opacity: 0.9;
-	padding: 5%;
-}
-
-#loople2 #bloc p{
-	padding: 1% 9%;
-}
-
-#loople2 #bloc h2{
+	padding: 2%;
 	margin: 0;
+	color: white;
+	font-weight: 300;
 }
 
-#readr a, #loople2 a, #spectrm a{
-	color: black;
-	font-weight: 400;
-}
 
-#readr img:hover{
-	opacity: 0.5;
-}
 
-#readr #bloc{
-	width: 90%;
-	height: 82%;
-	position: absolute;
-	background-color: white;
-	display: inline-block;
-	opacity: 0.9;
-	padding: 5%;	
-}
 
 #dancingcats{
 	width: 47%;

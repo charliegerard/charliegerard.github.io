@@ -80,36 +80,35 @@ $(document).ready(function(){
 		$('#loople2 #bloc').slideUp(200);
 	});
 
-	// $('#readr').hover(function(){
-	// 	$('#readr #bloc').slideDown(300);
-	// }, function(){
-	// 	$('#readr #bloc').slideUp(200);
-	// });
-
-	// $('#spectrm').hover(function(){
-	// 	$('#spectrm #bloc').slideDown(300);
-	// 	// $('#spectrm #bloc').fadeIn();
-	// }, function(){
-	// 	$('#spectrm #bloc').slideUp(200);
-	// });
-
-// $('#spectrm_img').each(function(){
-// 	var project = $(this);
-// 	project.find('#spectrm_tile').hover(function(){
-// 		project.find('#bloc').slideToggle();
-// 		return false;
-// 	});
-// });
-
+	/*-------------------------------------------------------- 
+				PROJECTS SLIDES WITH INFOS ON HOVER
+	---------------------------------------------------------*/
 
 	$('#readr').mouseenter(function(){
-		console.log("boo")
-		$('#readr_content').slideToggle();
+		$('#readr_content').slideToggle(150);
 		$('#readr h3').animate({bottom: '100px'}, 150);
 		return false;
 	}).mouseleave(function(){
-		$('#readr_content').slideToggle();
-		$('#readr h3').animate({bottom: '0px'}, 200);
+		$('#readr_content').slideToggle(150);
+		$('#readr h3').animate({bottom: '0px'}, 150);
+	});
+
+	$('#loople').mouseenter(function(){
+		$('#loople_content').slideToggle(150);
+		$('#loople h3').animate({bottom: '100px'}, 150);
+		return false;
+	}).mouseleave(function(){
+		$('#loople_content').slideToggle(150);
+		$('#loople h3').animate({bottom: '0px'}, 150);
+	});
+
+	$('#spectrm').mouseenter(function(){
+		$('#spectrm_content').slideToggle(150);
+		$('#spectrm h3').animate({bottom: '100px'}, 150);
+		return false;
+	}).mouseleave(function(){
+		$('#spectrm_content').slideToggle(150);
+		$('#spectrm h3').animate({bottom: '0px'}, 150);
 	});
 
 
