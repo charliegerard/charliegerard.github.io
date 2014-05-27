@@ -385,6 +385,7 @@ button.slick-next::before{
 #social{
 	display: block;
 	width: 45%;
+	margin: 0 auto;
 }
 #social a{
 	color: black;
@@ -403,8 +404,11 @@ button.slick-next::before{
 }
 
 #contact p{
-	display: inline-block;
-	max-width: 40%;
+	/*display: inline-block;*/
+	display: block;
+/*	max-width: 40%;*/
+	max-width: 60%;
+	margin: 0 auto;
 }
 
 #shellDiv{
