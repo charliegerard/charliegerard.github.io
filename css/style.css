@@ -113,9 +113,14 @@ section #contact{
 
 /*----------------------- PROJECTS SECTION --------------------*/
 
+#projects h2{
+	font-weight: 400;
+	text-align: center;
+}
+
 #project_tiles{
 	position: relative;
-	margin: 3% auto 7% auto;
+	margin: 3% auto 3% auto;
 	display: block;
 	width: 80%;
 	height: 40%;
@@ -147,31 +152,37 @@ button.slick-next::before{
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	background-color: grey;
+	background-color: rgb(20,21,22);
 	padding: 2%;
 	font-weight: 300;
-	color: white;
+	color: #bbb;
 	display: block;
 }
 
 #readr_content, #loople_content, #spectrm_content{
 	bottom: 0;
 	position: absolute;
-	height: 25%;
+	height: 26%;
 	display: none;
-	background-color: black;
+	background-color: rgb(20,21,22);
 	color: white;
 	padding: 1%;
 }
 
 #readr_content p, #loople_content p, #spectrm_content p{
 	display: block;
-	padding: 2%;
+	padding: 1%;
 	margin: 0;
-	color: white;
+	color: #bbb;
 	font-weight: 300;
+	font-style: italic;
+	font-size: 15px;
 }
 
+#loople_content p span, #readr_content p span, #spectrm_content p span{
+	color: grey;
+	font-weight: bold;
+}
 
 
 
