@@ -104,11 +104,11 @@ $(document).ready(function(){
 	});
 
 
-	$('#dancingcats').hover(function(){
-		$('#dancingcats #bloc').slideDown(200);
-	}, function(){
-		$('#dancingcats #bloc').slideUp(200);
-	});
+	// $('#dancingcats').hover(function(){
+	// 	$('#dancingcats #bloc').slideDown(200);
+	// }, function(){
+	// 	$('#dancingcats #bloc').slideUp(200);
+	// });
 
 
 	//Progress bar
