@@ -72,14 +72,6 @@ $(document).ready(function(){
 		}
 	});
 
-	//Trying to display text on hover for projects
-
-	$('#loople2').hover(function(){
-		$('#loople2 #bloc').slideDown(300);
-	}, function(){
-		$('#loople2 #bloc').slideUp(200);
-	});
-
 	/*-------------------------------------------------------- 
 				PROJECTS SLIDES WITH INFOS ON HOVER
 	---------------------------------------------------------*/
@@ -87,7 +79,7 @@ $(document).ready(function(){
 	$('#readr').mouseenter(function(){
 		$('#readr_content').slideToggle(150);
 		$('#readr h3').animate({bottom: '100px'}, 150);
-		return false;
+		// return false;
 	}).mouseleave(function(){
 		$('#readr_content').slideToggle(150);
 		$('#readr h3').animate({bottom: '0px'}, 150);
@@ -96,7 +88,7 @@ $(document).ready(function(){
 	$('#loople').mouseenter(function(){
 		$('#loople_content').slideToggle(150);
 		$('#loople h3').animate({bottom: '100px'}, 150);
-		return false;
+		// return false;
 	}).mouseleave(function(){
 		$('#loople_content').slideToggle(150);
 		$('#loople h3').animate({bottom: '0px'}, 150);
@@ -105,7 +97,7 @@ $(document).ready(function(){
 	$('#spectrm').mouseenter(function(){
 		$('#spectrm_content').slideToggle(150);
 		$('#spectrm h3').animate({bottom: '100px'}, 150);
-		return false;
+		// return false;
 	}).mouseleave(function(){
 		$('#spectrm_content').slideToggle(150);
 		$('#spectrm h3').animate({bottom: '0px'}, 150);
