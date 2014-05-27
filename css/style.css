@@ -114,78 +114,157 @@ section #contact{
 /*----------------------- PROJECTS SECTION --------------------*/
 
 #project_tiles{
-	margin: 0 auto;
+	margin: 5% auto 7% auto;
 	display: block;
-	width: 80%;
+	width: 70%;
 }
 
-#readr{
-	width: 31%;
+#project_tiles img{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+	border: 10px solid white;
+}
+
+button.slick-prev::before, button.slick-next::before{
+	color: grey;
+	font-size: 30px;
+}
+
+/*#readr{
+	/*width: 31%;
 	display: inline-block;
-	position: relative;
+/*	position: relative;
 	margin: 1%;
-	/*background-color: rgb(241,241,241);*/
+	background-color: rgb(241,241,241);
 	padding: 2%;
 /*	background-image: url(../images/readr_homepage.png);
-	background-size: cover;*/
+	background-size: cover;
 	padding: 0;
-}
+}*/
 
-#readr_tile{
-	width: 100%;
+/*#readr_tile{
+	width: 50%;
 	display: inline-block;
-}
+}*/
 
-#loople_tile, #spectrm_tile{
+/*#loople_tile, #spectrm_tile{
 	display: inline-block;
 	width: 100%;
-}
+}*/
 
-#loople2{
+/*#loople2{
 	width: 31%;
-	position: relative;
+position: relative;
 	display: inline-block;
 	margin: 1%;
-/*	background-image: url(../images/loople_homepage.png);
-	background-size: cover;*/
+	background-image: url(../images/loople_homepage.png);
+	background-size: cover;
 	padding: 0;
-/*	box-shadow: 0px 1px 20px 0px grey;*/
-}
+	box-shadow: 0px 1px 20px 0px grey;
+}*/
 
-#spectrm{
-	width: 31%;
-	position: relative;
+
+/*#spectrm{
+	/*width: 31%;
+	/*position: relative;
 	display: inline-block;
 	margin: 1%;
-/*	background-image: url(../images/spectrm.png);
-	background-size: cover;*/
+	background-image: url(../images/spectrm.png);
+	background-size: cover;
 	padding: 0;
-/*	box-shadow: 0px 1px 20px 0px grey;*/
-}
+/*	box-shadow: 0px 1px 20px 0px grey;
+}*/
 
-#spectrm p{
+
+
+/*#spectrm p{
 	color: black;
 	font-weight: 300;
-}
+}*/
 
-#spectrm #bloc{
-	width: 90%;
+/*#spectrm #bloc{
+	width: 80%;
 	position: absolute;
-	display: inline-block;
-	height: 82%;
+	margin: -30% auto 0 auto;
+	display: block;
+	height: auto;
 	background-color: white;
 	opacity: 0.9;
 	padding: 5%;
-}
+}*/
 
 
-#spectrm #bloc p{
+/*#spectrm #bloc p{
 	padding: 1% 9%;
 }
 
 #spectrm #bloc h2{
 	margin: 0;
+}*/
+
+/*#spectrm_catch{
+	background-color: grey;
+	position: absolute;
+	margin-top: -12%;
+	right: 5%;
+	color: white;
+	padding: 2% 5% 2% 1%;
+	font-weight: 200;
+	display: block;
 }
+
+#spectrm_img{
+	position: absolute;
+}*/
+/*
+#spectrm_catch span{
+	position: absolute;
+	font-weight: 400;
+	bottom: 0;
+	font-size: 20px;
+}*/
+#readr{
+	background-image: url(../images/readr_homepage.png);
+	background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+#readr h3{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: pink;
+	padding: 2%;
+	display: block;
+}
+
+#readr_content{
+	bottom: 0;
+	position: absolute;
+	height: 100px;
+	display: none;
+	background-color: white;
+}
+
+#readr_content p{
+	display: block;
+}
+
+#spectrm{
+	background-image: url(../images/spectrm.png);
+	background-size: cover;
+	width: 300px;
+	height: 350px;
+}
+
+
+
+
+
+
+
 
 
 #loople2 p{

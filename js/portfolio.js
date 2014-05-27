@@ -32,6 +32,12 @@ $(document).ready(function(){
 
 	window.setInterval(change, 1500);
 
+	/*
+	TEST WITH CAROUSEL PROJECTS
+	*/
+
+	$('#project_tiles').slick()
+
 
 
 	/*----------------
@@ -74,16 +80,36 @@ $(document).ready(function(){
 		$('#loople2 #bloc').slideUp(200);
 	});
 
-	$('#readr').hover(function(){
-		$('#readr #bloc').slideDown(300);
-	}, function(){
-		$('#readr #bloc').slideUp(200);
-	});
+	// $('#readr').hover(function(){
+	// 	$('#readr #bloc').slideDown(300);
+	// }, function(){
+	// 	$('#readr #bloc').slideUp(200);
+	// });
 
-	$('#spectrm').hover(function(){
-		$('#spectrm #bloc').slideDown(300);
-	}, function(){
-		$('#spectrm #bloc').slideUp(200);
+	// $('#spectrm').hover(function(){
+	// 	$('#spectrm #bloc').slideDown(300);
+	// 	// $('#spectrm #bloc').fadeIn();
+	// }, function(){
+	// 	$('#spectrm #bloc').slideUp(200);
+	// });
+
+// $('#spectrm_img').each(function(){
+// 	var project = $(this);
+// 	project.find('#spectrm_tile').hover(function(){
+// 		project.find('#bloc').slideToggle();
+// 		return false;
+// 	});
+// });
+
+
+	$('#readr').mouseenter(function(){
+		console.log("boo")
+		$('#readr_content').slideToggle();
+		$('#readr h3').animate({bottom: '100px'}, 150);
+		return false;
+	}).mouseleave(function(){
+		$('#readr_content').slideToggle();
+		$('#readr h3').animate({bottom: '0px'}, 200);
 	});
 
 
