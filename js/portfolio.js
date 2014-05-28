@@ -103,6 +103,54 @@ $(document).ready(function(){
 		$('#spectrm h3').animate({bottom: '0px'}, 150);
 	});
 
+	/* ---------------------------------------------
+				SKILLS
+	----------------------------------------------*/
+
+	$('#front-end').mouseenter(function(){
+		$(this).css({
+			backgroundColor: '#E6E6E6',
+			transition: 'all 0.1s',
+		}),
+		$('#front-end-details').fadeIn();
+
+	}).mouseleave(function(){
+		$(this).css({
+			backgroundColor: 'grey',
+			transition: 'all 0.1s',
+		}),
+		$('#front-end-details').fadeOut();
+	});
+
+	$('#back-end').mouseenter(function(){
+		$(this).css({
+			backgroundColor: '#E6E6E6',
+			transition: 'all 0.1s',
+		}),
+		$('#back-end-details').fadeIn();
+
+	}).mouseleave(function(){
+		$(this).css({
+			backgroundColor: 'grey',
+			transition: 'all 0.1s',
+		}),
+		$('#back-end-details').fadeOut();
+	});
+
+	$('#tdd').mouseenter(function(){
+		$(this).css({
+			backgroundColor: '#E6E6E6',
+			transition: 'all 0.1s',
+		}),
+		$('#test-details').fadeIn();
+
+	}).mouseleave(function(){
+		$(this).css({
+			backgroundColor: 'grey',
+			transition: 'all 0.1s',
+		}),
+		$('#test-details').fadeOut();
+	});
 
 	// $('#dancingcats').hover(function(){
 	// 	$('#dancingcats #bloc').slideDown(200);

@@ -256,89 +256,130 @@ button.slick-next::before{
 	
 }
 
-#bar {
+#skills_container{
+	width: 80%;
+	margin: 7% auto;
+	height: 100%;
+	display: block;
+}
+
+#front-end, #back-end, #tdd{
+	border: 1px solid grey;
+	background-color: grey;
+	width: 28%;
+	position: relative;
+	display: inline-block;
+	height: 17%;
+	margin: 4% 1%;
+	vertical-align: top;
+	color: white;
+	padding: 1%;
+}
+
+/*#front-end h2, #back-end h2, #tdd h2{
+	font-weight: 400;
+	text-align: center;
+	margin-top: 80px;
+}*/
+
+.fa-code, .fa-cogs, .fa-check-square-o{
+	font-size: 100px;
+/*	margin-left: 50px;*/
+margin-left: 25%;
+	margin-top: 35px;
+}
+
+#front-end-details, #back-end-details, #test-details{
+	font-weight: 400;
+	color: black;
+	text-align: center;
+	position: relative;
+	bottom: 80px;
+}
+
+/*#bar {
 	width:0px;
 	height:1%;
-/*    border:0,5px solid black;*/
+    border:0,5px solid black;
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}*/
+
+/*#log{
+	display: inline-block;
+}*/
+
+/*#bar2 {
+	width:0px;
+	height:1%;
+    border:0,5px solid black;
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}*/
+
+/*#log2{
+	display: inline-block;
+}*/
+
+/*#bar3 {
+	width:0px;
+	height:1%;
+    border:0,5px solid black;
+    background-color:red;
+    border-radius:3px;
+    display: inline-block;
+    margin-left: 20px;
+}*/
+
+/*#log3{
+	display: inline-block;
+}*/
+
+/*#bar4 {
+	width:0px;
+	height:1%;
+    border:0,5px solid black;
     background-color:red;
     border-radius:3px;
     display: inline-block;
     margin-left: 20px;
 }
-
-#log{
+*/
+/*#log4{
 	display: inline-block;
-}
+}*/
 
-#bar2 {
+/*#bar5 {
 	width:0px;
 	height:1%;
-/*    border:0,5px solid black;*/
+    border:0,5px solid black;
     background-color:red;
     border-radius:3px;
     display: inline-block;
     margin-left: 20px;
-}
+}*/
 
-#log2{
+/*#log5{
 	display: inline-block;
-}
+}*/
 
-#bar3 {
+/*#bar6 {
 	width:0px;
 	height:1%;
-/*    border:0,5px solid black;*/
+    border:0,5px solid black;
     background-color:red;
     border-radius:3px;
     display: inline-block;
     margin-left: 20px;
-}
+}*/
 
-#log3{
+/*#log6{
 	display: inline-block;
-}
-
-#bar4 {
-	width:0px;
-	height:1%;
-/*    border:0,5px solid black;*/
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-#log4{
-	display: inline-block;
-}
-
-#bar5 {
-	width:0px;
-	height:1%;
-/*    border:0,5px solid black;*/
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-#log5{
-	display: inline-block;
-}
-
-#bar6 {
-	width:0px;
-	height:1%;
-/*    border:0,5px solid black;*/
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-#log6{
-	display: inline-block;
-}
+}*/
 
 #skills li{
 	display: inline-block;

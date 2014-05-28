@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/portfolio.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css"/>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.6/slick.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script>
 </head>
@@ -127,33 +128,39 @@
 	<section id="skills">
 		<h1> SKILLS </h1>
 		<hr>
-		<h2>Front-End</h2>     
-		<li>HTML / CSS / SASS</li>
-		<div id="bar"></div>
-   		<div id="log"></div> <br>
+		<div id="skills_container">
+			<div id="front-end">
+				<i class="fa fa-code"></i>
+				<div id="front-end-details" style="display: none">     
+					<li>HTML / CSS / SASS</li>
+					<br>
+					<li>Javascript / jQuery</li>
+					<br>
+					<li>Underscore / Coffeescript</li>
+					<br>
+					<li>Three.js / Two.js </li>
+					<br>
+			   	</div>
+		   	</div>
 
-		<li>Javascript / jQuery</li>
-		<div id="bar2"></div>
-   		<div id="log2"></div> <br>
+		   	<div id="back-end">
+		   		<i class="fa fa-cogs"></i>
+		   		<div id="back-end-details" style="display:none" >
+					<li>Advanced Ruby / Rails</li>
+					<br>
+					<li>Backbone</li>
+					<br>
+					<li>Ajax</li>
+				</div>
+			</div>
 
-		<li>Underscore / Coffeescript</li>
-		<div id="bar3"></div>
-   		<div id="log3"></div> <br>
-		<li>Three.js / Two.js </li>
-		<div id="bar4"></div>
-   		<div id="log4"></div> <br>
-
-		<h2>Back-end</h2>
-		<li>Advanced Ruby / Rails</li>
-		<div id="bar5"></div>
-   		<div id="log5"></div> <br>
-		<li>Backbone</li>
-		<div id="bar6"></div>
-   		<div id="log6"></div> <br>
-		<li>Ajax</li>
-
-		<h2>TDD</h2>
-		<li>RSpec</li>
+			<div id="tdd">
+				<i class="fa fa-check-square-o"></i>
+				<div id="test-details" style="display:none">
+					<li>RSpec</li>
+				</div>
+			</div>
+		</div>
 
 	</section>
 
