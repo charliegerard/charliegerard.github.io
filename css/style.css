@@ -107,8 +107,12 @@ section h1{
 	font-weight: 300;
 }
 
-section #contact{
-	height: auto;
+section#contact{
+	height: 500px;
+}
+
+section#skills{
+	height: 500px;
 }
 
 /*----------------------- PROJECTS SECTION --------------------*/
@@ -188,7 +192,7 @@ button.slick-next::before{
 #personal-projects{
 	width: 100%;
 	display: block;
-	margin: 0 auto;
+	margin: 7% auto;
 }
 
 #dancingcats, #shooting-cats{
@@ -252,13 +256,9 @@ button.slick-next::before{
 
 /*----------------------- SKILLS SECTION --------------------- */
 
-#skills h2{
-	
-}
-
 #skills_container{
 	width: 80%;
-	margin: 7% auto;
+	margin: 7% auto 5% auto;
 	height: 100%;
 	display: block;
 }
@@ -269,23 +269,16 @@ button.slick-next::before{
 	width: 28%;
 	position: relative;
 	display: inline-block;
-	height: 17%;
+	height: 35%;
 	margin: 4% 1%;
 	vertical-align: top;
 	color: white;
 	padding: 1%;
 }
 
-/*#front-end h2, #back-end h2, #tdd h2{
-	font-weight: 400;
-	text-align: center;
-	margin-top: 80px;
-}*/
-
 .fa-code, .fa-cogs, .fa-check-square-o{
 	font-size: 100px;
-/*	margin-left: 50px;*/
-margin-left: 25%;
+	margin-left: 25%;
 	margin-top: 35px;
 }
 
@@ -297,97 +290,10 @@ margin-left: 25%;
 	bottom: 80px;
 }
 
-/*#bar {
-	width:0px;
-	height:1%;
-    border:0,5px solid black;
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}*/
-
-/*#log{
-	display: inline-block;
-}*/
-
-/*#bar2 {
-	width:0px;
-	height:1%;
-    border:0,5px solid black;
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}*/
-
-/*#log2{
-	display: inline-block;
-}*/
-
-/*#bar3 {
-	width:0px;
-	height:1%;
-    border:0,5px solid black;
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}*/
-
-/*#log3{
-	display: inline-block;
-}*/
-
-/*#bar4 {
-	width:0px;
-	height:1%;
-    border:0,5px solid black;
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}
-*/
-/*#log4{
-	display: inline-block;
-}*/
-
-/*#bar5 {
-	width:0px;
-	height:1%;
-    border:0,5px solid black;
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}*/
-
-/*#log5{
-	display: inline-block;
-}*/
-
-/*#bar6 {
-	width:0px;
-	height:1%;
-    border:0,5px solid black;
-    background-color:red;
-    border-radius:3px;
-    display: inline-block;
-    margin-left: 20px;
-}*/
-
-/*#log6{
-	display: inline-block;
-}*/
-
 #skills li{
 	display: inline-block;
 }
 
-.ui-widget-header{
-	background: blue;
-}
 
 /*----------------------- LAB SECTION ------------------------ */
 
@@ -396,28 +302,50 @@ margin-left: 25%;
 	font-weight: 300;
 }
 
+#threejs{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
 #threejs img{
 	width: 100%;
 	height: 30%;
 	border-radius: 3%;
+	display: inline-block;
+}
+
+#butterflies_flight, #star-wars{
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
 }
 
 #butterflies_flight{
-	width: 40%;
+	margin-right: 17%;
 }
 
-#butterflies_flight h4{
+#butterflies_flight h4, #star-wars h4{
 	text-align: center;
 	font-weight: 300;
+	margin: 5% auto;
 }
 
-#butterflies_flight #button{
+#star-wars a{
+	color: black;
+}
+
+#star-wars a:hover{
+	color: grey;
+}
+
+#butterflies_flight #button, #star-wars #button{
 	width: 40%;
-	padding: 3% 2%;
+	padding: 2% 2%;
 	border-radius: 5%;
-	background-color: #bbb;
+	background-color: #E6E6E6;
 	text-align: center;
-	font-size: 15px;
+	font-size: 10px;
 	font-weight: 200;
 }
 
