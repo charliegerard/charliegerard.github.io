@@ -353,20 +353,20 @@ button.slick-next::before{
 
 #social{
 	display: block;
-	width: 45%;
-	margin: 0 auto;
+	width: 90%;
+	margin: 5% auto;
 }
 #social a{
 	color: black;
 	font-weight: 300;
 	display: inline-block;
-	max-width: 30%;
-	margin: 20px 0;
+	max-width: 19%;
+	margin: 20px auto;
 	text-align: center;
 }
 
 #social a img{
-	width: 40%;
+	width: 30%;
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 5px;
@@ -378,6 +378,7 @@ button.slick-next::before{
 /*	max-width: 40%;*/
 	max-width: 60%;
 	margin: 0 auto;
+	text-align: center;
 }
 
 #shellDiv{
