@@ -36,7 +36,9 @@ $(document).ready(function(){
 	TEST WITH CAROUSEL PROJECTS
 	*/
 
-	$('#project_tiles').slick()
+	$('#project_tiles').slick({
+		dots: true
+	})
 
 
 

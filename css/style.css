@@ -2,6 +2,7 @@ body{
 	font-family: 'Lato', sans-serif;
 	margin: 0;
 	top: 0;
+	height: auto;
 }
 
 #navbar{
@@ -96,7 +97,7 @@ a:hover{
 
 /*------------------------SECTIONS ------------------*/
 
-section{
+/*section{
 	height: 1000px;
 	padding: 2% 10%;
 }
@@ -117,9 +118,43 @@ section#skills{
 
 section#lab{
 	height: 600px;
+}*/
+
+section{
+	height: auto;
+	padding: 2% 10%;
 }
 
+section h1{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+section#contact{
+	height: auto;
+	margin-bottom: 15%;
+}
+
+section#skills{
+	height: auto;
+}
+
+section#lab{
+	height: auto;
+}
+
+
+
 /*----------------------- PROJECTS SECTION --------------------*/
+/*#ga-projects{
+	width: 80%;
+	height: 90%;
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	border: 1px solid pink;
+}*/
 
 #projects h2{
 	font-weight: 400;
@@ -131,8 +166,25 @@ section#lab{
 	margin: 3% auto 3% auto;
 	display: block;
 	width: 80%;
-	height: 40%;
-	border: 10px solid white;
+	margin-bottom: -10%;
+	/*height: auto;*/
+}
+
+#project_tiles img{
+    position: relative;
+  /*  border: 10px solid #FFF;*/
+    display: block;
+    width: 100%;
+  /*  margin-bottom: -17%;*/
+}
+
+/*div.slick-track{
+	position: relative;
+	height: 100%;
+}*/
+
+.slick-dots{
+	margin-bottom: 20%;
 }
 
 button.slick-prev::before, button.slick-next::before{
@@ -170,7 +222,6 @@ button.slick-next::before{
 #readr_content, #loople_content, #spectrm_content{
 	bottom: 0;
 	position: absolute;
-	height: 26%;
 	display: none;
 	background-color: rgb(20,21,22);
 	color: white;
@@ -271,9 +322,9 @@ button.slick-next::before{
 	border: 1px solid grey;
 	background-color: grey;
 	width: 28%;
+	height: 170px;
 	position: relative;
 	display: inline-block;
-	height: 35%;
 	margin: 4% 1%;
 	vertical-align: top;
 	color: white;
