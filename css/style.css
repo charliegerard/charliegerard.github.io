@@ -109,29 +109,6 @@ a:hover{
 
 /*------------------------SECTIONS ------------------*/
 
-/*section{
-	height: 1000px;
-	padding: 2% 10%;
-}
-
-section h1{
-	text-align: center;
-	font-size: 30px;
-	font-weight: 300;
-}
-
-section#contact{
-	height: 500px;
-}
-
-section#skills{
-	height: 500px;
-}
-
-section#lab{
-	height: 600px;
-}*/
-
 section{
 	height: auto;
 	padding: 2% 10%;
@@ -159,14 +136,6 @@ section#lab{
 
 
 /*----------------------- PROJECTS SECTION --------------------*/
-/*#ga-projects{
-	width: 80%;
-	height: 90%;
-	display: block;
-	margin: 0 auto;
-	position: absolute;
-	border: 1px solid pink;
-}*/
 
 #projects h2{
 	font-weight: 400;
@@ -184,16 +153,9 @@ section#lab{
 
 #project_tiles img{
     position: relative;
-  /*  border: 10px solid #FFF;*/
     display: block;
     width: 100%;
-  /*  margin-bottom: -17%;*/
 }
-
-/*div.slick-track{
-	position: relative;
-	height: 100%;
-}*/
 
 .slick-dots{
 	margin-bottom: 20%;
@@ -262,47 +224,18 @@ button.slick-next::before{
 	margin: 7% auto;
 }
 
-#dancingcats, #shooting-cats{
+#dancingcats, #shooting-cats, #wdi-ipsum{
 	width: 30%;
 	height: auto;
 	display: inline-block;
 	margin: 0px 1.5%;
-/*	box-shadow: 0px 1px 20px 0px grey;*/
 	position: relative;
 }
 
-#wdi-ipsum{
-	width: 30%;
-	height: 30%;
-	display: inline-block;
-	margin: 0px 1.5%;
-/*	box-shadow: 0px 1px 20px 0px grey;*/
-	position: relative;
-}
-
-#dancingcats img{
+#dancingcats img, #wdi-ipsum img, #shooting-cats img{
 	width: 100%;
-	height: 100%;
 	display: inline-block;
 	border: 5px solid white;
-	vertical-align: top;
-}
-
-#wdi-ipsum img{
-	width: 100%;
-	height: 14.5%;
-	border: 5px solid white;
-	vertical-align: top;
-	display: inline-block;
-	vertical-align: top;
-}
-
-#shooting-cats img{
-	width: 100%;
-	height: 100%;
-	border: 5px solid white;
-	vertical-align: top;
-	display: inline-block;
 	vertical-align: top;
 }
 
@@ -512,7 +445,6 @@ button.slick-next::before{
 
 #shellIn{
 	background-color: black;
-	/*border: 1px solid white;*/
 	color: white;
 	font-family: Courier New;
 	font-size: 15px;
