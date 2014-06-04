@@ -352,12 +352,20 @@ button.slick-next::before{
 	margin-top: 35px;
 }
 
-#front-end-details, #back-end-details, #test-details{
+#back-end-details, #test-details{
 	font-weight: 400;
 	color: black;
 	text-align: center;
 	position: relative;
 	bottom: 80px;
+}
+
+#front-end-details{
+	bottom: 100px;
+	font-weight: 400;
+	color: black;
+	text-align: center;
+	position: relative;
 }
 
 #skills li{
