@@ -35,7 +35,11 @@
 		font-weight: 300;
 	}
 
-	.fa.fa-code{
+	.fa.fa-code, .fa.fa-cogs, .fa.fa-check-square-o{
 		font-size: 70px;
+	}
+
+	#front-end, #back-end, #tdd{
+		height: 120px;
 	}
 }
