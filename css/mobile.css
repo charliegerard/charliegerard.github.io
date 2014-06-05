@@ -17,6 +17,14 @@
 	#words{
 		font-weight: 300;
 	}
+
+	#network{
+		display: none;
+	}
+
+	#navbar a{
+		font-weight: 300;
+	}
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
   	span#intro{
@@ -24,14 +32,6 @@
 	}
 
 	#words{
-		font-weight: 300;
-	}
-
-	#network{
-		display: none;
-	}
-
-	#navbar a{
 		font-weight: 300;
 	}
 }
