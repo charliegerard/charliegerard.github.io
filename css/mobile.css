@@ -1,0 +1,10 @@
+@media(max-width: 1024px){
+	span#intro{
+		font-weight: 300;
+	}
+
+	#words{
+		font-weight: 300;
+	}
+
+}
