@@ -1,4 +1,4 @@
-@media(width: 1024px){
+/*@media(width: 1024px){
 	span#intro{
 		font-weight: 300;
 	}
@@ -7,4 +7,23 @@
 		font-weight: 300;
 	}
 
+}*/
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  	span#intro{
+		font-weight: 300;
+	}
+
+	#words{
+		font-weight: 300;
+	}
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+  	span#intro{
+		font-weight: 300;
+	}
+
+	#words{
+		font-weight: 300;
+	}
 }
