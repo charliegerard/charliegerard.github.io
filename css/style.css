@@ -435,40 +435,6 @@ button.slick-next::before{
 	text-align: center;
 }
 
-#shellDiv{
-	background-color: black;
-	height:300px;
-	width:500px;
-	border:1px solid;
-	overflow:auto;
-	display: inline-block;
-	right: 10%;
-	position: absolute;
-	margin-top: -7% ;
-	padding: 1%;
-}
-
-#shellIn{
-	background-color: black;
-	color: white;
-	font-family: Courier New;
-	font-size: 15px;
-	outline-width: 0;
-}
-
-input{
-	border-style: none;
-}
-
-span#shellOut{
-	color: lawngreen;
-	font-family: Courier New;
-}
-
-#shellOut{
-	color: white;
-}
-
 #answer{
 	color: white;
 	display: block;
