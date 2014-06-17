@@ -231,6 +231,7 @@ button.slick-next::before{
 	display: inline-block;
 	margin: 0px 1.5%;
 	position: relative;
+	vertical-align: top;
 }
 
 #dancingcats img, #wdi-ipsum img, #shooting-cats img{
