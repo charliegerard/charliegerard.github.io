@@ -403,6 +403,10 @@ button.slick-next::before{
 	margin: 0 auto;
 }
 
+#leap-sphero h3{
+	text-align: center;
+}
+
 /*----------------------- CONTACT SECTION -------------------- */
 
 #social{
