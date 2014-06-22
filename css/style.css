@@ -3,7 +3,8 @@ body{
 	margin: 0;
 	top: 0;
 	height: auto;
-	background-color: rgb(226,226,226);
+	/*background-color: rgb(226,226,226);*/
+	background-image: url(../images/portfolio_background.png);
 }
 
 #navbar{
