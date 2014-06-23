@@ -18,12 +18,15 @@
 		font-weight: 300;
 	}
 
-	#network{
-		display: none;
-	}
-
 	#navbar a{
 		font-weight: 300;
+	}
+
+	#container img{
+		border-radius: 50%;
+		max-width: 50%;
+		margin-top: 10%;
+		opacity: 0.8;
 	}
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
@@ -42,4 +45,5 @@
 	#front-end, #back-end, #tdd{
 		height: 140px;
 	}
+
 }
