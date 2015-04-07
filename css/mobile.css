@@ -9,10 +9,21 @@
 
 }*/
 
-@media only screen and (max-width : 480px) {	
+@media only screen and (max-width : 480px) {
   	span#intro{
 		font-weight: 300;
+		font-size: 30px;
 	}
+
+	span#intro_title{
+		font-weight: 400;
+		font-size: 40px;
+		color: white;
+		background-color: rgb(26,26,26);
+		padding: 1%;
+
+	}
+
 
 	#words{
 		font-weight: 300;
@@ -119,12 +130,13 @@
 
 	#social a img{
 		display: inline-block;
-		width: 100%;
+		max-width: 20%;
 	}
 
 	#social a{
-		width: 100%;
-		margin-right: 10%;
+		max-width: 35%;
+		margin-right: 8%;
+		margin-bottom: 2em;
 		text-align: center;
 	}
 
