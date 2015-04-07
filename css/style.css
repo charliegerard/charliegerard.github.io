@@ -225,6 +225,11 @@ section#intro-text{
 
 /*----------------------- CONTACT SECTION -------------------- */
 
+#contact h1{
+	font-size: 40px;
+}
+
+
 #social{
 	display: block;
 	width: 80%;
