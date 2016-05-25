@@ -1,4 +1,8 @@
 @media only screen and (max-width : 480px) {
+  body{
+    overflow: hidden;
+  }
+
   #container .description h1{
     line-height: 1em;
     display: inline;
@@ -6,10 +10,8 @@
   }
 
   #background-3d{
-  	position: absolute;
+  	position: fixed;
   	opacity: 0.3;
-    display: none;
-    /*z-index: -1;*/
   }
 
   #background-3d iframe{
