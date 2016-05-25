@@ -2,608 +2,141 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Portfolio</title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.16/processing.min.js"></script>
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>
+	<title>Portfolio - Charlie Gerard - Creative Developer</title>
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.6/slick.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css"/>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/portfolio.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/portfolio.js"></script>
 	<meta name="viewport" content="width=device-width">
 </head>
 <body>
+	<iframe id="background-3d" frameborder="0" src="p5.html" width="130%" height="100%"></iframe>
 
-	<div id="navbar">
-		<a href="#about">About</a>
-		<a href="#projects">Projects</a>
-		<a href="#skills">Skills</a>
-		<a href="#lab">Lab</a>
-		<a href="#contact">Contact</a>
-		<a href="http://charliegerard.github.io/blog" target="blank">Blog</a>
-	</div>
-	<div id="bottom_nav"></div>
-
-	<!-- Adding the processing background -->
-	<!-- <canvas id="network" data-processing-sources="processing/circles.pde"/></canvas> -->
-	<section id="about">
-		<section id="intro-text">
-			<div id="container">
-				<!-- <img src="images/charlie_gerard.jpg"> -->
-				<!-- <h1><span id="intro_title">HELLO WORLD</span></h1> -->
-				<h1><span id="intro_title">CHARLIE GERARD</span></h1>
-				<!-- <h2 id="intro">My name is Charlie and I'm a full-stack web dev.</h2> -->
-				<h2 id="intro">Software Developer, Creative Coder & Maker Of Things</h2>
-				<!-- <h3> --><span id="intro">I love</span><!-- </h3> -->
-				<div id="words">
-				</div>
-				<div><a href="#subsection-about">A little bit more</a></div>
-			</div>
-		</section>
-
-		<section id="subsection-about">
-
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-lg-12 text-center">
-	                    <h2 class="section-heading">ABOUT</h2>
-	                <hr>
-	                </div>
-	            </div>
-	            <div class="row text-center">
-	            	<img style="width: 20%; margin: 2em"src="images/charlie_gerard.jpg"/>
-	            	<p>Career changer, I started working in advertising as a Digital Producer a few years ago. After realising it wasn't for me, I decided to follow my passion for technology, quit my job and undertake an immersive course at General Assembly to become a web developer.</p>
-	            	<p>I am now working as a Software Developer @ ThoughtWorks and I have the chance to work on a variety of projects in a lot of different languages.</p>
-	            	<br>
-
-	            	<p>Passionate about Creative Innovations, Generative Art and all things Hardware, Robotics and Internet of Things, I use my personal time to hack around with Arduino, Processing, Kinect etc...</p>
-
-	            	<p>I also like to contribute to the industry by spending some time helping newbies, doing talks/workshops about hardware and open-sourcing all my personal projects.</p>
-	            </div>
-	        </div>
-	    </section>
-    </section>
-
-
-	<!-- ------------------------------ PROJECTS SECTION ------------------------------ -->
-
-
-	<!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Loople</h2>
-                            <p class="item-intro text-muted">A music composer in your browser.</p>
-                            <img class="img-responsive img-centered" src="images/loople.png" alt="">
-                            <p><a href="http://loople.herokuapp.com" target="blank">Loople</a> is a website that allows you to play music using your computer keyboard. Each key plays a sound and an animation and you can save your loops by signing up. </br>
-                            <ul>
-                            	<li>Front-End: HTML, CSS, jQuery</li>
-                            	<li>Back-End: Ruby, Rails, Web Audio API</li>
-                            </ul>
-                            <p>Check out Loople <a href="http://loople.herokuapp.com" target="blank">here</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Spectrm</h2>
-                            <p class="item-intro text-muted">A music visualizer.</p>
-                            <img class="img-responsive img-centered" src="images/spectrm.png" alt="">
-                            <p><a href="http://spectrm.herokuapp.com" target="blank">Spectrm</a> is a wesbite that allows you to visualize your favorite tracks. Either using the pre-selected song, your computer's microphone or any link from Soundcloud, choose any of the 3 visualizations proposed to see the graphics interact with the sound.</p>
-                            <ul>
-                            	<li>Front-End: HTML, CSS, jQuery, Three.js</li>
-                            	<li>Back-End: Ruby, Rails, Web Audio API, Soundcloud API</li>
-                            </ul>
-                            <p>Check out Spectrm <a href="http://spectrm.herokuapp.com" target="blank">here</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Brainwaves Visualiser</h2>
-                            <p class="item-intro text-muted">A visualizer for the neurosky headset.</p>
-                            <img class="img-responsive img-centered" src="images/neurosky-visualizer.png" alt="">
-                            <p>The Neurosky visualizer is an experiment to try and identify patterns in brainwaves when executing eye movements with the Neursosky headset. If this is successful, the next step would be to use these patterns to control device with your mind.</p>
-
-                            <ul>
-                            	<li>Front-End: HTML, CSS, jQuery, d3.js</li>
-                            	<li>Back-End: Node.js</li>
-                            </ul>
-                            <p>Work still in progress, this visualizer should be live soon!</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Dancing Cats</h2>
-                            <p class="item-intro text-muted">A Stupid lolcats animation.</p>
-                            <img class="img-responsive img-centered" src="images/dancingcats.png" alt="">
-                            <p><a href="http://charliegerard.github.io/dancingcats" target="blank">Dancing cats</a> is a single-page site with lolcats GIFs and music with no real purpose.</p>
-                            <ul>
-                            	<li>Front-End: HTML, CSS & Javascript, Javascript, Javascript!</li>
-                            	<li>Back-End: Inexistent</li>
-                            </ul>
-                            <p>Check it out <a href="http://charliegerard.github.io/dancingcats" target="blank">here</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Star Wars intro using HTML, CSS & JS</h2>
-                            <p class="item-intro text-muted">An experiment to re-create the Star Wars intro in code</p>
-                            <img class="img-responsive img-centered" src="images/starwarsthreejs.png" alt="">
-                            <p>This <a href="http://charliegerard.github.io/starwars" target="blank">Star Wars experiment</a> is a project to recreate the first movie's intro using code.</p>
-                            <ul>
-                            	<li>Front-End: HTML, CSS, JS</li>
-                            	<li>Back-End: Null</li>
-                            </ul>
-                            <p>You can check it out <a href="http://charliegerard.github.io/starwars" target="blank">here</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-	<!-- Portfolio Modal 7 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Sphero + Leap Motion</h2>
-                            <p class="item-intro text-muted">Control the Sphero using the Leap Motion</p>
-                            <img class="img-responsive img-centered" src="images/sphero_leap.png" alt="">
-                            <p>Using Node.js, this project aims at using your hand movements over the Leap Motion to apply directions to the Sphero robotic ball.</p>
-                            <p>At the moment, Up & Down will stop the ball while forward, backward, left and right apply these directions to the Sphero.</p>
-                            <p>You can view the source code on <a href="http://github.com/charliegerard/leap_sphero" target="blank">my Github</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    	<!-- Portfolio Modal 8 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Sphero + Myo Armband</h2>
-                            <p class="item-intro text-muted">Control the Sphero using the Myo armband</p>
-                            <img class="img-responsive img-centered" src="images/sphero_myo.png" alt="">
-                            <p>The Myo armband is an armband that analyses the activity of the muscles in your arm and can detect certain gestures or orientations. Paired with the Sphero using Node.js & Cylon.js, I managed to make the Sphero roll depending on which gestures I was executing wearing the armband.</p>
-                            <p>You can view the source code on <a href="http://github.com/charliegerard/myo_sphero" target="blank">my Github</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    	<!-- Portfolio Modal 10 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Drone + Leap Motion</h2>
-                            <p class="item-intro text-muted">Control the Parrot AR drone with the Leap Motion</p>
-                            <img class="img-responsive img-centered" src="images/drone-leap.png" alt="">
-                            <p>Using the Leap Motion controller and Node.js, I managed to make the drone fly depending on which movement I execute over the Leap Motion.</p>
-
-                            <p>You can view the source code on <a href="http://github.com/charliegerard/leap_drone" target="blank">my Github</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    	<!-- Portfolio Modal 11 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Drone + Myo armband</h2>
-                            <p class="item-intro text-muted">Control the Parrot AR drone using the Myo armband.</p>
-                            <img class="img-responsive img-centered" src="images/drone_myo.png" alt="">
-                            <p>The Myo armband is an armband that analyses the activity of the muscles in your arm and can detect certain gestures or orientations. Paired with the Sphero using Node.js & Cylon.js, I managed to make the Parrot AR Drone fly around depending on which gestures I was executing wearing the armband.</p>
-                            <p>You can view the source code on <a href="http://github.com/charliegerard/myo_drone" target="blank">my Github</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    	<!-- Portfolio Modal 12 -->
-     <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Drone + Neurosky</h2>
-                            <p class="item-intro text-muted">Control the Parrot AR Drone with the Neurosky headset</p>
-                            <img class="img-responsive img-centered" src="images/drone_neurosky.png" alt="">
-                            <p>The Neurosky brainsensor is a headset that collects in real time the data comming back from your brain activity. Using this data, I managed to make my drone take off by focusing enough.
-                            	This project is still in progress as I would like to use my Neurosky visualizer to identify patterns in my brain waves when I move my eyes. These patterns could then be used to control the directions of the Drone using my eyes.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-	    <!-- Portfolio Grid Section -->
-    <section id="projects" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">WEB PROJECTS</h2>
-                    <hr>
-                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/loople.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Loople</h4>
-                        <p class="text-muted">A music composer in your browser</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/spectrm.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Spectrm</h4>
-                        <p class="text-muted">A music visualizer using Three.js</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/neurosky-visualizer.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Brainwaves visualizer</h4>
-                        <p class="text-muted">A brainwaves visualizer for the Neurosky</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/dancingcats.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dancing Cats</h4>
-                        <p class="text-muted">A stupid lolcats animation</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/starwarsthreejs.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Star Wars Experiment</h4>
-                        <p class="text-muted">An experiment using HTML, CSS & JS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-	<!-- ------------------------------ SKILLS SECTION ------------------------------ -->
-
-	<section id="skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">SKILLS</h2>
-                <hr>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Front-End</h4>
-                    <p class="text-muted">Experience with HTML, CSS, and diverse Javascript frameworks such as jQuery, Backbone, Angular, React, Three.js, Underscore, CoffeeScript, ...</p>
-                    <p>Experience with testing frameworks like Jasmine, Protractor, Mocha, Sinon.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Back-End</h4>
-                    <p class="text-muted">Experience with Ruby, Rails, Sinatra, Node.js, Java and currently learning C for hardware programming with Arduino.</p>
-                    <p>Experience with the RSpec testing framework.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Project Management</h4>
-                    <p class="text-muted">Digital Producer in a previous life, I've had the responsibility to manage teams to deliver websites, emails and campaign pages for global brands such as Nivea, Dove and SEAT.</p>
-                    <p>I have experience using a various range of CMS systems and I am familiar with Agile methodologies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ------------------------------ LAB SECTION ------------------------------ -->
-
-
- <section id="lab" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">LAB</h2>
-                    <hr>
-                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/sphero-leap.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <!-- <h4>Sphero + Leap Motion</h4> -->
-                        <!-- <p class="text-muted">Control the Sphero using the Leap Motion</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/sphero-myo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <!-- <h4>Sphero + Myo armband</h4> -->
-                        <!-- <p class="text-muted">Control the Sphero using the Myo armband</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/drone_leap.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <!-- <h4>Drone + Leap Motion</h4> -->
-                        <!-- <p class="text-muted">Control the Parrot drone using the Leap Motion</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/drone-myo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <!-- <h4>Drone + Myo armband</h4> -->
-                        <!-- <p class="text-muted">Control the Parrot drone using the Myo armband</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal12" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/drone-neurosky.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <!-- <h4>Drone + Neurosky</h4> -->
-                        <!-- <p class="text-muted">Control the Parrot drone using the Neurosky</p> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-	<!-- ------------------------------ CONTACT SECTION ------------------------------ -->
-
-	<section id="contact">
-		<h1> CONTACT </h1>
-		<hr>
-		<div id="social">
-			<a href="http://github.com/charliegerard" target="blank"><img src="images/github-logo.png">GITHUB</a>
-			<a href="http://twitter.com/charlie__gerard" target="blank"><img src="images/twitter-logo.png"><span>TWITTER</span></a>
-			<a href="http://au.linkedin.com/in/charliegerard/en" target="blank"><img src="images/linkedin-logo.png"><span>LINKEDIN</span></a>
-			<a href="http://google.com/+CharlieGerard" target="blank"><img src="images/googleplus-logo.png">GOOGLE+</a>
-			<a href="http://thecodingpadawan.tumblr.com/" target="blank"><img src="images/tumblr-logo.png">TUMBLR</a>
-			<a href="mailto:annecharlotte.gerard@gmail.com"><img src="images/email-logo.png">EMAIL</a>
+	<div id="container">
+		<div id="navbar">
+			<a id="projects" href="#projects">Projects</a>
+			<a id="skills" href="#skills">Skills</a>
+			<a href="http://charliegerard.github.io/blog" target="blank">Blog</a>
 		</div>
-	</section> <!-- Enf of contact section -->
+
+		<div id="center">
+			<div id="about-block" class="fade-in is-paused">
+				<img src="./images/charlie_gerard.jpg" alt="Charlie Gerard" />
+				<div class="content">
+					<h3>Hello!</h3>
+					<p>
+						I'm Charlie and I'm a developer at ThoughtWorks.
+					</p>
+					<p>
+						When I'm not working on client projects, I love spending a big part of my personal time <strong>prototyping</strong> stupid stuff with Arduinos,
+						Raspberry Pi, etc... or making devices do other things than what they were created for.
+					</p>
+					<p>
+						I'm also <strong>passionate about creative coding</strong> and try to learn more about Three.js, WebGL, OpenFrameworks, Processing, etc...
+					</p>
+					<p>
+						If I didn't have to work for money, I'd spend my time trying to make things that would solve problems in innovative ways.
+					</p>
+				</div>
+			</div>
+
+			<div id="projects-block">
+				<h3>Latest projects</h3>
+				<p>Selection of personal projects I've worked on. More to come.</p>
+			</div>
+
+			<div id="skills-block">
+				<h3>Current</h3>
+				<div class="block">
+					<h4>Front-End</h4>
+					<ul>
+						<li>HTML/CSS</li>
+						<li>JavaScript / jQuery</li>
+						<li>Angular.js</li>
+						<li>Backbone.js</li>
+						<li>React.js</li>
+					</ul>
+				</div>
+
+				<div class="block">
+					<h4>Back-End</h4>
+					<ul>
+						<li>Ruby</li>
+						<li>Rails / Sinatra</li>
+						<li>Node.js</li>
+						<li>Java</li>
+						<li>C++</li>
+					</ul>
+				</div>
+
+				<div class="block">
+					<h4>Hardware</h4>
+					<ul>
+						<li>Arduino</li>
+						<li>Raspberry Pi</li>
+						<li>Particle Photon</li>
+						<li>Leap motion</li>
+						<li>Myo armband</li>
+						<li>Neurosky</li>
+						<li>Parrot AR Drone</li>
+						<li>Emotiv EPOC</li>
+						<li>Sphero</li>
+					</ul>
+				</div>
+
+				<div class="block">
+					<h4>Creative Coding</h4>
+					<ul>
+						<li>Processing</li>
+						<li>Three.js</li>
+						<li>OpenFrameworks (a little)</li>
+					</ul>
+				</div>
+
+				<h3>Looking for...</h3>
+				<div class="block">
+					<h4>More Creative Coding</h4>
+					<ul>
+						<li>Cinder</li>
+						<li>WebGL</li>
+						<li>OpenFrameworks</li>
+						<li>Unity 3d</li>
+						<li>VR</li>
+						<li>AR</li>
+						<li>Kinect installations</li>
+					</ul>
+				</div>
+
+				<div class="block">
+					<h4>More hardware</h4>
+					<ul>
+						<li>Fast prototyping</li>
+						<li>Intel Edison</li>
+						<li>Tessel</li>
+						<li>Anything, really</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<a href="">
+			<div class="description">
+				<h1>CHARLIE GERARD</h1>
+				<h3>DEVELOPER & MAKER OF THINGS</h3>
+			</div>
+		</a>
+
+		<div class="footer">
+			<ul>
+				<li><a href="http://github.com/charliegerard" target="_blank">Github</a> / </li>
+				<li><a href="http://twitter.com/charlie__gerard" target="_blank">Twitter</a> / </li>
+				<li><a href="mailto:charlie.a.gerard@gmail.com" target="_blank">Email</a> / </li>
+				<li><a href="https://au.linkedin.com/in/charliegerard" target="_blank">LinkedIn</a> / </li>
+				<li><a href="http://codepen.io/charlie_g/" target="_blank">Codepen</a></li>
+			</ul>
+		</div>
+	</div>
 
 	<!-- Google Analytics -->
 	<script>

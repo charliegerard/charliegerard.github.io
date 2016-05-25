@@ -1,0 +1,126 @@
+[
+  {
+    "web": [
+      {
+        "id": "spectrm",
+        "title": "Spectrm",
+        "url": "http://spectrm.herokuapp.com/",
+        "image": "./images/spectrm-screen.png",
+        "description": "Music Visualizer with built-in song or microphone",
+        "tags": ["web", "Three.js", "Web Audio API", "Spotify API"]
+      },
+      {
+        "id": "sphero-myo-armband",
+        "title": "Sphero & Myo armband",
+        "url": "https://github.com/charliegerard/myo_sphero",
+        "image": "./images/sphero_myo.png",
+        "description": "Control the Sphero with your arm using the Myo armband",
+        "tags": ["hardware", "Myo armband", "Sphero", "Node.js"]
+      },
+      {
+        "id": "emotiv-framework",
+        "title": "Epoc.js",
+        "url": "https://github.com/charliegerard/Epoc.js",
+        "image": "./images/EPOC_Emotiv.png",
+        "description": "WIP - A framework to use the Emotiv brain sensor in Node.js",
+        "tags": ["hardware", "Emotiv Epoc", "Node.js"]
+      },
+      {
+        "id": "loople",
+        "title": "Loople",
+        "url": "http://loople.herokuapp.com/",
+        "image": "./images/loople-screen.png",
+        "description": "Music composer. Press any key to make a sound.",
+        "tags": ["web", "JavaScript", "Web Audio API"]
+      },
+      {
+        "id": "brainwaves-visualizer",
+        "title": "Brainwaves Visualizer",
+        "url": "https://github.com/charliegerard/neurosky-brainwaves-visualizer",
+        "image": "./images/neurosky-visualizer.png",
+        "description": "WIP - A visualizer to be used with the Neurosky brain sensor.",
+        "tags": ["web", "hardware", "d3.js", "Neurosky"]
+      },
+      {
+        "id": "drone-neurosky",
+        "title": "Drone & Neurosky",
+        "url": "https://github.com/charliegerard/neurosky-drone",
+        "image": "./images/drone_neurosky.png",
+        "description": "Control the Parrot AR Drone with your mind using the Neurosky brain sensor",
+        "tags": ["hardware", "drone", "Neurosky", "Node.js"]
+      },
+      {
+        "id": "star-wars",
+        "title": "Star Wars",
+        "url": "http://charliegerard.github.io/starwars/",
+        "image": "./images/starwars.png",
+        "description": "Simple Star Wars opening crawl.",
+        "tags": ["web", "JavaScript", "HTML", "CSS"]
+      },
+      {
+        "id": "perspective",
+        "title": "Perspective",
+        "url": "http://charliegerard.github.io/Perspective/",
+        "image": "./images/perspective.png",
+        "description": "Prototype using head-tracking technology to explore a virtual world in the browser.",
+        "tags": ["web", "Three.js", "Face tracking"]
+      },
+      {
+        "id": "drone-leap-motion",
+        "title": "Drone & Leap motion",
+        "url": "https://github.com/charliegerard/leap_drone",
+        "image": "./images/drone-leap.png",
+        "description": "Control the Parrot AR Drone with your hands using the Leap motion",
+        "tags": ["hardware", "drone", "Leap motion", "Node.js"]
+      },
+      {
+        "id": "threejs-vr",
+        "title": "Three.js VR",
+        "url": "https://github.com/charliegerard/Threejs-VR",
+        "image": "./images/threejs-vr.png",
+        "description": "First prototype of WebVR to be used in a Google Cardboard",
+        "tags": ["web", "Three.js"]
+      },
+      {
+        "id": "leapsync",
+        "title": "Leapsync",
+        "url": "https://github.com/charliegerard/leapsync",
+        "image": "./images/leapsync.png",
+        "description": "Prototype build at the SheHacks hackathon - platform to teach sign language with the Leap motion.",
+        "tags": ["web", "hardware", "Leap motion"]
+      },
+      {
+        "id": "sphero-leap-motion",
+        "title": "Sphero & Leap Motion",
+        "url": "https://github.com/charliegerard/leap_sphero",
+        "image": "./images/sphero_leap.png",
+        "description": "Control the Sphero with your hands using the Leap motion controller",
+        "tags": ["hardware", "sphero", "leap motion", "Node.js"]
+      },
+      {
+        "id": "dancing-cats",
+        "title": "DancingCats",
+        "url": "http://charliegerard.github.io/dancingcats",
+        "image": "./images/dancingcats.png",
+        "description": "All the cats!",
+        "tags": ["web", "HTML/CSS", "JS", "cats"]
+      },
+      {
+        "id": "drone-myo-armband",
+        "title": "Drone & Myo armband",
+        "url": "https://github.com/charliegerard/myo_drone",
+        "image": "./images/drone_myo.png",
+        "description": "Control the Parrot AR Drone with your arm using the Myo armband",
+        "tags": ["hardware", "drone", "Myo armband", "Node.js"]
+      },
+      {
+        "id": "touch-mirror",
+        "title": "Touch mirror",
+        "url": "https://github.com/charliegerard/leap-ui",
+        "image": "",
+        "description": "WIP - Prototype of touch mirror",
+        "tags": ["hardware", "Raspberry pi"]
+      }
+    ]
+  }
+]

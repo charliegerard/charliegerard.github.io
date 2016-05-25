@@ -1,171 +1,82 @@
-/*@media(width: 1024px){
-	span#intro{
-		font-weight: 300;
-	}
-
-	#words{
-		font-weight: 300;
-	}
-
-}*/
-
 @media only screen and (max-width : 480px) {
-  	span#intro{
-		font-weight: 300;
-		font-size: 30px;
-	}
+  #container .description h1{
+    line-height: 1em;
+    display: inline;
+    font-size: 20px;
+  }
 
-	span#intro_title{
-		font-weight: 400;
-		font-size: 40px;
-		color: white;
-		background-color: rgb(26,26,26);
-		padding: 1%;
+  #background-3d{
+  	position: absolute;
+  	opacity: 0.3;
+    display: none;
+    /*z-index: -1;*/
+  }
 
-	}
+  #background-3d iframe{
+  	border: none;
+  }
 
+  #container{
+    border: 5px solid rgb(26, 25, 169);
+  }
 
-	#words{
-		font-weight: 300;
-	}
+  #container #navbar{
+    margin-right: 5px;
+  }
 
-	#navbar a{
-		font-weight: 300;
-	}
+  #container #navbar a{
+    font-size: 12px;
+    margin-right: 7px;
+  }
 
-	#container img{
-		border-radius: 50%;
-		max-width: 50%;
-		margin-top: 30%;
-		opacity: 0.8;
-	}
+  #container .description h3{
+    font-size: 15px;
+    margin-top: 0.5em;
+  }
 
-	h2#intro{
-		font-size: 20px;
-		width: 100%;
-	}
+  #about-block{
+    margin: 0 auto;
+    display: block;
+  }
 
-	#container{
-		height: 450px;
-	}
+  #about-block .content{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
 
-	/*---- GA projects --*/
+  #about-block img{
+    margin-bottom: 2em;
+    margin-top: 2em;
+    margin-left: 1em;
+    width: 10em;
+  }
 
-	#ga-projects{
-		width: 100%;
-		height: 1000px;
-	}
+  #center{
+    max-height: 75%;
+    margin-top: 15%;
+    width: 90%
+  }
 
-	#project_tiles{
-		width: 100%;
-		margin: 0 auto;
-	}
+  #center #projects-block, #center #about-block, #center #skills-block{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
 
+  #center #projects-block .project{
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+  }
 
-	#readr h3, #loople h3, #spectrm h3{
-		font-size: 15px;
-		position: relative;
-		color: black;
-		margin: 0;
-		background-color: transparent;
-		font-weight: 400;
-	}
+  #container .footer ul li{
+    font-size: 12px;
+  }
 
-	#readr_content, #loople_content, #spectrm_content{
-		display: block;
-		position: relative;
-		margin-top: 1%;
-		margin-bottom: 10%;
-		/*background-color: transparent;*/
-		/*background-color: rgb(0,0,0,0.1);*/
-		background-color: rgba(0,0,0, 0.2);
-	}
+  #container .footer{
+    bottom: 0;
+    width: 120%;
+  }
 
-	#readr_content p, #loople_content p, #spectrm_content p{
-		font-size: 12px;
-		color: white;
-	}
-
-	#readr_content p span, #loople_content p span, #spectrm_content p span{
-		color: grey;
-	}
-
-	/*---- End of GA projects ---*/
-
-
-	#dancingcats, #wdi-ipsum, #shooting-cats{
-		width: 100%;
-		display: block;
-		margin-bottom: 5%;
-	}
-
-	#front-end, #back-end, #tdd{
-		width: 100%;
-		display: block;
-	}
-
-	#device_orientation, #threejs{
-		width: 100%;
-		display: block;
-		margin-bottom: 10%;
-	}
-
-	#lab #button{
-		width: 50%;
-	}
-
-	#leap-sphero h1{
-		font-size: 30px;
-		font-weight: 400;
-	}
-
-	#leap-sphero h3{
-		font-size: 15px;
-		font-weight: 300;
-	}
-
-	#social{
-		margin: 5% 17%;
-	}
-
-	#social a img{
-		display: inline-block;
-		max-width: 20%;
-	}
-
-	#social a{
-		max-width: 35%;
-		margin-right: 8%;
-		margin-bottom: 2em;
-		text-align: center;
-	}
-
-	#contact p{
-		max-width: 100%;
-		margin: 0 auto;
-	}
-
-	#contact p a{
-		font-weight: 400;
-	}
 }
-
-
-/*@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
-  	span#intro{
-		font-weight: 300;
-	}
-
-	#words{
-		font-weight: 300;
-	}
-
-	.fa.fa-code, .fa.fa-cogs, .fa.fa-check-square-o{
-		font-size: 70px;
-	}
-
-	#front-end, #back-end, #tdd{
-		height: 140px;
-	}
-
-}*/
