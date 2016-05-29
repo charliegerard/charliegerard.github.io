@@ -95,7 +95,7 @@ body{
 	margin-top: 10px;
 	background-size: cover;
 	background-position: center;
-	opacity: 0.7;
+	/*opacity: 0.7;*/
 }
 
 #center #projects-block .project:hover{
