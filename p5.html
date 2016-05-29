@@ -7,8 +7,6 @@
   </head>
   <body>
     <script type="text/javascript">
-        var rotationX = 0;
-        var rotationY = 0;
         var texture;
 
         function setup(){
@@ -20,16 +18,13 @@
           translate(0,0, 100);
           push();
 
-          rotateX(rotationX);
-          rotationX+=0.05;
+          rotateX(frameCount * 0.04);
 
           torus(150,50);
 
           pop();
 
-          rotateY(rotationY);
-          rotateX(0);
-          rotationY+=0.05;
+          rotateY(frameCount * 0.04)
 
           torus(250,50);
         }
