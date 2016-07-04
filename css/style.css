@@ -33,6 +33,11 @@ body{
 	margin-top: 10px;
 }
 
+#navbar{
+	width: 50%;
+  float: right;
+}
+
 #container #navbar a{
 	font-family: 'Source Code Pro';
 	font-size: 15px;
@@ -146,6 +151,21 @@ body{
 #skills-block{
 	display: none;
 	font-family: 'Source Code Pro';
+}
+
+#contributions-block{
+	display: none;
+	font-family: 'Source Code Pro';
+	width: 80%;
+	margin: 0 auto;
+}
+
+#contributions-block ul li a{
+	color: rgb(26, 25, 169);
+}
+
+#contributions-block ul li a:hover{
+	text-decoration: underline;
 }
 
 @keyframes fadeIn {

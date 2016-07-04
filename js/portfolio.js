@@ -3,6 +3,7 @@ window.onload = function(){
 		var projectsLoaded = false;
 		var skillsShowing = false;
 		var aboutShowing = true;
+		var contributionsShowing = false;
 
 		var iframe = document.getElementById('background-3d');
 		iframe.width = window.innerWidth;
@@ -10,6 +11,7 @@ window.onload = function(){
 
 		var projectsLink = document.getElementById('projects');
 		var skillsLink = document.getElementById('skills');
+		var contributionsLink = document.getElementById('community');
 
 		if(!projectsShowing){
 			projectsLink.onclick = function(){
@@ -23,9 +25,16 @@ window.onload = function(){
 			}
 		}
 
+		if(!contributionsShowing){
+			contributionsLink.onclick = function(){
+				displayContributions();
+			}
+		}
+
 		displayAbout = function(){
 			projectsShowing = false;
 			skillsShowing = false;
+			contributionsShowing = false;
 
 			var projectsBlock = document.getElementById('projects-block');
 			projectsBlock.style.display = 'none';
@@ -34,8 +43,10 @@ window.onload = function(){
 			skillBlock.style.display = "none";
 
 			var aboutBlock = document.getElementById('about-block');
-
 			aboutBlock.style.display = 'block';
+
+			var contributionsBlock = document.getElementById('contributions-block');
+			contributionsBlock.style.display = 'none';
 
 			if (aboutBlock.classList.contains('is-paused')){
   			aboutBlock.classList.remove('is-paused');
@@ -46,6 +57,7 @@ window.onload = function(){
 			projectsShowing = false;
 			skillsShowing = true;
 			aboutShowing = false;
+			contributionsShowing = false;
 
 			var projectsBlock = document.getElementById('projects-block');
 			projectsBlock.style.display = 'none';
@@ -55,12 +67,35 @@ window.onload = function(){
 
 			var skillBlock = document.getElementById('skills-block');
 			skillBlock.style.display = "block";
+
+			var contributionsBlock = document.getElementById('contributions-block');
+			contributionsBlock.style.display = 'none';
+		}
+
+		displayContributions = function(){
+			projectsShowing = false;
+			skillsShowing = false;
+			aboutShowing = false;
+			contributionsShowing = true;
+
+			var projectsBlock = document.getElementById('projects-block');
+			projectsBlock.style.display = 'none';
+
+			var aboutBlock = document.getElementById('about-block');
+			aboutBlock.style.display = 'none';
+
+			var skillBlock = document.getElementById('skills-block');
+			skillBlock.style.display = "none";
+
+			var contributionsBlock = document.getElementById('contributions-block');
+			contributionsBlock.style.display = 'block';
 		}
 
 		displayProjects = function(){
 			projectsShowing = true;
 			skillsShowing = false;
 			aboutShowing = false;
+			contributionsShowing = false;
 
 			var aboutBlock = document.getElementById('about-block');
 			aboutBlock.style.display = 'none';
@@ -70,6 +105,9 @@ window.onload = function(){
 
 			var projectsBlock = document.getElementById('projects-block');
 			projectsBlock.style.display = 'block';
+
+			var contributionsBlock = document.getElementById('contributions-block');
+			contributionsBlock.style.display = 'none';
 
 			if(!projectsLoaded){
 				var getJSON = new Promise(function(resolve, reject){
