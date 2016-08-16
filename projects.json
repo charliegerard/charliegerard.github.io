@@ -2,6 +2,14 @@
   {
     "web": [
       {
+        "id": "browser-pong",
+        "title": "Browser Pong",
+        "url": "http://charliegerard.github.io/browser-pong",
+        "image": "./images/browser-pong.png",
+        "description": "Pong game with browser windows",
+        "tags": ["web", "JavaScript"]
+      },
+      {
         "id": "spectrm",
         "title": "Spectrm",
         "url": "http://spectrm.herokuapp.com/",
