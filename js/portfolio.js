@@ -1,3 +1,6 @@
+require("!style!css!sass!../scss/main.scss");
+require('./portfolio-es6.js');
+
 window.onload = function(){
 		var projectsShowing = false;
 		var projectsLoaded = false;
