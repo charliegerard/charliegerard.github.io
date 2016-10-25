@@ -8,9 +8,9 @@ window.onload = function(){
 		var aboutShowing = true;
 		var contributionsShowing = false;
 
-		var iframe = document.getElementById('background-3d');
-		iframe.width = window.innerWidth;
-		iframe.height = window.innerHeight;
+		// var iframe = document.getElementById('background-3d');
+		// iframe.width = window.innerWidth;
+		// iframe.height = window.innerHeight;
 
 		var projectsLink = document.getElementById('projects');
 		var skillsLink = document.getElementById('skills');
@@ -34,29 +34,23 @@ window.onload = function(){
 			}
 		}
 
-		displayAbout = function(){
+		function displayAbout(){
 			projectsShowing = false;
 			skillsShowing = false;
 			contributionsShowing = false;
 
-			var projectsBlock = document.getElementById('projects-block');
-			projectsBlock.style.display = 'none';
 
-			var skillBlock = document.getElementById('skills-block');
-			skillBlock.style.display = "none";
 
 			var aboutBlock = document.getElementById('about-block');
 			aboutBlock.style.display = 'block';
 
-			var contributionsBlock = document.getElementById('contributions-block');
-			contributionsBlock.style.display = 'none';
 
 			if (aboutBlock.classList.contains('is-paused')){
   			aboutBlock.classList.remove('is-paused');
 			}
 		}
 
-		displaySkills = function(){
+		function displaySkills(){
 			projectsShowing = false;
 			skillsShowing = true;
 			aboutShowing = false;
@@ -75,7 +69,7 @@ window.onload = function(){
 			contributionsBlock.style.display = 'none';
 		}
 
-		displayContributions = function(){
+		function displayContributions(){
 			projectsShowing = false;
 			skillsShowing = false;
 			aboutShowing = false;
@@ -94,7 +88,7 @@ window.onload = function(){
 			contributionsBlock.style.display = 'block';
 		}
 
-		displayProjects = function(){
+		function displayProjects(){
 			projectsShowing = true;
 			skillsShowing = false;
 			aboutShowing = false;
@@ -187,7 +181,7 @@ window.onload = function(){
 			 xobj.send(null);
 		}
 
-		if(aboutShowing){
+		if(window.location.pathname.includes('about')){
 			displayAbout();
 		}
 

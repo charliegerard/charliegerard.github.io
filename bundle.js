@@ -56,9 +56,9 @@
 		var aboutShowing = true;
 		var contributionsShowing = false;
 
-		var iframe = document.getElementById('background-3d');
-		iframe.width = window.innerWidth;
-		iframe.height = window.innerHeight;
+		// var iframe = document.getElementById('background-3d');
+		// iframe.width = window.innerWidth;
+		// iframe.height = window.innerHeight;
 
 		var projectsLink = document.getElementById('projects');
 		var skillsLink = document.getElementById('skills');
@@ -82,29 +82,20 @@
 			};
 		}
 
-		displayAbout = function displayAbout() {
+		function displayAbout() {
 			projectsShowing = false;
 			skillsShowing = false;
 			contributionsShowing = false;
 
-			var projectsBlock = document.getElementById('projects-block');
-			projectsBlock.style.display = 'none';
-
-			var skillBlock = document.getElementById('skills-block');
-			skillBlock.style.display = "none";
-
 			var aboutBlock = document.getElementById('about-block');
 			aboutBlock.style.display = 'block';
-
-			var contributionsBlock = document.getElementById('contributions-block');
-			contributionsBlock.style.display = 'none';
 
 			if (aboutBlock.classList.contains('is-paused')) {
 				aboutBlock.classList.remove('is-paused');
 			}
-		};
+		}
 
-		displaySkills = function displaySkills() {
+		function displaySkills() {
 			projectsShowing = false;
 			skillsShowing = true;
 			aboutShowing = false;
@@ -121,9 +112,9 @@
 
 			var contributionsBlock = document.getElementById('contributions-block');
 			contributionsBlock.style.display = 'none';
-		};
+		}
 
-		displayContributions = function displayContributions() {
+		function displayContributions() {
 			projectsShowing = false;
 			skillsShowing = false;
 			aboutShowing = false;
@@ -140,9 +131,9 @@
 
 			var contributionsBlock = document.getElementById('contributions-block');
 			contributionsBlock.style.display = 'block';
-		};
+		}
 
-		displayProjects = function displayProjects() {
+		function displayProjects() {
 			projectsShowing = true;
 			skillsShowing = false;
 			aboutShowing = false;
@@ -218,7 +209,7 @@
 
 				projectDiv.appendChild(descriptionBlock);
 			};
-		};
+		}
 
 		function loadJSON(callback) {
 			var xobj = new XMLHttpRequest();
@@ -234,7 +225,7 @@
 			xobj.send(null);
 		}
 
-		if (aboutShowing) {
+		if (window.location.pathname.includes('about')) {
 			displayAbout();
 		}
 
@@ -283,7 +274,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  margin: 0;\n  width: 100%;\n  overflow-y: hidden; }\n\n#background-3d {\n  position: absolute;\n  opacity: 0.3; }\n\n#background-3d iframe {\n  border: none; }\n\n#container a {\n  text-decoration: none;\n  color: black; }\n\n#container {\n  display: block;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 10px solid #1a19a9; }\n\n#container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: 10px;\n  margin-top: 10px; }\n\n#navbar {\n  width: 50%;\n  float: right; }\n\n#container #navbar a {\n  font-family: 'Source Code Pro';\n  font-size: 15px;\n  font-weight: 400;\n  color: #ff1c00;\n  margin-right: 10px;\n  /*font-weight: 600;*/ }\n\n#container #navbar a:hover {\n  /*color: rgb(255, 28, 0);*/\n  border-bottom: 3px solid #1a19a9;\n  text-decoration: none;\n  /*font-weight: 600;*/ }\n\n#about-block .content {\n  display: inline-block;\n  width: 70%;\n  vertical-align: top; }\n\n#about-block img {\n  width: 15em;\n  display: inline-block;\n  margin-right: 1em;\n  margin-bottom: 1em; }\n\n#about-block h3 {\n  margin-top: 0;\n  margin-bottom: 1em; }\n\n#about-block {\n  text-align: justify;\n  margin-top: 5em; }\n\n#center {\n  display: block;\n  margin: 5% auto;\n  width: 80%;\n  max-height: 73%;\n  overflow-y: scroll; }\n\n#center::-webkit-scrollbar {\n  width: 1px; }\n\n#center #projects-block .project {\n  display: inline-block;\n  position: relative;\n  width: 30em;\n  height: 15em;\n  background: lightgrey;\n  margin-right: 10px;\n  vertical-align: top;\n  margin-top: 10px;\n  background-size: cover;\n  background-position: center;\n  /*opacity: 0.7;*/ }\n\n#center #projects-block .project:hover {\n  opacity: 1; }\n\n#center #projects-block .project h4 {\n  color: white;\n  font-size: 15px; }\n\n#center #projects-block .project p {\n  color: white;\n  font-size: 12px; }\n\n#center #projects-block .project .project-description ul {\n  margin-bottom: 10px;\n  padding: 0;\n  list-style: none; }\n\n#center #projects-block .project .project-description ul li {\n  display: inline-block;\n  background: white;\n  margin-right: 10px;\n  padding: 0em 1em;\n  font-size: 10px; }\n\n#center #projects-block .project .project-description {\n  /*border: 5px solid rgb(26, 25, 169);*/\n  padding: 0em 1em;\n  background: #5539da;\n  display: block;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  left: 0; }\n\n#projects-block, #about-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 65em; }\n\n#skills-block {\n  display: none;\n  font-family: 'Source Code Pro'; }\n\n#contributions-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 80%;\n  margin: 0 auto; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#skills-block .block {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 2em; }\n\n#container .description {\n  display: block;\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  width: 50%; }\n\n#container .description h1 {\n  font-family: 'Source Code Pro';\n  font-weight: 700;\n  font-size: 30px;\n  line-height: 0px;\n  /*font-style: italic;*/ }\n\n#container .description h3 {\n  font-family: 'Source Code Pro';\n  font-weight: 500;\n  font-size: 20px; }\n\n#container .footer {\n  display: block;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  width: 100%;\n  text-align: right; }\n\n.footer ul {\n  font-family: 'Source Code Pro';\n  list-style: none; }\n\n.footer ul li {\n  display: inline-block; }\n\n.footer ul li a {\n  color: black; }\n\n@media only screen and (max-width: 480px) {\n  body {\n    overflow: hidden; }\n  #container .description h1 {\n    line-height: 1em;\n    display: inline;\n    font-size: 20px; }\n  #background-3d {\n    position: fixed;\n    opacity: 0.3; }\n  #background-3d iframe {\n    border: none; }\n  #container {\n    border: 5px solid #1a19a9; }\n  #container #navbar {\n    margin-right: 5px; }\n  #container #navbar a {\n    font-size: 12px;\n    margin-right: 7px; }\n  #container .description h3 {\n    font-size: 15px;\n    margin-top: 0.5em; }\n  #about-block {\n    margin: 0 auto;\n    display: block; }\n  #about-block .content {\n    width: 90%;\n    margin: 0 auto;\n    display: block; }\n  #about-block img {\n    margin-bottom: 2em;\n    margin-top: 2em;\n    margin-left: 1em;\n    width: 10em; }\n  #center {\n    max-height: 75%;\n    margin-top: 15%;\n    width: 90%; }\n  #center #projects-block, #center #about-block, #center #skills-block {\n    width: 100%;\n    display: block;\n    margin: 0 auto; }\n  #center #projects-block .project {\n    width: 100%;\n    display: block;\n    margin: 5px auto; }\n  #container .footer ul li {\n    font-size: 12px; }\n  #container .footer {\n    bottom: 0;\n    width: 120%; } }\n", ""]);
+	exports.push([module.id, "body {\n  margin: 0;\n  width: 100%;\n  overflow-y: hidden; }\n\n#background-3d {\n  position: absolute;\n  opacity: 0.3; }\n\n#background-3d iframe {\n  border: none; }\n\n#container a {\n  text-decoration: none;\n  color: black; }\n\n#container {\n  display: block;\n  position: absolute;\n  width: 95%;\n  height: 92%;\n  border: 6px solid #1a19a9;\n  margin: 2em; }\n\n#container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: 10px;\n  margin-top: 10px; }\n\n#navbar {\n  width: 50%;\n  float: right; }\n\n#container #navbar a {\n  font-family: 'Source Code Pro';\n  font-size: 15px;\n  font-weight: 400;\n  color: #ff1c00;\n  margin-right: 10px;\n  /*font-weight: 600;*/ }\n\n#container #navbar a:hover {\n  /*color: rgb(255, 28, 0);*/\n  border-bottom: 3px solid #1a19a9;\n  text-decoration: none;\n  /*font-weight: 600;*/ }\n\n#about-block .content {\n  display: inline-block;\n  width: 70%;\n  vertical-align: top; }\n\n#about-block img {\n  width: 15em;\n  display: inline-block;\n  margin-right: 1em;\n  margin-bottom: 1em; }\n\n#about-block h3 {\n  margin-top: 0;\n  margin-bottom: 1em; }\n\n#about-block {\n  text-align: justify;\n  margin-top: 5em; }\n\n#center {\n  display: block;\n  margin: 5% auto;\n  width: 80%;\n  max-height: 73%;\n  overflow-y: scroll; }\n\n#center::-webkit-scrollbar {\n  width: 1px; }\n\n#center #projects-block .project {\n  display: inline-block;\n  position: relative;\n  width: 30em;\n  height: 15em;\n  background: lightgrey;\n  margin-right: 10px;\n  vertical-align: top;\n  margin-top: 10px;\n  background-size: cover;\n  background-position: center;\n  /*opacity: 0.7;*/ }\n\n#center #projects-block .project:hover {\n  opacity: 1; }\n\n#center #projects-block .project h4 {\n  color: white;\n  font-size: 15px; }\n\n#center #projects-block .project p {\n  color: white;\n  font-size: 12px; }\n\n#center #projects-block .project .project-description ul {\n  margin-bottom: 10px;\n  padding: 0;\n  list-style: none; }\n\n#center #projects-block .project .project-description ul li {\n  display: inline-block;\n  background: white;\n  margin-right: 10px;\n  padding: 0em 1em;\n  font-size: 10px; }\n\n#center #projects-block .project .project-description {\n  /*border: 5px solid rgb(26, 25, 169);*/\n  padding: 0em 1em;\n  background: #5539da;\n  display: block;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  left: 0; }\n\n#projects-block, #about-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 65em; }\n\n#skills-block {\n  display: none;\n  font-family: 'Source Code Pro'; }\n\n#contributions-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 80%;\n  margin: 0 auto; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#skills-block .block {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 2em; }\n\n#container .description {\n  display: block;\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  width: 50%; }\n\n#container .description h1 {\n  font-family: 'Source Code Pro';\n  font-weight: 700;\n  font-size: 30px;\n  line-height: 0px;\n  /*font-style: italic;*/ }\n\n#container .description h3 {\n  font-family: 'Source Code Pro';\n  font-weight: 500;\n  font-size: 20px; }\n\n#container .footer {\n  display: block;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  width: 100%;\n  text-align: right; }\n\n.footer ul {\n  font-family: 'Source Code Pro';\n  list-style: none; }\n\n.footer ul li {\n  display: inline-block; }\n\n.footer ul li a {\n  color: black; }\n\n@media only screen and (max-width: 480px) {\n  body {\n    overflow: hidden; }\n  #container .description h1 {\n    line-height: 1em;\n    display: inline;\n    font-size: 20px; }\n  #background-3d {\n    position: fixed;\n    opacity: 0.3; }\n  #background-3d iframe {\n    border: none; }\n  #container {\n    border: 5px solid #1a19a9; }\n  #container #navbar {\n    margin-right: 5px; }\n  #container #navbar a {\n    font-size: 12px;\n    margin-right: 7px; }\n  #container .description h3 {\n    font-size: 15px;\n    margin-top: 0.5em; }\n  #about-block {\n    margin: 0 auto;\n    display: block; }\n  #about-block .content {\n    width: 90%;\n    margin: 0 auto;\n    display: block; }\n  #about-block img {\n    margin-bottom: 2em;\n    margin-top: 2em;\n    margin-left: 1em;\n    width: 10em; }\n  #center {\n    max-height: 75%;\n    margin-top: 15%;\n    width: 90%; }\n  #center #projects-block, #center #about-block, #center #skills-block {\n    width: 100%;\n    display: block;\n    margin: 0 auto; }\n  #center #projects-block .project {\n    width: 100%;\n    display: block;\n    margin: 5px auto; }\n  #container .footer ul li {\n    font-size: 12px; }\n  #container .footer {\n    bottom: 0;\n    width: 120%; } }\n\n#about-container {\n  font-family: 'Source Code Pro';\n  padding-left: 3em; }\n  #about-container h2 {\n    text-align: center; }\n  #about-container #intro-block, #about-container #skills-block {\n    display: inline-block;\n    width: 45%; }\n  #about-container #intro-block h1 {\n    font-size: 100px;\n    font-weight: 200; }\n  #about-container #skills-block {\n    border-left: 3px solid pink;\n    padding-left: 1em; }\n", ""]);
 
 	// exports
 

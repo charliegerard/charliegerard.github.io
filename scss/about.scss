@@ -1,0 +1,22 @@
+#about-container{
+  font-family: 'Source Code Pro';
+  padding-left: 3em;
+  h2{
+    text-align: center;
+  }
+
+  #intro-block, #skills-block{
+    display: inline-block;
+    width: 45%;
+  }
+
+  #intro-block h1{
+    font-size: 100px;
+    font-weight: 200;
+  }
+
+  #skills-block{
+    border-left: 3px solid pink;
+    padding-left: 1em;
+  }
+}
