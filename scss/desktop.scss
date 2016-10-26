@@ -24,10 +24,10 @@ body{
 	// position: absolute;
 	width: 95%;
 	height: 92%;
-	border-top: 6px solid rgb(26, 25, 169);
-	border-right: 6px solid rgb(26, 25, 169);
-	border-left: 6px solid rgb(26, 25, 169);
-	margin: 2em;
+	border-top: 3px solid rgb(26, 25, 169);
+	border-right: 3px solid rgb(26, 25, 169);
+	border-left: 3px solid rgb(26, 25, 169);
+	margin: 1.5em auto;
 	// margin: 0 auto;
 	// background: pink;
 }
@@ -35,13 +35,42 @@ body{
 #container #navbar{
 	display: block;
 	text-align: right;
-	margin-right: 10px;
+	margin-right: -20px;
 	margin-top: 10px;
+	position: relative;
+	float: right;
 }
 
 #navbar{
-	width: 50%;
-  float: right;
+	width: auto;
+
+	.link{
+		display: block;
+		right: -100px;
+		float: right;
+		clear: both;
+		transition-timing-function: ease-out;
+		transition: 0.5s;
+		transform: translateX(10%);
+	}
+
+	.link:hover{
+		right: -30px;
+		transition-timing-function: ease-in;
+		transition: 0.5s;
+		transform: translateX(-10%);
+	}
+
+	.line{
+		width: 50px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		box-shadow: none;
+		border: none;
+		color: #ccc;
+		height: 1px;
+	}
 }
 
 #container #navbar a{
@@ -50,12 +79,14 @@ body{
 	font-weight: 400;
 	color: rgb(255, 28, 0);
 	margin-right: 10px;
+	display: block;
+	margin-bottom: 5px;
 	/*font-weight: 600;*/
 }
 
 #container #navbar a:hover{
 	/*color: rgb(255, 28, 0);*/
-	border-bottom: 3px solid rgb(26, 25, 169);
+	// border-bottom: 3px solid rgb(26, 25, 169);
 	text-decoration: none;
 	/*font-weight: 600;*/
 }
@@ -153,6 +184,7 @@ body{
 	font-family: 'Source Code Pro';
 	width: 65em;
 }
+
 
 // #skills-block{
 // 	display: none;
