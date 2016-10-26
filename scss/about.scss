@@ -1,22 +1,82 @@
 #about-container{
-  font-family: 'Source Code Pro';
-  padding-left: 3em;
-  h2{
-    text-align: center;
-  }
+  // font-family: 'Source Code Pro';
+  font-family: 'Source Sans Pro', sans-serif;
+  // margin-top: 5em;
 
-  #intro-block, #skills-block{
-    display: inline-block;
-    width: 45%;
-  }
-
-  #intro-block h1{
+  h1{
     font-size: 100px;
     font-weight: 200;
+    color: rgb(45, 48, 122);
+    font-weight: 200;
+    letter-spacing: 0.3em;
+    margin-bottom: 0;
+    margin-left: 0.8em;
+  }
+
+  h2{
+    text-align: center;
+    // display: inline-block;
+  }
+
+  .about-content-block{
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+
+    #intro-block, #skills-block, #contributions-block{
+      display: block;
+      width: 70%;
+      // background: green;
+      margin: 0 auto;
+    }
+
+    #intro-block{
+      text-align: justify;
+
+      h3{
+        letter-spacing: 4px;
+        margin-bottom: 1em;
+      }
+
+      .social-button{
+        width: 26.5%;
+        margin-right: 1%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        border: 2px solid rgb(45, 48, 122);
+        display: inline-block;
+        text-align: center;
+      }
+    }
   }
 
   #skills-block{
     border-left: 3px solid pink;
     padding-left: 1em;
+
+    .skills{
+      display: inline-block;
+
+      ul{
+        list-style: none;
+        margin: 0;
+        margin-right: 3em;
+        padding: 0;
+      }
+    }
   }
+
+  #contributions-block{
+    ul{
+      list-style: none;
+      margin: 0;
+      margin-right: 3em;
+      padding: 0;
+    }
+  }
+}
+
+.important-title{
+  color: rgb(218, 45, 42);
 }

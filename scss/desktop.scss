@@ -1,7 +1,8 @@
 body{
 	margin: 0;
 	width: 100%;
-	overflow-y: hidden;
+	// overflow-y: hidden;
+	overflow-y: scroll;
 }
 
 #background-3d{
@@ -20,10 +21,12 @@ body{
 
 #container{
 	display: block;
-	position: absolute;
+	// position: absolute;
 	width: 95%;
 	height: 92%;
-	border: 6px solid rgb(26, 25, 169);
+	border-top: 6px solid rgb(26, 25, 169);
+	border-right: 6px solid rgb(26, 25, 169);
+	border-left: 6px solid rgb(26, 25, 169);
 	margin: 2em;
 	// margin: 0 auto;
 	// background: pink;
@@ -151,16 +154,16 @@ body{
 	width: 65em;
 }
 
-#skills-block{
-	display: none;
-	font-family: 'Source Code Pro';
-}
+// #skills-block{
+// 	display: none;
+// 	font-family: 'Source Code Pro';
+// }
 
 #contributions-block{
-	display: none;
-	font-family: 'Source Code Pro';
-	width: 80%;
-	margin: 0 auto;
+	// display: none;
+	// font-family: 'Source Code Pro';
+	// width: 80%;
+	// margin: 0 auto;
 }
 
 #contributions-block ul li a{
@@ -194,25 +197,33 @@ body{
 }
 
 #container .description{
-	display: block;
+	display: inline-block;
 	position: absolute;
-	top: 10px;
-	left: 10px;
-	width: 50%;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 100px;
+	// letter-spacing: 4px;
 }
 
 #container .description h1{
-	font-family: 'Source Code Pro';
-	font-weight: 700;
+	line-height: 30px;
+	color: rgb(45, 48, 122);
+	// font-family: 'Source Code Pro';
+	font-weight: 200;
 	font-size: 30px;
-	line-height: 0px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 2px;
+
 	/*font-style: italic;*/
 }
 
 #container .description h3{
-	font-family: 'Source Code Pro';
-	font-weight: 500;
-	font-size: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 12px;
+	margin-top: 5px;
 }
 
 #container .footer{
