@@ -1,3 +1,33 @@
+.show{
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.hide{
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
 #about-container{
   // font-family: 'Source Code Pro';
   font-family: 'Source Sans Pro', sans-serif;
@@ -57,6 +87,7 @@
 
     .skills{
       display: inline-block;
+      vertical-align: top;
 
       ul{
         list-style: none;

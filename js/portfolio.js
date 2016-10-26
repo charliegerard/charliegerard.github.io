@@ -12,102 +12,24 @@ window.onload = function(){
 		var navbarLinks = navbar.getElementsByClassName('link');
 
 		for(var i = 0; i < navbarLinks.length; i++){
-				navbarLinks[i].className += ' navbar-link-animation';
+			navbarLinks[i].className += ' navbar-link-animation';
 		}
 
 		var projectsLink = document.getElementById('projects');
+
+		projectsLink.onclick = function(event){
+			event.preventDefault();
+			var container = document.getElementById('container');
+			container.className -= 'show';
+			container.className += ' hide';
+		}
+
+
 		var skillsLink = document.getElementById('skills');
 		var contributionsLink = document.getElementById('community');
 
-		if(!projectsShowing){
-			projectsLink.onclick = function(){
-				displayProjects();
-			}
-		}
-
-		if(!skillsShowing){
-			skillsLink.onclick = function(){
-				displaySkills();
-			}
-		}
-
-		if(!contributionsShowing){
-			contributionsLink.onclick = function(){
-				displayContributions();
-			}
-		}
-
-		function displayAbout(){
-			projectsShowing = false;
-			skillsShowing = false;
-			contributionsShowing = false;
-
-
-
-			var aboutBlock = document.getElementById('about-block');
-			aboutBlock.style.display = 'block';
-
-
-			if (aboutBlock.classList.contains('is-paused')){
-  			aboutBlock.classList.remove('is-paused');
-			}
-		}
-
-		function displaySkills(){
-			projectsShowing = false;
-			skillsShowing = true;
-			aboutShowing = false;
-			contributionsShowing = false;
-
-			var projectsBlock = document.getElementById('projects-block');
-			projectsBlock.style.display = 'none';
-
-			var aboutBlock = document.getElementById('about-block');
-			aboutBlock.style.display = 'none';
-
-			var skillBlock = document.getElementById('skills-block');
-			skillBlock.style.display = "block";
-
-			var contributionsBlock = document.getElementById('contributions-block');
-			contributionsBlock.style.display = 'none';
-		}
-
-		function displayContributions(){
-			projectsShowing = false;
-			skillsShowing = false;
-			aboutShowing = false;
-			contributionsShowing = true;
-
-			var projectsBlock = document.getElementById('projects-block');
-			projectsBlock.style.display = 'none';
-
-			var aboutBlock = document.getElementById('about-block');
-			aboutBlock.style.display = 'none';
-
-			var skillBlock = document.getElementById('skills-block');
-			skillBlock.style.display = "none";
-
-			var contributionsBlock = document.getElementById('contributions-block');
-			contributionsBlock.style.display = 'block';
-		}
 
 		function displayProjects(){
-			projectsShowing = true;
-			skillsShowing = false;
-			aboutShowing = false;
-			contributionsShowing = false;
-
-			var aboutBlock = document.getElementById('about-block');
-			aboutBlock.style.display = 'none';
-
-			var skillBlock = document.getElementById('skills-block');
-			skillBlock.style.display = "none";
-
-			var projectsBlock = document.getElementById('projects-block');
-			projectsBlock.style.display = 'block';
-
-			var contributionsBlock = document.getElementById('contributions-block');
-			contributionsBlock.style.display = 'none';
 
 			if(!projectsLoaded){
 				var getJSON = new Promise(function(resolve, reject){
@@ -182,10 +104,6 @@ window.onload = function(){
 				 }
 			 };
 			 xobj.send(null);
-		}
-
-		if(window.location.pathname.includes('about')){
-			displayAbout();
 		}
 
 		// The following function is horrible but I don't have time to refactor it :/
