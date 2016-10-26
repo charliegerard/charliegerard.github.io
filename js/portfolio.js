@@ -8,9 +8,12 @@ window.onload = function(){
 		var aboutShowing = true;
 		var contributionsShowing = false;
 
-		// var iframe = document.getElementById('background-3d');
-		// iframe.width = window.innerWidth;
-		// iframe.height = window.innerHeight;
+		var navbar = document.getElementById('navbar');
+		var navbarLinks = navbar.getElementsByClassName('link');
+
+		for(var i = 0; i < navbarLinks.length; i++){
+				navbarLinks[i].className += ' navbar-link-animation';
+		}
 
 		var projectsLink = document.getElementById('projects');
 		var skillsLink = document.getElementById('skills');

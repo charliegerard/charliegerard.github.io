@@ -42,23 +42,29 @@ body{
 }
 
 #navbar{
+	font-family: 'Source Sans Pro', sans-serif;
 	width: auto;
 
 	.link{
 		display: block;
-		right: -100px;
 		float: right;
 		clear: both;
+		margin-right: -180px;
 		transition-timing-function: ease-out;
 		transition: 0.5s;
-		transform: translateX(10%);
+		transform: translateX(180px);
+	}
+
+	.navbar-link-animation{
+		transition-timing-function: ease-in;
+		transition: 1s;
+		transform: translateX(-170px);
 	}
 
 	.link:hover{
-		right: -30px;
 		transition-timing-function: ease-in;
 		transition: 0.5s;
-		transform: translateX(-10%);
+		transform: translateX(-180px);
 	}
 
 	.line{
@@ -74,8 +80,8 @@ body{
 }
 
 #container #navbar a{
-	font-family: 'Source Code Pro';
-	font-size: 15px;
+	// font-family: 'Source Code Pro';
+	font-size: 12px;
 	font-weight: 400;
 	color: rgb(255, 28, 0);
 	margin-right: 10px;
