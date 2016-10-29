@@ -4,27 +4,49 @@
 	<meta charset="UTF-8">
 	<title>Portfolio - Charlie Gerard - Creative Developer</title>
 	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:300,200" rel="stylesheet">
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/mobile.css"> -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
   <!-- <script type="text/javascript" src="js/portfolio.js"></script> -->
-	<script type="text/javascript" src="bundle.js"></script>
+	<!-- <script type="text/javascript" src="bundle.js"></script> -->
 	<meta name="viewport" content="width=device-width">
 </head>
 <body>
-	<iframe id="background-3d" frameborder="0" src="p5.html" width="130%" height="100%"></iframe>
+
+<div id="outer-container">
+	<a href="/">
+		<div class="description">
+			<h1>CHARLIE GERARD</h1>
+			<h3>creative technologist</h3>
+		</div>
+	</a>
+
+	<div id="navbar">
+		<div class="link">
+			<a id="projects" href="#projects">Projects<hr class="line" noshade></a>
+		</div>
+		<div class="link">
+			<a id="skills" href="#about">About<hr class="line" noshade></a>
+		</div>
+		<div class="link">
+			<a id="contact" href="#contact">Contact<hr class="line" noshade></a>
+		</div>
+	</div>
 
 	<div id="container">
-		<div id="navbar">
-			<a id="projects" href="#projects">Projects</a>
-			<a id="skills" href="#skills">Skills</a>
-			<a href="http://charliegerard.github.io/blog" target="blank">Blog</a>
-			<a id="community" href="#community">Contributions</a>
-		</div>
 
-		<div id="center">
-			<div id="about-block" class="fade-in is-paused">
-				<img src="./images/charlie_gerard.jpg" alt="Charlie Gerard" />
+	</div>
+
+</div>
+
+	<!-- <iframe id="background-3d" frameborder="0" src="p5.html" width="130%" height="100%"></iframe> -->
+
+	<!-- <div id="container"> -->
+
+		<!-- <div id="center"> -->
+			<!-- <div id="about-block" class="fade-in is-paused">
+
 				<div class="content">
 					<h3>Hello!</h3>
 					<p>
@@ -41,9 +63,9 @@
 						If I didn't have to work for money, I'd spend my time trying to make things that would solve problems in innovative ways.
 					</p>
 				</div>
-			</div>
+			</div> -->
 
-			<div id="projects-block">
+			<!-- <div id="projects-block">
 				<h3>Latest projects</h3>
 				<p>Selection of personal projects I've worked on. More to come.</p>
 			</div>
@@ -155,7 +177,7 @@
 				<li><a href="http://codepen.io/charlie_g/" target="_blank">Codepen</a></li>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Google Analytics -->
 	<script>
@@ -167,5 +189,6 @@
 	  ga('create', 'UA-51730931-1', 'charliegerard.github.io');
 	  ga('send', 'pageview');
 	</script>
+	<script type="text/javascript" src="./dist/app.js" charset="utf-8"></script>
 </body>
 </html>
