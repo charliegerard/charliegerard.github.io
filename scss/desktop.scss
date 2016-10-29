@@ -41,6 +41,14 @@ body{
 	float: right;
 }
 
+// #navbar .link:nth-of-type(1){
+// 		transition-timing-function: ease-in;
+// 		transition: 1s;
+// 		transform: translateX(-170px);
+// 		// transition-delay: 1s;
+// 		background: pink;
+// 	}
+
 #navbar{
 	font-family: 'Source Sans Pro', sans-serif;
 	width: auto;
@@ -55,11 +63,17 @@ body{
 		transform: translateX(180px);
 	}
 
-	.navbar-link-animation{
-		transition-timing-function: ease-in;
-		transition: 1s;
-		transform: translateX(-170px);
+	@for $i from 1 through 3{
+		.navbar-link-animation:nth-child(#{$i}) {
+			transition: all 1.2s #{$i * .3}s ease-in;
+			transform: translateX(-170px);
+		}
 	}
+
+	.link-loaded{
+		margin-right: -20px;
+	}
+
 
 	.link:hover{
 		transition-timing-function: ease-in;
