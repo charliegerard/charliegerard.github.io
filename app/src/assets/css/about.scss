@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.hide{
+.hide-up{
   overflow: hidden;
   max-height: 0;
   padding-top: 0;
@@ -48,6 +48,10 @@
     // display: inline-block;
   }
 
+  .about-content-block:nth-of-type(2){
+    border-left: 2px solid #da2d2a;;
+  }
+
   .about-content-block{
     display: inline-block;
     width: 49%;
@@ -56,7 +60,6 @@
     #intro-block, #skills-block, #contributions-block{
       display: block;
       width: 70%;
-      // background: green;
       margin: 0 auto;
     }
 
@@ -82,7 +85,6 @@
   }
 
   #skills-block{
-    border-left: 3px solid pink;
     padding-left: 1em;
 
     .skills{
@@ -97,14 +99,17 @@
       }
     }
   }
+}
+#contributions-block{
+  display: block;
+  margin: 0 auto;
+  width: 85%;
 
-  #contributions-block{
-    ul{
-      list-style: none;
-      margin: 0;
-      margin-right: 3em;
-      padding: 0;
-    }
+  ul{
+    list-style: none;
+    margin: 0;
+    margin-right: 3em;
+    padding: 0;
   }
 }
 

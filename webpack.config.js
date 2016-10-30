@@ -64,7 +64,12 @@ module.exports = {
             {
                 test: require.resolve("jquery"),
                 loader: "imports?jQuery=jquery"
-            }
+            },
+            { test: /\.json$/, loader: 'json' },
+            {
+              test: /\.hbs$/,
+              loader: "handlebars-loader"
+            },
         ]
     },
     plugins: [

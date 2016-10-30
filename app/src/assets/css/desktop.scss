@@ -20,23 +20,18 @@ body{
 }
 
 #outer-container{
-	// display: block;
-	// position: absolute;
 	width: 95%;
-	// height: 92%;
 	border-top: 3px solid rgb(26, 25, 169);
 	border-right: 3px solid rgb(26, 25, 169);
 	border-left: 3px solid rgb(26, 25, 169);
 	margin: 1.5em auto;
-	// margin: 0 auto;
-	// background: pink;
 }
 
 #outer-container #navbar{
 	display: block;
 	text-align: right;
 	margin-right: -20px;
-	margin-top: 10px;
+	margin-top: 20px;
 	position: relative;
 	float: right;
 }
@@ -251,8 +246,8 @@ body{
 #outer-container .description{
 	display: inline-block;
 	position: absolute;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
 	width: 100px;
 	// letter-spacing: 4px;
 }

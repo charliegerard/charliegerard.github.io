@@ -2,7 +2,10 @@ var Backbone = require('backbone');
 var Home = require('./views/home');
 var About = require('./views/about');
 var Contact = require('./views/contact');
-var Projects = require('./views/projects');
+var projects = require('./views/projects');
+import Project from './models/projectModel';
+import ProjectCollection from './models/projectCollection';
+var projectsData = require("./projects.json");
 
 var Router = Backbone.Router.extend({
     routes: {
@@ -31,7 +34,12 @@ router.on('route:contactView', function(){
 })
 
 router.on('route:projectsView', function(){
-  var projectsView = new Projects();
+  var list = [];
+  projectsData[0].web.forEach(function(project){
+    list.push(new Project({title: project.title}))
+  })
+
+  var projectsView = new projects({model: Project, collection: new ProjectCollection(list)});
   projectsView.render();
 })
 

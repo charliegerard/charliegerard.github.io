@@ -18,9 +18,9 @@ window.onload = function(){
 		//
 		// projectsLink.onclick = function(event){
 		// 	event.preventDefault();
-		// 	var container = document.getElementById('container');
-		// 	container.className -= 'show';
-		// 	container.className += ' hide';
+		// 	var container = document.getElementById('outer-container');
+		// 	// container.className -= 'show';
+		// 	container.className += ' hide-up';
 		// }
 
 
