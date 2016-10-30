@@ -36,7 +36,7 @@ router.on('route:contactView', function(){
 router.on('route:projectsView', function(){
   var list = [];
   projectsData[0].web.forEach(function(project){
-    list.push(new Project({title: project.title}))
+    list.push(new Project({title: project.title, image: project.image, url: project.url, description: project.description}))
   })
 
   var projectsView = new projects({model: Project, collection: new ProjectCollection(list)});

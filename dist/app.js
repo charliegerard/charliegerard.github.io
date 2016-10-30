@@ -2224,7 +2224,10 @@ class ProjectCollection extends __WEBPACK_IMPORTED_MODULE_0_backbone__["Collecti
 class Project extends __WEBPACK_IMPORTED_MODULE_0_backbone__["Model"] {
   defaults(){
     return {
-      title: 'boo'
+      title: '',
+      image: '',
+      url: '',
+      description: ''
     }
   }
 }
@@ -12741,7 +12744,7 @@ router.on('route:contactView', function(){
 router.on('route:projectsView', function(){
   var list = [];
   projectsData[0].web.forEach(function(project){
-    list.push(new __WEBPACK_IMPORTED_MODULE_0__models_projectModel__["a" /* default */]({title: project.title}))
+    list.push(new __WEBPACK_IMPORTED_MODULE_0__models_projectModel__["a" /* default */]({title: project.title, image: project.image, url: project.url, description: project.description}))
   })
 
   var projectsView = new projects({model: __WEBPACK_IMPORTED_MODULE_0__models_projectModel__["a" /* default */], collection: new __WEBPACK_IMPORTED_MODULE_1__models_projectCollection__["a" /* default */](list)});
@@ -12984,17 +12987,23 @@ module.exports = function() {
 var Handlebars = __webpack_require__(64);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
-    var stack1;
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 
-  return "    <p>"
-    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.title : stack1), depth0))
-    + "</p>\n";
+  return "    <a href=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.url : stack1), depth0))
+    + "\" target=\"_blank\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.title : stack1), depth0))
+    + "</a>\n    <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.image : stack1), depth0))
+    + "\" style=\"width: 100px\" alt=\"\" />\n    <p>\n      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.description : stack1), depth0))
+    + "\n    </p>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
   return "<div id=\"projects-container\">\n  <h2>Projects</h2>\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.projects : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\n</div>\n";
+    + "</div>\n";
 },"useData":true});
 
 /***/ },

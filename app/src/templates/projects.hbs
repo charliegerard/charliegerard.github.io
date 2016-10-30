@@ -1,7 +1,10 @@
 <div id="projects-container">
   <h2>Projects</h2>
   {{# each projects}}
-    <p>{{ this.attributes.title }}</p>
+    <a href="{{this.attributes.url}}" target="_blank">{{ this.attributes.title }}</a>
+    <img src="{{this.attributes.image}}" style="width: 100px" alt="" />
+    <p>
+      {{this.attributes.description}}
+    </p>
   {{/each}}
-
 </div>

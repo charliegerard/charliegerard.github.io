@@ -3,7 +3,10 @@ import { Model } from 'backbone';
 class Project extends Model {
   defaults(){
     return {
-      title: 'boo'
+      title: '',
+      image: '',
+      url: '',
+      description: ''
     }
   }
 }

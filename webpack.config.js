@@ -1,29 +1,3 @@
-// module.exports = {
-//     entry: "./js/portfolio.js",
-//     output: {
-//         path: __dirname,
-//         filename: "bundle.js"
-//     },
-//     module: {
-//         loaders: [
-//             { test: /\.css$/, loader: "style!css" },
-//             {
-//               test: /\.scss$/,
-//               loaders: ["style", "css", "sass"]
-//             },
-//             {
-//               test: /\.js$/,
-//               exclude: /(node_modules|bower_components)/,
-//               loader: 'babel', // 'babel-loader' is also a valid name to reference
-//               query: {
-//                 presets: ['es2015']
-//               }
-//             }
-//         ]
-//     }
-// };
-
-
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var merge = require('webpack-merge');
@@ -41,7 +15,8 @@ module.exports = {
     entry: PATHS.app + "/src/js/main.js",
     output: {
         path: PATHS.build,
-        filename: 'app.js'
+        filename: 'app.js',
+        publicPath: '/images'
     },
     module: {
         loaders: [
@@ -69,7 +44,7 @@ module.exports = {
             {
               test: /\.hbs$/,
               loader: "handlebars-loader"
-            },
+            }
         ]
     },
     plugins: [
