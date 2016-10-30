@@ -12867,17 +12867,38 @@ module.exports = Home;
 
 var Backbone = __webpack_require__(3);
 
+var projectDisplayed = 0;
 
 var Projects = Backbone.View.extend({
     el: '#container',
     template: __webpack_require__(48),
+    events: {
+      'click #next': 'showNextProject',
+      'click #previous': 'showPreviousProject'
+    },
 
     initialize: function(){
       _.bindAll(this, 'render');
     },
 
+    showNextProject: function(){
+      var numberOfProjects = this.collection.models.length;
+      if (projectDisplayed < numberOfProjects - 1){
+        projectDisplayed++
+      }
+      this.render();
+    },
+
+    showPreviousProject: function(){
+      var numberOfProjects = this.collection.models.length;
+      if (projectDisplayed > 0){
+        projectDisplayed--;
+      }
+      this.render();
+    },
+
     render : function(){
-      this.$el.html(this.template({projects: this.collection.models}));
+      this.$el.html(this.template({projects: this.collection.models[projectDisplayed]}));
       return this;
     }
 });
@@ -12986,24 +13007,18 @@ module.exports = function() {
 
 var Handlebars = __webpack_require__(64);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
-module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
+module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 
-  return "    <a href=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.url : stack1), depth0))
+  return "<div id=\"projects-container\">\n  <h2>Projects</h2>\n\n    <a href=\""
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.url : stack1), depth0))
     + "\" target=\"_blank\">"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.title : stack1), depth0))
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.title : stack1), depth0))
     + "</a>\n    <img src=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.image : stack1), depth0))
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.image : stack1), depth0))
     + "\" style=\"width: 100px\" alt=\"\" />\n    <p>\n      "
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.description : stack1), depth0))
-    + "\n    </p>\n";
-},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1;
-
-  return "<div id=\"projects-container\">\n  <h2>Projects</h2>\n"
-    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.projects : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "</div>\n";
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.description : stack1), depth0))
+    + "\n    </p>\n\n  <div id=\"next\">\n    Next\n  </div>\n\n  <div id=\"previous\">\n    Previous\n  </div>\n\n</div>\n";
 },"useData":true});
 
 /***/ },
@@ -13947,19 +13962,6 @@ module.exports = [
 				]
 			},
 			{
-				"id": "spectrm",
-				"title": "Spectrm",
-				"url": "http://spectrm.herokuapp.com/",
-				"image": "./images/spectrm-screen.png",
-				"description": "Music Visualizer with built-in song or microphone",
-				"tags": [
-					"web",
-					"Three.js",
-					"Web Audio API",
-					"Spotify API"
-				]
-			},
-			{
 				"id": "sphero-myo-armband",
 				"title": "Sphero & Myo armband",
 				"url": "https://github.com/charliegerard/myo_sphero",
@@ -13985,31 +13987,6 @@ module.exports = [
 				]
 			},
 			{
-				"id": "loople",
-				"title": "Loople",
-				"url": "http://loople.herokuapp.com/",
-				"image": "./images/loople-screen.png",
-				"description": "Music composer. Press any key to make a sound.",
-				"tags": [
-					"web",
-					"JavaScript",
-					"Web Audio API"
-				]
-			},
-			{
-				"id": "brainwaves-visualizer",
-				"title": "Brainwaves Visualizer",
-				"url": "https://github.com/charliegerard/neurosky-brainwaves-visualizer",
-				"image": "./images/neurosky-visualizer.png",
-				"description": "WIP - A visualizer to be used with the Neurosky brain sensor.",
-				"tags": [
-					"web",
-					"hardware",
-					"d3.js",
-					"Neurosky"
-				]
-			},
-			{
 				"id": "drone-neurosky",
 				"title": "Drone & Neurosky",
 				"url": "https://github.com/charliegerard/neurosky-drone",
@@ -14020,19 +13997,6 @@ module.exports = [
 					"drone",
 					"Neurosky",
 					"Node.js"
-				]
-			},
-			{
-				"id": "star-wars",
-				"title": "Star Wars",
-				"url": "http://charliegerard.github.io/starwars/",
-				"image": "./images/starwars.png",
-				"description": "Simple Star Wars opening crawl.",
-				"tags": [
-					"web",
-					"JavaScript",
-					"HTML",
-					"CSS"
 				]
 			},
 			{
@@ -14094,19 +14058,6 @@ module.exports = [
 					"sphero",
 					"leap motion",
 					"Node.js"
-				]
-			},
-			{
-				"id": "dancing-cats",
-				"title": "DancingCats",
-				"url": "http://charliegerard.github.io/dancingcats",
-				"image": "./images/dancingcats.png",
-				"description": "All the cats!",
-				"tags": [
-					"web",
-					"HTML/CSS",
-					"JS",
-					"cats"
 				]
 			},
 			{

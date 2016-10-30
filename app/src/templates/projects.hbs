@@ -1,10 +1,18 @@
 <div id="projects-container">
   <h2>Projects</h2>
-  {{# each projects}}
-    <a href="{{this.attributes.url}}" target="_blank">{{ this.attributes.title }}</a>
-    <img src="{{this.attributes.image}}" style="width: 100px" alt="" />
+
+    <a href="{{projects.attributes.url}}" target="_blank">{{ projects.attributes.title }}</a>
+    <img src="{{projects.attributes.image}}" style="width: 100px" alt="" />
     <p>
-      {{this.attributes.description}}
+      {{projects.attributes.description}}
     </p>
-  {{/each}}
+
+  <div id="next">
+    Next
+  </div>
+
+  <div id="previous">
+    Previous
+  </div>
+
 </div>

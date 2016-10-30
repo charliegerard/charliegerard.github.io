@@ -10,14 +10,6 @@
         "tags": ["web", "JavaScript"]
       },
       {
-        "id": "spectrm",
-        "title": "Spectrm",
-        "url": "http://spectrm.herokuapp.com/",
-        "image": "./images/spectrm-screen.png",
-        "description": "Music Visualizer with built-in song or microphone",
-        "tags": ["web", "Three.js", "Web Audio API", "Spotify API"]
-      },
-      {
         "id": "sphero-myo-armband",
         "title": "Sphero & Myo armband",
         "url": "https://github.com/charliegerard/myo_sphero",
@@ -34,36 +26,12 @@
         "tags": ["hardware", "Emotiv Epoc", "Node.js"]
       },
       {
-        "id": "loople",
-        "title": "Loople",
-        "url": "http://loople.herokuapp.com/",
-        "image": "./images/loople-screen.png",
-        "description": "Music composer. Press any key to make a sound.",
-        "tags": ["web", "JavaScript", "Web Audio API"]
-      },
-      {
-        "id": "brainwaves-visualizer",
-        "title": "Brainwaves Visualizer",
-        "url": "https://github.com/charliegerard/neurosky-brainwaves-visualizer",
-        "image": "./images/neurosky-visualizer.png",
-        "description": "WIP - A visualizer to be used with the Neurosky brain sensor.",
-        "tags": ["web", "hardware", "d3.js", "Neurosky"]
-      },
-      {
         "id": "drone-neurosky",
         "title": "Drone & Neurosky",
         "url": "https://github.com/charliegerard/neurosky-drone",
         "image": "./images/drone_neurosky.png",
         "description": "Control the Parrot AR Drone with your mind using the Neurosky brain sensor",
         "tags": ["hardware", "drone", "Neurosky", "Node.js"]
-      },
-      {
-        "id": "star-wars",
-        "title": "Star Wars",
-        "url": "http://charliegerard.github.io/starwars/",
-        "image": "./images/starwars.png",
-        "description": "Simple Star Wars opening crawl.",
-        "tags": ["web", "JavaScript", "HTML", "CSS"]
       },
       {
         "id": "perspective",
@@ -104,14 +72,6 @@
         "image": "./images/sphero_leap.png",
         "description": "Control the Sphero with your hands using the Leap motion controller",
         "tags": ["hardware", "sphero", "leap motion", "Node.js"]
-      },
-      {
-        "id": "dancing-cats",
-        "title": "DancingCats",
-        "url": "http://charliegerard.github.io/dancingcats",
-        "image": "./images/dancingcats.png",
-        "description": "All the cats!",
-        "tags": ["web", "HTML/CSS", "JS", "cats"]
       },
       {
         "id": "drone-myo-armband",
