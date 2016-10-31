@@ -1,18 +1,13 @@
 <div id="projects-container">
   <h2>Projects</h2>
+    <div class="project-block">
+      <a href="{{projects.attributes.url}}" target="_blank">{{ projects.attributes.title }}</a>
+      <img src="{{projects.attributes.image}}" alt="" />
+      <p>
+        {{projects.attributes.description}}
+      </p>
+    </div>
 
-    <a href="{{projects.attributes.url}}" target="_blank">{{ projects.attributes.title }}</a>
-    <img src="{{projects.attributes.image}}" style="width: 100px" alt="" />
-    <p>
-      {{projects.attributes.description}}
-    </p>
-
-  <div id="next">
-    Next
-  </div>
-
-  <div id="previous">
-    Previous
-  </div>
-
+      <div id="next">[n]</div>
+      <div id="previous">[p]</div>
 </div>

@@ -16,4 +16,53 @@
   h2{
     text-align: center;
   }
+
+  .project-block{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 6em;
+
+    img{
+      width: 100%;
+    }
+
+    a{
+      position: absolute;
+      z-index: 10;
+      color: lightgrey;
+      font-weight: 600;
+      font-size: 40px;
+      left: -50px;
+      top: 40px;
+    }
+
+    p{
+      position: absolute;
+      left: -40px;
+      top: 80px;
+      color: lightgrey;
+    }
+  }
+
+  #next{
+    font-size: 12px;
+    position: absolute;
+    top: 52%;
+    right: 4em;
+  }
+
+  #next:hover, #previous:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  #previous{
+    position: absolute;
+    font-size: 12px;
+    top: 52%;
+    left: 4em;
+  }
+
 }
