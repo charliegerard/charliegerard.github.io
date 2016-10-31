@@ -26,6 +26,8 @@
 
     img{
       width: 100%;
+      box-shadow: 2px 2px 10px lightgrey;
+      animation: slideshow 1.5s;
     }
 
     a{
@@ -36,6 +38,7 @@
       font-size: 40px;
       left: -50px;
       top: 40px;
+      animation: titleSlide 2.5s;
     }
 
     p{
@@ -43,6 +46,9 @@
       left: -40px;
       top: 80px;
       color: lightgrey;
+      animation: titleSlide 2.5s;
+      font-weight: 200;
+      font-size: 15px;
     }
   }
 
@@ -64,5 +70,28 @@
     top: 52%;
     left: 4em;
   }
+}
 
+@keyframes slideshow {
+  from{
+    margin-left: 30%;
+    opacity: 0;
+  }
+
+  to{
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes titleSlide {
+  from{
+    margin-left: 20%;
+    opacity: 0;
+  }
+
+  to{
+    margin-left: 0%;
+    opacity: 1;
+  }
 }

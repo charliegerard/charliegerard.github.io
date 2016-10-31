@@ -3,7 +3,7 @@
     "web": [
       {
         "id": "browser-pong",
-        "title": "Browser Pong",
+        "title": "BROWSER PONG",
         "url": "http://charliegerard.github.io/browser-pong",
         "image": "./images/browser-pong.png",
         "description": "Pong game with browser windows",
@@ -11,7 +11,7 @@
       },
       {
         "id": "sphero-myo-armband",
-        "title": "Sphero & Myo armband",
+        "title": "GESTURE CONTROLLED SPHERO",
         "url": "https://github.com/charliegerard/myo_sphero",
         "image": "./images/sphero_myo.png",
         "description": "Control the Sphero with your arm using the Myo armband",
