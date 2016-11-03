@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	width: 100%;
 	// overflow-y: hidden;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	background: #f3f1f1;
 }
 
@@ -28,6 +28,7 @@ body{
 	margin: 1.5em auto;
 	min-height: 700px;
 	background: white;
+	overflow-y: scroll;
 }
 
 #outer-container #navbar{
@@ -37,6 +38,7 @@ body{
 	margin-top: 20px;
 	position: relative;
 	float: right;
+	z-index: 20;
 }
 
 // #navbar .link:nth-of-type(1){
@@ -253,6 +255,7 @@ body{
 	margin-top: 20px;
 	margin-left: 20px;
 	width: 100px;
+	z-index: 20;
 	// letter-spacing: 4px;
 }
 
