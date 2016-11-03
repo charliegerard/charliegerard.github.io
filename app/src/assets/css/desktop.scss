@@ -3,6 +3,7 @@ body{
 	width: 100%;
 	// overflow-y: hidden;
 	overflow-y: scroll;
+	background: #f3f1f1;
 }
 
 #background-3d{
@@ -21,11 +22,12 @@ body{
 
 #outer-container{
 	width: 95%;
-	border-top: 3px solid rgb(26, 25, 169);
-	border-right: 3px solid rgb(26, 25, 169);
-	border-left: 3px solid rgb(26, 25, 169);
+	// border-top: 3px solid rgb(26, 25, 169);
+	// border-right: 3px solid rgb(26, 25, 169);
+	// border-left: 3px solid rgb(26, 25, 169);
 	margin: 1.5em auto;
 	min-height: 700px;
+	background: white;
 }
 
 #outer-container #navbar{
@@ -91,7 +93,8 @@ body{
 
 #outer-container #navbar a{
 	// font-family: 'Source Code Pro';
-	font-size: 12px;
+	font-family: 'Playfair Display', serif;
+	font-size: 10px;
 	font-weight: 400;
 	color: rgb(255, 28, 0);
 	margin-right: 10px;

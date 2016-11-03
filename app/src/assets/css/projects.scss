@@ -15,10 +15,13 @@
 
   h2{
     text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #2d307a;
   }
 
   .project-block{
-    width: 60%;
+    // width: 60%;
+    width: 75%;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -30,21 +33,43 @@
       animation: slideshow 1.5s;
     }
 
-    a{
+    h3{
       position: absolute;
       z-index: 10;
       color: lightgrey;
       font-weight: 600;
       font-size: 40px;
       left: -50px;
-      top: 40px;
+      bottom: 100px;
       animation: titleSlide 2.5s;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .project-buttons{
+      animation: titleSlide 2.5s;
+      position: absolute;
+      bottom: 60px;
+      left: 20px;
+
+      .visit-button{
+        display: inline-block;
+        // width: 100px;
+        border: 1px solid white;
+        // position: absolute;
+        color: white;
+        font-style: italic;
+        padding: 0.5em 1em;
+        margin-right: 10px;
+        font-weight: 200;
+      }
     }
 
     p{
       position: absolute;
       left: -40px;
-      top: 80px;
+      top: 8em;
       color: lightgrey;
       animation: titleSlide 2.5s;
       font-weight: 200;
@@ -70,7 +95,65 @@
     top: 52%;
     left: 4em;
   }
+
+  p.svg{
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    color: #2d307a;
+    margin-top: 20px;
+
+    svg{
+      width: 14px;
+      display: block;
+      margin: 10px auto;
+      -webkit-animation: bounce-arrow 2s infinite ease-in-out;
+      -moz-animation:    bounce-arrow 2s infinite ease-in-out;
+      -o-animation:      bounce-arrow 2s infinite ease-in-out;
+      animation:         bounce-arrow 2s infinite ease-in-out;
+    }
+  }
 }
+
+
+@-webkit-keyframes bounce-arrow {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+@-moz-keyframes bounce-arrow {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounce-arrow {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
 
 @keyframes slideshow {
   from{

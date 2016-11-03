@@ -1,13 +1,35 @@
 <div id="projects-container">
-  <h2>Projects</h2>
+  <h2>Work</h2>
     <div class="project-block">
-      <a href="{{projects.attributes.url}}" target="_blank">{{ projects.attributes.title }}</a>
-      <img src="{{projects.attributes.image}}" alt="" />
-      <p>
-        {{projects.attributes.description}}
-      </p>
-    </div>
+      <h3>{{ projects.attributes.title }}</h3>
+      <div class="project-buttons">
+        <a href="{{projects.attributes.url}}" target="_blank">
+          <div class="visit-button">
+          VISIT
+          </div>
+        </a>
+        <a href="{{projects.attributes.url}}" target="_blank">
+          <div class="visit-button">
+            CASE STUDY
+          </div>
+        </a>
+      </div>
 
+      <img src="{{projects.attributes.image}}" alt="" />
+      <!-- <p>
+        {{projects.attributes.description}}
+      </p> -->
+    </div>
       <div id="next">[n]</div>
       <div id="previous">[p]</div>
+
+      <p class="svg">
+        scroll
+        <svg version="1.1" id="svg-arrow-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 24" style="enable-background:new 0 0 22 24;" xml:space="preserve">
+          <polygon style="fill:#000000;" points="20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24
+                22,13.004 "></polygon>
+        </svg>
+      </p>
+<div id="cover"></div>
+
 </div>
