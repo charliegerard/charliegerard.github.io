@@ -39,6 +39,8 @@
       <h4>Concept</h4>
       <p>{{ projects.attributes.projectDescription.concept }}</p>
 
+      <img src="{{projects.attributes.projectDescription.images.0.url}}" alt="" />
+
       <h4>Technology</h4>
       {{#each projects.attributes.projectDescription.technology}}
           <p>
@@ -46,9 +48,9 @@
           </p>
       {{/each}}
 
-      <img src="{{projects.attributes.projectDescription.images.0.url}}" alt="" />
-
-      <img src="{{projects.attributes.projectDescription.images.1.url}}" alt="" />
+      {{#if projects.attributes.projectDescription.images.1.url }}
+        <img src="{{projects.attributes.projectDescription.images.1.url}}" alt="" />
+      {{/if}}
 
       <p>
         <a href="{{projects.attributes.projectDescription.link}}">Link</a>

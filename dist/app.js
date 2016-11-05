@@ -14658,8 +14658,14 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
     return "          <p>\n            "
     + container.escapeExpression(container.lambda(depth0, depth0))
     + "\n          </p>\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "        <img src=\""
+    + container.escapeExpression(container.lambda(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.images : stack1)) != null ? stack1["1"] : stack1)) != null ? stack1.url : stack1), depth0))
+    + "\" alt=\"\" />\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : {};
 
   return "<div id=\"projects-container\">\n  <h2>Work</h2>\n  <!-- <div id=\"test-container\"></div> -->\n    <div id=\"wipe-left\"></div>\n    <div class=\"project-block\">\n      <h3>"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.title : stack1), depth0))
@@ -14673,13 +14679,13 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
     + alias2(alias1(((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.date : stack1), depth0))
     + "\n      </p>\n\n      <h4>Concept</h4>\n      <p>"
     + alias2(alias1(((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.concept : stack1), depth0))
-    + "</p>\n\n      <h4>Technology</h4>\n"
-    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.technology : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\n      <img src=\""
+    + "</p>\n\n      <img src=\""
     + alias2(alias1(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.images : stack1)) != null ? stack1["0"] : stack1)) != null ? stack1.url : stack1), depth0))
-    + "\" alt=\"\" />\n\n      <img src=\""
-    + alias2(alias1(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.images : stack1)) != null ? stack1["1"] : stack1)) != null ? stack1.url : stack1), depth0))
-    + "\" alt=\"\" />\n\n      <p>\n        <a href=\""
+    + "\" alt=\"\" />\n\n      <h4>Technology</h4>\n"
+    + ((stack1 = helpers.each.call(alias3,((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.technology : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = helpers["if"].call(alias3,((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.images : stack1)) != null ? stack1["1"] : stack1)) != null ? stack1.url : stack1),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n      <p>\n        <a href=\""
     + alias2(alias1(((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.link : stack1), depth0))
     + "\">Link</a>\n      </p>\n    </div>\n</div>\n";
 },"useData":true});
@@ -15637,7 +15643,7 @@ module.exports = [
 				"id": "sphero-myo-armband",
 				"title": "GESTURE CONTROLLED SPHERO",
 				"url": "https://github.com/charliegerard/myo_sphero",
-				"image": "./images/sphero_myo.png",
+				"image": "./images/myo-sphero2.png",
 				"description": "Control the Sphero with your arm using the Myo armband",
 				"tags": [
 					"hardware",
@@ -15646,7 +15652,15 @@ module.exports = [
 					"Node.js"
 				],
 				"projectDescription": {
-					"concept": "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+					"date": "November 2014",
+					"concept": "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+					"images": [
+						{
+							"url": "./images/myo-sphero3.png"
+						}
+					],
+					"technology": [],
+					"link": "https://github.com/charliegerard/myo_sphero"
 				}
 			},
 			{
@@ -15795,6 +15809,21 @@ module.exports = [
 				"tags": [
 					"hardware",
 					"Raspberry pi"
+				],
+				"projectDescription": {
+					"concept": "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+				}
+			},
+			{
+				"id": "touch-poster",
+				"title": "Touch poster",
+				"url": "",
+				"image": "",
+				"description": "WIP - Prototype of touch mirror",
+				"tags": [
+					"hardware",
+					"bare conductive",
+					"music"
 				],
 				"projectDescription": {
 					"concept": "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"

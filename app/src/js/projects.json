@@ -22,13 +22,28 @@
         "id": "sphero-myo-armband",
         "title": "GESTURE CONTROLLED SPHERO",
         "url": "https://github.com/charliegerard/myo_sphero",
-        "image": "./images/sphero_myo.png",
+        "image": "./images/myo-sphero2.png",
         "description": "Control the Sphero with your arm using the Myo armband",
         "tags": ["hardware", "Myo armband", "Sphero", "Node.js"],
         "projectDescription": {
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+            "date": "November 2014",
+            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+            "images": [{"url": "./images/myo-sphero3.png"}],
+            "technology": [],
+            "link": "https://github.com/charliegerard/myo_sphero"
         }
       },
+      {
+        "id": "video-code",
+        "title": "Code in the Park",
+        "url": "",
+        "image": "",
+        "description": "WIP - Prototype of touch mirror",
+        "tags": ["creative coding", "Three.js"],
+        "projectDescription": {
+            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+        }
+      }
       {
         "id": "emotiv-framework",
         "title": "Epoc.js",
@@ -55,11 +70,15 @@
         "id": "perspective",
         "title": "Perspective",
         "url": "https://charliegerard.github.io/Perspective/",
-        "image": "./images/perspective.png",
+        "image": "./images/perspective2.png",
         "description": "Prototype using head-tracking technology to explore a virtual world in the browser.",
         "tags": ["web", "Three.js", "Face tracking"],
         "projectDescription": {
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+          "date": "July 2016",
+          "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+          "images": [{"url": "./images/perspective2.png"}, {"url": "./images/perspective.gif"}],
+          "technology": [],
+          "link": "https://github.com/charliegerard/Perspective"
         }
       },
       {
@@ -128,6 +147,17 @@
         "image": "",
         "description": "WIP - Prototype of touch mirror",
         "tags": ["hardware", "Raspberry pi"],
+        "projectDescription": {
+            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+        }
+      },
+      {
+        "id": "touch-poster",
+        "title": "Touch poster",
+        "url": "",
+        "image": "",
+        "description": "WIP - Prototype of touch mirror",
+        "tags": ["hardware", "bare conductive", "music"],
         "projectDescription": {
             "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
         }
