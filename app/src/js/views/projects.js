@@ -2,6 +2,7 @@
 
 var Backbone = require('backbone');
 import ProjectCollection from '../models/projectCollection';
+var Handlebars = require('handlebars');
 var projectDisplayed = 0;
 
 var Projects = Backbone.View.extend({
@@ -152,7 +153,9 @@ var Projects = Backbone.View.extend({
         lastScrollTop = scroll;
       });
 
-      this.$el.html(this.template({projects: this.collection.models[projectDisplayed]}));
+      var template = Handlebars.compile(this.template({projects: this.collection.models[projectDisplayed]}));
+
+      this.$el.html(template);
       return this;
     }
 });

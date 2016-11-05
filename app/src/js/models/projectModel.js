@@ -6,7 +6,8 @@ class Project extends Model {
       title: '',
       image: '',
       url: '',
-      description: ''
+      description: '',
+      projectDescription: ''
     }
   }
 }
