@@ -37,13 +37,14 @@
         "id": "video-code",
         "title": "Code in the Park",
         "url": "",
-        "image": "",
+        "image": "./images/code-park2.JPG",
         "description": "WIP - Prototype of touch mirror",
         "tags": ["creative coding", "Three.js"],
         "projectDescription": {
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+            "images": [{"url":"./images/code-park.JPG"}]
         }
-      }
+      },
       {
         "id": "emotiv-framework",
         "title": "Epoc.js",
@@ -70,7 +71,7 @@
         "id": "perspective",
         "title": "Perspective",
         "url": "https://charliegerard.github.io/Perspective/",
-        "image": "./images/perspective2.png",
+        "image": "./images/perspective.png",
         "description": "Prototype using head-tracking technology to explore a virtual world in the browser.",
         "tags": ["web", "Three.js", "Face tracking"],
         "projectDescription": {
@@ -100,7 +101,9 @@
         "description": "First prototype of WebVR to be used in a Google Cardboard",
         "tags": ["web", "Three.js"],
         "projectDescription": {
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+          "date": "",
+            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+            "images": [{"url": "./images/threejs-vr.gif"}]
         }
       },
       {
@@ -155,11 +158,13 @@
         "id": "touch-poster",
         "title": "Touch poster",
         "url": "",
-        "image": "",
+        "image": "./images/touch-poster.png",
         "description": "WIP - Prototype of touch mirror",
         "tags": ["hardware", "bare conductive", "music"],
         "projectDescription": {
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
+            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+            "images": [{"url": "./images/touch-poster.JPG"}],
+            "link": "https://www.youtube.com/watch?v=Ks8xG4rcNxE"
         }
       }
     ]
