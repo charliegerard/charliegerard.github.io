@@ -44,6 +44,7 @@
             "date": "June 2016",
             "concept" : "For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art.",
             "images": [{"url":"./images/code-park2.png"}],
+            "video": "https://player.vimeo.com/video/190437916",
             "technology": "The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."
         }
       },

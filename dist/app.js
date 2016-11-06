@@ -19320,6 +19320,7 @@ module.exports = [
 							"url": "./images/code-park2.png"
 						}
 					],
+					"video": "https://player.vimeo.com/video/190437916",
 					"technology": "The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."
 				}
 			},
