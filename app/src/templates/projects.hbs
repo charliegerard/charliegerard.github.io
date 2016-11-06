@@ -10,13 +10,12 @@
           VISIT
           </div>
         </a>
-        <a href="{{projects.attributes.url}}" target="_blank">
+        <!-- <a href="{{projects.attributes.url}}" target="_blank">
           <div class="visit-button">
             CASE STUDY
           </div>
-        </a>
+        </a> -->
       </div>
-
       <img src="{{projects.attributes.image}}" alt="" />
     </div>
     <div id="next">[n]</div>
@@ -50,6 +49,10 @@
 
       {{#if projects.attributes.projectDescription.images.1.url }}
         <img src="{{projects.attributes.projectDescription.images.1.url}}" alt="" />
+      {{/if}}
+
+      {{#if projects.attributes.projectDescription.video }}
+        <iframe width="560" height="315" src="{{projects.attributes.projectDescription.video}}" frameborder="0" allowfullscreen></iframe>
       {{/if}}
 
       <p>

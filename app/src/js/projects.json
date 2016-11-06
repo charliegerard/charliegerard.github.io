@@ -37,12 +37,14 @@
         "id": "video-code",
         "title": "Code in the Park",
         "url": "",
-        "image": "./images/code-park2.JPG",
-        "description": "WIP - Prototype of touch mirror",
+        "image": "./images/code-park.png",
+        "description": "Intro video for the Code in the Park event.",
         "tags": ["creative coding", "Three.js"],
         "projectDescription": {
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
-            "images": [{"url":"./images/code-park.JPG"}]
+            "date": "June 2016",
+            "concept" : "For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art.",
+            "images": [{"url":"./images/code-park2.png"}],
+            "technology": "The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."
         }
       },
       {
@@ -164,6 +166,7 @@
         "projectDescription": {
             "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
             "images": [{"url": "./images/touch-poster.JPG"}],
+            "video": "https://www.youtube.com/embed/Ks8xG4rcNxE",
             "link": "https://www.youtube.com/watch?v=Ks8xG4rcNxE"
         }
       }

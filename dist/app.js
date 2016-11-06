@@ -14950,6 +14950,12 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
   return "        <img src=\""
     + container.escapeExpression(container.lambda(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.images : stack1)) != null ? stack1["1"] : stack1)) != null ? stack1.url : stack1), depth0))
     + "\" alt=\"\" />\n";
+},"5":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "        <iframe width=\"560\" height=\"315\" src=\""
+    + container.escapeExpression(container.lambda(((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.video : stack1), depth0))
+    + "\" frameborder=\"0\" allowfullscreen></iframe>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : {};
 
@@ -14957,9 +14963,9 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.title : stack1), depth0))
     + "</h3>\n      <div class=\"project-buttons\">\n        <a href=\""
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.url : stack1), depth0))
-    + "\" target=\"_blank\">\n          <div class=\"visit-button\">\n          VISIT\n          </div>\n        </a>\n        <a href=\""
+    + "\" target=\"_blank\">\n          <div class=\"visit-button\">\n          VISIT\n          </div>\n        </a>\n        <!-- <a href=\""
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.url : stack1), depth0))
-    + "\" target=\"_blank\">\n          <div class=\"visit-button\">\n            CASE STUDY\n          </div>\n        </a>\n      </div>\n\n      <img src=\""
+    + "\" target=\"_blank\">\n          <div class=\"visit-button\">\n            CASE STUDY\n          </div>\n        </a> -->\n      </div>\n      <img src=\""
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.image : stack1), depth0))
     + "\" alt=\"\" />\n    </div>\n    <div id=\"next\">[n]</div>\n    <div id=\"previous\">[p]</div>\n\n    <p class=\"svg\">\n      scroll\n      <svg version=\"1.1\" id=\"svg-arrow-down\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 22 24\" style=\"enable-background:new 0 0 22 24;\" xml:space=\"preserve\">\n        <polygon style=\"fill:#000000;\" points=\"20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24\n              22,13.004 \"></polygon>\n      </svg>\n    </p>\n\n    <div class=\"project-details\">\n      <h4>Date</h4>\n      <p>\n        "
     + alias2(alias1(((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.date : stack1), depth0))
@@ -14971,6 +14977,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
     + ((stack1 = helpers.each.call(alias3,((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.technology : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\n"
     + ((stack1 = helpers["if"].call(alias3,((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.images : stack1)) != null ? stack1["1"] : stack1)) != null ? stack1.url : stack1),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = helpers["if"].call(alias3,((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.video : stack1),{"name":"if","hash":{},"fn":container.program(5, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\n      <p>\n        <a href=\""
     + alias2(alias1(((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.link : stack1), depth0))
     + "\">Link</a>\n      </p>\n    </div>\n</div>\n";
@@ -19298,19 +19306,21 @@ module.exports = [
 				"id": "video-code",
 				"title": "Code in the Park",
 				"url": "",
-				"image": "./images/code-park2.JPG",
-				"description": "WIP - Prototype of touch mirror",
+				"image": "./images/code-park.png",
+				"description": "Intro video for the Code in the Park event.",
 				"tags": [
 					"creative coding",
 					"Three.js"
 				],
 				"projectDescription": {
-					"concept": "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+					"date": "June 2016",
+					"concept": "For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art.",
 					"images": [
 						{
-							"url": "./images/code-park.JPG"
+							"url": "./images/code-park2.png"
 						}
-					]
+					],
+					"technology": "The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."
 				}
 			},
 			{
@@ -19499,6 +19509,7 @@ module.exports = [
 							"url": "./images/touch-poster.JPG"
 						}
 					],
+					"video": "https://www.youtube.com/embed/Ks8xG4rcNxE",
 					"link": "https://www.youtube.com/watch?v=Ks8xG4rcNxE"
 				}
 			}
