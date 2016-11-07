@@ -43,6 +43,8 @@ var Projects = Backbone.View.extend({
       //     '-webkit-mask-position': maskPosition + '% 50%'
       //   })
       // // });
+      var descriptionBlock = document.getElementsByClassName('description')[0];
+      descriptionBlock.style.display = 'block'
 
       var MOUSE_OVER = false;
       $('body').bind('mousewheel', function(e){

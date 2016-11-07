@@ -6,9 +6,11 @@ var About = Backbone.View.extend({
     initialize: function()
     {
     },
-    render : function()
-    {
-        this.$el.html(template);
+    render : function(){
+      var descriptionBlock = document.getElementsByClassName('description')[0];
+      descriptionBlock.style.display = 'block'
+
+      this.$el.html(template);
     }
 });
 
