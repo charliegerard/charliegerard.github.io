@@ -11,7 +11,7 @@
         "projectDescription": {
             "date": "August 2016",
             "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment to understand the mechanisms behind it. This game takes the concept of the Pong game out of the (browser) box by allowing the user to play using browser windows as paddles. The experience is a single player game where the user plays against the computer.",
-            "images": [],
+            "images": [{"url": "./images/browserpong.gif"}],
             "technology": [
               "This game was created using HTML, CSS and JavaScript without any specific framework and is a desktop only experience.",
               "An additional feature could allow 2 users to play remotely using web sockets."
@@ -52,7 +52,7 @@
         "id": "emotiv-framework",
         "title": "Epoc.js",
         "url": "https://github.com/charliegerard/Epoc.js",
-        "image": "./images/EPOC_Emotiv.png",
+        "image": "./images/Emotiv_1.jpg",
         "description": "WIP - A framework to use the Emotiv brain sensor in Node.js",
         "tags": ["hardware", "Emotiv Epoc", "Node.js"],
         "projectDescription": {
@@ -142,17 +142,6 @@
         "image": "./images/drone_myo.png",
         "description": "Control the Parrot AR Drone with your arm using the Myo armband",
         "tags": ["hardware", "drone", "Myo armband", "Node.js"],
-        "projectDescription": {
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
-        }
-      },
-      {
-        "id": "touch-mirror",
-        "title": "Touch mirror",
-        "url": "https://github.com/charliegerard/leap-ui",
-        "image": "",
-        "description": "WIP - Prototype of touch mirror",
-        "tags": ["hardware", "Raspberry pi"],
         "projectDescription": {
             "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment"
         }

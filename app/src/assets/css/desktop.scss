@@ -3,7 +3,30 @@ body{
 	width: 100%;
 	// overflow-y: hidden;
 	overflow-y: hidden;
+	// background: #f3f1f1;
+}
+
+#app-container{
 	background: #f3f1f1;
+	display: block;
+	width: 0;
+	position: absolute;
+	height: 0;
+	animation: grow 0.5s;
+	transform: translate(-50%, -50%);
+	animation-timing-function:linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 1;
+	top: 50%;
+ 	left: 50%;
+}
+
+
+@keyframes grow {
+	to{
+		width: 100%;
+		height: 100%;
+	}
 }
 
 #background-3d{
@@ -21,14 +44,32 @@ body{
 }
 
 #outer-container{
-	width: 95%;
+	width: 0;
 	// border-top: 3px solid rgb(26, 25, 169);
 	// border-right: 3px solid rgb(26, 25, 169);
 	// border-left: 3px solid rgb(26, 25, 169);
-	margin: 1.5em auto;
-	min-height: 700px;
+	min-height: 0;
 	background: white;
 	overflow-y: scroll;
+	width: 0;
+	position: absolute;
+	height: 0;
+	animation: growOuterContainer 0.5s;
+	transform: translate(-50%, -50%);
+	animation-delay: 0.5s;
+	animation-timing-function:linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 1;
+	top: 50%;
+	left: 50%;
+}
+
+@keyframes growOuterContainer {
+	to{
+		width: 95%;
+		min-height: 95%;
+	}
+
 }
 
 #outer-container #navbar{
@@ -257,6 +298,9 @@ body{
 	width: 100px;
 	z-index: 20;
 	// letter-spacing: 4px;
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in 1 forwards;
+	animation-delay: 1.5s;
 }
 
 #outer-container .description h1{
