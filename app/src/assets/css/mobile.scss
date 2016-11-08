@@ -1,84 +1,127 @@
 @media only screen and (max-width : 480px) {
-  body{
-    overflow: hidden;
+//   body{
+//     overflow: hidden;
+//   }
+
+  #outer-container{
+    .description{
+      width: 130px;
+    }
   }
 
-  #container .description h1{
-    line-height: 1em;
-    display: inline;
-    font-size: 20px;
-  }
+  #projects-container{
+    .project-block{
+      width: 90%;
+      margin-top: 5em;
 
-  #background-3d{
-  	position: fixed;
-  	opacity: 0.3;
-  }
+      h3{
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 2em;
+      }
 
-  #background-3d iframe{
-  	border: none;
-  }
+      .project-buttons{
+        left: 0;
+        bottom: -50px;
 
-  #container{
-    border: 5px solid rgb(26, 25, 169);
-  }
+        .visit-button{
+          color: black;
+          border: 1px solid black;
+        }
+      }
+    }
 
-  #container #navbar{
-    margin-right: 5px;
-  }
+    p.svg, #wipe-left{
+      display: none;
+    }
 
-  #container #navbar a{
-    font-size: 12px;
-    margin-right: 7px;
-  }
 
-  #container .description h3{
-    font-size: 15px;
-    margin-top: 0.5em;
+    .project-details{
+      width: 90%;
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-top: 4em;
+    }
   }
-
-  #about-block{
-    margin: 0 auto;
-    display: block;
-  }
-
-  #about-block .content{
-    width: 90%;
-    margin: 0 auto;
-    display: block;
-  }
-
-  #about-block img{
-    margin-bottom: 2em;
-    margin-top: 2em;
-    margin-left: 1em;
-    width: 10em;
-  }
-
-  #center{
-    max-height: 75%;
-    margin-top: 15%;
-    width: 90%
-  }
-
-  #center #projects-block, #center #about-block, #center #skills-block{
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-
-  #center #projects-block .project{
-    width: 100%;
-    display: block;
-    margin: 5px auto;
-  }
-
-  #container .footer ul li{
-    font-size: 12px;
-  }
-
-  #container .footer{
-    bottom: 0;
-    width: 120%;
-  }
-
+//
+//   #container .description h1{
+//     line-height: 1em;
+//     display: inline;
+//     font-size: 20px;
+//   }
+//
+//   #background-3d{
+//   	position: fixed;
+//   	opacity: 0.3;
+//   }
+//
+//   #background-3d iframe{
+//   	border: none;
+//   }
+//
+//   #container{
+//     border: 5px solid rgb(26, 25, 169);
+//   }
+//
+//   #container #navbar{
+//     margin-right: 5px;
+//   }
+//
+//   #container #navbar a{
+//     font-size: 12px;
+//     margin-right: 7px;
+//   }
+//
+//   #container .description h3{
+//     font-size: 15px;
+//     margin-top: 0.5em;
+//   }
+//
+//   #about-block{
+//     margin: 0 auto;
+//     display: block;
+//   }
+//
+//   #about-block .content{
+//     width: 90%;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//
+//   #about-block img{
+//     margin-bottom: 2em;
+//     margin-top: 2em;
+//     margin-left: 1em;
+//     width: 10em;
+//   }
+//
+//   #center{
+//     max-height: 75%;
+//     margin-top: 15%;
+//     width: 90%
+//   }
+//
+//   #center #projects-block, #center #about-block, #center #skills-block{
+//     width: 100%;
+//     display: block;
+//     margin: 0 auto;
+//   }
+//
+//   #center #projects-block .project{
+//     width: 100%;
+//     display: block;
+//     margin: 5px auto;
+//   }
+//
+//   #container .footer ul li{
+//     font-size: 12px;
+//   }
+//
+//   #container .footer{
+//     bottom: 0;
+//     width: 120%;
+//   }
+//
 }

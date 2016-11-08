@@ -52,7 +52,7 @@
 /******/ 	__webpack_require__.p = "/images";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 41);
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -12456,11 +12456,11 @@ var _exception = __webpack_require__(2);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _helpers = __webpack_require__(23);
+var _helpers = __webpack_require__(22);
 
-var _decorators = __webpack_require__(21);
+var _decorators = __webpack_require__(20);
 
-var _logger = __webpack_require__(31);
+var _logger = __webpack_require__(30);
 
 var _logger2 = _interopRequireDefault(_logger);
 
@@ -14129,17 +14129,9 @@ module.exports = g;
 
 /***/ },
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-__webpack_require__(12);
+/***/ function(module, exports) {
 
 window.onload = function(){
-		var projectsShowing = false;
-		var projectsLoaded = false;
-		var skillsShowing = false;
-		var aboutShowing = true;
-		var contributionsShowing = false;
-
 		var navbar = document.getElementById('navbar');
 		var navbarLinks = navbar.getElementsByClassName('link');
 
@@ -14147,96 +14139,19 @@ window.onload = function(){
 			navbarLinks[i].className += ' navbar-link-animation';
 		}
 
-		// var projectsLink = document.getElementById('projects');
-		//
-		// projectsLink.onclick = function(event){
-		// 	event.preventDefault();
-		// 	var container = document.getElementById('outer-container');
-		// 	// container.className -= 'show';
-		// 	container.className += ' hide-up';
-		// }
-
-
-		var skillsLink = document.getElementById('skills');
-		var contributionsLink = document.getElementById('community');
-
-
-		function displayProjects(){
-
-			if(!projectsLoaded){
-				var getJSON = new Promise(function(resolve, reject){
-					loadJSON(function(response) {
-						actual_JSON = JSON.parse(response);
-						resolve(actual_JSON)
-					});
-				});
-
-				getJSON.then(function(res){
-					res[0].web.forEach(function(project){
-						projectsLoaded = true;
-						var projectLink = document.createElement('a');
-						projectLink.href = project.url;
-						projectLink.target = "_blank";
-
-						var projectDiv = document.createElement('div')
-						projectDiv.className = 'project';
-						projectDiv.style.backgroundImage = `url(${project.image})`;
-
-						if(mobilecheck()){
-							displayProjectsContent(projectDiv, project);
-							projectDiv.style.opacity = 1;
-						}
-
-						projectDiv.addEventListener("mouseenter",function(){
-							displayProjectsContent(projectDiv, project);
-						})
-						projectDiv.addEventListener("mouseleave",function(){
-							projectDiv.innerHTML = '';
-						})
-						projectLink.appendChild(projectDiv);
-						projectsBlock.appendChild(projectLink);
-					})
-				})
-			}
-
-
-			var displayProjectsContent = function(projectDiv, project){
-				var descriptionBlock = document.createElement('div');
-				descriptionBlock.className = "project-description";
-
-				var titleParagraph = document.createElement('h4');
-				titleParagraph.innerHTML = project.title;
-
-				var descriptionParagraph = document.createElement('p');
-				descriptionParagraph.innerHTML = project.description;
-				descriptionBlock.appendChild(titleParagraph);
-				descriptionBlock.appendChild(descriptionParagraph);
-
-				var tagsBlock = document.createElement('ul');
-				project.tags.forEach(function(tag){
-					var tagElement = document.createElement('li');
-					tagElement.innerHTML = tag;
-					tagsBlock.appendChild(tagElement)
-				})
-				descriptionBlock.appendChild(tagsBlock);
-
-				projectDiv.appendChild(descriptionBlock);
+		var containersIntroAnimation = function(){
+			if(!window.location.hash){
+				// $('#app-container')
+				// $('#outer-container');
+			} else {
+				// $('#app-container').removeAttr('id', 'app-container')
+				// $('#app-container').attr('id', 'app-container-no-intro');
+				// $('#outer-container').removeAttr('id', 'outer-container')
+				// $('#outer-container').attr('id', 'outer-container-no-intro');
 			}
 		}
 
-		function loadJSON(callback) {
-			 var xobj = new XMLHttpRequest();
-					 xobj.overrideMimeType("application/json");
-			 xobj.open('GET', 'projects.json', true);
-
-			 xobj.onreadystatechange = function () {
-				 if (xobj.readyState == 4 && xobj.status == "200") {
-					 // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-					callback(xobj.response)
-				 }
-			 };
-			 xobj.send(null);
-		}
+		containersIntroAnimation()
 
 		// The following function is horrible but I don't have time to refactor it :/
 		window.mobilecheck = function() {
@@ -14244,7 +14159,6 @@ window.onload = function(){
 		  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
 			return check;
 		}
-
 }
 
 
@@ -14256,13 +14170,13 @@ window.onload = function(){
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectModel__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_projectCollection__ = __webpack_require__(4);
 var Backbone = __webpack_require__(1);
-var Home = __webpack_require__(15);
-var About = __webpack_require__(13);
-var Contact = __webpack_require__(14);
-var projects = __webpack_require__(16);
+var Home = __webpack_require__(14);
+var About = __webpack_require__(12);
+var Contact = __webpack_require__(13);
+var projects = __webpack_require__(15);
 
 
-var projectsData = __webpack_require__(39);
+var projectsData = __webpack_require__(38);
 
 var Router = Backbone.Router.extend({
     routes: {
@@ -14310,10 +14224,10 @@ module.exports = router;
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(17);
+var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(40)(content, {});
+var update = __webpack_require__(39)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -14331,23 +14245,9 @@ if(false) {
 
 /***/ },
 /* 12 */
-/***/ function(module, exports) {
-
-// var portfolio = {
-//
-//   console.log('boo')
-// }
-//
-//
-//
-// export default portfolio;
-
-
-/***/ },
-/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-var template = __webpack_require__(36);
+var template = __webpack_require__(35);
 var Backbone = __webpack_require__(1);
 
 var About = Backbone.View.extend({
@@ -14367,10 +14267,10 @@ module.exports = About;
 
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-var template = __webpack_require__(37);
+var template = __webpack_require__(36);
 var Backbone = __webpack_require__(1);
 
 var Contact = Backbone.View.extend({
@@ -14388,10 +14288,10 @@ module.exports = Contact;
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-var template = __webpack_require__(38);
+var template = __webpack_require__(37);
 var Backbone = __webpack_require__(1);
 
 var Home = Backbone.View.extend({
@@ -14409,7 +14309,7 @@ module.exports = Home;
 
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14422,13 +14322,18 @@ var projectDisplayed = 0;
 
 var Projects = Backbone.View.extend({
     el: '#container',
-    template: __webpack_require__(19),
+    template: __webpack_require__(18),
     events: {
       'click #next': 'showNextProject',
       'click #previous': 'showPreviousProject'
     },
 
     initialize: function(){
+      window.mobilecheck = function() {
+        var check = false;
+        (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+        return check;
+      }
       _.bindAll(this, 'render');
     },
 
@@ -14470,105 +14375,106 @@ var Projects = Backbone.View.extend({
         }
       });
 
-      $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
-      $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
+      if(!window.mobilecheck()){
+        $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
+        $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
 
-      $('#outer-container').bind('mousewheel', function(e){
-        var e = window.event;
-        var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        if(delta > 0){
-          //go up
-          var width = parseInt($('#wipe-left').css('width'))
-          width-=10;
-          var newWidth = (width <= 0) ? 0 : width;
-          $('#wipe-left').css({
-            'width': newWidth + 'px'
-          })
-          //text
-          var position = parseInt($('.project-details').css('top'));
-          position+=10;
-          var paragraphHeight = parseInt($('.project-details').height());
-          var newPosition = (position >= window.innerHeight + 50) ? window.innerHeight + 50 : position
-          $('.project-details').css({
-            'top': newPosition + 'px'
-          })
-          //title
-          var titlePosition = parseInt($('.project-block h3').css('bottom'))
-          titlePosition-=2;
-          var newTitlePosition = (titlePosition <= 100) ? 100 : titlePosition;
-          var titlePositionLeft = parseInt($('.project-block h3').css('left'));
-          titlePositionLeft+=1;
-          var newTitleLeft = (titlePositionLeft >= -50) ? -50 : titlePositionLeft;
-          var titleSize = parseInt($('.project-block h3').css('font-size'));
-          titleSize+=1;
-          var newTitleSize = titleSize >= 40 ? 40 : titleSize;
-          $('.project-block h3').css({
-            'bottom': newTitlePosition + 'px',
-            'left': -50 + 'px',
-            'font-size': newTitleSize + 'px'
-          })
-        }else{
-          //go down
+        $('#outer-container').bind('mousewheel', function(e){
+          var e = window.event;
+          var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+          if(delta > 0){
+            //go up
+            var width = parseInt($('#wipe-left').css('width'))
+            width-=10;
+            var newWidth = (width <= 0) ? 0 : width;
+            $('#wipe-left').css({
+              'width': newWidth + 'px'
+            })
+            //text
+            var position = parseInt($('.project-details').css('top'));
+            position+=10;
+            var paragraphHeight = parseInt($('.project-details').height());
+            var newPosition = (position >= window.innerHeight + 50) ? window.innerHeight + 50 : position
+            $('.project-details').css({
+              'top': newPosition + 'px'
+            })
+            //title
+            var titlePosition = parseInt($('.project-block h3').css('bottom'))
+            titlePosition-=2;
+            var newTitlePosition = (titlePosition <= 100) ? 100 : titlePosition;
+            var titlePositionLeft = parseInt($('.project-block h3').css('left'));
+            titlePositionLeft+=1;
+            var newTitleLeft = (titlePositionLeft >= -50) ? -50 : titlePositionLeft;
+            var titleSize = parseInt($('.project-block h3').css('font-size'));
+            titleSize+=1;
+            var newTitleSize = titleSize >= 40 ? 40 : titleSize;
+            $('.project-block h3').css({
+              'bottom': newTitlePosition + 'px',
+              'left': -50 + 'px',
+              'font-size': newTitleSize + 'px'
+            })
+          }else{
+            //go down
 
-          // white background
-          var width = parseInt($('#wipe-left').css('width'));
-          var outerContainerWidth = parseInt($('#outer-container').css('width'));
-          width+=15;
-          var newWidth = (width >= outerContainerWidth) ? outerContainerWidth : width;
-          $('#wipe-left').css({
-            'width': newWidth + 'px'
-          })
+            // white background
+            var width = parseInt($('#wipe-left').css('width'));
+            var outerContainerWidth = parseInt($('#outer-container').css('width'));
+            width+=15;
+            var newWidth = (width >= outerContainerWidth) ? outerContainerWidth : width;
+            $('#wipe-left').css({
+              'width': newWidth + 'px'
+            })
 
-          //text
-          var position = parseInt($('.project-details').css('top'));
-          var textBottom = parseInt($('.project-details').css('bottom'));
-          position -= (textBottom > 100) ? 0 : 5;
-          $('.project-details').css({
-            'top': position + 'px'
-          })
+            //text
+            var position = parseInt($('.project-details').css('top'));
+            var textBottom = parseInt($('.project-details').css('bottom'));
+            position -= (textBottom > 100) ? 0 : 5;
+            $('.project-details').css({
+              'top': position + 'px'
+            })
 
-          //title
-          var titlePositionBottom = parseInt($('.project-block h3').css('bottom'));
-          titlePositionBottom+=2;
-          var titlePositionLeft = parseInt($('.project-block h3').css('left'));
-          titlePositionLeft-=1;
-          var newTitlePosition = (titlePositionBottom >= 325) ? 325 : titlePositionBottom;
-          var newTitleLeft = (titlePositionLeft <= -85) ? -85 : titlePositionLeft;
-          var titleSize = parseInt($('.project-block h3').css('font-size'));
-          titleSize-=0.5;
-          var newTitleSize = titleSize <= 15 ? 15 : titleSize;
-          $('.project-block h3').css({
-            'bottom': newTitlePosition + 'px',
-            'left': newTitleLeft + 'px',
-            'font-size': newTitleSize + 'px'
-          })
-        }
-      });
+            //title
+            var titlePositionBottom = parseInt($('.project-block h3').css('bottom'));
+            titlePositionBottom+=2;
+            var titlePositionLeft = parseInt($('.project-block h3').css('left'));
+            titlePositionLeft-=1;
+            var newTitlePosition = (titlePositionBottom >= 325) ? 325 : titlePositionBottom;
+            var newTitleLeft = (titlePositionLeft <= -85) ? -85 : titlePositionLeft;
+            var titleSize = parseInt($('.project-block h3').css('font-size'));
+            titleSize-=0.5;
+            var newTitleSize = titleSize <= 15 ? 15 : titleSize;
+            $('.project-block h3').css({
+              'bottom': newTitlePosition + 'px',
+              'left': newTitleLeft + 'px',
+              'font-size': newTitleSize + 'px'
+            })
+          }
+        });
 
 
-      var lastScrollTop = 0;
-      window.addEventListener('scroll', function(e) {
-        var step = ($('#wipe-left').height() - $(window).height()) / 22;
-        var scrollStep = parseInt($(window).scrollTop() / step);
-        var maskPosition = (100/22) * scrollStep;
+        var lastScrollTop = 0;
+        window.addEventListener('scroll', function(e) {
+          var step = ($('#wipe-left').height() - $(window).height()) / 22;
+          var scrollStep = parseInt($(window).scrollTop() / step);
+          var maskPosition = (100/22) * scrollStep;
 
-        var scroll = $(this).scrollTop();
-        if (scroll > lastScrollTop){
-          console.log(maskPosition)
-          // console.log('diw width', parseInt($('#wipe-left').css('width')))
-          var width = (parseInt($('#wipe-left').css('width')) >= $('#projects-container').css('width')) ? $('#projects-container').css('width') + 'px' : maskPosition + 'px'
-          console.log('width', width)
-          $('#wipe-left').css({
-            'width': width + 'px'
-          })
-        } else {
-          // var width = (parseInt($('#wipe-left').css('width')) >= window.innerWidth) ? $('#projects-container').css('width') : ($('#wipe-left').position().left - maskPosition) + 'px'
-          // $('#wipe-left').css({
-          //   'width': width
-          // })
-        }
-        lastScrollTop = scroll;
-      });
+          var scroll = $(this).scrollTop();
+          if (scroll > lastScrollTop){
+            var width = (parseInt($('#wipe-left').css('width')) >= $('#projects-container').css('width')) ? $('#projects-container').css('width') + 'px' : maskPosition + 'px'
+            $('#wipe-left').css({
+              'width': width + 'px'
+            })
+          } else {
+            // var width = (parseInt($('#wipe-left').css('width')) >= window.innerWidth) ? $('#projects-container').css('width') : ($('#wipe-left').position().left - maskPosition) + 'px'
+            // $('#wipe-left').css({
+            //   'width': width
+            // })
+          }
+          lastScrollTop = scroll;
+        });
+
+      }
+
 
       this.$el.html(this.template({projects: this.collection.models[projectDisplayed]}));
       return this;
@@ -14580,21 +14486,21 @@ module.exports = Projects;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(3)))
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(18)();
+exports = module.exports = __webpack_require__(17)();
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 0;\n  position: absolute;\n  height: 0;\n  animation: grow 0.5s;\n  transform: translate(-50%, -50%);\n  animation-timing-function: linear;\n  animation-fill-mode: forwards;\n  animation-iteration-count: 1;\n  top: 50%;\n  left: 50%; }\n\n@keyframes grow {\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#background-3d {\n  position: absolute;\n  opacity: 0.3; }\n\n#background-3d iframe {\n  border: none; }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  width: 0;\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 0;\n  position: absolute;\n  height: 0;\n  animation: growOuterContainer 0.5s;\n  transform: translate(-50%, -50%);\n  animation-delay: 0.5s;\n  animation-timing-function: linear;\n  animation-fill-mode: forwards;\n  animation-iteration-count: 1;\n  top: 50%;\n  left: 50%; }\n\n@keyframes growOuterContainer {\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#outer-container #navbar a {\n  font-family: 'Playfair Display', serif;\n  font-size: 10px;\n  font-weight: 400;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px;\n  /*font-weight: 600;*/ }\n\n#outer-container #navbar a:hover {\n  /*color: rgb(255, 28, 0);*/\n  text-decoration: none;\n  /*font-weight: 600;*/ }\n\n#about-block .content {\n  display: inline-block;\n  width: 70%;\n  vertical-align: top; }\n\n#about-block img {\n  width: 15em;\n  display: inline-block;\n  margin-right: 1em;\n  margin-bottom: 1em; }\n\n#about-block h3 {\n  margin-top: 0;\n  margin-bottom: 1em; }\n\n#about-block {\n  text-align: justify;\n  margin-top: 5em; }\n\n#center {\n  display: block;\n  margin: 5% auto;\n  width: 80%;\n  max-height: 73%;\n  overflow-y: scroll; }\n\n#center::-webkit-scrollbar {\n  width: 1px; }\n\n#center #projects-block .project {\n  display: inline-block;\n  position: relative;\n  width: 30em;\n  height: 15em;\n  background: lightgrey;\n  margin-right: 10px;\n  vertical-align: top;\n  margin-top: 10px;\n  background-size: cover;\n  background-position: center;\n  /*opacity: 0.7;*/ }\n\n#center #projects-block .project:hover {\n  opacity: 1; }\n\n#center #projects-block .project h4 {\n  color: white;\n  font-size: 15px; }\n\n#center #projects-block .project p {\n  color: white;\n  font-size: 12px; }\n\n#center #projects-block .project .project-description ul {\n  margin-bottom: 10px;\n  padding: 0;\n  list-style: none; }\n\n#center #projects-block .project .project-description ul li {\n  display: inline-block;\n  background: white;\n  margin-right: 10px;\n  padding: 0em 1em;\n  font-size: 10px; }\n\n#center #projects-block .project .project-description {\n  /*border: 5px solid rgb(26, 25, 169);*/\n  padding: 0em 1em;\n  background: #5539da;\n  display: block;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  left: 0; }\n\n#projects-block, #about-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 65em; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#skills-block .block {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 2em; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 100px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 1.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'Source Sans Pro', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px; }\n\n#outer-container .footer {\n  display: block;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  width: 100%;\n  text-align: right; }\n\n.footer ul {\n  font-family: 'Source Code Pro';\n  list-style: none; }\n\n.footer ul li {\n  display: inline-block; }\n\n.footer ul li a {\n  color: black; }\n\n@media only screen and (max-width: 480px) {\n  body {\n    overflow: hidden; }\n  #container .description h1 {\n    line-height: 1em;\n    display: inline;\n    font-size: 20px; }\n  #background-3d {\n    position: fixed;\n    opacity: 0.3; }\n  #background-3d iframe {\n    border: none; }\n  #container {\n    border: 5px solid #1a19a9; }\n  #container #navbar {\n    margin-right: 5px; }\n  #container #navbar a {\n    font-size: 12px;\n    margin-right: 7px; }\n  #container .description h3 {\n    font-size: 15px;\n    margin-top: 0.5em; }\n  #about-block {\n    margin: 0 auto;\n    display: block; }\n  #about-block .content {\n    width: 90%;\n    margin: 0 auto;\n    display: block; }\n  #about-block img {\n    margin-bottom: 2em;\n    margin-top: 2em;\n    margin-left: 1em;\n    width: 10em; }\n  #center {\n    max-height: 75%;\n    margin-top: 15%;\n    width: 90%; }\n  #center #projects-block, #center #about-block, #center #skills-block {\n    width: 100%;\n    display: block;\n    margin: 0 auto; }\n  #center #projects-block .project {\n    width: 100%;\n    display: block;\n    margin: 5px auto; }\n  #container .footer ul li {\n    font-size: 12px; }\n  #container .footer {\n    bottom: 0;\n    width: 120%; } }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border-left: 2px solid #da2d2a; }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 49%;\n    vertical-align: top; }\n    #about-container .about-content-block #intro-block, #about-container .about-content-block #skills-block, #about-container .about-content-block #contributions-block {\n      display: block;\n      width: 70%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em; }\n      #about-container .about-content-block #intro-block .social-button {\n        width: 26.5%;\n        margin-right: 1%;\n        margin-top: 1em;\n        margin-bottom: 1em;\n        border: 2px solid #2d307a;\n        display: inline-block;\n        text-align: center;\n        position: relative; }\n        #about-container .about-content-block #intro-block .social-button a {\n          position: relative;\n          transition: all 0.3s ease;\n          display: inline-block;\n          width: 100%;\n          height: 2em;\n          line-height: 2em; }\n          #about-container .about-content-block #intro-block .social-button a:before, #about-container .about-content-block #intro-block .social-button a:after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            height: 0;\n            transition: all .3s ease; }\n          #about-container .about-content-block #intro-block .social-button a:before {\n            background: white;\n            z-index: -2; }\n          #about-container .about-content-block #intro-block .social-button a:after {\n            background: #2d307a;\n            z-index: -1;\n            color: white;\n            height: -100%; }\n          #about-container .about-content-block #intro-block .social-button a:hover, #about-container .about-content-block #intro-block .social-button a:focus {\n            cursor: pointer;\n            color: white; }\n            #about-container .about-content-block #intro-block .social-button a:hover:after, #about-container .about-content-block #intro-block .social-button a:focus:after {\n              height: 100%; }\n  #about-container #skills-block {\n    padding-left: 1em; }\n    #about-container #skills-block .skills {\n      display: inline-block;\n      vertical-align: top; }\n      #about-container #skills-block .skills ul {\n        list-style: none;\n        margin: 0;\n        margin-right: 3em;\n        padding: 0; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 85%; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 3em;\n    padding: 0; }\n\n.important-title {\n  color: #da2d2a; }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif;\n    color: #2d307a; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'Playfair Display', serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 800px;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 85%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: 20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#home h1 {\n  position: absolute;\n  top: 35%;\n  width: 100%;\n  text-align: center; }\n\n#home h2 {\n  position: absolute;\n  top: 45%;\n  width: 100%;\n  text-align: center; }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  animation: grow 0.5s;\n  transform: translate(-50%, -50%);\n  animation-timing-function: linear;\n  animation-fill-mode: forwards;\n  animation-iteration-count: 1; }\n\n@keyframes grow {\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  animation: growOuterContainer 0.5s;\n  transform: translate(-50%, -50%);\n  animation-delay: 0.5s;\n  animation-timing-function: linear;\n  animation-fill-mode: forwards;\n  animation-iteration-count: 1; }\n\n@keyframes growOuterContainer {\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#outer-container #navbar a {\n  font-family: 'Playfair Display', serif;\n  font-size: 10px;\n  font-weight: 400;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px;\n  /*font-weight: 600;*/ }\n\n#outer-container #navbar a:hover {\n  /*color: rgb(255, 28, 0);*/\n  text-decoration: none;\n  /*font-weight: 600;*/ }\n\n#about-block .content {\n  display: inline-block;\n  width: 70%;\n  vertical-align: top; }\n\n#about-block img {\n  width: 15em;\n  display: inline-block;\n  margin-right: 1em;\n  margin-bottom: 1em; }\n\n#about-block h3 {\n  margin-top: 0;\n  margin-bottom: 1em; }\n\n#about-block {\n  text-align: justify;\n  margin-top: 5em; }\n\n#center {\n  display: block;\n  margin: 5% auto;\n  width: 80%;\n  max-height: 73%;\n  overflow-y: scroll; }\n\n#center::-webkit-scrollbar {\n  width: 1px; }\n\n#center #projects-block .project {\n  display: inline-block;\n  position: relative;\n  width: 30em;\n  height: 15em;\n  background: lightgrey;\n  margin-right: 10px;\n  vertical-align: top;\n  margin-top: 10px;\n  background-size: cover;\n  background-position: center;\n  /*opacity: 0.7;*/ }\n\n#center #projects-block .project:hover {\n  opacity: 1; }\n\n#center #projects-block .project h4 {\n  color: white;\n  font-size: 15px; }\n\n#center #projects-block .project p {\n  color: white;\n  font-size: 12px; }\n\n#center #projects-block .project .project-description ul {\n  margin-bottom: 10px;\n  padding: 0;\n  list-style: none; }\n\n#center #projects-block .project .project-description ul li {\n  display: inline-block;\n  background: white;\n  margin-right: 10px;\n  padding: 0em 1em;\n  font-size: 10px; }\n\n#center #projects-block .project .project-description {\n  /*border: 5px solid rgb(26, 25, 169);*/\n  padding: 0em 1em;\n  background: #5539da;\n  display: block;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  left: 0; }\n\n#projects-block, #about-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 65em; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#skills-block .block {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 2em; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 100px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 1.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'Source Sans Pro', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px; }\n\n#outer-container .footer {\n  display: block;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  width: 100%;\n  text-align: right; }\n\n.footer ul {\n  font-family: 'Source Code Pro';\n  list-style: none; }\n\n.footer ul li {\n  display: inline-block; }\n\n.footer ul li a {\n  color: black; }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    color: #2d307a;\n    margin-bottom: 0;\n    margin-left: 0.8em;\n    font-family: 'Josefin Sans', sans-serif;\n    font-weight: 100;\n    letter-spacing: 15px; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border-left: 2px solid #da2d2a; }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 49%;\n    vertical-align: top; }\n    #about-container .about-content-block #intro-block, #about-container .about-content-block #skills-block, #about-container .about-content-block #contributions-block {\n      display: block;\n      width: 70%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em; }\n      #about-container .about-content-block #intro-block .social-button {\n        width: 26.5%;\n        margin-right: 1%;\n        margin-top: 1em;\n        margin-bottom: 1em;\n        border: 2px solid #2d307a;\n        display: inline-block;\n        text-align: center;\n        position: relative; }\n        #about-container .about-content-block #intro-block .social-button a {\n          position: relative;\n          transition: all 0.3s ease;\n          display: inline-block;\n          width: 100%;\n          height: 2em;\n          line-height: 2em; }\n          #about-container .about-content-block #intro-block .social-button a:before, #about-container .about-content-block #intro-block .social-button a:after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            height: 0;\n            transition: all .3s ease; }\n          #about-container .about-content-block #intro-block .social-button a:before {\n            background: white;\n            z-index: -2; }\n          #about-container .about-content-block #intro-block .social-button a:after {\n            background: #2d307a;\n            z-index: -1;\n            color: white;\n            height: -100%; }\n          #about-container .about-content-block #intro-block .social-button a:hover, #about-container .about-content-block #intro-block .social-button a:focus {\n            cursor: pointer;\n            color: white; }\n            #about-container .about-content-block #intro-block .social-button a:hover:after, #about-container .about-content-block #intro-block .social-button a:focus:after {\n              height: 100%; }\n  #about-container #skills-block {\n    padding-left: 1em; }\n    #about-container #skills-block .skills {\n      display: inline-block;\n      vertical-align: top; }\n      #about-container #skills-block .skills ul {\n        list-style: none;\n        margin: 0;\n        margin-right: 3em;\n        padding: 0; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 85%; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 3em;\n    padding: 0; }\n\n.important-title {\n  color: #da2d2a; }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif;\n    color: #2d307a; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'Playfair Display', serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 800px;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 85%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: 20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#home h1 {\n  position: absolute;\n  top: 35%;\n  width: 100%;\n  text-align: center; }\n\n#home h2 {\n  position: absolute;\n  top: 45%;\n  width: 100%;\n  text-align: center; }\n\n@media only screen and (max-width: 480px) {\n  #outer-container .description {\n    width: 130px; }\n  #projects-container .project-block {\n    width: 90%;\n    margin-top: 5em; }\n    #projects-container .project-block h3 {\n      position: relative;\n      left: 0;\n      top: 0;\n      font-size: 2em; }\n    #projects-container .project-block .project-buttons {\n      left: 0;\n      bottom: -50px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        color: black;\n        border: 1px solid black; }\n  #projects-container p.svg, #projects-container #wipe-left {\n    display: none; }\n  #projects-container .project-details {\n    width: 90%;\n    position: relative;\n    top: 0;\n    left: 0;\n    margin-top: 4em; } }\n", ""]);
 
 // exports
 
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports) {
 
 /*
@@ -14650,10 +14556,10 @@ module.exports = function() {
 
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(35);
+var Handlebars = __webpack_require__(34);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
     return "          <p>\n            "
@@ -14700,7 +14606,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 },"useData":true});
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14722,7 +14628,7 @@ var base = _interopRequireWildcard(_handlebarsBase);
 // Each of these augment the Handlebars object. No need to setup here.
 // (This is done to easily share code between commonjs and browse envs)
 
-var _handlebarsSafeString = __webpack_require__(34);
+var _handlebarsSafeString = __webpack_require__(33);
 
 var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 
@@ -14734,11 +14640,11 @@ var _handlebarsUtils = __webpack_require__(0);
 
 var Utils = _interopRequireWildcard(_handlebarsUtils);
 
-var _handlebarsRuntime = __webpack_require__(33);
+var _handlebarsRuntime = __webpack_require__(32);
 
 var runtime = _interopRequireWildcard(_handlebarsRuntime);
 
-var _handlebarsNoConflict = __webpack_require__(32);
+var _handlebarsNoConflict = __webpack_require__(31);
 
 var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 
@@ -14773,7 +14679,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14785,7 +14691,7 @@ exports.registerDefaultDecorators = registerDefaultDecorators;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _decoratorsInline = __webpack_require__(22);
+var _decoratorsInline = __webpack_require__(21);
 
 var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 
@@ -14796,7 +14702,7 @@ function registerDefaultDecorators(instance) {
 
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14832,7 +14738,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14844,31 +14750,31 @@ exports.registerDefaultHelpers = registerDefaultHelpers;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _helpersBlockHelperMissing = __webpack_require__(24);
+var _helpersBlockHelperMissing = __webpack_require__(23);
 
 var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 
-var _helpersEach = __webpack_require__(25);
+var _helpersEach = __webpack_require__(24);
 
 var _helpersEach2 = _interopRequireDefault(_helpersEach);
 
-var _helpersHelperMissing = __webpack_require__(26);
+var _helpersHelperMissing = __webpack_require__(25);
 
 var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 
-var _helpersIf = __webpack_require__(27);
+var _helpersIf = __webpack_require__(26);
 
 var _helpersIf2 = _interopRequireDefault(_helpersIf);
 
-var _helpersLog = __webpack_require__(28);
+var _helpersLog = __webpack_require__(27);
 
 var _helpersLog2 = _interopRequireDefault(_helpersLog);
 
-var _helpersLookup = __webpack_require__(29);
+var _helpersLookup = __webpack_require__(28);
 
 var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 
-var _helpersWith = __webpack_require__(30);
+var _helpersWith = __webpack_require__(29);
 
 var _helpersWith2 = _interopRequireDefault(_helpersWith);
 
@@ -14885,7 +14791,7 @@ function registerDefaultHelpers(instance) {
 
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14931,7 +14837,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15032,7 +14938,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15064,7 +14970,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15100,7 +15006,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -15133,7 +15039,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -15152,7 +15058,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15192,7 +15098,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15246,7 +15152,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15274,7 +15180,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15573,7 +15479,7 @@ function executeDecorators(fn, prog, container, depths, data, blockParams) {
 
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -15595,34 +15501,34 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
-module.exports = __webpack_require__(20)['default'];
+module.exports = __webpack_require__(19)['default'];
 
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+module.exports = "<div id=\"about-container\">\n  <h2>ABOUT</h2>\n\n  <h1>HELLO!</h1>\n  <div class=\"about-content-block\">\n    <div id=\"intro-block\">\n      <h3 class=\"important-title\">I'M A CREATIVE TECHNOLOGIST</h3>\n      <p>\n        I have a background in marketing and advertising and started my career as a Digital Producer in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took an immersive course in Web Development.\n        I am now a Software Developer / Consultant at ThoughtWorks in Sydney. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with electronics, creative coding and love to bring any of my ideas to life with code.\n      </p>\n\n      <div class=\"social-button\">\n        <a href=\"http://github.com/charliegerard\" target=\"_blank\">GITHUB</a>\n      </div>\n      <div class=\"social-button\">\n        <a href=\"http://twitter.com/charlie__gerard\" target=\"_blank\">TWITTER</a>\n      </div>\n      <div class=\"social-button\">\n        <a href=\"http://charliegerard.github.io/blog\" target=\"_blank\">BLOG</a>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"about-content-block\">\n    <div id=\"skills-block\">\n      <h3 class=\"important-title\">MY SKILLS INCLUDE</h3>\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Front-End</h4>\n        <ul>\n          <li>HTML/CSS</li>\n          <li>JS</li>\n          <li>Angular.js</li>\n          <li>React.js</li>\n          <li>Backbone.js</li>\n          <li>THREE.js</li>\n          <li>WebVR</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Back-End</h4>\n        <ul>\n          <li>Node.js</li>\n          <li>Ruby</li>\n          <li>Python</li>\n          <li>Java</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Hardware</h4>\n        <ul>\n          <li>Arduino</li>\n          <li>Raspberry Pi</li>\n          <li>Leap Motion</li>\n          <li>Sphero</li>\n          <li>Particle Photon</li>\n          <li>Parrot AR Drone</li>\n          <li>Neurosky</li>\n          <li>Emotiv EPOC</li>\n          <li>Myo armband</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Other</h4>\n        <ul>\n          <li>Rapid prototyping</li>\n          <li>User testing</li>\n          <li>Project Management</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n  <div id=\"contributions-block\">\n    <h3 class=\"important-title\">COMMUNITY CONTRIBUTIONS</h3>\n    <h4 class=\"important-title\">TALKS</h4>\n    <ul>\n      <li><a href=\"https://www.youtube.com/watch?v=hM5N_zDdgJM&feature=youtu.be\" target=\"_blank\">CampJS Jun. 2016 - Experimenting with motion control in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=7JBh7QF7CLU&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Apr.2016 - Creative coding in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=9rLnmHy44tM&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Nov.2015 - Nodebots</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=hkhzXr_iyAk&feature=youtu.be\" target=\"_blank\">SydJS Jul. 2014 - Getting rolling with Sphero</a></li>\n    </ul>\n\n    <h4 class=\"important-title\">ARTICLES</h4>\n    <ul>\n      <li><a href=\"http://blog.leapmotion.com/controlling-sphero-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling the Sphero with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"http://blog.leapmotion.com/controlling-parrot-ar-drone-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling a drone with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"https://medium.com/@spherodev_74007/makermonday-control-sphero-with-gestures-bf686444c21c#.gsnmxcolz\" target=\"_blank\">Sphero on Medium - Control Sphero with gestures</a></li>\n    </ul>\n  </div>\n</div>\n";
 
 /***/ },
 /* 36 */
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"about-container\">\n  <h2>ABOUT</h2>\n\n  <h1>HELLO!</h1>\n  <div class=\"about-content-block\">\n    <div id=\"intro-block\">\n      <h3 class=\"important-title\">I'M A CREATIVE TECHNOLOGIST</h3>\n      <p>\n        I have a background in marketing and advertising and started my career as a Digital Producer in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took an immersive course in Web Development.\n        I am now a Software Developer / Consultant at ThoughtWorks in Sydney. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with electronics, creative coding and love to bring any of my ideas to life with code.\n      </p>\n\n      <div class=\"social-button\">\n        <a href=\"http://github.com/charliegerard\" target=\"_blank\">GITHUB</a>\n      </div>\n      <div class=\"social-button\">\n        <a href=\"http://twitter.com/charlie__gerard\" target=\"_blank\">TWITTER</a>\n      </div>\n      <div class=\"social-button\">\n        <a href=\"http://charliegerard.github.io/blog\" target=\"_blank\">BLOG</a>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"about-content-block\">\n    <div id=\"skills-block\">\n      <h3 class=\"important-title\">MY SKILLS INCLUDE</h3>\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Front-End</h4>\n        <ul>\n          <li>HTML/CSS</li>\n          <li>JS</li>\n          <li>Angular.js</li>\n          <li>React.js</li>\n          <li>Backbone.js</li>\n          <li>THREE.js</li>\n          <li>WebVR</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Back-End</h4>\n        <ul>\n          <li>Node.js</li>\n          <li>Ruby</li>\n          <li>Python</li>\n          <li>Java</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Hardware</h4>\n        <ul>\n          <li>Arduino</li>\n          <li>Raspberry Pi</li>\n          <li>Leap Motion</li>\n          <li>Sphero</li>\n          <li>Particle Photon</li>\n          <li>Parrot AR Drone</li>\n          <li>Neurosky</li>\n          <li>Emotiv EPOC</li>\n          <li>Myo armband</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Other</h4>\n        <ul>\n          <li>Quick prototyping</li>\n          <li>User testing</li>\n          <li>Project Management</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n  <div id=\"contributions-block\">\n    <h3 class=\"important-title\">COMMUNITY CONTRIBUTIONS</h3>\n    <h4 class=\"important-title\">TALKS</h4>\n    <ul>\n      <li><a href=\"https://www.youtube.com/watch?v=hM5N_zDdgJM&feature=youtu.be\" target=\"_blank\">CampJS Jun. 2016 - Experimenting with motion control in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=7JBh7QF7CLU&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Apr.2016 - Creative coding in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=9rLnmHy44tM&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Nov.2015 - Nodebots</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=hkhzXr_iyAk&feature=youtu.be\" target=\"_blank\">SydJS Jul. 2014 - Getting rolling with Sphero</a></li>\n    </ul>\n\n    <h4 class=\"important-title\">ARTICLES</h4>\n    <ul>\n      <li><a href=\"http://blog.leapmotion.com/controlling-sphero-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling the Sphero with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"http://blog.leapmotion.com/controlling-parrot-ar-drone-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling a drone with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"https://medium.com/@spherodev_74007/makermonday-control-sphero-with-gestures-bf686444c21c#.gsnmxcolz\" target=\"_blank\">Sphero on Medium - Control Sphero with gestures</a></li>\n    </ul>\n  </div>\n</div>\n";
+module.exports = "<div id=\"contact-container\">\n  <h2>Contact</h2>\n\n</div>\n";
 
 /***/ },
 /* 37 */
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"contact-container\">\n  <h2>Contact</h2>\n\n</div>\n";
-
-/***/ },
-/* 38 */
-/***/ function(module, exports) {
-
 module.exports = "<div id=\"home\">\n  <!-- <h1>MEOW</h1> -->\n  <h1>Charlie Gerard</h1>\n  <h2>Creative Technologist</h2>\n</div>\n";
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports) {
 
 module.exports = [
@@ -15879,7 +15785,7 @@ module.exports = [
 ];
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports) {
 
 /*
@@ -16131,7 +16037,7 @@ function updateLink(linkElement, obj) {
 
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
@@ -16146,7 +16052,9 @@ if(!window.location.hash){
   var descriptionBlock = document.getElementsByClassName('description')[0];
   descriptionBlock.style.display = 'none'
 } else {
-  descriptionBlock.style.display = 'block'
+  if(descriptionBlock){
+    descriptionBlock.style.display = 'block'
+  }
 }
 
 

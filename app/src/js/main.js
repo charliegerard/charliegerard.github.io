@@ -10,5 +10,7 @@ if(!window.location.hash){
   var descriptionBlock = document.getElementsByClassName('description')[0];
   descriptionBlock.style.display = 'none'
 } else {
-  descriptionBlock.style.display = 'block'
+  if(descriptionBlock){
+    descriptionBlock.style.display = 'block'
+  }
 }
