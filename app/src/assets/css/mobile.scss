@@ -9,6 +9,8 @@
     }
   }
 
+  //******* PROJECTS *********
+
   #projects-container{
     .project-block{
       width: 90%;
@@ -44,6 +46,55 @@
       left: 0;
       margin-top: 4em;
     }
+  }
+
+
+
+
+  //******* ABOUT ********
+
+  #about-container{
+    h1{
+      margin-left: 0;
+      font-size: 75px;
+      width: 90%;
+      display: block;
+      margin: 0 auto;
+      margin-top: 1em;
+    }
+
+    .about-content-block{
+      display: block;
+      width: 100%;
+
+      #intro-block{
+        width: 90%;
+
+        h3{
+          letter-spacing: 3px;
+        }
+      }
+    }
+
+    .about-content-block:nth-of-type(2){
+      border: none;
+    }
+
+    .about-content-block{
+      #skills-block{
+        padding: 0;
+        width: 90%;
+        .skills{
+          width: 48%;
+        }
+      }
+    }
+
+    #contributions-block{
+      width: 90%;
+    }
+
+
   }
 //
 //   #container .description h1{
