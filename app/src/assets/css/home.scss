@@ -1,15 +1,45 @@
 #home{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background: pink;
   h1{
+    z-index: 20;
     position: absolute;
-    top: 35%;
+    top: 10%;
     width: 100%;
     text-align: center;
+    font-family: 'PT Sans Narrow';
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #2d307a;
+    // opacity: 0;
+    animation: appear 1s ease;
+    animation-delay: 2s;
   }
 
   h2{
     position: absolute;
-    top: 45%;
+    top: 20%;
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow';
+    font-weight: 200;
+    // font-style: italic;
+    color: #ff1c00;
+    opacity: 0.8;
+  }
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
   }
 }

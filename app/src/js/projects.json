@@ -35,7 +35,7 @@
       },
       {
         "id": "video-code",
-        "title": "Code in the Park",
+        "title": "CODE IN THE PARK",
         "url": "",
         "image": "./images/code-park.png",
         "description": "Intro video for the Code in the Park event.",
@@ -50,7 +50,7 @@
       },
       {
         "id": "emotiv-framework",
-        "title": "Epoc.js",
+        "title": "EPOC.JS FRAMEWORK",
         "url": "https://github.com/charliegerard/Epoc.js",
         "image": "./images/Emotiv_1.jpg",
         "description": "WIP - A framework to use the Emotiv brain sensor in Node.js",
@@ -61,7 +61,7 @@
       },
       {
         "id": "drone-neurosky",
-        "title": "Drone & Neurosky",
+        "title": "DRONE & NEUROSKY",
         "url": "https://github.com/charliegerard/neurosky-drone",
         "image": "./images/drone_neurosky.png",
         "description": "Control the Parrot AR Drone with your mind using the Neurosky brain sensor",
@@ -72,7 +72,7 @@
       },
       {
         "id": "perspective",
-        "title": "Perspective",
+        "title": "PERSPECTIVE",
         "url": "https://charliegerard.github.io/Perspective/",
         "image": "./images/perspective.png",
         "description": "Prototype using head-tracking technology to explore a virtual world in the browser.",
@@ -87,7 +87,7 @@
       },
       {
         "id": "drone-leap-motion",
-        "title": "Drone & Leap motion",
+        "title": "DRONE & LEAP MOTION",
         "url": "https://github.com/charliegerard/leap_drone",
         "image": "./images/drone-leap.png",
         "description": "Control the Parrot AR Drone with your hands using the Leap motion",
@@ -98,7 +98,7 @@
       },
       {
         "id": "threejs-vr",
-        "title": "Three.js VR",
+        "title": "WEBVR EXPERIMENT",
         "url": "https://github.com/charliegerard/Threejs-VR",
         "image": "./images/threejs-vr.png",
         "description": "First prototype of WebVR to be used in a Google Cardboard",
@@ -111,7 +111,7 @@
       },
       {
         "id": "leapsync",
-        "title": "Leapsync",
+        "title": "LEAPSYNC",
         "url": "https://github.com/charliegerard/leapsync",
         "image": "./images/leapsync.png",
         "description": "Prototype build at the SheHacks hackathon - platform to teach sign language with the Leap motion.",
@@ -122,7 +122,7 @@
       },
       {
         "id": "sphero-leap-motion",
-        "title": "Sphero & Leap Motion",
+        "title": "SPHERO & LEAP MOTION",
         "url": "https://github.com/charliegerard/leap_sphero",
         "image": "./images/leap-sphero.png",
         "description": "Control the Sphero with your hands using the Leap motion controller",
@@ -137,7 +137,7 @@
       },
       {
         "id": "drone-myo-armband",
-        "title": "Drone & Myo armband",
+        "title": "DRONE & MYO ARMBAND",
         "url": "https://github.com/charliegerard/myo_drone",
         "image": "./images/drone_myo.png",
         "description": "Control the Parrot AR Drone with your arm using the Myo armband",
@@ -148,7 +148,7 @@
       },
       {
         "id": "touch-poster",
-        "title": "Touch poster",
+        "title": "TOUCH POSTER",
         "url": "",
         "image": "./images/touch-poster.png",
         "description": "WIP - Prototype of touch mirror",
