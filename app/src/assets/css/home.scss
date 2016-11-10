@@ -16,9 +16,12 @@
     text-transform: uppercase;
     font-size: 50px;
     color: #2d307a;
-    // opacity: 0;
+    opacity: 0;
     animation: appear 1s ease;
-    animation-delay: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    // top: -10px;
+    // transition: top 0.5s ease;
   }
 
   h2{
@@ -31,15 +34,31 @@
     font-weight: 200;
     // font-style: italic;
     color: #ff1c00;
-    opacity: 0.8;
+    opacity: 0;
+    animation: appearSubtitle 1s ease;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
   }
 }
 
 @keyframes appear {
   from{
     opacity: 0;
+    top: -10px;
   }
   to{
     opacity: 1;
+    top: 20%;
+  }
+}
+
+@keyframes appearSubtitle {
+  from{
+    opacity: 0;
+    top: -10px;
+  }
+  to{
+    opacity: 0.8;
+    top: 30%;
   }
 }

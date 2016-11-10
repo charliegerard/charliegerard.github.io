@@ -1,5 +1,4 @@
 <div id="home">
-  <!-- <h1>MEOW</h1> -->
   <h1>Charlie Gerard</h1>
   <h2>Creative Technologist</h2>
   <div id="threejs-container"></div>
@@ -11,13 +10,6 @@
     <body>
   <canvas id="canvas"></canvas>
       <div id="homeView" class="current-state ajaxhidden" style="visibility: inherit;">
-      <div class="layout layout-homepage">
-          <article class="slideshow">
-          <div class="item">
-          <img src="http://svp.xyz/svp.png" class="visual">
-          </div>
-          </article>
-      </div>
   </div>
   </body>
 
@@ -27,26 +19,13 @@
   ThreeJs custom waves
   Original script by ThreeJS : http://threejs.org/examples/canvas_particles_waves.html
   Original Modified version for https://bradient.com
-
-
   */
 
   var SEPARATION = 30, AMOUNTX = 430, AMOUNTY = 55;
 
   var container;
   var camera, scene, renderer;
-  /*
-
-  if (window.WebGLRenderingContext){
-    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    }
-  else {
-    renderer = new THREE.CanvasRenderer();
-    }
-  */
-
   var particles, particle, count = 0;
-
   var windowHalfX = window.innerWidth / 2;
   var windowHalfY = window.innerHeight / 2;
 
@@ -56,7 +35,6 @@
   function init() {
 
     container = document.getElementById( 'threejs-container' );
-    // document.body.appendChild( container );
     if(container) {
         container.className += container.className ? ' waves' : 'waves';
     }
@@ -110,7 +88,6 @@
   }
 
   function onWindowResize() {
-
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
 
@@ -118,40 +95,27 @@
     camera.updateProjectionMatrix();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
-
   }
 
   function animate() {
-
     requestAnimationFrame( animate );
-
     render();
-
   }
 
   function render() {
-
     var i = 0;
 
     for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-
       for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-
         particle = particles[ i++ ];
         particle.position.y = ( Math.sin( ( ix + count ) * 0.20 ) * 50 ) + ( Math.sin( ( iy + count ) * 0.2 ) * 20 );
         particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 2 ) * 4 + ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
-
       }
-
     }
 
     renderer.render( scene, camera );
-
     // This increases or decreases speed
     count += 0.5;
-
   }
-
-
   </script>
 </div>
