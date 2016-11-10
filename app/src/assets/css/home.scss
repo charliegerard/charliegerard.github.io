@@ -18,7 +18,7 @@
     color: #2d307a;
     opacity: 0;
     animation: appear 1s ease;
-    animation-delay: 1.2s;
+    animation-delay: 1.4s;
     animation-fill-mode: forwards;
   }
 
@@ -34,14 +34,14 @@
     color: #ff1c00;
     opacity: 0;
     animation: appearSubtitle 1s ease;
-    animation-delay: 1.4s;
+    animation-delay: 1.6s;
     animation-fill-mode: forwards;
   }
 
   #threejs-container{
     opacity: 0;
     animation: canvasAppear 1s ease;
-    animation-delay: 1s;
+    animation-delay: 1.2s;
     animation-fill-mode: forwards;
   }
 }

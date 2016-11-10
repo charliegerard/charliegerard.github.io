@@ -6,9 +6,11 @@ var Home = Backbone.View.extend({
     initialize: function(){
     },
 
-    render : function()
-    {
-        this.$el.html(template);
+    render : function(){
+      var self = this;
+      window.onload = function(){
+        self.$el.html(template);
+      }
     }
 });
 
