@@ -9,6 +9,10 @@ Backbone.history.start();
 if(!window.location.hash){
   var descriptionBlock = document.getElementsByClassName('description')[0];
   descriptionBlock.style.display = 'none'
+  var appContainer = $('#app-container');
+  appContainer.addClass('container-animation');
+  var outerContainer = $('#outer-container');
+  outerContainer.addClass('outer-container-animation');
 } else {
   if(descriptionBlock){
     descriptionBlock.style.display = 'block'

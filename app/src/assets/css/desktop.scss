@@ -6,19 +6,26 @@ body{
 #app-container{
 	background: #f3f1f1;
 	display: block;
-	width: 0;
+	width: 100%;
 	position: absolute;
-	height: 0;
+	height: 100%;
 	top: 50%;
  	left: 50%;
-	animation: grow 0.5s;
 	transform: translate(-50%, -50%);
+}
+
+.container-animation{
+	animation: grow 0.5s;
 	animation-timing-function:linear;
 	animation-fill-mode:forwards;
 	animation-iteration-count: 1;
 }
 
 @keyframes grow {
+	from{
+		width: 0;
+		height: 0;
+	}
 	to{
 		width: 100%;
 		height: 100%;
@@ -34,24 +41,27 @@ body{
 	min-height: 0;
 	background: white;
 	overflow-y: scroll;
-	width: 0;
+	width: 95%;
 	position: absolute;
-	height: 0;
+	height: 95%;
 	top: 50%;
 	left: 50%;
-	animation: growOuterContainer 0.5s;
 	transform: translate(-50%, -50%);
+}
+
+.outer-container-animation{
+	animation: growOuterContainer 0.5s;
 	animation-delay: 0.5s;
 	animation-timing-function:linear;
 	animation-fill-mode:forwards;
 	animation-iteration-count: 1;
 }
 
-.outer-container-intro{
-
-}
-
 @keyframes growOuterContainer {
+	from{
+		width: 0;
+		height: 0;
+	}
 	to{
 		width: 95%;
 		min-height: 95%;
