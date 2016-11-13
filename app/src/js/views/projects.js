@@ -155,7 +155,7 @@ var Projects = Backbone.View.extend({
             // })
           }
           lastScrollTop = scroll;
-        });
+        }, {passive: true});
 
       }
 
