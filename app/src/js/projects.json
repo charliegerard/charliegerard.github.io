@@ -2,7 +2,7 @@
   {
     "web": [
       {
-        "id": "browser-pong",
+        "id": 1,
         "title": "BROWSER PONG",
         "url": "http://charliegerard.github.io/browser-pong",
         "image": "./images/browser-pong.png",
@@ -10,7 +10,7 @@
         "tags": ["web", "JavaScript"],
         "projectDescription": {
             "date": "August 2016",
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment to understand the mechanisms behind it. This game takes the concept of the Pong game out of the (browser) box by allowing the user to play using browser windows as paddles. The experience is a single player game where the user plays against the computer.",
+            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment to understand the mechanisms behind it. This game takes the concept of the Pong game out of the (browser) box by allowing the user to play using browser windows as paddles. The experience is a single player game where the user plays against an AI.",
             "images": [{"url": "./images/browserpong.gif"}],
             "technology": [
               "This game was created using HTML, CSS and JavaScript without any specific framework and is a desktop only experience.",
@@ -19,7 +19,7 @@
         }
       },
       {
-        "id": "sphero-myo-armband",
+        "id": 2,
         "title": "GESTURE CONTROLLED SPHERO",
         "url": "https://github.com/charliegerard/myo_sphero",
         "image": "./images/myo-sphero2.png",
@@ -27,14 +27,14 @@
         "tags": ["hardware", "Myo armband", "Sphero", "Node.js"],
         "projectDescription": {
             "date": "November 2014",
-            "concept" : "Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment",
+            "concept" : "This project is an experiment to see if I could use the data given by the Myo armband to control the direction of a Sphero ball. Once the Sphero is on and the Myo is calibrated properly, the user is able to change the direction of the ball depending on the gesture executed. For example, a `wipe right` gesture, makes the Sphero ball roll in the right direction.",
             "images": [{"url": "./images/myo-sphero3.png"}],
-            "technology": [],
+            "technology": ["The Myo armband is a wearable gesture control and motion control device that senses electrical signals going through the user's arm and connects to the computer via bluetooth. Built in Node.js, this project "],
             "link": "https://github.com/charliegerard/myo_sphero"
         }
       },
       {
-        "id": "video-code",
+        "id": 3,
         "title": "CODE IN THE PARK",
         "url": "",
         "image": "./images/code-park.png",
@@ -49,7 +49,7 @@
         }
       },
       {
-        "id": "emotiv-framework",
+        "id": 4,
         "title": "EPOC.JS FRAMEWORK",
         "url": "https://github.com/charliegerard/Epoc.js",
         "image": "./images/Emotiv_1.jpg",
@@ -60,7 +60,7 @@
         }
       },
       {
-        "id": "drone-neurosky",
+        "id": 5,
         "title": "DRONE & NEUROSKY",
         "url": "https://github.com/charliegerard/neurosky-drone",
         "image": "./images/drone_neurosky.png",
@@ -71,7 +71,7 @@
         }
       },
       {
-        "id": "perspective",
+        "id": 6,
         "title": "PERSPECTIVE",
         "url": "https://charliegerard.github.io/Perspective/",
         "image": "./images/perspective.png",
@@ -86,7 +86,7 @@
         }
       },
       {
-        "id": "drone-leap-motion",
+        "id": 7,
         "title": "DRONE & LEAP MOTION",
         "url": "https://github.com/charliegerard/leap_drone",
         "image": "./images/drone-leap.png",
@@ -97,7 +97,7 @@
         }
       },
       {
-        "id": "threejs-vr",
+        "id": 8,
         "title": "WEBVR EXPERIMENT",
         "url": "https://github.com/charliegerard/Threejs-VR",
         "image": "./images/threejs-vr.png",
@@ -110,7 +110,7 @@
         }
       },
       {
-        "id": "leapsync",
+        "id": 9,
         "title": "LEAPSYNC",
         "url": "https://github.com/charliegerard/leapsync",
         "image": "./images/leapsync.png",
@@ -121,7 +121,7 @@
         }
       },
       {
-        "id": "sphero-leap-motion",
+        "id": 10,
         "title": "SPHERO & LEAP MOTION",
         "url": "https://github.com/charliegerard/leap_sphero",
         "image": "./images/leap-sphero.png",
@@ -136,7 +136,7 @@
         }
       },
       {
-        "id": "drone-myo-armband",
+        "id": 11,
         "title": "DRONE & MYO ARMBAND",
         "url": "https://github.com/charliegerard/myo_drone",
         "image": "./images/drone_myo.png",
@@ -147,7 +147,7 @@
         }
       },
       {
-        "id": "touch-poster",
+        "id": 12,
         "title": "TOUCH POSTER",
         "url": "",
         "image": "./images/touch-poster.png",
