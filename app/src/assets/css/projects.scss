@@ -30,6 +30,22 @@
     color: #2d307a;
   }
 
+
+  .project-number{
+    position: absolute;
+    font-size: 50em;
+    margin: 0;
+    color: lightgray;
+    opacity: 0.3;
+    /* letter-spacing: -50px; */
+    // top: -292px;
+    // left: -230px;
+    letter-spacing: -50px;
+    top: -88px;
+    left: 100px;
+    z-index: -1;
+  }
+
   .project-block{
     // width: 60%;
     width: 65%;
