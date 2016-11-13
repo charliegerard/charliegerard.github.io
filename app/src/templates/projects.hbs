@@ -39,7 +39,11 @@
       </p>
 
       <h4>Concept</h4>
-      <p>{{ projects.attributes.projectDescription.concept }}</p>
+      {{#each projects.attributes.projectDescription.concept}}
+          <p>
+            {{this}}
+          </p>
+      {{/each}}
 
       <img src="{{projects.attributes.projectDescription.images.0.url}}" alt="" />
 

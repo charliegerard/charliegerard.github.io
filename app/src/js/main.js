@@ -29,6 +29,4 @@ $('#projects').click(function(){
   $('#threejs-container canvas').bind("animationend", function(){
      window.location.href = "#projects"
   });
-
-  //
 })
