@@ -6,8 +6,6 @@ var Home = Backbone.View.extend({
     events:{
       load : 'loaded'
     },
-    initialize: function(){
-    },
 
     loaded: function(){
       this.render()
