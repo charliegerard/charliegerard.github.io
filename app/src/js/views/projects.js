@@ -63,99 +63,99 @@ var Projects = Backbone.View.extend({
         $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
         $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
 
-        $('#outer-container').bind('mousewheel', function(e){
-          var e = window.event;
-          var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-          if(delta > 0){
-            //go up
-            var width = parseInt($('#wipe-left').css('width'))
-            width-=10;
-            var newWidth = (width <= 0) ? 0 : width;
-            $('#wipe-left').css({
-              'width': newWidth + 'px'
-            })
-            //text
-            var position = parseInt($('.project-details').css('top'));
-            position+=10;
-            var paragraphHeight = parseInt($('.project-details').height());
-            var newPosition = (position >= window.innerHeight + 50) ? window.innerHeight + 50 : position
-            $('.project-details').css({
-              'top': newPosition + 'px'
-            })
-            //title
-            var titlePosition = parseInt($('.project-block h3').css('bottom'))
-            titlePosition-=2;
-            var newTitlePosition = (titlePosition <= 100) ? 100 : titlePosition;
-            var titlePositionLeft = parseInt($('.project-block h3').css('left'));
-            titlePositionLeft+=1;
-            var newTitleLeft = (titlePositionLeft >= -50) ? -50 : titlePositionLeft;
-            var titleSize = parseInt($('.project-block h3').css('font-size'));
-            titleSize+=1;
-            var newTitleSize = titleSize >= 40 ? 40 : titleSize;
-            $('.project-block h3').css({
-              'bottom': newTitlePosition + 'px',
-              'left': -50 + 'px',
-              'font-size': newTitleSize + 'px'
-            })
-          }else{
-            //go down
+        // $('#outer-container').bind('mousewheel', function(e){
+        //   var e = window.event;
+        //   var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        //   if(delta > 0){
+        //     //go up
+        //     var width = parseInt($('#wipe-left').css('width'))
+        //     width-=10;
+        //     var newWidth = (width <= 0) ? 0 : width;
+        //     $('#wipe-left').css({
+        //       'width': newWidth + 'px'
+        //     })
+        //     //text
+        //     var position = parseInt($('.project-details').css('top'));
+        //     position+=10;
+        //     var paragraphHeight = parseInt($('.project-details').height());
+        //     var newPosition = (position >= window.innerHeight + 50) ? window.innerHeight + 50 : position
+        //     $('.project-details').css({
+        //       'top': newPosition + 'px'
+        //     })
+        //     //title
+        //     var titlePosition = parseInt($('.project-block h3').css('bottom'))
+        //     titlePosition-=2;
+        //     var newTitlePosition = (titlePosition <= 100) ? 100 : titlePosition;
+        //     var titlePositionLeft = parseInt($('.project-block h3').css('left'));
+        //     titlePositionLeft+=1;
+        //     var newTitleLeft = (titlePositionLeft >= -50) ? -50 : titlePositionLeft;
+        //     var titleSize = parseInt($('.project-block h3').css('font-size'));
+        //     titleSize+=1;
+        //     var newTitleSize = titleSize >= 40 ? 40 : titleSize;
+        //     $('.project-block h3').css({
+        //       'bottom': newTitlePosition + 'px',
+        //       'left': -50 + 'px',
+        //       'font-size': newTitleSize + 'px'
+        //     })
+        //   }else{
+        //     //go down
+        //
+        //     // white background
+        //     var width = parseInt($('#wipe-left').css('width'));
+        //     var outerContainerWidth = parseInt($('#outer-container').css('width'));
+        //     width+=15;
+        //     var newWidth = (width >= outerContainerWidth) ? outerContainerWidth : width;
+        //     $('#wipe-left').css({
+        //       'width': newWidth + 'px'
+        //     })
+        //
+        //     //text
+        //     var position = parseInt($('.project-details').css('top'));
+        //     var textBottom = parseInt($('.project-details').css('bottom'));
+        //     position -= (textBottom > 100) ? 0 : 5;
+        //     $('.project-details').css({
+        //       'top': position + 'px'
+        //     })
+        //
+        //     //title
+        //     var titlePositionBottom = parseInt($('.project-block h3').css('bottom'));
+        //     titlePositionBottom+=2;
+        //     var titlePositionLeft = parseInt($('.project-block h3').css('left'));
+        //     titlePositionLeft-=1;
+        //     var newTitlePosition = (titlePositionBottom >= 325) ? 325 : titlePositionBottom;
+        //     var newTitleLeft = (titlePositionLeft <= -85) ? -85 : titlePositionLeft;
+        //     var titleSize = parseInt($('.project-block h3').css('font-size'));
+        //     titleSize-=0.5;
+        //     var newTitleSize = titleSize <= 15 ? 15 : titleSize;
+        //     $('.project-block h3').css({
+        //       'bottom': newTitlePosition + 'px',
+        //       'left': newTitleLeft + 'px',
+        //       'font-size': newTitleSize + 'px'
+        //     })
+        //   }
+        // });
 
-            // white background
-            var width = parseInt($('#wipe-left').css('width'));
-            var outerContainerWidth = parseInt($('#outer-container').css('width'));
-            width+=15;
-            var newWidth = (width >= outerContainerWidth) ? outerContainerWidth : width;
-            $('#wipe-left').css({
-              'width': newWidth + 'px'
-            })
 
-            //text
-            var position = parseInt($('.project-details').css('top'));
-            var textBottom = parseInt($('.project-details').css('bottom'));
-            position -= (textBottom > 100) ? 0 : 5;
-            $('.project-details').css({
-              'top': position + 'px'
-            })
-
-            //title
-            var titlePositionBottom = parseInt($('.project-block h3').css('bottom'));
-            titlePositionBottom+=2;
-            var titlePositionLeft = parseInt($('.project-block h3').css('left'));
-            titlePositionLeft-=1;
-            var newTitlePosition = (titlePositionBottom >= 325) ? 325 : titlePositionBottom;
-            var newTitleLeft = (titlePositionLeft <= -85) ? -85 : titlePositionLeft;
-            var titleSize = parseInt($('.project-block h3').css('font-size'));
-            titleSize-=0.5;
-            var newTitleSize = titleSize <= 15 ? 15 : titleSize;
-            $('.project-block h3').css({
-              'bottom': newTitlePosition + 'px',
-              'left': newTitleLeft + 'px',
-              'font-size': newTitleSize + 'px'
-            })
-          }
-        });
-
-
-        var lastScrollTop = 0;
-        window.addEventListener('scroll', function(e) {
-          var step = ($('#wipe-left').height() - $(window).height()) / 22;
-          var scrollStep = parseInt($(window).scrollTop() / step);
-          var maskPosition = (100/22) * scrollStep;
-
-          var scroll = $(this).scrollTop();
-          if (scroll > lastScrollTop){
-            var width = (parseInt($('#wipe-left').css('width')) >= $('#projects-container').css('width')) ? $('#projects-container').css('width') + 'px' : maskPosition + 'px'
-            $('#wipe-left').css({
-              'width': width + 'px'
-            })
-          } else {
-            // var width = (parseInt($('#wipe-left').css('width')) >= window.innerWidth) ? $('#projects-container').css('width') : ($('#wipe-left').position().left - maskPosition) + 'px'
-            // $('#wipe-left').css({
-            //   'width': width
-            // })
-          }
-          lastScrollTop = scroll;
-        }, {passive: true});
+        // var lastScrollTop = 0;
+        // window.addEventListener('scroll', function(e) {
+        //   var step = ($('#wipe-left').height() - $(window).height()) / 22;
+        //   var scrollStep = parseInt($(window).scrollTop() / step);
+        //   var maskPosition = (100/22) * scrollStep;
+        //
+        //   var scroll = $(this).scrollTop();
+        //   if (scroll > lastScrollTop){
+        //     var width = (parseInt($('#wipe-left').css('width')) >= $('#projects-container').css('width')) ? $('#projects-container').css('width') + 'px' : maskPosition + 'px'
+        //     $('#wipe-left').css({
+        //       'width': width + 'px'
+        //     })
+        //   } else {
+        //     // var width = (parseInt($('#wipe-left').css('width')) >= window.innerWidth) ? $('#projects-container').css('width') : ($('#wipe-left').position().left - maskPosition) + 'px'
+        //     // $('#wipe-left').css({
+        //     //   'width': width
+        //     // })
+        //   }
+        //   lastScrollTop = scroll;
+        // }, {passive: true});
 
       }
 

@@ -10,7 +10,6 @@ const PATHS = {
     build: path.join(__dirname, 'dist')
 };
 
-
 module.exports = {
     entry: PATHS.app + "/src/js/main.js",
     output: {

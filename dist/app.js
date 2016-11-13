@@ -14139,20 +14139,6 @@ window.onload = function(){
 			navbarLinks[i].className += ' navbar-link-animation';
 		}
 
-		var containersIntroAnimation = function(){
-			if(!window.location.hash){
-				// $('#app-container')
-				// $('#outer-container');
-			} else {
-				// $('#app-container').removeAttr('id', 'app-container')
-				// $('#app-container').attr('id', 'app-container-no-intro');
-				// $('#outer-container').removeAttr('id', 'outer-container')
-				// $('#outer-container').attr('id', 'outer-container-no-intro');
-			}
-		}
-
-		containersIntroAnimation()
-
 		// The following function is horrible but I don't have time to refactor it :/
 		window.mobilecheck = function() {
 		  var check = false;
@@ -14394,99 +14380,99 @@ var Projects = Backbone.View.extend({
         $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
         $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
 
-        $('#outer-container').bind('mousewheel', function(e){
-          var e = window.event;
-          var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-          if(delta > 0){
-            //go up
-            var width = parseInt($('#wipe-left').css('width'))
-            width-=10;
-            var newWidth = (width <= 0) ? 0 : width;
-            $('#wipe-left').css({
-              'width': newWidth + 'px'
-            })
-            //text
-            var position = parseInt($('.project-details').css('top'));
-            position+=10;
-            var paragraphHeight = parseInt($('.project-details').height());
-            var newPosition = (position >= window.innerHeight + 50) ? window.innerHeight + 50 : position
-            $('.project-details').css({
-              'top': newPosition + 'px'
-            })
-            //title
-            var titlePosition = parseInt($('.project-block h3').css('bottom'))
-            titlePosition-=2;
-            var newTitlePosition = (titlePosition <= 100) ? 100 : titlePosition;
-            var titlePositionLeft = parseInt($('.project-block h3').css('left'));
-            titlePositionLeft+=1;
-            var newTitleLeft = (titlePositionLeft >= -50) ? -50 : titlePositionLeft;
-            var titleSize = parseInt($('.project-block h3').css('font-size'));
-            titleSize+=1;
-            var newTitleSize = titleSize >= 40 ? 40 : titleSize;
-            $('.project-block h3').css({
-              'bottom': newTitlePosition + 'px',
-              'left': -50 + 'px',
-              'font-size': newTitleSize + 'px'
-            })
-          }else{
-            //go down
+        // $('#outer-container').bind('mousewheel', function(e){
+        //   var e = window.event;
+        //   var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        //   if(delta > 0){
+        //     //go up
+        //     var width = parseInt($('#wipe-left').css('width'))
+        //     width-=10;
+        //     var newWidth = (width <= 0) ? 0 : width;
+        //     $('#wipe-left').css({
+        //       'width': newWidth + 'px'
+        //     })
+        //     //text
+        //     var position = parseInt($('.project-details').css('top'));
+        //     position+=10;
+        //     var paragraphHeight = parseInt($('.project-details').height());
+        //     var newPosition = (position >= window.innerHeight + 50) ? window.innerHeight + 50 : position
+        //     $('.project-details').css({
+        //       'top': newPosition + 'px'
+        //     })
+        //     //title
+        //     var titlePosition = parseInt($('.project-block h3').css('bottom'))
+        //     titlePosition-=2;
+        //     var newTitlePosition = (titlePosition <= 100) ? 100 : titlePosition;
+        //     var titlePositionLeft = parseInt($('.project-block h3').css('left'));
+        //     titlePositionLeft+=1;
+        //     var newTitleLeft = (titlePositionLeft >= -50) ? -50 : titlePositionLeft;
+        //     var titleSize = parseInt($('.project-block h3').css('font-size'));
+        //     titleSize+=1;
+        //     var newTitleSize = titleSize >= 40 ? 40 : titleSize;
+        //     $('.project-block h3').css({
+        //       'bottom': newTitlePosition + 'px',
+        //       'left': -50 + 'px',
+        //       'font-size': newTitleSize + 'px'
+        //     })
+        //   }else{
+        //     //go down
+        //
+        //     // white background
+        //     var width = parseInt($('#wipe-left').css('width'));
+        //     var outerContainerWidth = parseInt($('#outer-container').css('width'));
+        //     width+=15;
+        //     var newWidth = (width >= outerContainerWidth) ? outerContainerWidth : width;
+        //     $('#wipe-left').css({
+        //       'width': newWidth + 'px'
+        //     })
+        //
+        //     //text
+        //     var position = parseInt($('.project-details').css('top'));
+        //     var textBottom = parseInt($('.project-details').css('bottom'));
+        //     position -= (textBottom > 100) ? 0 : 5;
+        //     $('.project-details').css({
+        //       'top': position + 'px'
+        //     })
+        //
+        //     //title
+        //     var titlePositionBottom = parseInt($('.project-block h3').css('bottom'));
+        //     titlePositionBottom+=2;
+        //     var titlePositionLeft = parseInt($('.project-block h3').css('left'));
+        //     titlePositionLeft-=1;
+        //     var newTitlePosition = (titlePositionBottom >= 325) ? 325 : titlePositionBottom;
+        //     var newTitleLeft = (titlePositionLeft <= -85) ? -85 : titlePositionLeft;
+        //     var titleSize = parseInt($('.project-block h3').css('font-size'));
+        //     titleSize-=0.5;
+        //     var newTitleSize = titleSize <= 15 ? 15 : titleSize;
+        //     $('.project-block h3').css({
+        //       'bottom': newTitlePosition + 'px',
+        //       'left': newTitleLeft + 'px',
+        //       'font-size': newTitleSize + 'px'
+        //     })
+        //   }
+        // });
 
-            // white background
-            var width = parseInt($('#wipe-left').css('width'));
-            var outerContainerWidth = parseInt($('#outer-container').css('width'));
-            width+=15;
-            var newWidth = (width >= outerContainerWidth) ? outerContainerWidth : width;
-            $('#wipe-left').css({
-              'width': newWidth + 'px'
-            })
 
-            //text
-            var position = parseInt($('.project-details').css('top'));
-            var textBottom = parseInt($('.project-details').css('bottom'));
-            position -= (textBottom > 100) ? 0 : 5;
-            $('.project-details').css({
-              'top': position + 'px'
-            })
-
-            //title
-            var titlePositionBottom = parseInt($('.project-block h3').css('bottom'));
-            titlePositionBottom+=2;
-            var titlePositionLeft = parseInt($('.project-block h3').css('left'));
-            titlePositionLeft-=1;
-            var newTitlePosition = (titlePositionBottom >= 325) ? 325 : titlePositionBottom;
-            var newTitleLeft = (titlePositionLeft <= -85) ? -85 : titlePositionLeft;
-            var titleSize = parseInt($('.project-block h3').css('font-size'));
-            titleSize-=0.5;
-            var newTitleSize = titleSize <= 15 ? 15 : titleSize;
-            $('.project-block h3').css({
-              'bottom': newTitlePosition + 'px',
-              'left': newTitleLeft + 'px',
-              'font-size': newTitleSize + 'px'
-            })
-          }
-        });
-
-
-        var lastScrollTop = 0;
-        window.addEventListener('scroll', function(e) {
-          var step = ($('#wipe-left').height() - $(window).height()) / 22;
-          var scrollStep = parseInt($(window).scrollTop() / step);
-          var maskPosition = (100/22) * scrollStep;
-
-          var scroll = $(this).scrollTop();
-          if (scroll > lastScrollTop){
-            var width = (parseInt($('#wipe-left').css('width')) >= $('#projects-container').css('width')) ? $('#projects-container').css('width') + 'px' : maskPosition + 'px'
-            $('#wipe-left').css({
-              'width': width + 'px'
-            })
-          } else {
-            // var width = (parseInt($('#wipe-left').css('width')) >= window.innerWidth) ? $('#projects-container').css('width') : ($('#wipe-left').position().left - maskPosition) + 'px'
-            // $('#wipe-left').css({
-            //   'width': width
-            // })
-          }
-          lastScrollTop = scroll;
-        }, {passive: true});
+        // var lastScrollTop = 0;
+        // window.addEventListener('scroll', function(e) {
+        //   var step = ($('#wipe-left').height() - $(window).height()) / 22;
+        //   var scrollStep = parseInt($(window).scrollTop() / step);
+        //   var maskPosition = (100/22) * scrollStep;
+        //
+        //   var scroll = $(this).scrollTop();
+        //   if (scroll > lastScrollTop){
+        //     var width = (parseInt($('#wipe-left').css('width')) >= $('#projects-container').css('width')) ? $('#projects-container').css('width') + 'px' : maskPosition + 'px'
+        //     $('#wipe-left').css({
+        //       'width': width + 'px'
+        //     })
+        //   } else {
+        //     // var width = (parseInt($('#wipe-left').css('width')) >= window.innerWidth) ? $('#projects-container').css('width') : ($('#wipe-left').position().left - maskPosition) + 'px'
+        //     // $('#wipe-left').css({
+        //     //   'width': width
+        //     // })
+        //   }
+        //   lastScrollTop = scroll;
+        // }, {passive: true});
 
       }
 
@@ -14509,7 +14495,7 @@ exports = module.exports = __webpack_require__(17)();
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.container-animation {\n  animation: grow 1s ease;\n  animation-fill-mode: forwards; }\n\n.container-style {\n  width: 100% !important;\n  height: 100% !important; }\n\n@keyframes grow {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.outer-container-animation {\n  animation: growOuterContainer 0.5s ease;\n  animation-delay: 0.5s;\n  animation-fill-mode: forwards; }\n\n.outer-container-style {\n  width: 95% !important;\n  height: 95% !important; }\n\n@keyframes growOuterContainer {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#outer-container #navbar a {\n  font-size: 10px;\n  font-weight: 200;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px;\n  /*font-weight: 600;*/ }\n\n#outer-container #navbar a:hover {\n  /*color: rgb(255, 28, 0);*/\n  text-decoration: none;\n  /*font-weight: 600;*/ }\n\n#about-block .content {\n  display: inline-block;\n  width: 70%;\n  vertical-align: top; }\n\n#about-block img {\n  width: 15em;\n  display: inline-block;\n  margin-right: 1em;\n  margin-bottom: 1em; }\n\n#about-block h3 {\n  margin-top: 0;\n  margin-bottom: 1em; }\n\n#about-block {\n  text-align: justify;\n  margin-top: 5em; }\n\n#center {\n  display: block;\n  margin: 5% auto;\n  width: 80%;\n  max-height: 73%;\n  overflow-y: scroll; }\n\n#center::-webkit-scrollbar {\n  width: 1px; }\n\n#center #projects-block .project {\n  display: inline-block;\n  position: relative;\n  width: 30em;\n  height: 15em;\n  background: lightgrey;\n  margin-right: 10px;\n  vertical-align: top;\n  margin-top: 10px;\n  background-size: cover;\n  background-position: center;\n  /*opacity: 0.7;*/ }\n\n#center #projects-block .project:hover {\n  opacity: 1; }\n\n#center #projects-block .project h4 {\n  color: white;\n  font-size: 15px; }\n\n#center #projects-block .project p {\n  color: white;\n  font-size: 12px; }\n\n#center #projects-block .project .project-description ul {\n  margin-bottom: 10px;\n  padding: 0;\n  list-style: none; }\n\n#center #projects-block .project .project-description ul li {\n  display: inline-block;\n  background: white;\n  margin-right: 10px;\n  padding: 0em 1em;\n  font-size: 10px; }\n\n#center #projects-block .project .project-description {\n  /*border: 5px solid rgb(26, 25, 169);*/\n  padding: 0em 1em;\n  background: #5539da;\n  display: block;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  left: 0; }\n\n#projects-block, #about-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 65em; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#skills-block .block {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 2em; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 200px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 1.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'PT Sans Narrow', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px;\n  font-style: italic; }\n\n#outer-container .footer {\n  display: block;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  width: 100%;\n  text-align: right; }\n\n.footer ul {\n  font-family: 'Source Code Pro';\n  list-style: none; }\n\n.footer ul li {\n  display: inline-block; }\n\n.footer ul li a {\n  color: black; }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    color: #2d307a;\n    margin-bottom: 0;\n    margin-left: 0.8em;\n    font-family: 'Josefin Sans', sans-serif;\n    font-weight: 100;\n    letter-spacing: 15px; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border-left: 2px solid #da2d2a; }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 49%;\n    vertical-align: top; }\n    #about-container .about-content-block #intro-block, #about-container .about-content-block #skills-block, #about-container .about-content-block #contributions-block {\n      display: block;\n      width: 70%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em; }\n      #about-container .about-content-block #intro-block .social-button {\n        width: 26.5%;\n        margin-right: 1%;\n        margin-top: 1em;\n        margin-bottom: 1em;\n        border: 2px solid #2d307a;\n        display: inline-block;\n        text-align: center;\n        position: relative; }\n        #about-container .about-content-block #intro-block .social-button a {\n          position: relative;\n          transition: all 0.3s ease;\n          display: inline-block;\n          width: 100%;\n          height: 2em;\n          line-height: 2em; }\n          #about-container .about-content-block #intro-block .social-button a:before, #about-container .about-content-block #intro-block .social-button a:after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            height: 0;\n            transition: all .3s ease; }\n          #about-container .about-content-block #intro-block .social-button a:before {\n            background: white;\n            z-index: -2; }\n          #about-container .about-content-block #intro-block .social-button a:after {\n            background: #2d307a;\n            z-index: -1;\n            color: white;\n            height: -100%; }\n          #about-container .about-content-block #intro-block .social-button a:hover, #about-container .about-content-block #intro-block .social-button a:focus {\n            cursor: pointer;\n            color: white; }\n            #about-container .about-content-block #intro-block .social-button a:hover:after, #about-container .about-content-block #intro-block .social-button a:focus:after {\n              height: 100%; }\n  #about-container #skills-block {\n    padding-left: 1em; }\n    #about-container #skills-block .skills {\n      display: inline-block;\n      vertical-align: top; }\n      #about-container #skills-block .skills ul {\n        list-style: none;\n        margin: 0;\n        margin-right: 3em;\n        padding: 0; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 85%; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 3em;\n    padding: 0; }\n\n.important-title {\n  color: #da2d2a; }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'PT Sans Narrow', sans-serif;\n    color: #2d307a; }\n  #projects-container .project-number {\n    position: absolute;\n    font-size: 50em;\n    margin: 0;\n    color: lightgray;\n    opacity: 0.3;\n    /* letter-spacing: -50px; */\n    letter-spacing: -50px;\n    top: -88px;\n    left: 100px;\n    z-index: -1; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'PT Sans Narrow', sans-serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 100%;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 100%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: 20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#home {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0; }\n  #home h1 {\n    z-index: 20;\n    position: absolute;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    font-family: 'PT Sans Narrow';\n    font-weight: 800;\n    text-transform: uppercase;\n    font-size: 50px;\n    color: #2d307a;\n    opacity: 0;\n    animation: appear 1s ease;\n    animation-delay: 1.4s;\n    animation-fill-mode: forwards; }\n  #home .outro-animation {\n    animation: disappear 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-h2 {\n    animation: disappearh2 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-canvas {\n    animation: disappearCanvas 0.5s ease;\n    animation-fill-mode: forwards;\n    animation-delay: 0.5s; }\n  #home h2 {\n    position: absolute;\n    top: 20%;\n    z-index: 20;\n    width: 100%;\n    text-align: center;\n    text-transform: uppercase;\n    font-family: 'PT Sans Narrow';\n    font-weight: 200;\n    color: #ff1c00;\n    opacity: 0;\n    animation: appearSubtitle 1s ease;\n    animation-delay: 1.6s;\n    animation-fill-mode: forwards; }\n  #home #threejs-container {\n    opacity: 0;\n    animation: canvasAppear 1s ease;\n    animation-delay: 1.2s;\n    animation-fill-mode: forwards; }\n\n@keyframes appear {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 1;\n    top: 25%; } }\n\n@keyframes appearSubtitle {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 0.8;\n    top: 35%; } }\n\n@keyframes canvasAppear {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes disappear {\n  from {\n    opacity: 1;\n    top: 25%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearh2 {\n  from {\n    opacity: 1;\n    top: 35%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearCanvas {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\n@media only screen and (max-width: 480px) {\n  #outer-container .description {\n    width: 130px; }\n    #outer-container .description h1 {\n      line-height: 25px;\n      font-size: 25px;\n      letter-spacing: 1px;\n      font-family: 'PT Sans Narrow';\n      font-weight: 600; }\n    #outer-container .description h3 {\n      font-size: italic; }\n  #projects-container h2 {\n    font-family: 'PT Sans Narrow'; }\n  #projects-container .project-block {\n    width: 90%;\n    margin-top: 5em; }\n    #projects-container .project-block h2 {\n      font-family: 'PT Sans Narrow'; }\n    #projects-container .project-block h3 {\n      position: relative;\n      left: 0;\n      top: 0;\n      font-size: 1em;\n      width: 100%;\n      display: block;\n      text-align: center;\n      font-family: 'PT Sans Narrow';\n      font-weight: 100; }\n    #projects-container .project-block .project-buttons {\n      left: 0;\n      bottom: -50px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        color: black;\n        border: 1px solid black; }\n  #projects-container p.svg, #projects-container #wipe-left {\n    display: none; }\n  #projects-container .project-details {\n    width: 90%;\n    position: relative;\n    top: 0;\n    left: 0;\n    margin-top: 4em;\n    margin-bottom: 2em; }\n    #projects-container .project-details img {\n      width: 100%; }\n  #projects-container #previous {\n    top: 21%;\n    left: 1.5em;\n    z-index: 10; }\n  #projects-container #next {\n    right: 1.5em;\n    top: 21%;\n    z-index: 10; }\n  #about-container h1 {\n    margin-left: 0;\n    font-size: 75px;\n    width: 90%;\n    display: block;\n    margin: 0 auto;\n    margin-top: 1em; }\n  #about-container .about-content-block {\n    display: block;\n    width: 100%; }\n    #about-container .about-content-block #intro-block {\n      width: 90%; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 3px; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border: none; }\n  #about-container .about-content-block #skills-block {\n    padding: 0;\n    width: 90%; }\n    #about-container .about-content-block #skills-block .skills {\n      width: 48%; }\n  #about-container #contributions-block {\n    width: 90%; } }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.container-animation {\n  animation: grow 1s ease;\n  animation-fill-mode: forwards; }\n\n.container-style {\n  width: 100% !important;\n  height: 100% !important; }\n\n@keyframes grow {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.outer-container-animation {\n  animation: growOuterContainer 0.5s ease;\n  animation-delay: 0.5s;\n  animation-fill-mode: forwards; }\n\n.outer-container-style {\n  width: 95% !important;\n  height: 95% !important; }\n\n@keyframes growOuterContainer {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#outer-container #navbar a {\n  font-size: 10px;\n  font-weight: 200;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px; }\n\n#outer-container #navbar a:hover {\n  text-decoration: none; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 200px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 1.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'PT Sans Narrow', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px;\n  font-style: italic; }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    color: #2d307a;\n    margin-bottom: 0;\n    margin-left: 0.8em;\n    font-family: 'Josefin Sans', sans-serif;\n    font-weight: 100;\n    letter-spacing: 15px; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border-left: 2px solid #da2d2a; }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 49%;\n    vertical-align: top; }\n    #about-container .about-content-block #intro-block, #about-container .about-content-block #skills-block, #about-container .about-content-block #contributions-block {\n      display: block;\n      width: 70%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em; }\n      #about-container .about-content-block #intro-block .social-button {\n        width: 26.5%;\n        margin-right: 1%;\n        margin-top: 1em;\n        margin-bottom: 1em;\n        border: 2px solid #2d307a;\n        display: inline-block;\n        text-align: center;\n        position: relative; }\n        #about-container .about-content-block #intro-block .social-button a {\n          position: relative;\n          transition: all 0.3s ease;\n          display: inline-block;\n          width: 100%;\n          height: 2em;\n          line-height: 2em; }\n          #about-container .about-content-block #intro-block .social-button a:before, #about-container .about-content-block #intro-block .social-button a:after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            height: 0;\n            transition: all .3s ease; }\n          #about-container .about-content-block #intro-block .social-button a:before {\n            background: white;\n            z-index: -2; }\n          #about-container .about-content-block #intro-block .social-button a:after {\n            background: #2d307a;\n            z-index: -1;\n            color: white;\n            height: -100%; }\n          #about-container .about-content-block #intro-block .social-button a:hover, #about-container .about-content-block #intro-block .social-button a:focus {\n            cursor: pointer;\n            color: white; }\n            #about-container .about-content-block #intro-block .social-button a:hover:after, #about-container .about-content-block #intro-block .social-button a:focus:after {\n              height: 100%; }\n  #about-container #skills-block {\n    padding-left: 1em; }\n    #about-container #skills-block .skills {\n      display: inline-block;\n      vertical-align: top; }\n      #about-container #skills-block .skills ul {\n        list-style: none;\n        margin: 0;\n        margin-right: 3em;\n        padding: 0; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 85%; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 3em;\n    padding: 0; }\n\n.important-title {\n  color: #da2d2a; }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'PT Sans Narrow', sans-serif;\n    color: #2d307a; }\n  #projects-container .project-number {\n    position: absolute;\n    font-size: 50em;\n    margin: 0;\n    color: lightgray;\n    opacity: 0.3;\n    /* letter-spacing: -50px; */\n    letter-spacing: -50px;\n    top: -88px;\n    left: 100px;\n    z-index: -1; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'PT Sans Narrow', sans-serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 100%;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 100%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: 20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto;\n  display: block !important; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#home {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0; }\n  #home h1 {\n    z-index: 20;\n    position: absolute;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    font-family: 'PT Sans Narrow';\n    font-weight: 800;\n    text-transform: uppercase;\n    font-size: 50px;\n    color: #2d307a;\n    opacity: 0;\n    animation: appear 1s ease;\n    animation-delay: 1.4s;\n    animation-fill-mode: forwards; }\n  #home .outro-animation {\n    animation: disappear 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-h2 {\n    animation: disappearh2 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-canvas {\n    animation: disappearCanvas 0.5s ease;\n    animation-fill-mode: forwards;\n    animation-delay: 0.5s; }\n  #home h2 {\n    position: absolute;\n    top: 20%;\n    z-index: 20;\n    width: 100%;\n    text-align: center;\n    text-transform: uppercase;\n    font-family: 'PT Sans Narrow';\n    font-weight: 200;\n    color: #ff1c00;\n    opacity: 0;\n    animation: appearSubtitle 1s ease;\n    animation-delay: 1.6s;\n    animation-fill-mode: forwards; }\n  #home #threejs-container {\n    opacity: 0;\n    animation: canvasAppear 1s ease;\n    animation-delay: 1.2s;\n    animation-fill-mode: forwards; }\n\n@keyframes appear {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 1;\n    top: 25%; } }\n\n@keyframes appearSubtitle {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 0.8;\n    top: 35%; } }\n\n@keyframes canvasAppear {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes disappear {\n  from {\n    opacity: 1;\n    top: 25%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearh2 {\n  from {\n    opacity: 1;\n    top: 35%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearCanvas {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\n@media only screen and (max-width: 480px) {\n  #outer-container .description {\n    width: 130px; }\n    #outer-container .description h1 {\n      line-height: 25px;\n      font-size: 25px;\n      letter-spacing: 1px;\n      font-family: 'PT Sans Narrow';\n      font-weight: 600; }\n    #outer-container .description h3 {\n      font-size: italic; }\n  #projects-container h2 {\n    font-family: 'PT Sans Narrow'; }\n  #projects-container .project-block {\n    width: 90%;\n    margin-top: 5em; }\n    #projects-container .project-block h2 {\n      font-family: 'PT Sans Narrow'; }\n    #projects-container .project-block h3 {\n      position: relative;\n      left: 0;\n      top: 0;\n      font-size: 1em;\n      width: 100%;\n      display: block;\n      text-align: center;\n      font-family: 'PT Sans Narrow';\n      font-weight: 100; }\n    #projects-container .project-block .project-buttons {\n      left: 0;\n      bottom: -50px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        color: black;\n        border: 1px solid black; }\n  #projects-container p.svg, #projects-container #wipe-left {\n    display: none; }\n  #projects-container .project-details {\n    width: 90%;\n    position: relative;\n    top: 0;\n    left: 0;\n    margin-top: 4em;\n    margin-bottom: 2em; }\n    #projects-container .project-details img {\n      width: 100%; }\n  #projects-container #previous {\n    top: 21%;\n    left: 1.5em;\n    z-index: 10; }\n  #projects-container #next {\n    right: 1.5em;\n    top: 21%;\n    z-index: 10; }\n  #about-container h1 {\n    margin-left: 0;\n    font-size: 75px;\n    width: 90%;\n    display: block;\n    margin: 0 auto;\n    margin-top: 1em; }\n  #about-container .about-content-block {\n    display: block;\n    width: 100%; }\n    #about-container .about-content-block #intro-block {\n      width: 90%; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 3px; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border: none; }\n  #about-container .about-content-block #skills-block {\n    padding: 0;\n    width: 90%; }\n    #about-container .about-content-block #skills-block .skills {\n      width: 48%; }\n  #about-container #contributions-block {\n    width: 90%; } }\n", ""]);
 
 // exports
 
@@ -16187,31 +16173,41 @@ if(!window.location.hash){
 
 }
 
-$('#projects').click(function(){
-  $('#home h1').addClass("outro-animation");
-  $('#home h2').addClass("outro-animation-h2");
-  $('#home h2').bind("animationend", function(){
-    window.location.href = "#projects"
-  });
+if(!window.location.hash){
+  $('#projects').click(function(){
+    $('#home h1').addClass("outro-animation");
+    $('#home h2').addClass("outro-animation-h2");
+    $('#home h2').bind("animationend", function(){
+      window.location.href = "#projects"
+    });
 
-  // $('#threejs-container canvas').addClass("outro-animation-canvas");
-  // $('#threejs-container canvas').bind("animationend", function(){
-  //    window.location.href = "#projects"
-  // });
-})
+    // $('#threejs-container canvas').addClass("outro-animation-canvas");
+    // $('#threejs-container canvas').bind("animationend", function(){
+    //    window.location.href = "#projects"
+    // });
+  })
 
-$('#about').click(function(){
-  $('#home h1').addClass("outro-animation");
-  $('#home h2').addClass("outro-animation-h2");
-  $('#home h2').bind("animationend", function(){
-    window.location.href = "#about"
-  });
+  $('#about').click(function(){
+    $('#home h1').addClass("outro-animation");
+    $('#home h2').addClass("outro-animation-h2");
+    $('#home h2').bind("animationend", function(){
+      window.location.href = "#about"
+    });
 
-  // $('#threejs-container canvas').addClass("outro-animation-canvas");
-  // $('#threejs-container canvas').bind("animationend", function(){
-  //    window.location.href = "#about"
-  // });
-})
+    // $('#threejs-container canvas').addClass("outro-animation-canvas");
+    // $('#threejs-container canvas').bind("animationend", function(){
+    //    window.location.href = "#about"
+    // });
+  })
+} else if(window.location.hash.includes('projects')){
+  $('#about').click(function(){
+      window.location.href = "#about"
+  })
+} else if(window.location.hash.includes('#about')){
+  $('#projects').click(function(){
+      window.location.href = "#projects"
+  })
+}
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 

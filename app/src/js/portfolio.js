@@ -6,20 +6,6 @@ window.onload = function(){
 			navbarLinks[i].className += ' navbar-link-animation';
 		}
 
-		var containersIntroAnimation = function(){
-			if(!window.location.hash){
-				// $('#app-container')
-				// $('#outer-container');
-			} else {
-				// $('#app-container').removeAttr('id', 'app-container')
-				// $('#app-container').attr('id', 'app-container-no-intro');
-				// $('#outer-container').removeAttr('id', 'outer-container')
-				// $('#outer-container').attr('id', 'outer-container-no-intro');
-			}
-		}
-
-		containersIntroAnimation()
-
 		// The following function is horrible but I don't have time to refactor it :/
 		window.mobilecheck = function() {
 		  var check = false;

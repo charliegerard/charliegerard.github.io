@@ -29,28 +29,38 @@ if(!window.location.hash){
 
 }
 
-$('#projects').click(function(){
-  $('#home h1').addClass("outro-animation");
-  $('#home h2').addClass("outro-animation-h2");
-  $('#home h2').bind("animationend", function(){
-    window.location.href = "#projects"
-  });
+if(!window.location.hash){
+  $('#projects').click(function(){
+    $('#home h1').addClass("outro-animation");
+    $('#home h2').addClass("outro-animation-h2");
+    $('#home h2').bind("animationend", function(){
+      window.location.href = "#projects"
+    });
 
-  // $('#threejs-container canvas').addClass("outro-animation-canvas");
-  // $('#threejs-container canvas').bind("animationend", function(){
-  //    window.location.href = "#projects"
-  // });
-})
+    // $('#threejs-container canvas').addClass("outro-animation-canvas");
+    // $('#threejs-container canvas').bind("animationend", function(){
+    //    window.location.href = "#projects"
+    // });
+  })
 
-$('#about').click(function(){
-  $('#home h1').addClass("outro-animation");
-  $('#home h2').addClass("outro-animation-h2");
-  $('#home h2').bind("animationend", function(){
-    window.location.href = "#about"
-  });
+  $('#about').click(function(){
+    $('#home h1').addClass("outro-animation");
+    $('#home h2').addClass("outro-animation-h2");
+    $('#home h2').bind("animationend", function(){
+      window.location.href = "#about"
+    });
 
-  // $('#threejs-container canvas').addClass("outro-animation-canvas");
-  // $('#threejs-container canvas').bind("animationend", function(){
-  //    window.location.href = "#about"
-  // });
-})
+    // $('#threejs-container canvas').addClass("outro-animation-canvas");
+    // $('#threejs-container canvas').bind("animationend", function(){
+    //    window.location.href = "#about"
+    // });
+  })
+} else if(window.location.hash.includes('projects')){
+  $('#about').click(function(){
+      window.location.href = "#about"
+  })
+} else if(window.location.hash.includes('#about')){
+  $('#projects').click(function(){
+      window.location.href = "#projects"
+  })
+}
