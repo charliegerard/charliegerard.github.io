@@ -14509,7 +14509,7 @@ exports = module.exports = __webpack_require__(17)();
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 100%;\n  position: absolute;\n  height: 100%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.container-animation {\n  animation: grow 0.5s;\n  animation-timing-function: linear;\n  animation-fill-mode: forwards;\n  animation-iteration-count: 1; }\n\n@keyframes grow {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 95%;\n  position: absolute;\n  height: 95%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.outer-container-animation {\n  animation: growOuterContainer 0.5s;\n  animation-delay: 0.5s;\n  animation-timing-function: linear;\n  animation-fill-mode: forwards;\n  animation-iteration-count: 1; }\n\n@keyframes growOuterContainer {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#outer-container #navbar a {\n  font-size: 10px;\n  font-weight: 200;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px;\n  /*font-weight: 600;*/ }\n\n#outer-container #navbar a:hover {\n  /*color: rgb(255, 28, 0);*/\n  text-decoration: none;\n  /*font-weight: 600;*/ }\n\n#about-block .content {\n  display: inline-block;\n  width: 70%;\n  vertical-align: top; }\n\n#about-block img {\n  width: 15em;\n  display: inline-block;\n  margin-right: 1em;\n  margin-bottom: 1em; }\n\n#about-block h3 {\n  margin-top: 0;\n  margin-bottom: 1em; }\n\n#about-block {\n  text-align: justify;\n  margin-top: 5em; }\n\n#center {\n  display: block;\n  margin: 5% auto;\n  width: 80%;\n  max-height: 73%;\n  overflow-y: scroll; }\n\n#center::-webkit-scrollbar {\n  width: 1px; }\n\n#center #projects-block .project {\n  display: inline-block;\n  position: relative;\n  width: 30em;\n  height: 15em;\n  background: lightgrey;\n  margin-right: 10px;\n  vertical-align: top;\n  margin-top: 10px;\n  background-size: cover;\n  background-position: center;\n  /*opacity: 0.7;*/ }\n\n#center #projects-block .project:hover {\n  opacity: 1; }\n\n#center #projects-block .project h4 {\n  color: white;\n  font-size: 15px; }\n\n#center #projects-block .project p {\n  color: white;\n  font-size: 12px; }\n\n#center #projects-block .project .project-description ul {\n  margin-bottom: 10px;\n  padding: 0;\n  list-style: none; }\n\n#center #projects-block .project .project-description ul li {\n  display: inline-block;\n  background: white;\n  margin-right: 10px;\n  padding: 0em 1em;\n  font-size: 10px; }\n\n#center #projects-block .project .project-description {\n  /*border: 5px solid rgb(26, 25, 169);*/\n  padding: 0em 1em;\n  background: #5539da;\n  display: block;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  left: 0; }\n\n#projects-block, #about-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 65em; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#skills-block .block {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 2em; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 200px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 1.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'PT Sans Narrow', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px;\n  font-style: italic; }\n\n#outer-container .footer {\n  display: block;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  width: 100%;\n  text-align: right; }\n\n.footer ul {\n  font-family: 'Source Code Pro';\n  list-style: none; }\n\n.footer ul li {\n  display: inline-block; }\n\n.footer ul li a {\n  color: black; }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    color: #2d307a;\n    margin-bottom: 0;\n    margin-left: 0.8em;\n    font-family: 'Josefin Sans', sans-serif;\n    font-weight: 100;\n    letter-spacing: 15px; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border-left: 2px solid #da2d2a; }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 49%;\n    vertical-align: top; }\n    #about-container .about-content-block #intro-block, #about-container .about-content-block #skills-block, #about-container .about-content-block #contributions-block {\n      display: block;\n      width: 70%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em; }\n      #about-container .about-content-block #intro-block .social-button {\n        width: 26.5%;\n        margin-right: 1%;\n        margin-top: 1em;\n        margin-bottom: 1em;\n        border: 2px solid #2d307a;\n        display: inline-block;\n        text-align: center;\n        position: relative; }\n        #about-container .about-content-block #intro-block .social-button a {\n          position: relative;\n          transition: all 0.3s ease;\n          display: inline-block;\n          width: 100%;\n          height: 2em;\n          line-height: 2em; }\n          #about-container .about-content-block #intro-block .social-button a:before, #about-container .about-content-block #intro-block .social-button a:after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            height: 0;\n            transition: all .3s ease; }\n          #about-container .about-content-block #intro-block .social-button a:before {\n            background: white;\n            z-index: -2; }\n          #about-container .about-content-block #intro-block .social-button a:after {\n            background: #2d307a;\n            z-index: -1;\n            color: white;\n            height: -100%; }\n          #about-container .about-content-block #intro-block .social-button a:hover, #about-container .about-content-block #intro-block .social-button a:focus {\n            cursor: pointer;\n            color: white; }\n            #about-container .about-content-block #intro-block .social-button a:hover:after, #about-container .about-content-block #intro-block .social-button a:focus:after {\n              height: 100%; }\n  #about-container #skills-block {\n    padding-left: 1em; }\n    #about-container #skills-block .skills {\n      display: inline-block;\n      vertical-align: top; }\n      #about-container #skills-block .skills ul {\n        list-style: none;\n        margin: 0;\n        margin-right: 3em;\n        padding: 0; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 85%; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 3em;\n    padding: 0; }\n\n.important-title {\n  color: #da2d2a; }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'PT Sans Narrow', sans-serif;\n    color: #2d307a; }\n  #projects-container .project-number {\n    position: absolute;\n    font-size: 50em;\n    margin: 0;\n    color: lightgray;\n    opacity: 0.3;\n    /* letter-spacing: -50px; */\n    letter-spacing: -50px;\n    top: -88px;\n    left: 100px;\n    z-index: -1; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'PT Sans Narrow', sans-serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 800px;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 85%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: 20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#home {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0; }\n  #home h1 {\n    z-index: 20;\n    position: absolute;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    font-family: 'PT Sans Narrow';\n    font-weight: 800;\n    text-transform: uppercase;\n    font-size: 50px;\n    color: #2d307a;\n    opacity: 0;\n    animation: appear 1s ease;\n    animation-delay: 1.4s;\n    animation-fill-mode: forwards; }\n  #home .outro-animation {\n    animation: disappear 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-h2 {\n    animation: disappearh2 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-canvas {\n    animation: disappearCanvas 0.5s ease;\n    animation-fill-mode: forwards;\n    animation-delay: 0.5s; }\n  #home h2 {\n    position: absolute;\n    top: 20%;\n    z-index: 20;\n    width: 100%;\n    text-align: center;\n    text-transform: uppercase;\n    font-family: 'PT Sans Narrow';\n    font-weight: 200;\n    color: #ff1c00;\n    opacity: 0;\n    animation: appearSubtitle 1s ease;\n    animation-delay: 1.6s;\n    animation-fill-mode: forwards; }\n  #home #threejs-container {\n    opacity: 0;\n    animation: canvasAppear 1s ease;\n    animation-delay: 1.2s;\n    animation-fill-mode: forwards; }\n\n@keyframes appear {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 1;\n    top: 25%; } }\n\n@keyframes appearSubtitle {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 0.8;\n    top: 35%; } }\n\n@keyframes canvasAppear {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes disappear {\n  from {\n    opacity: 1;\n    top: 25%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearh2 {\n  from {\n    opacity: 1;\n    top: 35%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearCanvas {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\n@media only screen and (max-width: 480px) {\n  #outer-container .description {\n    width: 130px; }\n    #outer-container .description h1 {\n      line-height: 25px;\n      font-size: 25px;\n      letter-spacing: 1px;\n      font-family: 'PT Sans Narrow';\n      font-weight: 600; }\n    #outer-container .description h3 {\n      font-size: italic; }\n  #projects-container h2 {\n    font-family: 'PT Sans Narrow'; }\n  #projects-container .project-block {\n    width: 90%;\n    margin-top: 5em; }\n    #projects-container .project-block h2 {\n      font-family: 'PT Sans Narrow'; }\n    #projects-container .project-block h3 {\n      position: relative;\n      left: 0;\n      top: 0;\n      font-size: 1em;\n      width: 100%;\n      display: block;\n      text-align: center;\n      font-family: 'PT Sans Narrow';\n      font-weight: 100; }\n    #projects-container .project-block .project-buttons {\n      left: 0;\n      bottom: -50px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        color: black;\n        border: 1px solid black; }\n  #projects-container p.svg, #projects-container #wipe-left {\n    display: none; }\n  #projects-container .project-details {\n    width: 90%;\n    position: relative;\n    top: 0;\n    left: 0;\n    margin-top: 4em;\n    margin-bottom: 2em; }\n    #projects-container .project-details img {\n      width: 100%; }\n  #projects-container #previous {\n    top: 21%;\n    left: 1.5em;\n    z-index: 10; }\n  #projects-container #next {\n    right: 1.5em;\n    top: 21%;\n    z-index: 10; }\n  #about-container h1 {\n    margin-left: 0;\n    font-size: 75px;\n    width: 90%;\n    display: block;\n    margin: 0 auto;\n    margin-top: 1em; }\n  #about-container .about-content-block {\n    display: block;\n    width: 100%; }\n    #about-container .about-content-block #intro-block {\n      width: 90%; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 3px; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border: none; }\n  #about-container .about-content-block #skills-block {\n    padding: 0;\n    width: 90%; }\n    #about-container .about-content-block #skills-block .skills {\n      width: 48%; }\n  #about-container #contributions-block {\n    width: 90%; } }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.container-animation {\n  animation: grow 1s ease;\n  animation-fill-mode: forwards; }\n\n.container-style {\n  width: 100% !important;\n  height: 100% !important; }\n\n@keyframes grow {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.outer-container-animation {\n  animation: growOuterContainer 0.5s ease;\n  animation-delay: 0.5s;\n  animation-fill-mode: forwards; }\n\n.outer-container-style {\n  width: 95% !important;\n  height: 95% !important; }\n\n@keyframes growOuterContainer {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#outer-container #navbar a {\n  font-size: 10px;\n  font-weight: 200;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px;\n  /*font-weight: 600;*/ }\n\n#outer-container #navbar a:hover {\n  /*color: rgb(255, 28, 0);*/\n  text-decoration: none;\n  /*font-weight: 600;*/ }\n\n#about-block .content {\n  display: inline-block;\n  width: 70%;\n  vertical-align: top; }\n\n#about-block img {\n  width: 15em;\n  display: inline-block;\n  margin-right: 1em;\n  margin-bottom: 1em; }\n\n#about-block h3 {\n  margin-top: 0;\n  margin-bottom: 1em; }\n\n#about-block {\n  text-align: justify;\n  margin-top: 5em; }\n\n#center {\n  display: block;\n  margin: 5% auto;\n  width: 80%;\n  max-height: 73%;\n  overflow-y: scroll; }\n\n#center::-webkit-scrollbar {\n  width: 1px; }\n\n#center #projects-block .project {\n  display: inline-block;\n  position: relative;\n  width: 30em;\n  height: 15em;\n  background: lightgrey;\n  margin-right: 10px;\n  vertical-align: top;\n  margin-top: 10px;\n  background-size: cover;\n  background-position: center;\n  /*opacity: 0.7;*/ }\n\n#center #projects-block .project:hover {\n  opacity: 1; }\n\n#center #projects-block .project h4 {\n  color: white;\n  font-size: 15px; }\n\n#center #projects-block .project p {\n  color: white;\n  font-size: 12px; }\n\n#center #projects-block .project .project-description ul {\n  margin-bottom: 10px;\n  padding: 0;\n  list-style: none; }\n\n#center #projects-block .project .project-description ul li {\n  display: inline-block;\n  background: white;\n  margin-right: 10px;\n  padding: 0em 1em;\n  font-size: 10px; }\n\n#center #projects-block .project .project-description {\n  /*border: 5px solid rgb(26, 25, 169);*/\n  padding: 0em 1em;\n  background: #5539da;\n  display: block;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  left: 0; }\n\n#projects-block, #about-block {\n  display: none;\n  font-family: 'Source Code Pro';\n  width: 65em; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#skills-block .block {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 2em; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 200px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 1.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'PT Sans Narrow', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px;\n  font-style: italic; }\n\n#outer-container .footer {\n  display: block;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  width: 100%;\n  text-align: right; }\n\n.footer ul {\n  font-family: 'Source Code Pro';\n  list-style: none; }\n\n.footer ul li {\n  display: inline-block; }\n\n.footer ul li a {\n  color: black; }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    color: #2d307a;\n    margin-bottom: 0;\n    margin-left: 0.8em;\n    font-family: 'Josefin Sans', sans-serif;\n    font-weight: 100;\n    letter-spacing: 15px; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border-left: 2px solid #da2d2a; }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 49%;\n    vertical-align: top; }\n    #about-container .about-content-block #intro-block, #about-container .about-content-block #skills-block, #about-container .about-content-block #contributions-block {\n      display: block;\n      width: 70%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em; }\n      #about-container .about-content-block #intro-block .social-button {\n        width: 26.5%;\n        margin-right: 1%;\n        margin-top: 1em;\n        margin-bottom: 1em;\n        border: 2px solid #2d307a;\n        display: inline-block;\n        text-align: center;\n        position: relative; }\n        #about-container .about-content-block #intro-block .social-button a {\n          position: relative;\n          transition: all 0.3s ease;\n          display: inline-block;\n          width: 100%;\n          height: 2em;\n          line-height: 2em; }\n          #about-container .about-content-block #intro-block .social-button a:before, #about-container .about-content-block #intro-block .social-button a:after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            height: 0;\n            transition: all .3s ease; }\n          #about-container .about-content-block #intro-block .social-button a:before {\n            background: white;\n            z-index: -2; }\n          #about-container .about-content-block #intro-block .social-button a:after {\n            background: #2d307a;\n            z-index: -1;\n            color: white;\n            height: -100%; }\n          #about-container .about-content-block #intro-block .social-button a:hover, #about-container .about-content-block #intro-block .social-button a:focus {\n            cursor: pointer;\n            color: white; }\n            #about-container .about-content-block #intro-block .social-button a:hover:after, #about-container .about-content-block #intro-block .social-button a:focus:after {\n              height: 100%; }\n  #about-container #skills-block {\n    padding-left: 1em; }\n    #about-container #skills-block .skills {\n      display: inline-block;\n      vertical-align: top; }\n      #about-container #skills-block .skills ul {\n        list-style: none;\n        margin: 0;\n        margin-right: 3em;\n        padding: 0; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 85%; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 3em;\n    padding: 0; }\n\n.important-title {\n  color: #da2d2a; }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'PT Sans Narrow', sans-serif;\n    color: #2d307a; }\n  #projects-container .project-number {\n    position: absolute;\n    font-size: 50em;\n    margin: 0;\n    color: lightgray;\n    opacity: 0.3;\n    /* letter-spacing: -50px; */\n    letter-spacing: -50px;\n    top: -88px;\n    left: 100px;\n    z-index: -1; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'PT Sans Narrow', sans-serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 100%;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 100%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: 20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#home {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0; }\n  #home h1 {\n    z-index: 20;\n    position: absolute;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    font-family: 'PT Sans Narrow';\n    font-weight: 800;\n    text-transform: uppercase;\n    font-size: 50px;\n    color: #2d307a;\n    opacity: 0;\n    animation: appear 1s ease;\n    animation-delay: 1.4s;\n    animation-fill-mode: forwards; }\n  #home .outro-animation {\n    animation: disappear 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-h2 {\n    animation: disappearh2 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-canvas {\n    animation: disappearCanvas 0.5s ease;\n    animation-fill-mode: forwards;\n    animation-delay: 0.5s; }\n  #home h2 {\n    position: absolute;\n    top: 20%;\n    z-index: 20;\n    width: 100%;\n    text-align: center;\n    text-transform: uppercase;\n    font-family: 'PT Sans Narrow';\n    font-weight: 200;\n    color: #ff1c00;\n    opacity: 0;\n    animation: appearSubtitle 1s ease;\n    animation-delay: 1.6s;\n    animation-fill-mode: forwards; }\n  #home #threejs-container {\n    opacity: 0;\n    animation: canvasAppear 1s ease;\n    animation-delay: 1.2s;\n    animation-fill-mode: forwards; }\n\n@keyframes appear {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 1;\n    top: 25%; } }\n\n@keyframes appearSubtitle {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 0.8;\n    top: 35%; } }\n\n@keyframes canvasAppear {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes disappear {\n  from {\n    opacity: 1;\n    top: 25%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearh2 {\n  from {\n    opacity: 1;\n    top: 35%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearCanvas {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\n@media only screen and (max-width: 480px) {\n  #outer-container .description {\n    width: 130px; }\n    #outer-container .description h1 {\n      line-height: 25px;\n      font-size: 25px;\n      letter-spacing: 1px;\n      font-family: 'PT Sans Narrow';\n      font-weight: 600; }\n    #outer-container .description h3 {\n      font-size: italic; }\n  #projects-container h2 {\n    font-family: 'PT Sans Narrow'; }\n  #projects-container .project-block {\n    width: 90%;\n    margin-top: 5em; }\n    #projects-container .project-block h2 {\n      font-family: 'PT Sans Narrow'; }\n    #projects-container .project-block h3 {\n      position: relative;\n      left: 0;\n      top: 0;\n      font-size: 1em;\n      width: 100%;\n      display: block;\n      text-align: center;\n      font-family: 'PT Sans Narrow';\n      font-weight: 100; }\n    #projects-container .project-block .project-buttons {\n      left: 0;\n      bottom: -50px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        color: black;\n        border: 1px solid black; }\n  #projects-container p.svg, #projects-container #wipe-left {\n    display: none; }\n  #projects-container .project-details {\n    width: 90%;\n    position: relative;\n    top: 0;\n    left: 0;\n    margin-top: 4em;\n    margin-bottom: 2em; }\n    #projects-container .project-details img {\n      width: 100%; }\n  #projects-container #previous {\n    top: 21%;\n    left: 1.5em;\n    z-index: 10; }\n  #projects-container #next {\n    right: 1.5em;\n    top: 21%;\n    z-index: 10; }\n  #about-container h1 {\n    margin-left: 0;\n    font-size: 75px;\n    width: 90%;\n    display: block;\n    margin: 0 auto;\n    margin-top: 1em; }\n  #about-container .about-content-block {\n    display: block;\n    width: 100%; }\n    #about-container .about-content-block #intro-block {\n      width: 90%; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 3px; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border: none; }\n  #about-container .about-content-block #skills-block {\n    padding: 0;\n    width: 90%; }\n    #about-container .about-content-block #skills-block .skills {\n      width: 48%; }\n  #about-container #contributions-block {\n    width: 90%; } }\n", ""]);
 
 // exports
 
@@ -14595,7 +14595,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : {};
 
-  return "<div id=\"projects-container\">\n  <h2>Work</h2>\n  <!-- <div id=\"test-container\"></div> -->\n    <div id=\"wipe-left\"></div>\n    <p class=\"project-number\">\n      "
+  return "<div id=\"projects-container\">\n  <h2>Work</h2>\n    <div id=\"wipe-left\"></div>\n    <p class=\"project-number\">\n      "
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.id : stack1), depth0))
     + "/"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.totalProjects : stack1), depth0))
@@ -15544,13 +15544,361 @@ module.exports = "<div id=\"contact-container\">\n  <h2>Contact</h2>\n\n</div>\n
 /* 37 */
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"home\">\n  <h1>Charlie Gerard</h1>\n  <h2>Creative Technologist</h2>\n  <div id=\"threejs-container\"></div>\n  <!-- <canvas id=\"canvas\"></canvas>\n      <div id=\"homeView\" class=\"current-state ajaxhidden\" style=\"visibility: inherit;\">\n  </div> -->\n\n  <script type=\"text/javascript\">\n  /*\n\n  ThreeJs custom waves\n  Original script by ThreeJS : http://threejs.org/examples/canvas_particles_waves.html\n  Original Modified version for https://bradient.com\n  */\n\n  var SEPARATION = 30, AMOUNTX = 430, AMOUNTY = 55;\n\n  var container;\n  var camera, scene, renderer;\n  var particles, particle, count = 0;\n  var windowHalfX = window.innerWidth / 2;\n  var windowHalfY = window.innerHeight / 2;\n\n  init();\n  animate();\n\n  function init() {\n\n    container = document.getElementById( 'threejs-container' );\n    if(container) {\n        container.className += container.className ? ' waves' : 'waves';\n    }\n\n    camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 1, 10000 );\n    camera.position.y = 350; //changes how far back you can see i.e the particles towards horizon\n    camera.position.z = 200; //This is how close or far the particles are seen\n\n    camera.rotation.x = 0.15;\n\n    scene = new THREE.Scene();\n\n    particles = new Array();\n\n    var PI2 = Math.PI * 2;\n    var material = new THREE.SpriteCanvasMaterial( {\n\n      color: 0x939393, //changes color of particles\n      program: function ( context ) {\n\n        context.beginPath();\n        context.arc( 0, 0, 0.1, 0, PI2, true );\n        context.fill();\n\n      }\n\n    } );\n\n    var i = 0;\n\n    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {\n\n      for ( var iy = 0; iy < AMOUNTY; iy ++ ) {\n\n        particle = particles[ i ++ ] = new THREE.Sprite( material );\n        particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );\n        particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) - 10 );\n        scene.add( particle );\n\n      }\n\n    }\n\n    renderer = new THREE.CanvasRenderer();\n    renderer.setSize( window.innerWidth, window.innerHeight );\n    renderer.setClearColor( 0xffffff, 1);\n    container.appendChild( renderer.domElement );\n\n    window.addEventListener( 'resize', onWindowResize, false );\n\n  }\n\n  function onWindowResize() {\n    windowHalfX = window.innerWidth / 2;\n    windowHalfY = window.innerHeight / 2;\n\n    camera.aspect = window.innerWidth / window.innerHeight;\n    camera.updateProjectionMatrix();\n\n    renderer.setSize( window.innerWidth, window.innerHeight );\n  }\n\n  function animate() {\n    requestAnimationFrame( animate );\n    render();\n  }\n\n  function render() {\n    var i = 0;\n\n    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {\n      for ( var iy = 0; iy < AMOUNTY; iy ++ ) {\n        particle = particles[ i++ ];\n        particle.position.y = ( Math.sin( ( ix + count ) * 0.20 ) * 50 ) + ( Math.sin( ( iy + count ) * 0.2 ) * 20 );\n        particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 2 ) * 4 + ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;\n      }\n    }\n\n    renderer.render( scene, camera );\n    // This increases or decreases speed\n    count += 0.5;\n  }\n  </script>\n</div>\n";
+module.exports = "<div id=\"home\">\n  <h1>Charlie Gerard</h1>\n  <h2>Creative Technologist</h2>\n  <div id=\"threejs-container\"></div>\n\n  <!--<script type=\"text/javascript\">\n  /*\n\n  ThreeJs custom waves\n  Original script by ThreeJS : http://threejs.org/examples/canvas_particles_waves.html\n  Original Modified version for https://bradient.com\n  */\n\n  var SEPARATION = 30, AMOUNTX = 430, AMOUNTY = 55;\n\n  var container;\n  var camera, scene, renderer;\n  var particles, particle, count = 0;\n  var windowHalfX = window.innerWidth / 2;\n  var windowHalfY = window.innerHeight / 2;\n\n  init();\n  animate();\n\n  function init() {\n\n    container = document.getElementById( 'threejs-container' );\n    if(container) {\n        container.className += container.className ? ' waves' : 'waves';\n    }\n\n    camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 1, 10000 );\n    camera.position.y = 350; //changes how far back you can see i.e the particles towards horizon\n    camera.position.z = 200; //This is how close or far the particles are seen\n\n    camera.rotation.x = 0.15;\n\n    scene = new THREE.Scene();\n\n    particles = new Array();\n\n    var PI2 = Math.PI * 2;\n    var material = new THREE.SpriteCanvasMaterial( {\n\n      color: 0x939393, //changes color of particles\n      program: function ( context ) {\n\n        context.beginPath();\n        context.arc( 0, 0, 0.1, 0, PI2, true );\n        context.fill();\n\n      }\n\n    } );\n\n    var i = 0;\n\n    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {\n\n      for ( var iy = 0; iy < AMOUNTY; iy ++ ) {\n\n        particle = particles[ i ++ ] = new THREE.Sprite( material );\n        particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );\n        particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) - 10 );\n        scene.add( particle );\n\n      }\n\n    }\n\n    renderer = new THREE.CanvasRenderer();\n    renderer.setSize( window.innerWidth, window.innerHeight );\n    renderer.setClearColor( 0xffffff, 1);\n    container.appendChild( renderer.domElement );\n\n    window.addEventListener( 'resize', onWindowResize, false );\n\n  }\n\n  function onWindowResize() {\n    windowHalfX = window.innerWidth / 2;\n    windowHalfY = window.innerHeight / 2;\n\n    camera.aspect = window.innerWidth / window.innerHeight;\n    camera.updateProjectionMatrix();\n\n    renderer.setSize( window.innerWidth, window.innerHeight );\n  }\n\n  function animate() {\n    requestAnimationFrame( animate );\n    render();\n  }\n\n  function render() {\n    var i = 0;\n\n    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {\n      for ( var iy = 0; iy < AMOUNTY; iy ++ ) {\n        particle = particles[ i++ ];\n        particle.position.y = ( Math.sin( ( ix + count ) * 0.20 ) * 50 ) + ( Math.sin( ( iy + count ) * 0.2 ) * 20 );\n        particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 2 ) * 4 + ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;\n      }\n    }\n\n    renderer.render( scene, camera );\n    // This increases or decreases speed\n    count += 0.5;\n  }\n  </script> -->\n</div>\n";
 
 /***/ },
 /* 38 */
 /***/ function(module, exports) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected string\n    at Object.parse (native)\n    at Object.module.exports (/Users/cgerard/Projects/Personal_Projects/Personal_projects_Github/charliegerard.github.io/node_modules/json-loader/index.js:7:48)");
+module.exports = [
+	{
+		"web": [
+			{
+				"id": 1,
+				"title": "BROWSER PONG",
+				"url": "http://charliegerard.github.io/browser-pong",
+				"image": "./images/browser-pong.png",
+				"description": "Pong game with browser windows",
+				"tags": [
+					"web",
+					"JavaScript"
+				],
+				"projectDescription": {
+					"date": "August 2016",
+					"concept": [
+						"Inspired by Stewart Smith's original work, I was interested in recreating his Browser Pong experiment to understand the mechanisms behind it. This game takes the concept of the Pong game out of the (browser) box by allowing the user to play using browser windows as paddles. The experience is a single player game where the user plays against an AI."
+					],
+					"images": [
+						{
+							"url": "./images/browserpong.gif"
+						}
+					],
+					"technology": [
+						"This game was created using HTML, CSS and JavaScript without any specific framework and is a desktop only experience.",
+						"An additional feature could allow 2 users to play remotely using web sockets."
+					]
+				}
+			},
+			{
+				"id": 2,
+				"title": "GESTURE CONTROLLED SPHERO",
+				"url": "https://github.com/charliegerard/myo_sphero",
+				"image": "./images/myo-sphero2.png",
+				"description": "Control the Sphero with your arm using the Myo armband",
+				"tags": [
+					"hardware",
+					"Myo armband",
+					"Sphero",
+					"Node.js"
+				],
+				"projectDescription": {
+					"date": "November 2014",
+					"concept": [
+						"This project is an experiment to see if I could use the data provided by the Myo armband to control the direction of a Sphero ball rolling. Once the Sphero is on and the Myo is calibrated properly, the user is able to change the direction of the ball depending on the gesture executed. For example, a `wipe right` gesture, makes the Sphero ball roll in the right direction."
+					],
+					"images": [
+						{
+							"url": "./images/myo-sphero3.png"
+						}
+					],
+					"technology": [
+						"The Myo armband is a wearable gesture control and motion control device that senses electrical signals going through the user's arm and connects to the computer via bluetooth. Built in Node.js, this project uses the myo and sphero npm modules to get the data from the Myo and send commands to the Sphero."
+					],
+					"link": "https://github.com/charliegerard/myo_sphero"
+				}
+			},
+			{
+				"id": 3,
+				"title": "CODE IN THE PARK",
+				"url": "",
+				"image": "./images/code-park.png",
+				"description": "Intro video for the Code in the Park event.",
+				"tags": [
+					"creative coding",
+					"Three.js"
+				],
+				"projectDescription": {
+					"date": "June 2016",
+					"concept": [
+						"For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art."
+					],
+					"images": [
+						{
+							"url": "./images/code-park2.png"
+						}
+					],
+					"video": "https://player.vimeo.com/video/190437916",
+					"technology": [
+						"The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."
+					]
+				}
+			},
+			{
+				"id": 4,
+				"title": "EPOC.JS FRAMEWORK",
+				"url": "https://github.com/charliegerard/Epoc.js",
+				"image": "./images/emotiv.png",
+				"description": "WIP - A framework to use the Emotiv brain sensor in Node.js",
+				"tags": [
+					"hardware",
+					"Emotiv Epoc",
+					"Node.js"
+				],
+				"projectDescription": {
+					"date": "June 2016",
+					"concept": [
+						"The Emotiv EPOC brain sensor is a device tracking the user's brainwaves and allows them to interact with different interfaces to train their brain.",
+						"As a developer, I wanted to use the data provided by the device to interact with interfaces or other devices. At the time, the only SDK available were written in Java and C++ which are languages I am not that familiar with. As I really wanted to be able to prototype for this device quickly, I built my own JavaScript framework for it. As a result, I can now get the data from the device and use JavaScript to build my projects."
+					],
+					"images": [
+						{
+							"url": "./images/emotiv2.png"
+						}
+					],
+					"video": "",
+					"technology": [
+						"This project is open-source, all the code is available on Github. The technology used involves the node-gyp module, Node.js and C++ in the background.",
+						"As a result of this project, I started trying to control the Sphero using my eye movements and my thoughts. Due to a lack of time, I have not yet achieved this but this is a work in progress."
+					]
+				}
+			},
+			{
+				"id": 5,
+				"title": "DRONE & NEUROSKY",
+				"url": "https://github.com/charliegerard/neurosky-drone",
+				"image": "./images/neurosky-drone.png",
+				"description": "Control the Parrot AR Drone with your mind using the Neurosky brain sensor",
+				"tags": [
+					"hardware",
+					"drone",
+					"Neurosky",
+					"Node.js"
+				],
+				"projectDescription": {
+					"date": "March 2015",
+					"concept": [
+						"I started experimenting with brain waves with the Neurosky brain sensor. With 4 different channels, this device tracks the level of meditation and attention of the user. I wanted to use this data to see if I could interact with a drone using focus."
+					],
+					"images": [],
+					"video": "",
+					"technology": [
+						"Written using the Cylon.js framework, this project is entirely written in JavaScript and uses the Neurosky and Parrot AR drone modules."
+					],
+					"link": "https://github.com/charliegerard/neurosky-drone"
+				}
+			},
+			{
+				"id": 6,
+				"title": "PERSPECTIVE",
+				"url": "https://charliegerard.github.io/Perspective/",
+				"image": "./images/perspective.png",
+				"description": "Prototype using head-tracking technology to explore a virtual world in the browser.",
+				"tags": [
+					"web",
+					"Three.js",
+					"Face tracking"
+				],
+				"projectDescription": {
+					"date": "July 2016",
+					"concept": [
+						"The way we interact with interfaces in the browser is usually using the trackpad or keyboard. However, these types of interactions are not so natural, they force the user to adapt to the technology rather than the opposite. With this project, I wanted to try and experiment with new ways of interacting with the computer screen.",
+						"As a result, I created an experiment where the user can use the movement of their head to influence what is happening on the screen, as if they were looking through a window."
+					],
+					"images": [
+						{
+							"url": "./images/perspective2.png"
+						},
+						{
+							"url": "./images/perspective.gif"
+						}
+					],
+					"technology": [
+						"Written in HTML, CSS and JavaScript, this project is experimenting with computer vision in the browser using tracker.js"
+					],
+					"video": "",
+					"link": "https://github.com/charliegerard/Perspective"
+				}
+			},
+			{
+				"id": 7,
+				"title": "DRONE & LEAP MOTION",
+				"url": "https://github.com/charliegerard/leap_drone",
+				"image": "./images/leap-drone.png",
+				"description": "Control the Parrot AR Drone with your hands using the Leap motion",
+				"tags": [
+					"hardware",
+					"drone",
+					"Leap motion",
+					"Node.js"
+				],
+				"projectDescription": {
+					"date": "April 2015",
+					"concept": [
+						"As part of my first experimentations with the Leap Motion and after managing to control the Sphero ball using my hand movements, I moved on to controlling the Parrot AR Drone. Simple gestures such as `swipe left` / `swipe right`, allow users to control the orientation of the drone using more natural movements then having to download an app on your phone.",
+						"The video coming from the drone's front camera is also streamed in the browser."
+					],
+					"images": [],
+					"video": "",
+					"technology": [
+						"This project involves a Leap Motion controller, a Parrot AR drone, and Node.js"
+					],
+					"link": "https://github.com/charliegerard/leap_drone"
+				}
+			},
+			{
+				"id": 8,
+				"title": "WEBVR EXPERIMENT",
+				"url": "https://github.com/charliegerard/Threejs-VR",
+				"image": "./images/threejs-vr.png",
+				"description": "First prototype of WebVR to be used in a Google Cardboard",
+				"tags": [
+					"web",
+					"Three.js"
+				],
+				"projectDescription": {
+					"date": "December 2015",
+					"concept": [
+						"This mini project is my first attempt at creating a WebVR experiment. Displaying a procedural city, this project works on both desktop and mobile and is aiming at creating a feeling of flying over a city.",
+						"On desktop, the interaction happens using the mouse, but on mobile, paired with a Google Cardboard, the user can move their head to look around the 3D landscape."
+					],
+					"images": [
+						{
+							"url": "./images/threejs-vr.gif"
+						}
+					],
+					"video": "",
+					"technology": [
+						"Using Three.js for the graphics and interactions, this project experiments with the latest technologies in the browser."
+					],
+					"link": "https://github.com/charliegerard/Threejs-VR"
+				}
+			},
+			{
+				"id": 9,
+				"title": "LEAPSYNC",
+				"url": "https://github.com/charliegerard/leapsync",
+				"image": "./images/leapsync.png",
+				"description": "Prototype build at the SheHacks hackathon - platform to teach sign language with the Leap motion.",
+				"tags": [
+					"web",
+					"hardware",
+					"Leap motion"
+				],
+				"projectDescription": {
+					"date": "May 2015",
+					"concept": [
+						"As part of the SheHacks hackathon organised in Sydney in May 2015, Daisy Smith and I worked on a prototype to help people learn sign language in an interactive way.",
+						"Using the Leap Motion sensor, we wanted to see if we could build an interface that could help people practice sign language with immediate feedback on their performance.",
+						"The interface displays an alphabet in sign language and prompts the user to execute one of the hand gestures. If the gesture is done properly, the user sees feedback on the screen with drawings of the letter they just did."
+					],
+					"images": [
+						{
+							"url": "./images/leapsync2.png"
+						},
+						{
+							"url": "./images/leapsync-gif.gif"
+						}
+					],
+					"video": "",
+					"technology": [
+						"This project uses the Leap Motion controller and HTML/CSS/JavaScript for the interface."
+					],
+					"link": ""
+				}
+			},
+			{
+				"id": 10,
+				"title": "SPHERO & LEAP MOTION",
+				"url": "https://github.com/charliegerard/leap_sphero",
+				"image": "./images/leap-sphero.png",
+				"description": "Control the Sphero with your hands using the Leap motion controller",
+				"tags": [
+					"hardware",
+					"sphero",
+					"leap motion",
+					"Node.js"
+				],
+				"projectDescription": {
+					"date": "July 2014",
+					"concept": [
+						"The Sphero ball is a little robot usually controlled using an app on your mobile. As I was experimenting with the Leap Motion and Sphero seperately, I started wondering if I could actually use these 2 devices together. Controlling the Sphero using the movements of my hand over the Leap Motion seemed like an interesting experiment and also a more exciting way to interact with the robot than having to hold my phone."
+					],
+					"images": [
+						{
+							"url": "./images/leap-sphero2.png"
+						},
+						{
+							"url": "./images/leap-sphero-video.gif"
+						}
+					],
+					"technology": [
+						"This project was built using Node.js, the Leap.Js node module to have access to the Leap Motion data and the Sphero.js module to be able to control the robotic ball in JavaScript.",
+						"Once the app is launched, you can also display a visualizer in the browser to see your hands moving over the Leap motion"
+					],
+					"link": "https://github.com/charliegerard/leap_sphero"
+				}
+			},
+			{
+				"id": 11,
+				"title": "DRONE & MYO ARMBAND",
+				"url": "https://github.com/charliegerard/myo_drone",
+				"image": "./images/myo-drone.png",
+				"description": "Control the Parrot AR Drone with your arm using the Myo armband",
+				"tags": [
+					"hardware",
+					"drone",
+					"Myo armband",
+					"Node.js"
+				],
+				"projectDescription": {
+					"date": "August 2015",
+					"concept": [
+						"After controlling the Sphero ball using the Myo armband, I worked on controlling the drone using the same gestures."
+					],
+					"images": [
+						{
+							"url": "./images/myo-drone2.png"
+						}
+					],
+					"video": "",
+					"technology": [
+						"Myo armband, Parrot AR Drone, Node.js"
+					],
+					"link": "https://github.com/charliegerard/myo_drone"
+				}
+			},
+			{
+				"id": 12,
+				"title": "TOUCH POSTER",
+				"url": "",
+				"image": "./images/touch-poster.png",
+				"description": "WIP - Prototype of touch mirror",
+				"tags": [
+					"hardware",
+					"bare conductive",
+					"music"
+				],
+				"projectDescription": {
+					"date": "April 2016",
+					"concept": [
+						"After discovering Bare conductive, I knew I had to try it to understand how it all worked.",
+						"I decided to build a prototype of interactive touch poster to try and turn something as mondain as a poster into an unreached experience."
+					],
+					"images": [
+						{
+							"url": "./images/touch-poster.JPG"
+						}
+					],
+					"video": "https://www.youtube.com/embed/Ks8xG4rcNxE",
+					"technology": [
+						"This project uses conductive ink and a Bare conductive board with some sample sounds."
+					],
+					"link": "https://www.youtube.com/watch?v=Ks8xG4rcNxE"
+				}
+			}
+		]
+	}
+];
 
 /***/ },
 /* 39 */
@@ -15830,15 +16178,39 @@ if(!window.location.hash){
   if(descriptionBlock){
     descriptionBlock.style.display = 'block'
   }
+
+  var appContainer = $('#app-container');
+  appContainer.addClass('container-style');
+
+  var outerContainer = $('#outer-container');
+  outerContainer.addClass('outer-container-style');
+
 }
 
 $('#projects').click(function(){
   $('#home h1').addClass("outro-animation");
   $('#home h2').addClass("outro-animation-h2");
-  $('#threejs-container canvas').addClass("outro-animation-canvas");
-  $('#threejs-container canvas').bind("animationend", function(){
-     window.location.href = "#projects"
+  $('#home h2').bind("animationend", function(){
+    window.location.href = "#projects"
   });
+
+  // $('#threejs-container canvas').addClass("outro-animation-canvas");
+  // $('#threejs-container canvas').bind("animationend", function(){
+  //    window.location.href = "#projects"
+  // });
+})
+
+$('#about').click(function(){
+  $('#home h1').addClass("outro-animation");
+  $('#home h2').addClass("outro-animation-h2");
+  $('#home h2').bind("animationend", function(){
+    window.location.href = "#about"
+  });
+
+  // $('#threejs-container canvas').addClass("outro-animation-canvas");
+  // $('#threejs-container canvas').bind("animationend", function(){
+  //    window.location.href = "#about"
+  // });
 })
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))

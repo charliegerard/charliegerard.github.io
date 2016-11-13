@@ -52,7 +52,7 @@
         "id": 4,
         "title": "EPOC.JS FRAMEWORK",
         "url": "https://github.com/charliegerard/Epoc.js",
-        "image": "./images/Emotiv_1.jpg",
+        "image": "./images/emotiv.png",
         "description": "WIP - A framework to use the Emotiv brain sensor in Node.js",
         "tags": ["hardware", "Emotiv Epoc", "Node.js"],
         "projectDescription": {
@@ -60,7 +60,7 @@
             "concept" : ["The Emotiv EPOC brain sensor is a device tracking the user's brainwaves and allows them to interact with different interfaces to train their brain.",
                         "As a developer, I wanted to use the data provided by the device to interact with interfaces or other devices. At the time, the only SDK available were written in Java and C++ which are languages I am not that familiar with. As I really wanted to be able to prototype for this device quickly, I built my own JavaScript framework for it. As a result, I can now get the data from the device and use JavaScript to build my projects."
                       ],
-            "images": [],
+            "images": [{"url": "./images/emotiv2.png"}],
             "video": "",
             "technology": ["This project is open-source, all the code is available on Github. The technology used involves the node-gyp module, Node.js and C++ in the background.",
             "As a result of this project, I started trying to control the Sphero using my eye movements and my thoughts. Due to a lack of time, I have not yet achieved this but this is a work in progress."]
@@ -70,7 +70,7 @@
         "id": 5,
         "title": "DRONE & NEUROSKY",
         "url": "https://github.com/charliegerard/neurosky-drone",
-        "image": "./images/drone_neurosky.png",
+        "image": "./images/neurosky-drone.png",
         "description": "Control the Parrot AR Drone with your mind using the Neurosky brain sensor",
         "tags": ["hardware", "drone", "Neurosky", "Node.js"],
         "projectDescription": {
@@ -91,7 +91,7 @@
         "tags": ["web", "Three.js", "Face tracking"],
         "projectDescription": {
           "date": "July 2016",
-          "concept" : ["The way we interact with interfaces in the browser is usually using the trackpad or keyboard. However, these types of interactions are not so natural, they force the user to adapt to the technology rather than the opposite. With this project, I wanted to try and experiment with new ways of interacting with the computer screen."
+          "concept" : ["The way we interact with interfaces in the browser is usually using the trackpad or keyboard. However, these types of interactions are not so natural, they force the user to adapt to the technology rather than the opposite. With this project, I wanted to try and experiment with new ways of interacting with the computer screen.",
                       "As a result, I created an experiment where the user can use the movement of their head to influence what is happening on the screen, as if they were looking through a window."
                     ],
           "images": [{"url": "./images/perspective2.png"}, {"url": "./images/perspective.gif"}],
@@ -104,7 +104,7 @@
         "id": 7,
         "title": "DRONE & LEAP MOTION",
         "url": "https://github.com/charliegerard/leap_drone",
-        "image": "./images/drone-leap.png",
+        "image": "./images/leap-drone.png",
         "description": "Control the Parrot AR Drone with your hands using the Leap motion",
         "tags": ["hardware", "drone", "Leap motion", "Node.js"],
         "projectDescription": {
@@ -149,7 +149,7 @@
                         "Using the Leap Motion sensor, we wanted to see if we could build an interface that could help people practice sign language with immediate feedback on their performance.",
                         "The interface displays an alphabet in sign language and prompts the user to execute one of the hand gestures. If the gesture is done properly, the user sees feedback on the screen with drawings of the letter they just did."
                       ],
-            "images": [],
+            "images": [{"url": "./images/leapsync2.png"}, {"url": "./images/leapsync-gif.gif"}],
             "video": "",
             "technology": ["This project uses the Leap Motion controller and HTML/CSS/JavaScript for the interface."],
             "link" : ""
@@ -174,13 +174,13 @@
         "id": 11,
         "title": "DRONE & MYO ARMBAND",
         "url": "https://github.com/charliegerard/myo_drone",
-        "image": "./images/drone_myo.png",
+        "image": "./images/myo-drone.png",
         "description": "Control the Parrot AR Drone with your arm using the Myo armband",
         "tags": ["hardware", "drone", "Myo armband", "Node.js"],
         "projectDescription": {
             "date": "August 2015",
             "concept" : ["After controlling the Sphero ball using the Myo armband, I worked on controlling the drone using the same gestures."],
-            "images": [],
+            "images": [{"url": "./images/myo-drone2.png"}],
             "video": "",
             "technology": ["Myo armband, Parrot AR Drone, Node.js"],
             "link": "https://github.com/charliegerard/myo_drone"
