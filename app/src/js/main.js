@@ -54,10 +54,27 @@ if(!window.location.hash){
     // $('#threejs-container canvas').bind("animationend", function(){
     //    window.location.href = "#about"
     // });
+
   })
 } else if(window.location.hash.includes('projects')){
   $('#about').click(function(){
-      window.location.href = "#about"
+      $('.project-number').fadeOut();
+      $('.project-block h3').slideUp();
+      $('.visit-button').slideUp();
+      $('.svg').fadeOut();
+      $('.project-block img').fadeOut("slow", function(){
+          window.location.href = "#about"
+      });
+  })
+
+  $('#home-link .description').click(function(){
+    $('.project-number').fadeOut();
+    $('.project-block h3').slideUp();
+    $('.visit-button').slideUp();
+    $('.svg').fadeOut();
+    $('.project-block img').fadeOut("slow", function(){
+        window.location.href = "/"
+    });
   })
 } else if(window.location.hash.includes('#about')){
   $('#projects').click(function(){

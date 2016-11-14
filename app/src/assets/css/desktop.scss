@@ -96,6 +96,7 @@ body{
 
 #outer-container #navbar a:hover{
 	text-decoration: none;
+	cursor: pointer;
 }
 
 #contributions-block ul li a{
@@ -131,7 +132,7 @@ body{
 	// letter-spacing: 4px;
 	opacity: 0;
 	animation: fadeIn 0.5s ease-in 1 forwards;
-	animation-delay: 1.5s;
+	animation-delay: 0.5s;
 }
 
 #outer-container .description h1{

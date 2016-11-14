@@ -1,4 +1,4 @@
-var template = require('../../templates/about.html');
+var template = require('../../templates/about.hbs');
 var Backbone = require('backbone');
 
 var About = Backbone.View.extend({

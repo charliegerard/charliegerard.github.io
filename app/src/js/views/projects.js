@@ -50,18 +50,18 @@ var Projects = Backbone.View.extend({
       var descriptionBlock = document.getElementsByClassName('description')[0];
       descriptionBlock.style.display = 'block'
 
-      var MOUSE_OVER = false;
-      $('body').bind('mousewheel', function(e){
-        if(MOUSE_OVER){
-          if(e.preventDefault) { e.preventDefault(); }
-          e.returnValue = false;
-          return false;
-        }
-      });
+      // var MOUSE_OVER = false;
+      // $('body').bind('mousewheel', function(e){
+      //   if(MOUSE_OVER){
+      //     if(e.preventDefault) { e.preventDefault(); }
+      //     e.returnValue = false;
+      //     return false;
+      //   }
+      // });
 
       if(!window.mobilecheck()){
-        $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
-        $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
+        // $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
+        // $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
 
         // $('#outer-container').bind('mousewheel', function(e){
         //   var e = window.event;
@@ -137,7 +137,11 @@ var Projects = Backbone.View.extend({
 
 
         // var lastScrollTop = 0;
-        // window.addEventListener('scroll', function(e) {
+        // $('#projects-container').bind('mousewheel', function(e){
+        //   console.log('boo')
+        // })
+        window.addEventListener('scroll', function(e) {
+          console.log(e)
         //   var step = ($('#wipe-left').height() - $(window).height()) / 22;
         //   var scrollStep = parseInt($(window).scrollTop() / step);
         //   var maskPosition = (100/22) * scrollStep;
@@ -155,10 +159,8 @@ var Projects = Backbone.View.extend({
         //     // })
         //   }
         //   lastScrollTop = scroll;
-        // }, {passive: true});
-
+        }, {passive: true});
       }
-
 
       this.$el.html(this.template({projects: this.collection.models[projectDisplayed]}));
       return this;

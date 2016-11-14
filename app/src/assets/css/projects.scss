@@ -30,20 +30,20 @@
     color: #2d307a;
   }
 
-
   .project-number{
     position: absolute;
     font-size: 50em;
-    margin: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
     color: lightgray;
-    opacity: 0.3;
-    /* letter-spacing: -50px; */
-    // top: -292px;
-    // left: -230px;
+    opacity: 0.2;
     letter-spacing: -50px;
     top: -88px;
     left: 100px;
     z-index: -1;
+          font-family: 'Playfair Display', serif;
   }
 
   .project-block{
@@ -70,7 +70,6 @@
       left: -50px;
       bottom: 100px;
       animation: titleSlide 2.5s;
-      // font-family: 'Playfair Display', serif;
       font-family: 'PT Sans Narrow', sans-serif;
       margin-bottom: 10px;
       font-style: italic;
@@ -248,7 +247,7 @@
 
 @keyframes titleSlide {
   from{
-    margin-left: 20%;
+    margin-left: -20%;
     opacity: 0;
   }
 

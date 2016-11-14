@@ -52,142 +52,11 @@
 /******/ 	__webpack_require__.p = "/images";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 40);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
-
-"use strict";
-'use strict';
-
-exports.__esModule = true;
-exports.extend = extend;
-exports.indexOf = indexOf;
-exports.escapeExpression = escapeExpression;
-exports.isEmpty = isEmpty;
-exports.createFrame = createFrame;
-exports.blockParams = blockParams;
-exports.appendContextPath = appendContextPath;
-var escape = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '"': '&quot;',
-  "'": '&#x27;',
-  '`': '&#x60;',
-  '=': '&#x3D;'
-};
-
-var badChars = /[&<>"'`=]/g,
-    possible = /[&<>"'`=]/;
-
-function escapeChar(chr) {
-  return escape[chr];
-}
-
-function extend(obj /* , ...source */) {
-  for (var i = 1; i < arguments.length; i++) {
-    for (var key in arguments[i]) {
-      if (Object.prototype.hasOwnProperty.call(arguments[i], key)) {
-        obj[key] = arguments[i][key];
-      }
-    }
-  }
-
-  return obj;
-}
-
-var toString = Object.prototype.toString;
-
-exports.toString = toString;
-// Sourced from lodash
-// https://github.com/bestiejs/lodash/blob/master/LICENSE.txt
-/* eslint-disable func-style */
-var isFunction = function isFunction(value) {
-  return typeof value === 'function';
-};
-// fallback for older versions of Chrome and Safari
-/* istanbul ignore next */
-if (isFunction(/x/)) {
-  exports.isFunction = isFunction = function (value) {
-    return typeof value === 'function' && toString.call(value) === '[object Function]';
-  };
-}
-exports.isFunction = isFunction;
-
-/* eslint-enable func-style */
-
-/* istanbul ignore next */
-var isArray = Array.isArray || function (value) {
-  return value && typeof value === 'object' ? toString.call(value) === '[object Array]' : false;
-};
-
-exports.isArray = isArray;
-// Older IE versions do not directly support indexOf so we must implement our own, sadly.
-
-function indexOf(array, value) {
-  for (var i = 0, len = array.length; i < len; i++) {
-    if (array[i] === value) {
-      return i;
-    }
-  }
-  return -1;
-}
-
-function escapeExpression(string) {
-  if (typeof string !== 'string') {
-    // don't escape SafeStrings, since they're already safe
-    if (string && string.toHTML) {
-      return string.toHTML();
-    } else if (string == null) {
-      return '';
-    } else if (!string) {
-      return string + '';
-    }
-
-    // Force a string conversion as this will be done by the append regardless and
-    // the regex test will do this transparently behind the scenes, causing issues if
-    // an object's to string has escaped characters in it.
-    string = '' + string;
-  }
-
-  if (!possible.test(string)) {
-    return string;
-  }
-  return string.replace(badChars, escapeChar);
-}
-
-function isEmpty(value) {
-  if (!value && value !== 0) {
-    return true;
-  } else if (isArray(value) && value.length === 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function createFrame(object) {
-  var frame = extend({}, object);
-  frame._parent = object;
-  return frame;
-}
-
-function blockParams(params, ids) {
-  params.path = ids;
-  return params;
-}
-
-function appendContextPath(contextPath, id) {
-  return (contextPath ? contextPath + '.' : '') + id;
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL3V0aWxzLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQSxJQUFNLE1BQU0sR0FBRztBQUNiLEtBQUcsRUFBRSxPQUFPO0FBQ1osS0FBRyxFQUFFLE1BQU07QUFDWCxLQUFHLEVBQUUsTUFBTTtBQUNYLEtBQUcsRUFBRSxRQUFRO0FBQ2IsS0FBRyxFQUFFLFFBQVE7QUFDYixLQUFHLEVBQUUsUUFBUTtBQUNiLEtBQUcsRUFBRSxRQUFRO0NBQ2QsQ0FBQzs7QUFFRixJQUFNLFFBQVEsR0FBRyxZQUFZO0lBQ3ZCLFFBQVEsR0FBRyxXQUFXLENBQUM7O0FBRTdCLFNBQVMsVUFBVSxDQUFDLEdBQUcsRUFBRTtBQUN2QixTQUFPLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQztDQUNwQjs7QUFFTSxTQUFTLE1BQU0sQ0FBQyxHQUFHLG9CQUFtQjtBQUMzQyxPQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsU0FBUyxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBRTtBQUN6QyxTQUFLLElBQUksR0FBRyxJQUFJLFNBQVMsQ0FBQyxDQUFDLENBQUMsRUFBRTtBQUM1QixVQUFJLE1BQU0sQ0FBQyxTQUFTLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLEVBQUUsR0FBRyxDQUFDLEVBQUU7QUFDM0QsV0FBRyxDQUFDLEdBQUcsQ0FBQyxHQUFHLFNBQVMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztPQUM5QjtLQUNGO0dBQ0Y7O0FBRUQsU0FBTyxHQUFHLENBQUM7Q0FDWjs7QUFFTSxJQUFJLFFBQVEsR0FBRyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQzs7Ozs7O0FBS2hELElBQUksVUFBVSxHQUFHLG9CQUFTLEtBQUssRUFBRTtBQUMvQixTQUFPLE9BQU8sS0FBSyxLQUFLLFVBQVUsQ0FBQztDQUNwQyxDQUFDOzs7QUFHRixJQUFJLFVBQVUsQ0FBQyxHQUFHLENBQUMsRUFBRTtBQUNuQixVQUlNLFVBQVUsR0FKaEIsVUFBVSxHQUFHLFVBQVMsS0FBSyxFQUFFO0FBQzNCLFdBQU8sT0FBTyxLQUFLLEtBQUssVUFBVSxJQUFJLFFBQVEsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUssbUJBQW1CLENBQUM7R0FDcEYsQ0FBQztDQUNIO1FBQ08sVUFBVSxHQUFWLFVBQVU7Ozs7O0FBSVgsSUFBTSxPQUFPLEdBQUcsS0FBSyxDQUFDLE9BQU8sSUFBSSxVQUFTLEtBQUssRUFBRTtBQUN0RCxTQUFPLEFBQUMsS0FBSyxJQUFJLE9BQU8sS0FBSyxLQUFLLFFBQVEsR0FBSSxRQUFRLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxLQUFLLGdCQUFnQixHQUFHLEtBQUssQ0FBQztDQUNqRyxDQUFDOzs7OztBQUdLLFNBQVMsT0FBTyxDQUFDLEtBQUssRUFBRSxLQUFLLEVBQUU7QUFDcEMsT0FBSyxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsR0FBRyxHQUFHLEtBQUssQ0FBQyxNQUFNLEVBQUUsQ0FBQyxHQUFHLEdBQUcsRUFBRSxDQUFDLEVBQUUsRUFBRTtBQUNoRCxRQUFJLEtBQUssQ0FBQyxDQUFDLENBQUMsS0FBSyxLQUFLLEVBQUU7QUFDdEIsYUFBTyxDQUFDLENBQUM7S0FDVjtHQUNGO0FBQ0QsU0FBTyxDQUFDLENBQUMsQ0FBQztDQUNYOztBQUdNLFNBQVMsZ0JBQWdCLENBQUMsTUFBTSxFQUFFO0FBQ3ZDLE1BQUksT0FBTyxNQUFNLEtBQUssUUFBUSxFQUFFOztBQUU5QixRQUFJLE1BQU0sSUFBSSxNQUFNLENBQUMsTUFBTSxFQUFFO0FBQzNCLGFBQU8sTUFBTSxDQUFDLE1BQU0sRUFBRSxDQUFDO0tBQ3hCLE1BQU0sSUFBSSxNQUFNLElBQUksSUFBSSxFQUFFO0FBQ3pCLGFBQU8sRUFBRSxDQUFDO0tBQ1gsTUFBTSxJQUFJLENBQUMsTUFBTSxFQUFFO0FBQ2xCLGFBQU8sTUFBTSxHQUFHLEVBQUUsQ0FBQztLQUNwQjs7Ozs7QUFLRCxVQUFNLEdBQUcsRUFBRSxHQUFHLE1BQU0sQ0FBQztHQUN0Qjs7QUFFRCxNQUFJLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsRUFBRTtBQUFFLFdBQU8sTUFBTSxDQUFDO0dBQUU7QUFDOUMsU0FBTyxNQUFNLENBQUMsT0FBTyxDQUFDLFFBQVEsRUFBRSxVQUFVLENBQUMsQ0FBQztDQUM3Qzs7QUFFTSxTQUFTLE9BQU8sQ0FBQyxLQUFLLEVBQUU7QUFDN0IsTUFBSSxDQUFDLEtBQUssSUFBSSxLQUFLLEtBQUssQ0FBQyxFQUFFO0FBQ3pCLFdBQU8sSUFBSSxDQUFDO0dBQ2IsTUFBTSxJQUFJLE9BQU8sQ0FBQyxLQUFLLENBQUMsSUFBSSxLQUFLLENBQUMsTUFBTSxLQUFLLENBQUMsRUFBRTtBQUMvQyxXQUFPLElBQUksQ0FBQztHQUNiLE1BQU07QUFDTCxXQUFPLEtBQUssQ0FBQztHQUNkO0NBQ0Y7O0FBRU0sU0FBUyxXQUFXLENBQUMsTUFBTSxFQUFFO0FBQ2xDLE1BQUksS0FBSyxHQUFHLE1BQU0sQ0FBQyxFQUFFLEVBQUUsTUFBTSxDQUFDLENBQUM7QUFDL0IsT0FBSyxDQUFDLE9BQU8sR0FBRyxNQUFNLENBQUM7QUFDdkIsU0FBTyxLQUFLLENBQUM7Q0FDZDs7QUFFTSxTQUFTLFdBQVcsQ0FBQyxNQUFNLEVBQUUsR0FBRyxFQUFFO0FBQ3ZDLFFBQU0sQ0FBQyxJQUFJLEdBQUcsR0FBRyxDQUFDO0FBQ2xCLFNBQU8sTUFBTSxDQUFDO0NBQ2Y7O0FBRU0sU0FBUyxpQkFBaUIsQ0FBQyxXQUFXLEVBQUUsRUFBRSxFQUFFO0FBQ2pELFNBQU8sQ0FBQyxXQUFXLEdBQUcsV0FBVyxHQUFHLEdBQUcsR0FBRyxFQUFFLENBQUEsR0FBSSxFQUFFLENBQUM7Q0FDcEQiLCJmaWxlIjoidXRpbHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBlc2NhcGUgPSB7XG4gICcmJzogJyZhbXA7JyxcbiAgJzwnOiAnJmx0OycsXG4gICc+JzogJyZndDsnLFxuICAnXCInOiAnJnF1b3Q7JyxcbiAgXCInXCI6ICcmI3gyNzsnLFxuICAnYCc6ICcmI3g2MDsnLFxuICAnPSc6ICcmI3gzRDsnXG59O1xuXG5jb25zdCBiYWRDaGFycyA9IC9bJjw+XCInYD1dL2csXG4gICAgICBwb3NzaWJsZSA9IC9bJjw+XCInYD1dLztcblxuZnVuY3Rpb24gZXNjYXBlQ2hhcihjaHIpIHtcbiAgcmV0dXJuIGVzY2FwZVtjaHJdO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gZXh0ZW5kKG9iai8qICwgLi4uc291cmNlICovKSB7XG4gIGZvciAobGV0IGkgPSAxOyBpIDwgYXJndW1lbnRzLmxlbmd0aDsgaSsrKSB7XG4gICAgZm9yIChsZXQga2V5IGluIGFyZ3VtZW50c1tpXSkge1xuICAgICAgaWYgKE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChhcmd1bWVudHNbaV0sIGtleSkpIHtcbiAgICAgICAgb2JqW2tleV0gPSBhcmd1bWVudHNbaV1ba2V5XTtcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICByZXR1cm4gb2JqO1xufVxuXG5leHBvcnQgbGV0IHRvU3RyaW5nID0gT2JqZWN0LnByb3RvdHlwZS50b1N0cmluZztcblxuLy8gU291cmNlZCBmcm9tIGxvZGFzaFxuLy8gaHR0cHM6Ly9naXRodWIuY29tL2Jlc3RpZWpzL2xvZGFzaC9ibG9iL21hc3Rlci9MSUNFTlNFLnR4dFxuLyogZXNsaW50LWRpc2FibGUgZnVuYy1zdHlsZSAqL1xubGV0IGlzRnVuY3Rpb24gPSBmdW5jdGlvbih2YWx1ZSkge1xuICByZXR1cm4gdHlwZW9mIHZhbHVlID09PSAnZnVuY3Rpb24nO1xufTtcbi8vIGZhbGxiYWNrIGZvciBvbGRlciB2ZXJzaW9ucyBvZiBDaHJvbWUgYW5kIFNhZmFyaVxuLyogaXN0YW5idWwgaWdub3JlIG5leHQgKi9cbmlmIChpc0Z1bmN0aW9uKC94LykpIHtcbiAgaXNGdW5jdGlvbiA9IGZ1bmN0aW9uKHZhbHVlKSB7XG4gICAgcmV0dXJuIHR5cGVvZiB2YWx1ZSA9PT0gJ2Z1bmN0aW9uJyAmJiB0b1N0cmluZy5jYWxsKHZhbHVlKSA9PT0gJ1tvYmplY3QgRnVuY3Rpb25dJztcbiAgfTtcbn1cbmV4cG9ydCB7aXNGdW5jdGlvbn07XG4vKiBlc2xpbnQtZW5hYmxlIGZ1bmMtc3R5bGUgKi9cblxuLyogaXN0YW5idWwgaWdub3JlIG5leHQgKi9cbmV4cG9ydCBjb25zdCBpc0FycmF5ID0gQXJyYXkuaXNBcnJheSB8fCBmdW5jdGlvbih2YWx1ZSkge1xuICByZXR1cm4gKHZhbHVlICYmIHR5cGVvZiB2YWx1ZSA9PT0gJ29iamVjdCcpID8gdG9TdHJpbmcuY2FsbCh2YWx1ZSkgPT09ICdbb2JqZWN0IEFycmF5XScgOiBmYWxzZTtcbn07XG5cbi8vIE9sZGVyIElFIHZlcnNpb25zIGRvIG5vdCBkaXJlY3RseSBzdXBwb3J0IGluZGV4T2Ygc28gd2UgbXVzdCBpbXBsZW1lbnQgb3VyIG93biwgc2FkbHkuXG5leHBvcnQgZnVuY3Rpb24gaW5kZXhPZihhcnJheSwgdmFsdWUpIHtcbiAgZm9yIChsZXQgaSA9IDAsIGxlbiA9IGFycmF5Lmxlbmd0aDsgaSA8IGxlbjsgaSsrKSB7XG4gICAgaWYgKGFycmF5W2ldID09PSB2YWx1ZSkge1xuICAgICAgcmV0dXJuIGk7XG4gICAgfVxuICB9XG4gIHJldHVybiAtMTtcbn1cblxuXG5leHBvcnQgZnVuY3Rpb24gZXNjYXBlRXhwcmVzc2lvbihzdHJpbmcpIHtcbiAgaWYgKHR5cGVvZiBzdHJpbmcgIT09ICdzdHJpbmcnKSB7XG4gICAgLy8gZG9uJ3QgZXNjYXBlIFNhZmVTdHJpbmdzLCBzaW5jZSB0aGV5J3JlIGFscmVhZHkgc2FmZVxuICAgIGlmIChzdHJpbmcgJiYgc3RyaW5nLnRvSFRNTCkge1xuICAgICAgcmV0dXJuIHN0cmluZy50b0hUTUwoKTtcbiAgICB9IGVsc2UgaWYgKHN0cmluZyA9PSBudWxsKSB7XG4gICAgICByZXR1cm4gJyc7XG4gICAgfSBlbHNlIGlmICghc3RyaW5nKSB7XG4gICAgICByZXR1cm4gc3RyaW5nICsgJyc7XG4gICAgfVxuXG4gICAgLy8gRm9yY2UgYSBzdHJpbmcgY29udmVyc2lvbiBhcyB0aGlzIHdpbGwgYmUgZG9uZSBieSB0aGUgYXBwZW5kIHJlZ2FyZGxlc3MgYW5kXG4gICAgLy8gdGhlIHJlZ2V4IHRlc3Qgd2lsbCBkbyB0aGlzIHRyYW5zcGFyZW50bHkgYmVoaW5kIHRoZSBzY2VuZXMsIGNhdXNpbmcgaXNzdWVzIGlmXG4gICAgLy8gYW4gb2JqZWN0J3MgdG8gc3RyaW5nIGhhcyBlc2NhcGVkIGNoYXJhY3RlcnMgaW4gaXQuXG4gICAgc3RyaW5nID0gJycgKyBzdHJpbmc7XG4gIH1cblxuICBpZiAoIXBvc3NpYmxlLnRlc3Qoc3RyaW5nKSkgeyByZXR1cm4gc3RyaW5nOyB9XG4gIHJldHVybiBzdHJpbmcucmVwbGFjZShiYWRDaGFycywgZXNjYXBlQ2hhcik7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBpc0VtcHR5KHZhbHVlKSB7XG4gIGlmICghdmFsdWUgJiYgdmFsdWUgIT09IDApIHtcbiAgICByZXR1cm4gdHJ1ZTtcbiAgfSBlbHNlIGlmIChpc0FycmF5KHZhbHVlKSAmJiB2YWx1ZS5sZW5ndGggPT09IDApIHtcbiAgICByZXR1cm4gdHJ1ZTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gZmFsc2U7XG4gIH1cbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUZyYW1lKG9iamVjdCkge1xuICBsZXQgZnJhbWUgPSBleHRlbmQoe30sIG9iamVjdCk7XG4gIGZyYW1lLl9wYXJlbnQgPSBvYmplY3Q7XG4gIHJldHVybiBmcmFtZTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGJsb2NrUGFyYW1zKHBhcmFtcywgaWRzKSB7XG4gIHBhcmFtcy5wYXRoID0gaWRzO1xuICByZXR1cm4gcGFyYW1zO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gYXBwZW5kQ29udGV4dFBhdGgoY29udGV4dFBhdGgsIGlkKSB7XG4gIHJldHVybiAoY29udGV4dFBhdGggPyBjb250ZXh0UGF0aCArICcuJyA6ICcnKSArIGlkO1xufVxuIl19
-
-
-/***/ },
-/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Backbone.js 1.3.3
@@ -206,7 +75,7 @@ function appendContextPath(contextPath, id) {
 
   // Set up Backbone appropriately for the environment. Start with AMD.
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(7), __webpack_require__(3), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(8), __webpack_require__(3), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
       // Export global even in AMD case in case this script is loaded with
       // others that may still expect a global Backbone.
       root.Backbone = factory(root, exports, _, $);
@@ -2111,7 +1980,138 @@ function appendContextPath(contextPath, id) {
   return Backbone;
 });
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+"use strict";
+'use strict';
+
+exports.__esModule = true;
+exports.extend = extend;
+exports.indexOf = indexOf;
+exports.escapeExpression = escapeExpression;
+exports.isEmpty = isEmpty;
+exports.createFrame = createFrame;
+exports.blockParams = blockParams;
+exports.appendContextPath = appendContextPath;
+var escape = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#x27;',
+  '`': '&#x60;',
+  '=': '&#x3D;'
+};
+
+var badChars = /[&<>"'`=]/g,
+    possible = /[&<>"'`=]/;
+
+function escapeChar(chr) {
+  return escape[chr];
+}
+
+function extend(obj /* , ...source */) {
+  for (var i = 1; i < arguments.length; i++) {
+    for (var key in arguments[i]) {
+      if (Object.prototype.hasOwnProperty.call(arguments[i], key)) {
+        obj[key] = arguments[i][key];
+      }
+    }
+  }
+
+  return obj;
+}
+
+var toString = Object.prototype.toString;
+
+exports.toString = toString;
+// Sourced from lodash
+// https://github.com/bestiejs/lodash/blob/master/LICENSE.txt
+/* eslint-disable func-style */
+var isFunction = function isFunction(value) {
+  return typeof value === 'function';
+};
+// fallback for older versions of Chrome and Safari
+/* istanbul ignore next */
+if (isFunction(/x/)) {
+  exports.isFunction = isFunction = function (value) {
+    return typeof value === 'function' && toString.call(value) === '[object Function]';
+  };
+}
+exports.isFunction = isFunction;
+
+/* eslint-enable func-style */
+
+/* istanbul ignore next */
+var isArray = Array.isArray || function (value) {
+  return value && typeof value === 'object' ? toString.call(value) === '[object Array]' : false;
+};
+
+exports.isArray = isArray;
+// Older IE versions do not directly support indexOf so we must implement our own, sadly.
+
+function indexOf(array, value) {
+  for (var i = 0, len = array.length; i < len; i++) {
+    if (array[i] === value) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function escapeExpression(string) {
+  if (typeof string !== 'string') {
+    // don't escape SafeStrings, since they're already safe
+    if (string && string.toHTML) {
+      return string.toHTML();
+    } else if (string == null) {
+      return '';
+    } else if (!string) {
+      return string + '';
+    }
+
+    // Force a string conversion as this will be done by the append regardless and
+    // the regex test will do this transparently behind the scenes, causing issues if
+    // an object's to string has escaped characters in it.
+    string = '' + string;
+  }
+
+  if (!possible.test(string)) {
+    return string;
+  }
+  return string.replace(badChars, escapeChar);
+}
+
+function isEmpty(value) {
+  if (!value && value !== 0) {
+    return true;
+  } else if (isArray(value) && value.length === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function createFrame(object) {
+  var frame = extend({}, object);
+  frame._parent = object;
+  return frame;
+}
+
+function blockParams(params, ids) {
+  params.path = ids;
+  return params;
+}
+
+function appendContextPath(contextPath, id) {
+  return (contextPath ? contextPath + '.' : '') + id;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL3V0aWxzLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQSxJQUFNLE1BQU0sR0FBRztBQUNiLEtBQUcsRUFBRSxPQUFPO0FBQ1osS0FBRyxFQUFFLE1BQU07QUFDWCxLQUFHLEVBQUUsTUFBTTtBQUNYLEtBQUcsRUFBRSxRQUFRO0FBQ2IsS0FBRyxFQUFFLFFBQVE7QUFDYixLQUFHLEVBQUUsUUFBUTtBQUNiLEtBQUcsRUFBRSxRQUFRO0NBQ2QsQ0FBQzs7QUFFRixJQUFNLFFBQVEsR0FBRyxZQUFZO0lBQ3ZCLFFBQVEsR0FBRyxXQUFXLENBQUM7O0FBRTdCLFNBQVMsVUFBVSxDQUFDLEdBQUcsRUFBRTtBQUN2QixTQUFPLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQztDQUNwQjs7QUFFTSxTQUFTLE1BQU0sQ0FBQyxHQUFHLG9CQUFtQjtBQUMzQyxPQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsU0FBUyxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBRTtBQUN6QyxTQUFLLElBQUksR0FBRyxJQUFJLFNBQVMsQ0FBQyxDQUFDLENBQUMsRUFBRTtBQUM1QixVQUFJLE1BQU0sQ0FBQyxTQUFTLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLEVBQUUsR0FBRyxDQUFDLEVBQUU7QUFDM0QsV0FBRyxDQUFDLEdBQUcsQ0FBQyxHQUFHLFNBQVMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztPQUM5QjtLQUNGO0dBQ0Y7O0FBRUQsU0FBTyxHQUFHLENBQUM7Q0FDWjs7QUFFTSxJQUFJLFFBQVEsR0FBRyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQzs7Ozs7O0FBS2hELElBQUksVUFBVSxHQUFHLG9CQUFTLEtBQUssRUFBRTtBQUMvQixTQUFPLE9BQU8sS0FBSyxLQUFLLFVBQVUsQ0FBQztDQUNwQyxDQUFDOzs7QUFHRixJQUFJLFVBQVUsQ0FBQyxHQUFHLENBQUMsRUFBRTtBQUNuQixVQUlNLFVBQVUsR0FKaEIsVUFBVSxHQUFHLFVBQVMsS0FBSyxFQUFFO0FBQzNCLFdBQU8sT0FBTyxLQUFLLEtBQUssVUFBVSxJQUFJLFFBQVEsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUssbUJBQW1CLENBQUM7R0FDcEYsQ0FBQztDQUNIO1FBQ08sVUFBVSxHQUFWLFVBQVU7Ozs7O0FBSVgsSUFBTSxPQUFPLEdBQUcsS0FBSyxDQUFDLE9BQU8sSUFBSSxVQUFTLEtBQUssRUFBRTtBQUN0RCxTQUFPLEFBQUMsS0FBSyxJQUFJLE9BQU8sS0FBSyxLQUFLLFFBQVEsR0FBSSxRQUFRLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxLQUFLLGdCQUFnQixHQUFHLEtBQUssQ0FBQztDQUNqRyxDQUFDOzs7OztBQUdLLFNBQVMsT0FBTyxDQUFDLEtBQUssRUFBRSxLQUFLLEVBQUU7QUFDcEMsT0FBSyxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsR0FBRyxHQUFHLEtBQUssQ0FBQyxNQUFNLEVBQUUsQ0FBQyxHQUFHLEdBQUcsRUFBRSxDQUFDLEVBQUUsRUFBRTtBQUNoRCxRQUFJLEtBQUssQ0FBQyxDQUFDLENBQUMsS0FBSyxLQUFLLEVBQUU7QUFDdEIsYUFBTyxDQUFDLENBQUM7S0FDVjtHQUNGO0FBQ0QsU0FBTyxDQUFDLENBQUMsQ0FBQztDQUNYOztBQUdNLFNBQVMsZ0JBQWdCLENBQUMsTUFBTSxFQUFFO0FBQ3ZDLE1BQUksT0FBTyxNQUFNLEtBQUssUUFBUSxFQUFFOztBQUU5QixRQUFJLE1BQU0sSUFBSSxNQUFNLENBQUMsTUFBTSxFQUFFO0FBQzNCLGFBQU8sTUFBTSxDQUFDLE1BQU0sRUFBRSxDQUFDO0tBQ3hCLE1BQU0sSUFBSSxNQUFNLElBQUksSUFBSSxFQUFFO0FBQ3pCLGFBQU8sRUFBRSxDQUFDO0tBQ1gsTUFBTSxJQUFJLENBQUMsTUFBTSxFQUFFO0FBQ2xCLGFBQU8sTUFBTSxHQUFHLEVBQUUsQ0FBQztLQUNwQjs7Ozs7QUFLRCxVQUFNLEdBQUcsRUFBRSxHQUFHLE1BQU0sQ0FBQztHQUN0Qjs7QUFFRCxNQUFJLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsRUFBRTtBQUFFLFdBQU8sTUFBTSxDQUFDO0dBQUU7QUFDOUMsU0FBTyxNQUFNLENBQUMsT0FBTyxDQUFDLFFBQVEsRUFBRSxVQUFVLENBQUMsQ0FBQztDQUM3Qzs7QUFFTSxTQUFTLE9BQU8sQ0FBQyxLQUFLLEVBQUU7QUFDN0IsTUFBSSxDQUFDLEtBQUssSUFBSSxLQUFLLEtBQUssQ0FBQyxFQUFFO0FBQ3pCLFdBQU8sSUFBSSxDQUFDO0dBQ2IsTUFBTSxJQUFJLE9BQU8sQ0FBQyxLQUFLLENBQUMsSUFBSSxLQUFLLENBQUMsTUFBTSxLQUFLLENBQUMsRUFBRTtBQUMvQyxXQUFPLElBQUksQ0FBQztHQUNiLE1BQU07QUFDTCxXQUFPLEtBQUssQ0FBQztHQUNkO0NBQ0Y7O0FBRU0sU0FBUyxXQUFXLENBQUMsTUFBTSxFQUFFO0FBQ2xDLE1BQUksS0FBSyxHQUFHLE1BQU0sQ0FBQyxFQUFFLEVBQUUsTUFBTSxDQUFDLENBQUM7QUFDL0IsT0FBSyxDQUFDLE9BQU8sR0FBRyxNQUFNLENBQUM7QUFDdkIsU0FBTyxLQUFLLENBQUM7Q0FDZDs7QUFFTSxTQUFTLFdBQVcsQ0FBQyxNQUFNLEVBQUUsR0FBRyxFQUFFO0FBQ3ZDLFFBQU0sQ0FBQyxJQUFJLEdBQUcsR0FBRyxDQUFDO0FBQ2xCLFNBQU8sTUFBTSxDQUFDO0NBQ2Y7O0FBRU0sU0FBUyxpQkFBaUIsQ0FBQyxXQUFXLEVBQUUsRUFBRSxFQUFFO0FBQ2pELFNBQU8sQ0FBQyxXQUFXLEdBQUcsV0FBVyxHQUFHLEdBQUcsR0FBRyxFQUFFLENBQUEsR0FBSSxFQUFFLENBQUM7Q0FDcEQiLCJmaWxlIjoidXRpbHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBlc2NhcGUgPSB7XG4gICcmJzogJyZhbXA7JyxcbiAgJzwnOiAnJmx0OycsXG4gICc+JzogJyZndDsnLFxuICAnXCInOiAnJnF1b3Q7JyxcbiAgXCInXCI6ICcmI3gyNzsnLFxuICAnYCc6ICcmI3g2MDsnLFxuICAnPSc6ICcmI3gzRDsnXG59O1xuXG5jb25zdCBiYWRDaGFycyA9IC9bJjw+XCInYD1dL2csXG4gICAgICBwb3NzaWJsZSA9IC9bJjw+XCInYD1dLztcblxuZnVuY3Rpb24gZXNjYXBlQ2hhcihjaHIpIHtcbiAgcmV0dXJuIGVzY2FwZVtjaHJdO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gZXh0ZW5kKG9iai8qICwgLi4uc291cmNlICovKSB7XG4gIGZvciAobGV0IGkgPSAxOyBpIDwgYXJndW1lbnRzLmxlbmd0aDsgaSsrKSB7XG4gICAgZm9yIChsZXQga2V5IGluIGFyZ3VtZW50c1tpXSkge1xuICAgICAgaWYgKE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChhcmd1bWVudHNbaV0sIGtleSkpIHtcbiAgICAgICAgb2JqW2tleV0gPSBhcmd1bWVudHNbaV1ba2V5XTtcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICByZXR1cm4gb2JqO1xufVxuXG5leHBvcnQgbGV0IHRvU3RyaW5nID0gT2JqZWN0LnByb3RvdHlwZS50b1N0cmluZztcblxuLy8gU291cmNlZCBmcm9tIGxvZGFzaFxuLy8gaHR0cHM6Ly9naXRodWIuY29tL2Jlc3RpZWpzL2xvZGFzaC9ibG9iL21hc3Rlci9MSUNFTlNFLnR4dFxuLyogZXNsaW50LWRpc2FibGUgZnVuYy1zdHlsZSAqL1xubGV0IGlzRnVuY3Rpb24gPSBmdW5jdGlvbih2YWx1ZSkge1xuICByZXR1cm4gdHlwZW9mIHZhbHVlID09PSAnZnVuY3Rpb24nO1xufTtcbi8vIGZhbGxiYWNrIGZvciBvbGRlciB2ZXJzaW9ucyBvZiBDaHJvbWUgYW5kIFNhZmFyaVxuLyogaXN0YW5idWwgaWdub3JlIG5leHQgKi9cbmlmIChpc0Z1bmN0aW9uKC94LykpIHtcbiAgaXNGdW5jdGlvbiA9IGZ1bmN0aW9uKHZhbHVlKSB7XG4gICAgcmV0dXJuIHR5cGVvZiB2YWx1ZSA9PT0gJ2Z1bmN0aW9uJyAmJiB0b1N0cmluZy5jYWxsKHZhbHVlKSA9PT0gJ1tvYmplY3QgRnVuY3Rpb25dJztcbiAgfTtcbn1cbmV4cG9ydCB7aXNGdW5jdGlvbn07XG4vKiBlc2xpbnQtZW5hYmxlIGZ1bmMtc3R5bGUgKi9cblxuLyogaXN0YW5idWwgaWdub3JlIG5leHQgKi9cbmV4cG9ydCBjb25zdCBpc0FycmF5ID0gQXJyYXkuaXNBcnJheSB8fCBmdW5jdGlvbih2YWx1ZSkge1xuICByZXR1cm4gKHZhbHVlICYmIHR5cGVvZiB2YWx1ZSA9PT0gJ29iamVjdCcpID8gdG9TdHJpbmcuY2FsbCh2YWx1ZSkgPT09ICdbb2JqZWN0IEFycmF5XScgOiBmYWxzZTtcbn07XG5cbi8vIE9sZGVyIElFIHZlcnNpb25zIGRvIG5vdCBkaXJlY3RseSBzdXBwb3J0IGluZGV4T2Ygc28gd2UgbXVzdCBpbXBsZW1lbnQgb3VyIG93biwgc2FkbHkuXG5leHBvcnQgZnVuY3Rpb24gaW5kZXhPZihhcnJheSwgdmFsdWUpIHtcbiAgZm9yIChsZXQgaSA9IDAsIGxlbiA9IGFycmF5Lmxlbmd0aDsgaSA8IGxlbjsgaSsrKSB7XG4gICAgaWYgKGFycmF5W2ldID09PSB2YWx1ZSkge1xuICAgICAgcmV0dXJuIGk7XG4gICAgfVxuICB9XG4gIHJldHVybiAtMTtcbn1cblxuXG5leHBvcnQgZnVuY3Rpb24gZXNjYXBlRXhwcmVzc2lvbihzdHJpbmcpIHtcbiAgaWYgKHR5cGVvZiBzdHJpbmcgIT09ICdzdHJpbmcnKSB7XG4gICAgLy8gZG9uJ3QgZXNjYXBlIFNhZmVTdHJpbmdzLCBzaW5jZSB0aGV5J3JlIGFscmVhZHkgc2FmZVxuICAgIGlmIChzdHJpbmcgJiYgc3RyaW5nLnRvSFRNTCkge1xuICAgICAgcmV0dXJuIHN0cmluZy50b0hUTUwoKTtcbiAgICB9IGVsc2UgaWYgKHN0cmluZyA9PSBudWxsKSB7XG4gICAgICByZXR1cm4gJyc7XG4gICAgfSBlbHNlIGlmICghc3RyaW5nKSB7XG4gICAgICByZXR1cm4gc3RyaW5nICsgJyc7XG4gICAgfVxuXG4gICAgLy8gRm9yY2UgYSBzdHJpbmcgY29udmVyc2lvbiBhcyB0aGlzIHdpbGwgYmUgZG9uZSBieSB0aGUgYXBwZW5kIHJlZ2FyZGxlc3MgYW5kXG4gICAgLy8gdGhlIHJlZ2V4IHRlc3Qgd2lsbCBkbyB0aGlzIHRyYW5zcGFyZW50bHkgYmVoaW5kIHRoZSBzY2VuZXMsIGNhdXNpbmcgaXNzdWVzIGlmXG4gICAgLy8gYW4gb2JqZWN0J3MgdG8gc3RyaW5nIGhhcyBlc2NhcGVkIGNoYXJhY3RlcnMgaW4gaXQuXG4gICAgc3RyaW5nID0gJycgKyBzdHJpbmc7XG4gIH1cblxuICBpZiAoIXBvc3NpYmxlLnRlc3Qoc3RyaW5nKSkgeyByZXR1cm4gc3RyaW5nOyB9XG4gIHJldHVybiBzdHJpbmcucmVwbGFjZShiYWRDaGFycywgZXNjYXBlQ2hhcik7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBpc0VtcHR5KHZhbHVlKSB7XG4gIGlmICghdmFsdWUgJiYgdmFsdWUgIT09IDApIHtcbiAgICByZXR1cm4gdHJ1ZTtcbiAgfSBlbHNlIGlmIChpc0FycmF5KHZhbHVlKSAmJiB2YWx1ZS5sZW5ndGggPT09IDApIHtcbiAgICByZXR1cm4gdHJ1ZTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gZmFsc2U7XG4gIH1cbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUZyYW1lKG9iamVjdCkge1xuICBsZXQgZnJhbWUgPSBleHRlbmQoe30sIG9iamVjdCk7XG4gIGZyYW1lLl9wYXJlbnQgPSBvYmplY3Q7XG4gIHJldHVybiBmcmFtZTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGJsb2NrUGFyYW1zKHBhcmFtcywgaWRzKSB7XG4gIHBhcmFtcy5wYXRoID0gaWRzO1xuICByZXR1cm4gcGFyYW1zO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gYXBwZW5kQ29udGV4dFBhdGgoY29udGV4dFBhdGgsIGlkKSB7XG4gIHJldHVybiAoY29udGV4dFBhdGggPyBjb250ZXh0UGF0aCArICcuJyA6ICcnKSArIGlkO1xufVxuIl19
+
 
 /***/ },
 /* 2 */
@@ -12395,7 +12395,7 @@ return jQuery;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone___default = __WEBPACK_IMPORTED_MODULE_0_backbone__ && __WEBPACK_IMPORTED_MODULE_0_backbone__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0_backbone__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0_backbone__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0_backbone___default, 'a', __WEBPACK_IMPORTED_MODULE_0_backbone___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__projectModel__ = __webpack_require__(5);
@@ -12417,7 +12417,7 @@ class ProjectCollection extends __WEBPACK_IMPORTED_MODULE_0_backbone__["Collecti
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone___default = __WEBPACK_IMPORTED_MODULE_0_backbone__ && __WEBPACK_IMPORTED_MODULE_0_backbone__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0_backbone__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0_backbone__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0_backbone___default, 'a', __WEBPACK_IMPORTED_MODULE_0_backbone___default);
 
@@ -12450,17 +12450,17 @@ exports.HandlebarsEnvironment = HandlebarsEnvironment;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 var _exception = __webpack_require__(2);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _helpers = __webpack_require__(22);
+var _helpers = __webpack_require__(25);
 
-var _decorators = __webpack_require__(20);
+var _decorators = __webpack_require__(23);
 
-var _logger = __webpack_require__(30);
+var _logger = __webpack_require__(33);
 
 var _logger2 = _interopRequireDefault(_logger);
 
@@ -12550,6 +12550,15 @@ exports.logger = _logger2['default'];
 
 /***/ },
 /* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+// Create a simple path alias to allow browserify to resolve
+// the runtime on a supported path.
+module.exports = __webpack_require__(22)['default'];
+
+
+/***/ },
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -14103,7 +14112,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 var g;
@@ -14128,7 +14137,7 @@ module.exports = g;
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 window.onload = function(){
@@ -14149,20 +14158,20 @@ window.onload = function(){
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectModel__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_projectCollection__ = __webpack_require__(4);
-var Backbone = __webpack_require__(1);
-var Home = __webpack_require__(14);
-var About = __webpack_require__(12);
-var Contact = __webpack_require__(13);
-var projects = __webpack_require__(15);
+var Backbone = __webpack_require__(0);
+var Home = __webpack_require__(16);
+var About = __webpack_require__(14);
+var Contact = __webpack_require__(15);
+var projects = __webpack_require__(17);
 
 
-var projectsData = __webpack_require__(38);
+var projectsData = __webpack_require__(39);
 
 var Router = Backbone.Router.extend({
     routes: {
@@ -14212,16 +14221,16 @@ module.exports = router;
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(16);
+var content = __webpack_require__(18);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(39)(content, {});
+var update = __webpack_require__(40)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -14238,11 +14247,12 @@ if(false) {
 }
 
 /***/ },
-/* 12 */
+/* 13 */,
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-var template = __webpack_require__(35);
-var Backbone = __webpack_require__(1);
+var template = __webpack_require__(20);
+var Backbone = __webpack_require__(0);
 
 var About = Backbone.View.extend({
     el: '#container',
@@ -14261,11 +14271,11 @@ module.exports = About;
 
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-var template = __webpack_require__(36);
-var Backbone = __webpack_require__(1);
+var template = __webpack_require__(37);
+var Backbone = __webpack_require__(0);
 
 var Contact = Backbone.View.extend({
     el: '#container',
@@ -14282,11 +14292,11 @@ module.exports = Contact;
 
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-var template = __webpack_require__(37);
-var Backbone = __webpack_require__(1);
+var template = __webpack_require__(38);
+var Backbone = __webpack_require__(0);
 
 var Home = Backbone.View.extend({
     el: '#container',
@@ -14310,20 +14320,20 @@ module.exports = Home;
 
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(_, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectCollection__ = __webpack_require__(4);
+/* WEBPACK VAR INJECTION */(function(_) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectCollection__ = __webpack_require__(4);
 'use strict'
 
-var Backbone = __webpack_require__(1);
+var Backbone = __webpack_require__(0);
 
 var projectDisplayed = 0;
 
 var Projects = Backbone.View.extend({
     el: '#container',
-    template: __webpack_require__(18),
+    template: __webpack_require__(21),
     events: {
       'click #next': 'showNextProject',
       'click #previous': 'showPreviousProject'
@@ -14367,18 +14377,18 @@ var Projects = Backbone.View.extend({
       var descriptionBlock = document.getElementsByClassName('description')[0];
       descriptionBlock.style.display = 'block'
 
-      var MOUSE_OVER = false;
-      $('body').bind('mousewheel', function(e){
-        if(MOUSE_OVER){
-          if(e.preventDefault) { e.preventDefault(); }
-          e.returnValue = false;
-          return false;
-        }
-      });
+      // var MOUSE_OVER = false;
+      // $('body').bind('mousewheel', function(e){
+      //   if(MOUSE_OVER){
+      //     if(e.preventDefault) { e.preventDefault(); }
+      //     e.returnValue = false;
+      //     return false;
+      //   }
+      // });
 
       if(!window.mobilecheck()){
-        $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
-        $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
+        // $('#outer-container').mouseenter(function(){ MOUSE_OVER=true; });
+        // $('#outer-container').mouseleave(function(){ MOUSE_OVER=false; });
 
         // $('#outer-container').bind('mousewheel', function(e){
         //   var e = window.event;
@@ -14454,7 +14464,11 @@ var Projects = Backbone.View.extend({
 
 
         // var lastScrollTop = 0;
-        // window.addEventListener('scroll', function(e) {
+        // $('#projects-container').bind('mousewheel', function(e){
+        //   console.log('boo')
+        // })
+        window.addEventListener('scroll', function(e) {
+          console.log(e)
         //   var step = ($('#wipe-left').height() - $(window).height()) / 22;
         //   var scrollStep = parseInt($(window).scrollTop() / step);
         //   var maskPosition = (100/22) * scrollStep;
@@ -14472,10 +14486,8 @@ var Projects = Backbone.View.extend({
         //     // })
         //   }
         //   lastScrollTop = scroll;
-        // }, {passive: true});
-
+        }, {passive: true});
       }
-
 
       this.$el.html(this.template({projects: this.collection.models[projectDisplayed]}));
       return this;
@@ -14484,24 +14496,24 @@ var Projects = Backbone.View.extend({
 
 module.exports = Projects;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(17)();
+exports = module.exports = __webpack_require__(19)();
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.container-animation {\n  animation: grow 1s ease;\n  animation-fill-mode: forwards; }\n\n.container-style {\n  width: 100% !important;\n  height: 100% !important; }\n\n@keyframes grow {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.outer-container-animation {\n  animation: growOuterContainer 0.5s ease;\n  animation-delay: 0.5s;\n  animation-fill-mode: forwards; }\n\n.outer-container-style {\n  width: 95% !important;\n  height: 95% !important; }\n\n@keyframes growOuterContainer {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#outer-container #navbar a {\n  font-size: 10px;\n  font-weight: 200;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px; }\n\n#outer-container #navbar a:hover {\n  text-decoration: none; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 200px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 1.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'PT Sans Narrow', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px;\n  font-style: italic; }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    color: #2d307a;\n    margin-bottom: 0;\n    margin-left: 0.8em;\n    font-family: 'Josefin Sans', sans-serif;\n    font-weight: 100;\n    letter-spacing: 15px; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'Playfair Display', serif; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border-left: 2px solid #da2d2a; }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 49%;\n    vertical-align: top; }\n    #about-container .about-content-block #intro-block, #about-container .about-content-block #skills-block, #about-container .about-content-block #contributions-block {\n      display: block;\n      width: 70%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em; }\n      #about-container .about-content-block #intro-block .social-button {\n        width: 26.5%;\n        margin-right: 1%;\n        margin-top: 1em;\n        margin-bottom: 1em;\n        border: 2px solid #2d307a;\n        display: inline-block;\n        text-align: center;\n        position: relative; }\n        #about-container .about-content-block #intro-block .social-button a {\n          position: relative;\n          transition: all 0.3s ease;\n          display: inline-block;\n          width: 100%;\n          height: 2em;\n          line-height: 2em; }\n          #about-container .about-content-block #intro-block .social-button a:before, #about-container .about-content-block #intro-block .social-button a:after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            height: 0;\n            transition: all .3s ease; }\n          #about-container .about-content-block #intro-block .social-button a:before {\n            background: white;\n            z-index: -2; }\n          #about-container .about-content-block #intro-block .social-button a:after {\n            background: #2d307a;\n            z-index: -1;\n            color: white;\n            height: -100%; }\n          #about-container .about-content-block #intro-block .social-button a:hover, #about-container .about-content-block #intro-block .social-button a:focus {\n            cursor: pointer;\n            color: white; }\n            #about-container .about-content-block #intro-block .social-button a:hover:after, #about-container .about-content-block #intro-block .social-button a:focus:after {\n              height: 100%; }\n  #about-container #skills-block {\n    padding-left: 1em; }\n    #about-container #skills-block .skills {\n      display: inline-block;\n      vertical-align: top; }\n      #about-container #skills-block .skills ul {\n        list-style: none;\n        margin: 0;\n        margin-right: 3em;\n        padding: 0; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 85%; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 3em;\n    padding: 0; }\n\n.important-title {\n  color: #da2d2a; }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'PT Sans Narrow', sans-serif;\n    color: #2d307a; }\n  #projects-container .project-number {\n    position: absolute;\n    font-size: 50em;\n    margin: 0;\n    color: lightgray;\n    opacity: 0.3;\n    /* letter-spacing: -50px; */\n    letter-spacing: -50px;\n    top: -88px;\n    left: 100px;\n    z-index: -1; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'PT Sans Narrow', sans-serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 100%;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 100%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: 20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto;\n  display: block !important; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#home {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0; }\n  #home h1 {\n    z-index: 20;\n    position: absolute;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    font-family: 'PT Sans Narrow';\n    font-weight: 800;\n    text-transform: uppercase;\n    font-size: 50px;\n    color: #2d307a;\n    opacity: 0;\n    animation: appear 1s ease;\n    animation-delay: 1.4s;\n    animation-fill-mode: forwards; }\n  #home .outro-animation {\n    animation: disappear 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-h2 {\n    animation: disappearh2 0.5s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-canvas {\n    animation: disappearCanvas 0.5s ease;\n    animation-fill-mode: forwards;\n    animation-delay: 0.5s; }\n  #home h2 {\n    position: absolute;\n    top: 20%;\n    z-index: 20;\n    width: 100%;\n    text-align: center;\n    text-transform: uppercase;\n    font-family: 'PT Sans Narrow';\n    font-weight: 200;\n    color: #ff1c00;\n    opacity: 0;\n    animation: appearSubtitle 1s ease;\n    animation-delay: 1.6s;\n    animation-fill-mode: forwards; }\n  #home #threejs-container {\n    opacity: 0;\n    animation: canvasAppear 1s ease;\n    animation-delay: 1.2s;\n    animation-fill-mode: forwards; }\n\n@keyframes appear {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 1;\n    top: 25%; } }\n\n@keyframes appearSubtitle {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 0.8;\n    top: 35%; } }\n\n@keyframes canvasAppear {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes disappear {\n  from {\n    opacity: 1;\n    top: 25%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearh2 {\n  from {\n    opacity: 1;\n    top: 35%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearCanvas {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\n@media only screen and (max-width: 480px) {\n  #outer-container .description {\n    width: 130px; }\n    #outer-container .description h1 {\n      line-height: 25px;\n      font-size: 25px;\n      letter-spacing: 1px;\n      font-family: 'PT Sans Narrow';\n      font-weight: 600; }\n    #outer-container .description h3 {\n      font-size: italic; }\n  #projects-container h2 {\n    font-family: 'PT Sans Narrow'; }\n  #projects-container .project-block {\n    width: 90%;\n    margin-top: 5em; }\n    #projects-container .project-block h2 {\n      font-family: 'PT Sans Narrow'; }\n    #projects-container .project-block h3 {\n      position: relative;\n      left: 0;\n      top: 0;\n      font-size: 1em;\n      width: 100%;\n      display: block;\n      text-align: center;\n      font-family: 'PT Sans Narrow';\n      font-weight: 100; }\n    #projects-container .project-block .project-buttons {\n      left: 0;\n      bottom: -50px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        color: black;\n        border: 1px solid black; }\n  #projects-container p.svg, #projects-container #wipe-left {\n    display: none; }\n  #projects-container .project-details {\n    width: 90%;\n    position: relative;\n    top: 0;\n    left: 0;\n    margin-top: 4em;\n    margin-bottom: 2em; }\n    #projects-container .project-details img {\n      width: 100%; }\n  #projects-container #previous {\n    top: 21%;\n    left: 1.5em;\n    z-index: 10; }\n  #projects-container #next {\n    right: 1.5em;\n    top: 21%;\n    z-index: 10; }\n  #about-container h1 {\n    margin-left: 0;\n    font-size: 75px;\n    width: 90%;\n    display: block;\n    margin: 0 auto;\n    margin-top: 1em; }\n  #about-container .about-content-block {\n    display: block;\n    width: 100%; }\n    #about-container .about-content-block #intro-block {\n      width: 90%; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 3px; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border: none; }\n  #about-container .about-content-block #skills-block {\n    padding: 0;\n    width: 90%; }\n    #about-container .about-content-block #skills-block .skills {\n      width: 48%; }\n  #about-container #contributions-block {\n    width: 90%; } }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  width: 100%; }\n\n#app-container {\n  background: #f3f1f1;\n  display: block;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.container-animation {\n  animation: grow 1s ease;\n  animation-fill-mode: forwards; }\n\n.container-style {\n  width: 100% !important;\n  height: 100% !important; }\n\n@keyframes grow {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 100%;\n    height: 100%; } }\n\n#outer-container a {\n  text-decoration: none;\n  color: black; }\n\n#outer-container {\n  min-height: 0;\n  background: white;\n  overflow-y: scroll;\n  width: 0;\n  position: absolute;\n  height: 0;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.outer-container-animation {\n  animation: growOuterContainer 0.5s ease;\n  animation-delay: 0.5s;\n  animation-fill-mode: forwards; }\n\n.outer-container-style {\n  width: 95% !important;\n  height: 95% !important; }\n\n@keyframes growOuterContainer {\n  from {\n    width: 0;\n    height: 0; }\n  to {\n    width: 95%;\n    min-height: 95%; } }\n\n#outer-container #navbar {\n  display: block;\n  text-align: right;\n  margin-right: -20px;\n  margin-top: 20px;\n  position: relative;\n  float: right;\n  z-index: 20; }\n\n#outer-container #navbar a {\n  font-size: 10px;\n  font-weight: 200;\n  color: #ff1c00;\n  margin-right: 10px;\n  display: block;\n  margin-bottom: 5px; }\n\n#outer-container #navbar a:hover {\n  text-decoration: none;\n  cursor: pointer; }\n\n#contributions-block ul li a {\n  color: #1a19a9; }\n\n#contributions-block ul li a:hover {\n  text-decoration: underline; }\n\n@keyframes fadeIn {\n  to {\n    opacity: 1; } }\n\n.fade-in {\n  opacity: 0;\n  animation: fadeIn .5s ease-in 1 forwards; }\n\n.is-paused {\n  animation-play-state: paused; }\n\n#outer-container .description {\n  display: inline-block;\n  position: absolute;\n  margin-top: 20px;\n  margin-left: 20px;\n  width: 200px;\n  z-index: 20;\n  opacity: 0;\n  animation: fadeIn 0.5s ease-in 1 forwards;\n  animation-delay: 0.5s; }\n\n#outer-container .description h1 {\n  line-height: 30px;\n  color: #2d307a;\n  font-weight: 200;\n  font-size: 30px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  font-family: 'PT Sans Narrow', sans-serif;\n  letter-spacing: 2px;\n  /*font-style: italic;*/ }\n\n#outer-container .description h3 {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 200;\n  font-size: 12px;\n  margin-top: 5px;\n  font-style: italic; }\n\n#about-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #about-container h1 {\n    font-size: 100px;\n    color: #2d307a;\n    margin-bottom: 0;\n    text-align: center;\n    margin-top: 0;\n    font-family: 'Josefin Sans', sans-serif;\n    font-weight: 100;\n    letter-spacing: 15px; }\n  #about-container h2 {\n    text-align: center;\n    font-family: 'PT Sans Narrow', sans-serif;\n    color: #2d307a; }\n  #about-container img {\n    width: 10em;\n    height: 10em;\n    display: block;\n    margin: 0 auto;\n    margin-top: 2em;\n    margin-bottom: 2em;\n    animation: slideDown 1s ease;\n    animation-fill-mode: forwards; }\n  #about-container .profile-image {\n    -webkit-clip-path: circle(5em at center);\n    clip-path: circle(5em at center); }\n  #about-container .about-content-block {\n    display: inline-block;\n    width: 48%;\n    vertical-align: top;\n    margin: 0 auto;\n    margin-top: 6em; }\n    #about-container .about-content-block:nth-of-type(2) {\n      margin-top: 6em; }\n      #about-container .about-content-block:nth-of-type(2) p {\n        display: block;\n        margin: 0 auto;\n        text-align: justify;\n        color: #2d307a;\n        font-weight: 200;\n        margin-bottom: 2em; }\n    #about-container .about-content-block #skills-block, #about-container .about-content-block #about-me-block {\n      display: block;\n      width: 85%;\n      vertical-align: top;\n      margin: 0 auto; }\n    #about-container .about-content-block #about-me-block h3 {\n      margin-top: 0; }\n    #about-container .about-content-block #about-me-block .important-word {\n      font-weight: 400; }\n    #about-container .about-content-block #intro-block {\n      display: block;\n      width: 85%;\n      margin: 0 auto; }\n    #about-container .about-content-block #intro-block {\n      text-align: justify; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 4px;\n        margin-bottom: 1em;\n        text-align: center; }\n      #about-container .about-content-block #intro-block #buttons {\n        display: block;\n        width: 85%;\n        margin: 0 auto; }\n        #about-container .about-content-block #intro-block #buttons .social-button {\n          width: 30%;\n          margin-right: 1%;\n          margin-top: 1em;\n          margin-bottom: 1em;\n          border: 2px solid #2d307a;\n          display: inline-block;\n          text-align: center;\n          position: relative; }\n          #about-container .about-content-block #intro-block #buttons .social-button a {\n            position: relative;\n            transition: all 0.3s ease;\n            display: inline-block;\n            width: 100%;\n            height: 2em;\n            line-height: 2em;\n            font-weight: 300; }\n            #about-container .about-content-block #intro-block #buttons .social-button a:before, #about-container .about-content-block #intro-block #buttons .social-button a:after {\n              content: \"\";\n              position: absolute;\n              bottom: 0;\n              left: 0;\n              width: 100%;\n              height: 0;\n              transition: all .3s ease; }\n            #about-container .about-content-block #intro-block #buttons .social-button a:before {\n              background: white;\n              z-index: -2; }\n            #about-container .about-content-block #intro-block #buttons .social-button a:after {\n              background: #2d307a;\n              z-index: -1;\n              color: white;\n              height: -100%; }\n            #about-container .about-content-block #intro-block #buttons .social-button a:hover, #about-container .about-content-block #intro-block #buttons .social-button a:focus {\n              cursor: pointer;\n              color: white; }\n              #about-container .about-content-block #intro-block #buttons .social-button a:hover:after, #about-container .about-content-block #intro-block #buttons .social-button a:focus:after {\n                height: 100%; }\n  #about-container #skills-block .skills {\n    display: inline-block;\n    vertical-align: top; }\n    #about-container #skills-block .skills h4 {\n      margin-top: 0;\n      margin-bottom: 10px; }\n    #about-container #skills-block .skills ul {\n      list-style: none;\n      margin: 0;\n      margin-right: 2em;\n      padding: 0;\n      font-weight: 200;\n      color: #2d307a; }\n\n#contributions-block {\n  display: block;\n  margin: 0 auto;\n  width: 90%;\n  margin-bottom: 2em; }\n  #contributions-block ul {\n    list-style: none;\n    margin: 0;\n    margin-right: 2em;\n    padding: 0;\n    color: #2d307a;\n    font-weight: 200; }\n\n.important-title {\n  color: #da2d2a;\n  font-weight: 200; }\n\np.svg {\n  font-family: sans-serif;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  font-size: 10px;\n  color: #2d307a;\n  margin-top: 20px; }\n  p.svg svg {\n    width: 14px;\n    display: block;\n    margin: 10px auto;\n    -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n    -moz-animation: bounce-arrow 2s infinite ease-in-out;\n    -o-animation: bounce-arrow 2s infinite ease-in-out;\n    animation: bounce-arrow 2s infinite ease-in-out; }\n\n@keyframes slideDown {\n  from {\n    margin-top: -20px; }\n  to {\n    margin-top: 1em; } }\n\n#contact-container {\n  font-family: 'Source Sans Pro', sans-serif; }\n  #contact-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #contact-container h2 {\n    text-align: center; }\n\n#projects-container {\n  font-family: 'Source Sans Pro', sans-serif;\n  max-height: 700px; }\n  #projects-container #wipe-left {\n    width: 0px;\n    height: 1000px;\n    background: white;\n    position: absolute;\n    top: 2em;\n    z-index: 5; }\n  #projects-container h1 {\n    font-size: 100px;\n    font-weight: 200;\n    color: #2d307a;\n    font-weight: 200;\n    letter-spacing: 0.3em;\n    margin-bottom: 0;\n    margin-left: 0.8em; }\n  #projects-container h2 {\n    text-align: center;\n    font-family: 'PT Sans Narrow', sans-serif;\n    color: #2d307a; }\n  #projects-container .project-number {\n    position: absolute;\n    font-size: 50em;\n    display: block;\n    text-align: center;\n    width: 100%;\n    margin: 0 auto;\n    color: lightgray;\n    opacity: 0.2;\n    letter-spacing: -50px;\n    top: -88px;\n    left: 100px;\n    z-index: -1;\n    font-family: 'Playfair Display', serif; }\n  #projects-container .project-block {\n    width: 65%;\n    display: block;\n    margin: 0 auto;\n    position: relative;\n    margin-top: 6em; }\n    #projects-container .project-block img {\n      width: 100%;\n      max-height: 475px;\n      box-shadow: 2px 2px 10px lightgrey;\n      animation: slideshow 1.5s; }\n    #projects-container .project-block h3 {\n      position: absolute;\n      z-index: 5;\n      color: lightgrey;\n      font-weight: 600;\n      font-size: 3em;\n      left: -50px;\n      bottom: 100px;\n      animation: titleSlide 2.5s;\n      font-family: 'PT Sans Narrow', sans-serif;\n      margin-bottom: 10px;\n      font-style: italic; }\n    #projects-container .project-block .project-buttons {\n      animation: titleSlide 2.5s;\n      position: absolute;\n      bottom: 60px;\n      left: 20px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        display: inline-block;\n        border: 1px solid white;\n        color: white;\n        font-style: italic;\n        padding: 0.5em 1em;\n        margin-right: 10px;\n        font-weight: 200; }\n    #projects-container .project-block p {\n      position: absolute;\n      left: -40px;\n      top: 8em;\n      color: lightgrey;\n      animation: titleSlide 2.5s;\n      font-weight: 200;\n      font-size: 15px; }\n  #projects-container #next {\n    font-size: 12px;\n    position: absolute;\n    top: 52%;\n    right: 4em; }\n  #projects-container #next:hover, #projects-container #previous:hover {\n    cursor: pointer;\n    text-decoration: underline; }\n  #projects-container #previous {\n    position: absolute;\n    font-size: 12px;\n    top: 52%;\n    left: 4em; }\n  #projects-container p.svg {\n    font-family: sans-serif;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-size: 10px;\n    color: #2d307a;\n    margin-top: 20px; }\n    #projects-container p.svg svg {\n      width: 14px;\n      display: block;\n      margin: 10px auto;\n      -webkit-animation: bounce-arrow 2s infinite ease-in-out;\n      -moz-animation: bounce-arrow 2s infinite ease-in-out;\n      -o-animation: bounce-arrow 2s infinite ease-in-out;\n      animation: bounce-arrow 2s infinite ease-in-out; }\n  #projects-container .project-details {\n    width: 50%;\n    display: block;\n    margin: 0 auto;\n    position: absolute;\n    z-index: 10;\n    top: 100%;\n    left: 27%; }\n    #projects-container .project-details img {\n      width: 100%; }\n    #projects-container .project-details a.project-link {\n      text-decoration: underline; }\n\n@-webkit-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@-moz-keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes bounce-arrow {\n  0% {\n    transform: translateY(0); }\n  50% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n@keyframes wipe {\n  0% {\n    transform: translateX(0); }\n  50% {\n    transform: translateX(1000px); }\n  100% {\n    transform: translateX(2000px); } }\n\n@keyframes slideshow {\n  from {\n    margin-left: 30%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n@keyframes titleSlide {\n  from {\n    margin-left: -20%;\n    opacity: 0; }\n  to {\n    margin-left: 0%;\n    opacity: 1; } }\n\n#navbar {\n  font-family: 'Source Sans Pro', sans-serif;\n  width: auto;\n  display: block !important; }\n  #navbar .link {\n    display: block;\n    float: right;\n    clear: both;\n    margin-right: -180px;\n    transition-timing-function: ease-out;\n    transition: 0.5s;\n    transform: translateX(180px); }\n  #navbar .navbar-link-animation:nth-child(1) {\n    transition: all 1.2s 0.3s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(2) {\n    transition: all 1.2s 0.6s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(3) {\n    transition: all 1.2s 0.9s ease-in;\n    transform: translateX(-170px); }\n  #navbar .navbar-link-animation:nth-child(4) {\n    transition: all 1.2s 1.2s ease-in;\n    transform: translateX(-170px); }\n  #navbar .link-loaded {\n    margin-right: -20px; }\n  #navbar .link:hover {\n    transition-timing-function: ease-in;\n    transition: 0.5s;\n    transform: translateX(-180px); }\n  #navbar .line {\n    width: 50px;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 10px;\n    box-shadow: none;\n    border: none;\n    color: #ccc;\n    height: 1px; }\n\n#home {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0; }\n  #home h1 {\n    z-index: 20;\n    position: absolute;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    font-family: 'PT Sans Narrow';\n    font-weight: 800;\n    text-transform: uppercase;\n    font-size: 50px;\n    color: #2d307a;\n    opacity: 0;\n    animation: appear 1s ease;\n    animation-delay: 1.4s;\n    animation-fill-mode: forwards; }\n  #home .outro-animation {\n    animation: disappear 1s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-h2 {\n    animation: disappearh2 1s ease;\n    animation-fill-mode: forwards; }\n  #home .outro-animation-canvas {\n    animation: disappearCanvas 0.5s ease;\n    animation-fill-mode: forwards;\n    animation-delay: 0.5s; }\n  #home h2 {\n    position: absolute;\n    top: 20%;\n    z-index: 20;\n    width: 100%;\n    text-align: center;\n    text-transform: uppercase;\n    font-family: 'PT Sans Narrow';\n    font-weight: 200;\n    color: #ff1c00;\n    opacity: 0;\n    animation: appearSubtitle 1s ease;\n    animation-delay: 1.6s;\n    animation-fill-mode: forwards; }\n  #home #threejs-container {\n    opacity: 0;\n    animation: canvasAppear 1s ease;\n    animation-delay: 1.2s;\n    animation-fill-mode: forwards; }\n\n@keyframes appear {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 1;\n    top: 25%; } }\n\n@keyframes appearSubtitle {\n  from {\n    opacity: 0;\n    top: -10px; }\n  to {\n    opacity: 0.8;\n    top: 35%; } }\n\n@keyframes canvasAppear {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes disappear {\n  from {\n    opacity: 1;\n    top: 25%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearh2 {\n  from {\n    opacity: 1;\n    top: 35%; }\n  to {\n    opacity: 0;\n    top: -5%; } }\n\n@keyframes disappearCanvas {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\n@media only screen and (max-width: 480px) {\n  #outer-container .description {\n    width: 130px; }\n    #outer-container .description h1 {\n      line-height: 25px;\n      font-size: 25px;\n      letter-spacing: 1px;\n      font-family: 'PT Sans Narrow';\n      font-weight: 600; }\n    #outer-container .description h3 {\n      font-size: italic; }\n  #projects-container h2 {\n    font-family: 'PT Sans Narrow'; }\n  #projects-container .project-block {\n    width: 90%;\n    margin-top: 5em; }\n    #projects-container .project-block h2 {\n      font-family: 'PT Sans Narrow'; }\n    #projects-container .project-block h3 {\n      position: relative;\n      left: 0;\n      top: 0;\n      font-size: 1em;\n      width: 100%;\n      display: block;\n      text-align: center;\n      font-family: 'PT Sans Narrow';\n      font-weight: 100; }\n    #projects-container .project-block .project-buttons {\n      left: 0;\n      bottom: -50px; }\n      #projects-container .project-block .project-buttons .visit-button {\n        color: black;\n        border: 1px solid black; }\n  #projects-container p.svg, #projects-container #wipe-left {\n    display: none; }\n  #projects-container .project-details {\n    width: 90%;\n    position: relative;\n    top: 0;\n    left: 0;\n    margin-top: 4em;\n    margin-bottom: 2em; }\n    #projects-container .project-details img {\n      width: 100%; }\n  #projects-container #previous {\n    top: 21%;\n    left: 1.5em;\n    z-index: 10; }\n  #projects-container #next {\n    right: 1.5em;\n    top: 21%;\n    z-index: 10; }\n  #about-container h1 {\n    margin-left: 0;\n    font-size: 75px;\n    width: 90%;\n    display: block;\n    margin: 0 auto;\n    margin-top: 1em; }\n  #about-container .about-content-block {\n    display: block;\n    width: 100%; }\n    #about-container .about-content-block #intro-block {\n      width: 90%; }\n      #about-container .about-content-block #intro-block h3 {\n        letter-spacing: 3px; }\n  #about-container .about-content-block:nth-of-type(2) {\n    border: none; }\n  #about-container .about-content-block #skills-block {\n    padding: 0;\n    width: 90%; }\n    #about-container .about-content-block #skills-block .skills {\n      width: 48%; }\n  #about-container #contributions-block {\n    width: 90%; } }\n", ""]);
 
 // exports
 
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports) {
 
 /*
@@ -14557,10 +14569,20 @@ module.exports = function() {
 
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(34);
+var Handlebars = __webpack_require__(7);
+function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
+module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div id=\"about-container\">\n  <h2>ABOUT</h2>\n  <div class=\"about-content-block\">\n\n    <div id=\"intro-block\">\n      <h1>HELLO!</h1>\n      <h3 class=\"important-title\">I'M A CREATIVE TECHNOLOGIST</h3>\n      <img src=\"./images/charlie_gerard.jpg\" alt=\"Charlie Gerard\" class=\"profile-image\"/>\n      <!-- <p>\n        I have a background in marketing and advertising and started my career as a Digital Producer in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took an immersive course in Web Development.\n        I am now a Software Developer / Consultant at ThoughtWorks in Sydney. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with electronics, creative coding and love to bring any of my ideas to life with code.\n      </p> -->\n      <div id=\"buttons\">\n        <div class=\"social-button\">\n          <a href=\"http://github.com/charliegerard\" target=\"_blank\">GITHUB</a>\n        </div>\n        <div class=\"social-button\">\n          <a href=\"http://twitter.com/charlie__gerard\" target=\"_blank\">TWITTER</a>\n        </div>\n        <div class=\"social-button\">\n          <a href=\"http://charliegerard.github.io/blog\" target=\"_blank\">BLOG</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"about-content-block\">\n    <div id=\"about-me-block\">\n      <h3 class=\"important-title\">A BIT OF HISTORY</h3>\n      <p>\n        I have a <span class=\"important-word\">background</span> in marketing and <span class=\"important-word\">advertising</span> and started my career as a <span class=\"important-word\">Digital Producer</span> in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took an immersive course in Web Development.\n        I am now a <span class=\"important-word\">Software Developer / Consultant at ThoughtWorks</span> in Sydney. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with <span class=\"important-word\">electronics, creative coding</span> and love to bring any of my ideas to life with code.\n      </p>\n    </div>\n    <div id=\"skills-block\">\n      <h3 class=\"important-title\">MY SKILLS INCLUDE</h3>\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Front-End</h4>\n        <ul>\n          <li>HTML/CSS</li>\n          <li>JS</li>\n          <li>Angular.js</li>\n          <li>React.js</li>\n          <li>Backbone.js</li>\n          <li>THREE.js</li>\n          <li>WebVR</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Back-End</h4>\n        <ul>\n          <li>Node.js</li>\n          <li>Ruby</li>\n          <li>Python</li>\n          <li>Java</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Hardware</h4>\n        <ul>\n          <li>Arduino</li>\n          <li>Raspberry Pi</li>\n          <li>Leap Motion</li>\n          <li>Sphero</li>\n          <li>Particle Photon</li>\n          <li>Parrot AR Drone</li>\n          <li>Neurosky</li>\n          <li>Emotiv EPOC</li>\n          <li>Myo armband</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Other</h4>\n        <ul>\n          <li>Rapid prototyping</li>\n          <li>User testing</li>\n          <li>Project Management</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n\n  <p class=\"svg\">\n    scroll\n    <svg version=\"1.1\" id=\"svg-arrow-down\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 22 24\" style=\"enable-background:new 0 0 22 24;\" xml:space=\"preserve\">\n      <polygon style=\"fill:#000000;\" points=\"20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24\n            22,13.004 \"></polygon>\n    </svg>\n  </p>\n\n\n  <div id=\"contributions-block\">\n    <h3 class=\"important-title\">COMMUNITY CONTRIBUTIONS</h3>\n    <h4 class=\"important-title\">TALKS</h4>\n    <ul>\n      <li><a href=\"https://www.youtube.com/watch?v=hM5N_zDdgJM&feature=youtu.be\" target=\"_blank\">CampJS Jun. 2016 - Experimenting with motion control in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=7JBh7QF7CLU&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Apr.2016 - Creative coding in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=9rLnmHy44tM&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Nov.2015 - Nodebots</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=hkhzXr_iyAk&feature=youtu.be\" target=\"_blank\">SydJS Jul. 2014 - Getting rolling with Sphero</a></li>\n    </ul>\n\n    <h4 class=\"important-title\">ARTICLES</h4>\n    <ul>\n      <li><a href=\"http://blog.leapmotion.com/controlling-sphero-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling the Sphero with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"http://blog.leapmotion.com/controlling-parrot-ar-drone-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling a drone with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"https://medium.com/@spherodev_74007/makermonday-control-sphero-with-gestures-bf686444c21c#.gsnmxcolz\" target=\"_blank\">Sphero on Medium - Control Sphero with gestures</a></li>\n    </ul>\n  </div>\n</div>\n";
+},"useData":true});
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+var Handlebars = __webpack_require__(7);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
     return "          <p>\n            "
@@ -14589,9 +14611,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.title : stack1), depth0))
     + "</h3>\n      <div class=\"project-buttons\">\n        <a href=\""
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.url : stack1), depth0))
-    + "\" target=\"_blank\">\n          <div class=\"visit-button\">\n          VISIT\n          </div>\n        </a>\n        <!-- <a href=\""
-    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.url : stack1), depth0))
-    + "\" target=\"_blank\">\n          <div class=\"visit-button\">\n            CASE STUDY\n          </div>\n        </a> -->\n      </div>\n      <img src=\""
+    + "\" target=\"_blank\">\n          <div class=\"visit-button\">\n          VISIT\n          </div>\n        </a>\n      </div>\n      <img src=\""
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.image : stack1), depth0))
     + "\" alt=\"\" />\n    </div>\n    <div id=\"next\">[n]</div>\n    <div id=\"previous\">[p]</div>\n\n    <p class=\"svg\">\n      scroll\n      <svg version=\"1.1\" id=\"svg-arrow-down\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 22 24\" style=\"enable-background:new 0 0 22 24;\" xml:space=\"preserve\">\n        <polygon style=\"fill:#000000;\" points=\"20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24\n              22,13.004 \"></polygon>\n      </svg>\n    </p>\n\n    <div class=\"project-details\">\n      <h4>Date</h4>\n      <p>\n        "
     + alias2(alias1(((stack1 = ((stack1 = ((stack1 = (depth0 != null ? depth0.projects : depth0)) != null ? stack1.attributes : stack1)) != null ? stack1.projectDescription : stack1)) != null ? stack1.date : stack1), depth0))
@@ -14611,7 +14631,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 },"useData":true});
 
 /***/ },
-/* 19 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14633,7 +14653,7 @@ var base = _interopRequireWildcard(_handlebarsBase);
 // Each of these augment the Handlebars object. No need to setup here.
 // (This is done to easily share code between commonjs and browse envs)
 
-var _handlebarsSafeString = __webpack_require__(33);
+var _handlebarsSafeString = __webpack_require__(36);
 
 var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 
@@ -14641,15 +14661,15 @@ var _handlebarsException = __webpack_require__(2);
 
 var _handlebarsException2 = _interopRequireDefault(_handlebarsException);
 
-var _handlebarsUtils = __webpack_require__(0);
+var _handlebarsUtils = __webpack_require__(1);
 
 var Utils = _interopRequireWildcard(_handlebarsUtils);
 
-var _handlebarsRuntime = __webpack_require__(32);
+var _handlebarsRuntime = __webpack_require__(35);
 
 var runtime = _interopRequireWildcard(_handlebarsRuntime);
 
-var _handlebarsNoConflict = __webpack_require__(31);
+var _handlebarsNoConflict = __webpack_require__(34);
 
 var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 
@@ -14684,7 +14704,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 20 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14696,7 +14716,7 @@ exports.registerDefaultDecorators = registerDefaultDecorators;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _decoratorsInline = __webpack_require__(21);
+var _decoratorsInline = __webpack_require__(24);
 
 var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 
@@ -14707,7 +14727,7 @@ function registerDefaultDecorators(instance) {
 
 
 /***/ },
-/* 21 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14715,7 +14735,7 @@ function registerDefaultDecorators(instance) {
 
 exports.__esModule = true;
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 exports['default'] = function (instance) {
   instance.registerDecorator('inline', function (fn, props, container, options) {
@@ -14743,7 +14763,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 22 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14755,31 +14775,31 @@ exports.registerDefaultHelpers = registerDefaultHelpers;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _helpersBlockHelperMissing = __webpack_require__(23);
+var _helpersBlockHelperMissing = __webpack_require__(26);
 
 var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 
-var _helpersEach = __webpack_require__(24);
+var _helpersEach = __webpack_require__(27);
 
 var _helpersEach2 = _interopRequireDefault(_helpersEach);
 
-var _helpersHelperMissing = __webpack_require__(25);
+var _helpersHelperMissing = __webpack_require__(28);
 
 var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 
-var _helpersIf = __webpack_require__(26);
+var _helpersIf = __webpack_require__(29);
 
 var _helpersIf2 = _interopRequireDefault(_helpersIf);
 
-var _helpersLog = __webpack_require__(27);
+var _helpersLog = __webpack_require__(30);
 
 var _helpersLog2 = _interopRequireDefault(_helpersLog);
 
-var _helpersLookup = __webpack_require__(28);
+var _helpersLookup = __webpack_require__(31);
 
 var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 
-var _helpersWith = __webpack_require__(29);
+var _helpersWith = __webpack_require__(32);
 
 var _helpersWith2 = _interopRequireDefault(_helpersWith);
 
@@ -14796,7 +14816,7 @@ function registerDefaultHelpers(instance) {
 
 
 /***/ },
-/* 23 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14804,7 +14824,7 @@ function registerDefaultHelpers(instance) {
 
 exports.__esModule = true;
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 exports['default'] = function (instance) {
   instance.registerHelper('blockHelperMissing', function (context, options) {
@@ -14842,7 +14862,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 24 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14853,7 +14873,7 @@ exports.__esModule = true;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 var _exception = __webpack_require__(2);
 
@@ -14943,7 +14963,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 25 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14975,7 +14995,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 26 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14983,7 +15003,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 exports['default'] = function (instance) {
   instance.registerHelper('if', function (conditional, options) {
@@ -15011,7 +15031,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 27 */
+/* 30 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -15044,7 +15064,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 28 */
+/* 31 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -15063,7 +15083,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 29 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15071,7 +15091,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 exports['default'] = function (instance) {
   instance.registerHelper('with', function (context, options) {
@@ -15103,7 +15123,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 30 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15111,7 +15131,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 var logger = {
   methodMap: ['debug', 'info', 'warn', 'error'],
@@ -15157,7 +15177,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 31 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15182,10 +15202,10 @@ exports['default'] = function (Handlebars) {
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL25vLWNvbmZsaWN0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O3FCQUNlLFVBQVMsVUFBVSxFQUFFOztBQUVsQyxNQUFJLElBQUksR0FBRyxPQUFPLE1BQU0sS0FBSyxXQUFXLEdBQUcsTUFBTSxHQUFHLE1BQU07TUFDdEQsV0FBVyxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUM7O0FBRWxDLFlBQVUsQ0FBQyxVQUFVLEdBQUcsWUFBVztBQUNqQyxRQUFJLElBQUksQ0FBQyxVQUFVLEtBQUssVUFBVSxFQUFFO0FBQ2xDLFVBQUksQ0FBQyxVQUFVLEdBQUcsV0FBVyxDQUFDO0tBQy9CO0FBQ0QsV0FBTyxVQUFVLENBQUM7R0FDbkIsQ0FBQztDQUNIIiwiZmlsZSI6Im5vLWNvbmZsaWN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyogZ2xvYmFsIHdpbmRvdyAqL1xuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24oSGFuZGxlYmFycykge1xuICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqL1xuICBsZXQgcm9vdCA9IHR5cGVvZiBnbG9iYWwgIT09ICd1bmRlZmluZWQnID8gZ2xvYmFsIDogd2luZG93LFxuICAgICAgJEhhbmRsZWJhcnMgPSByb290LkhhbmRsZWJhcnM7XG4gIC8qIGlzdGFuYnVsIGlnbm9yZSBuZXh0ICovXG4gIEhhbmRsZWJhcnMubm9Db25mbGljdCA9IGZ1bmN0aW9uKCkge1xuICAgIGlmIChyb290LkhhbmRsZWJhcnMgPT09IEhhbmRsZWJhcnMpIHtcbiAgICAgIHJvb3QuSGFuZGxlYmFycyA9ICRIYW5kbGViYXJzO1xuICAgIH1cbiAgICByZXR1cm4gSGFuZGxlYmFycztcbiAgfTtcbn1cbiJdfQ==
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ },
-/* 32 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15206,7 +15226,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(1);
 
 var Utils = _interopRequireWildcard(_utils);
 
@@ -15484,7 +15504,7 @@ function executeDecorators(fn, prog, container, depths, data, blockParams) {
 
 
 /***/ },
-/* 33 */
+/* 36 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -15506,34 +15526,19 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-// Create a simple path alias to allow browserify to resolve
-// the runtime on a supported path.
-module.exports = __webpack_require__(19)['default'];
-
-
-/***/ },
-/* 35 */
-/***/ function(module, exports) {
-
-module.exports = "<div id=\"about-container\">\n  <h2>ABOUT</h2>\n\n  <h1>HELLO!</h1>\n  <div class=\"about-content-block\">\n    <div id=\"intro-block\">\n      <h3 class=\"important-title\">I'M A CREATIVE TECHNOLOGIST</h3>\n      <p>\n        I have a background in marketing and advertising and started my career as a Digital Producer in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took an immersive course in Web Development.\n        I am now a Software Developer / Consultant at ThoughtWorks in Sydney. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with electronics, creative coding and love to bring any of my ideas to life with code.\n      </p>\n\n      <div class=\"social-button\">\n        <a href=\"http://github.com/charliegerard\" target=\"_blank\">GITHUB</a>\n      </div>\n      <div class=\"social-button\">\n        <a href=\"http://twitter.com/charlie__gerard\" target=\"_blank\">TWITTER</a>\n      </div>\n      <div class=\"social-button\">\n        <a href=\"http://charliegerard.github.io/blog\" target=\"_blank\">BLOG</a>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"about-content-block\">\n    <div id=\"skills-block\">\n      <h3 class=\"important-title\">MY SKILLS INCLUDE</h3>\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Front-End</h4>\n        <ul>\n          <li>HTML/CSS</li>\n          <li>JS</li>\n          <li>Angular.js</li>\n          <li>React.js</li>\n          <li>Backbone.js</li>\n          <li>THREE.js</li>\n          <li>WebVR</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Back-End</h4>\n        <ul>\n          <li>Node.js</li>\n          <li>Ruby</li>\n          <li>Python</li>\n          <li>Java</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Hardware</h4>\n        <ul>\n          <li>Arduino</li>\n          <li>Raspberry Pi</li>\n          <li>Leap Motion</li>\n          <li>Sphero</li>\n          <li>Particle Photon</li>\n          <li>Parrot AR Drone</li>\n          <li>Neurosky</li>\n          <li>Emotiv EPOC</li>\n          <li>Myo armband</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Other</h4>\n        <ul>\n          <li>Rapid prototyping</li>\n          <li>User testing</li>\n          <li>Project Management</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n  <div id=\"contributions-block\">\n    <h3 class=\"important-title\">COMMUNITY CONTRIBUTIONS</h3>\n    <h4 class=\"important-title\">TALKS</h4>\n    <ul>\n      <li><a href=\"https://www.youtube.com/watch?v=hM5N_zDdgJM&feature=youtu.be\" target=\"_blank\">CampJS Jun. 2016 - Experimenting with motion control in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=7JBh7QF7CLU&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Apr.2016 - Creative coding in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=9rLnmHy44tM&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Nov.2015 - Nodebots</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=hkhzXr_iyAk&feature=youtu.be\" target=\"_blank\">SydJS Jul. 2014 - Getting rolling with Sphero</a></li>\n    </ul>\n\n    <h4 class=\"important-title\">ARTICLES</h4>\n    <ul>\n      <li><a href=\"http://blog.leapmotion.com/controlling-sphero-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling the Sphero with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"http://blog.leapmotion.com/controlling-parrot-ar-drone-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling a drone with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"https://medium.com/@spherodev_74007/makermonday-control-sphero-with-gestures-bf686444c21c#.gsnmxcolz\" target=\"_blank\">Sphero on Medium - Control Sphero with gestures</a></li>\n    </ul>\n  </div>\n</div>\n";
-
-/***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports) {
 
 module.exports = "<div id=\"contact-container\">\n  <h2>Contact</h2>\n\n</div>\n";
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 module.exports = "<div id=\"home\">\n  <h1>Charlie Gerard</h1>\n  <h2>Creative Technologist</h2>\n  <div id=\"threejs-container\"></div>\n\n  <!--<script type=\"text/javascript\">\n  /*\n\n  ThreeJs custom waves\n  Original script by ThreeJS : http://threejs.org/examples/canvas_particles_waves.html\n  Original Modified version for https://bradient.com\n  */\n\n  var SEPARATION = 30, AMOUNTX = 430, AMOUNTY = 55;\n\n  var container;\n  var camera, scene, renderer;\n  var particles, particle, count = 0;\n  var windowHalfX = window.innerWidth / 2;\n  var windowHalfY = window.innerHeight / 2;\n\n  init();\n  animate();\n\n  function init() {\n\n    container = document.getElementById( 'threejs-container' );\n    if(container) {\n        container.className += container.className ? ' waves' : 'waves';\n    }\n\n    camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 1, 10000 );\n    camera.position.y = 350; //changes how far back you can see i.e the particles towards horizon\n    camera.position.z = 200; //This is how close or far the particles are seen\n\n    camera.rotation.x = 0.15;\n\n    scene = new THREE.Scene();\n\n    particles = new Array();\n\n    var PI2 = Math.PI * 2;\n    var material = new THREE.SpriteCanvasMaterial( {\n\n      color: 0x939393, //changes color of particles\n      program: function ( context ) {\n\n        context.beginPath();\n        context.arc( 0, 0, 0.1, 0, PI2, true );\n        context.fill();\n\n      }\n\n    } );\n\n    var i = 0;\n\n    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {\n\n      for ( var iy = 0; iy < AMOUNTY; iy ++ ) {\n\n        particle = particles[ i ++ ] = new THREE.Sprite( material );\n        particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );\n        particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) - 10 );\n        scene.add( particle );\n\n      }\n\n    }\n\n    renderer = new THREE.CanvasRenderer();\n    renderer.setSize( window.innerWidth, window.innerHeight );\n    renderer.setClearColor( 0xffffff, 1);\n    container.appendChild( renderer.domElement );\n\n    window.addEventListener( 'resize', onWindowResize, false );\n\n  }\n\n  function onWindowResize() {\n    windowHalfX = window.innerWidth / 2;\n    windowHalfY = window.innerHeight / 2;\n\n    camera.aspect = window.innerWidth / window.innerHeight;\n    camera.updateProjectionMatrix();\n\n    renderer.setSize( window.innerWidth, window.innerHeight );\n  }\n\n  function animate() {\n    requestAnimationFrame( animate );\n    render();\n  }\n\n  function render() {\n    var i = 0;\n\n    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {\n      for ( var iy = 0; iy < AMOUNTY; iy ++ ) {\n        particle = particles[ i++ ];\n        particle.position.y = ( Math.sin( ( ix + count ) * 0.20 ) * 50 ) + ( Math.sin( ( iy + count ) * 0.2 ) * 20 );\n        particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 2 ) * 4 + ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;\n      }\n    }\n\n    renderer.render( scene, camera );\n    // This increases or decreases speed\n    count += 0.5;\n  }\n  </script> -->\n</div>\n";
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports) {
 
 module.exports = [
@@ -15887,7 +15892,7 @@ module.exports = [
 ];
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports) {
 
 /*
@@ -16139,14 +16144,14 @@ function updateLink(linkElement, obj) {
 
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {__webpack_require__(11);
-__webpack_require__(9);
+/* WEBPACK VAR INJECTION */(function($) {__webpack_require__(12);
 __webpack_require__(10);
+__webpack_require__(11);
 
-var Backbone = __webpack_require__(1);
+var Backbone = __webpack_require__(0);
 
 Backbone.history.start();
 
@@ -16198,10 +16203,27 @@ if(!window.location.hash){
     // $('#threejs-container canvas').bind("animationend", function(){
     //    window.location.href = "#about"
     // });
+
   })
 } else if(window.location.hash.includes('projects')){
   $('#about').click(function(){
-      window.location.href = "#about"
+      $('.project-number').fadeOut();
+      $('.project-block h3').slideUp();
+      $('.visit-button').slideUp();
+      $('.svg').fadeOut();
+      $('.project-block img').fadeOut("slow", function(){
+          window.location.href = "#about"
+      });
+  })
+
+  $('#home-link .description').click(function(){
+    $('.project-number').fadeOut();
+    $('.project-block h3').slideUp();
+    $('.visit-button').slideUp();
+    $('.svg').fadeOut();
+    $('.project-block img').fadeOut("slow", function(){
+        window.location.href = "/"
+    });
   })
 } else if(window.location.hash.includes('#about')){
   $('#projects').click(function(){
