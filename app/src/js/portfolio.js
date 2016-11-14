@@ -32,6 +32,8 @@ window.onload = function(){
 	$('#home-link .description').click(function(){
 		if(window.location.hash.includes('projects')){
 			clickOnHomeFromProjectsPage();
+		} else if(window.location.hash.includes('#about')){
+			window.location.href = "/"
 		}
 	})
 

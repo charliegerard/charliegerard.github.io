@@ -32,6 +32,18 @@
 
   .project-number{
     position: absolute;
+    // font-size: 50em;
+    // display: block;
+    // text-align: center;
+    // width: 100%;
+    // margin: 0 auto;
+    // color: lightgray;
+    // opacity: 0.2;
+    // letter-spacing: -50px;
+    // top: -88px;
+    // left: 100px;
+    // z-index: -1;
+    // font-family: 'Playfair Display', serif;
     font-size: 50em;
     display: block;
     text-align: center;
@@ -40,10 +52,13 @@
     color: lightgray;
     opacity: 0.2;
     letter-spacing: -50px;
-    top: -88px;
-    left: 100px;
+    /* top: -88px; */
+    /* left: 100px; */
+    bottom: -150px;
+    /* top: 0; */
     z-index: -1;
-          font-family: 'Playfair Display', serif;
+    font-family: 'Source Sans Pro', serif;
+    font-weight: 600;
   }
 
   .project-block{

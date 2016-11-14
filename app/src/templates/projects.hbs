@@ -39,7 +39,9 @@
           </p>
       {{/each}}
 
-      <img src="{{projects.attributes.projectDescription.images.0.url}}" alt="" />
+      {{#if projects.attributes.projectDescription.images}}
+        <img src="{{projects.attributes.projectDescription.images.0.url}}" alt="" />
+      {{/if}}
 
       <h4>Technology</h4>
       {{#each projects.attributes.projectDescription.technology}}
@@ -48,8 +50,10 @@
           </p>
       {{/each}}
 
-      {{#if projects.attributes.projectDescription.images.1.url }}
-        <img src="{{projects.attributes.projectDescription.images.1.url}}" alt="" />
+      {{#if projects.attributes.projectDescription.images}}
+        {{#if projects.attributes.projectDescription.images.1.url }}
+          <img src="{{projects.attributes.projectDescription.images.1.url}}" alt="" />
+        {{/if}}
       {{/if}}
 
       {{#if projects.attributes.projectDescription.video }}
