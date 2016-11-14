@@ -121,17 +121,31 @@
       #intro-block{
         width: 90%;
 
+        h1{
+          width: 100%;
+          letter-spacing: 10px;
+        }
+
         h3{
           letter-spacing: 3px;
+        }
+
+        #buttons{
+          width: 100%;
         }
       }
     }
 
     .about-content-block:nth-of-type(2){
       border: none;
+      margin-top: 1em;
     }
 
     .about-content-block{
+      #about-me-block{
+        width: 90%;
+      }
+
       #skills-block{
         padding: 0;
         width: 90%;
@@ -141,8 +155,13 @@
       }
     }
 
+    p.svg{
+      display: none;
+    }
+
     #contributions-block{
       width: 90%;
+      margin-top: 2em;
     }
 
 
