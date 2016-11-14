@@ -1,4 +1,4 @@
-window.onload = function(){
+$(document).ready(function(){
 	var navbar = document.getElementById('navbar');
 	var navbarLinks = navbar.getElementsByClassName('link');
 
@@ -36,6 +36,29 @@ window.onload = function(){
 			window.location.href = "/"
 		}
 	})
+
+	//Check for scroll on about page
+
+	// var MOUSE_OVER = false;
+	$('body').bind('mousewheel', function(e){
+	  // if(MOUSE_OVER){
+	  //   if(e.preventDefault) { e.preventDefault(); }
+	  //   e.returnValue = false;
+	  //   return false;
+	  // }
+			if(window.location.hash.includes('about')){
+				var block = $('#contributions-block')[0].getBoundingClientRect()
+				var e = window.event;
+				var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+				// console.log(delta)
+				if(delta < 0){
+					// console.log(e.detail)
+					$('p.svg').fadeOut(1000);
+				} else if(delta > 0 && block.top>-1 && block.bottom <= $(window).height()){ //If scrolling back to top and contributions block not visible
+					$('p.svg').fadeIn(1000);
+				}
+			}
+	});
 
 	//Home page
 	if(!window.location.hash){
@@ -114,4 +137,4 @@ window.onload = function(){
 		  });
 		}
 
-}
+})

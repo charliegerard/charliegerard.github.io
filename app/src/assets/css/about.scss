@@ -1,4 +1,5 @@
 #about-container{
+  overflow: scroll;
   // font-family: 'Source Code Pro';
   font-family: 'Source Sans Pro', sans-serif;
   // margin-top: 5em;
@@ -215,6 +216,9 @@ p.svg{
   font-size: 10px;
   color: #2d307a;
   margin-top: 20px;
+  position: absolute;
+  display: block;
+  width: 100%;
 
   svg{
     width: 14px;
