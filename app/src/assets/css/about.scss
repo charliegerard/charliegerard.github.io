@@ -37,8 +37,8 @@
     margin-top: 2em;
     margin-bottom: 2em;
     // left: 15%;
-    animation: slideDown 1s ease;
-    animation-fill-mode: forwards;
+    // animation: slideDown 1s ease;
+    // animation-fill-mode: forwards;
 
   }
 
@@ -86,11 +86,21 @@
       }
     }
 
+    #about-me-block.fade-right{
+      animation: fadeRight 0.3s ease;
+      animation-fill-mode: forwards;
+      animation-delay: 0.1s;
+    }
 
     #intro-block{
       display: block;
       width: 85%;
       margin: 0 auto;
+    }
+
+    #intro-block.fade-left{
+      animation: fadeLeft 0.3s ease;
+      animation-fill-mode: forwards;
     }
 
     #intro-block{
@@ -185,6 +195,12 @@
       }
     }
   }
+
+  #skills-block.fade-right{
+    animation: fadeRight 0.3s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+  }
 }
 #contributions-block{
   display: block;
@@ -201,6 +217,12 @@
     font-weight: 200;
 
   }
+}
+
+#contributions-block.fade-down{
+  animation: fadeDown 0.3s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 }
 
 .important-title{
@@ -238,5 +260,39 @@ p.svg{
   }
   to{
     margin-top: 1em;
+  }
+}
+
+@keyframes fadeLeft {
+  from{
+    margin-left: 0;
+    opacity: 1;
+  }
+  to{
+    margin-left: -500px;
+    opacity: 0
+  }
+}
+
+@keyframes fadeRight {
+  from{
+    margin-right: 0;
+    opacity: 1;
+  }
+  to{
+    margin-right: -500px;
+    opacity: 0;
+  }
+}
+
+
+@keyframes fadeDown {
+  from{
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  to{
+    margin-bottom: -500px;
+    opacity: 0;
   }
 }

@@ -17,7 +17,7 @@ $(document).ready(function(){
 		if(!window.location.hash){
 			clickOnProjectsLinkFromHomepage();
 		} else if(window.location.hash.includes('#about')){
-			window.location.href = "#projects"
+			clickOnProjectsFromAboutPage();
 		}
 	})
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
 		if(window.location.hash.includes('projects')){
 			clickOnHomeFromProjectsPage();
 		} else if(window.location.hash.includes('#about')){
-			window.location.href = "/"
+			clickOnHomeFromAboutPage();
 		}
 	})
 
@@ -137,4 +137,49 @@ $(document).ready(function(){
 		  });
 		}
 
+		function clickOnHomeFromAboutPage(){
+			 $('#intro-block').addClass('fade-left');
+			 $('#about-me-block').addClass('fade-right');
+			 $('#skills-block').addClass('fade-right');
+			 $('#contributions-block').addClass('fade-down');
+			 $('p.svg').fadeOut();
+		   $('#about-container h2').fadeOut();
+			 $('#home-link').addClass('fade-left');
+			 $('#navbar').addClass('fade-right');
+			$('#navbar').bind("animationend", function(){
+				window.location.href = "/"
+				$('#intro-block').removeClass('fade-left');
+				$('#about-me-block').removeClass('fade-right');
+				$('#skills-block').removeClass('fade-right');
+				$('#contributions-block').removeClass('fade-down');
+				$('p.svg').fadeOut();
+				$('#about-container h2').fadeOut();
+				$('#home-link').removeClass('fade-left');
+				$('#navbar').removeClass('fade-right');
+			})
+		}
+
+		function clickOnProjectsFromAboutPage(){
+			$('#intro-block').addClass('fade-left');
+			$('#about-me-block').addClass('fade-right');
+			$('#skills-block').addClass('fade-right');
+			$('#contributions-block').addClass('fade-down');
+			$('p.svg').fadeOut();
+			$('#about-container h2').fadeOut();
+			$('#home-link').addClass('fade-left');
+			$('#navbar').addClass('fade-right');
+		 $('#navbar').bind("animationend", function(){
+			 window.location.href = "#projects"
+			//  if(window.location.hash.includes('projects')){
+			// 	 $('#intro-block').removeClass('fade-left');
+			// 	 $('#about-me-block').removeClass('fade-right');
+			// 	 $('#skills-block').removeClass('fade-right');
+			// 	 $('#contributions-block').removeClass('fade-down');
+			// 	 $('p.svg').fadeOut();
+			// 	 $('#about-container h2').fadeOut();
+			// 	 $('#home-link').removeClass('fade-left');
+			// 	 $('#navbar').removeClass('fade-right');
+			//  }
+		 })
+		}
 })
