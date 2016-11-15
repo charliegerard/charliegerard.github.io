@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	width: 100%;
+	// overflow-y: scroll;
 }
 
 #app-container{
@@ -43,6 +44,7 @@ body{
 #outer-container{
 	min-height: 0;
 	background: white;
+	max-height: 700px;
 	overflow-y: scroll;
 	width: 0;
 	position: absolute;

@@ -5,7 +5,9 @@
       {{ projects.attributes.id}}/{{projects.attributes.totalProjects}}
     </p>
     <div class="project-block">
-      <h3>{{ projects.attributes.title }}</h3>
+      <div id="project-title-background">
+        <h3>{{ projects.attributes.title }}</h3>
+      </div>
       <div class="project-buttons">
         <a href="{{projects.attributes.url}}" target="_blank">
           <div class="visit-button">

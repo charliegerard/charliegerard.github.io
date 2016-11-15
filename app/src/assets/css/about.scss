@@ -1,5 +1,5 @@
 #about-container{
-  overflow-y: scroll;
+  // overflow-y: scroll;
   // max-height: 700px;
   font-family: 'Source Sans Pro', sans-serif;
 
@@ -27,10 +27,6 @@
     margin: 0 auto;
     margin-top: 2em;
     margin-bottom: 2em;
-    // left: 15%;
-    // animation: slideDown 1s ease;
-    // animation-fill-mode: forwards;
-
   }
 
   .profile-image{
@@ -38,53 +34,18 @@
               clip-path: circle(5em at center);
   }
 
-  .about-content-block{
+  .about-content-block:nth-of-type(1){
     display: inline-block;
     width: 48%;
     vertical-align: top;
     margin: 0 auto;
     margin-top: 6em;
 
-    &:nth-of-type(2){
-      margin-top: 6em;
-
-      p{
-        display: block;
-        margin: 0 auto;
-        text-align: justify;
-        color: #2d307a;
-        font-weight: 200;
-        margin-bottom: 2em;
-      }
-    }
-
-    #skills-block, #about-me-block{
-      display: block;
-      width: 85%;
-      vertical-align: top;
-      margin: 0 auto;
-    }
-
-    #about-me-block{
-      h3{
-        margin-top: 0;
-      }
-
-      .important-word{
-        font-weight: 400;
-      }
-    }
-
-    #about-me-block.fade-right{
-      animation: fadeRight 0.3s ease;
-      animation-fill-mode: forwards;
-      animation-delay: 0.1s;
-    }
-
     #intro-block{
       display: block;
       width: 85%;
       margin: 0 auto;
+      animation: appearLeft 1s ease;
     }
 
     #intro-block.fade-left{
@@ -118,7 +79,6 @@
 
           a{
             position: relative;
-            // overflow: hidden;
             transition: all 0.3s ease;
             display: inline-block;
             width: 100%;
@@ -161,8 +121,52 @@
     }
   }
 
-  #skills-block{
 
+  .about-content-block:nth-of-type(2){
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    margin-top: 6.5em;
+    position: absolute;
+    opacity: 0;
+    animation: appearRight 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+
+    p{
+      display: block;
+      margin: 0 auto;
+      text-align: justify;
+      color: #2d307a;
+      font-weight: 200;
+      margin-bottom: 2em;
+    }
+  }
+
+  #skills-block, #about-me-block{
+    display: block;
+    width: 85%;
+    vertical-align: top;
+    margin: 0 auto;
+  }
+
+  #about-me-block{
+    h3{
+      margin-top: 0;
+    }
+
+    .important-word{
+      font-weight: 400;
+    }
+  }
+
+  #about-me-block.fade-right{
+    animation: fadeRight 0.3s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+  }
+
+  #skills-block{
     .skills{
       display: inline-block;
       vertical-align: top;
@@ -193,6 +197,7 @@
   display: block;
   margin: 0 auto;
   width: 90%;
+  margin-bottom: 2em;
 
   ul{
     list-style: none;
@@ -226,6 +231,7 @@ p.svg{
   margin-top: 20px;
   position: absolute;
   display: block;
+  bottom: 0;
   width: 100%;
 
   svg{
@@ -236,6 +242,28 @@ p.svg{
     -moz-animation:    bounce-arrow 2s infinite ease-in-out;
     -o-animation:      bounce-arrow 2s infinite ease-in-out;
     animation:         bounce-arrow 2s infinite ease-in-out;
+  }
+}
+
+@keyframes appearLeft {
+  from{
+    margin-left: -10%;
+    opacity: 0;
+  }
+  to{
+    margin-left: 7%;
+    opacity: 1;
+  }
+}
+
+@keyframes appearRight {
+  from{
+    right: -10px;
+    opacity: 0;
+  }
+  to{
+    right: 1em;
+    opacity: 1;
   }
 }
 

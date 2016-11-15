@@ -49,7 +49,7 @@ $(document).ready(function(){
 	  //   e.returnValue = false;
 	  //   return false;
 	  // }
-			if(window.location.hash.includes('about')){
+			if(window.location.hash.includes('about') && !window.mobilecheck()){
 				var block = $('#contributions-block')[0].getBoundingClientRect()
 				var e = window.event;
 				var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
@@ -62,7 +62,7 @@ $(document).ready(function(){
 				}
 			}
 
-			if(window.location.hash.includes('projects')){
+			if(window.location.hash.includes('projects') && !window.mobilecheck()){
 				var block = $('.project-details')[0].getBoundingClientRect()
 				var e = window.event;
 				var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));

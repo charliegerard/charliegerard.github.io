@@ -1,6 +1,6 @@
 #projects-container{
   font-family: 'Source Sans Pro', sans-serif;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   // max-height: 700px;
 
   #wipe-left{
@@ -73,18 +73,26 @@
       animation: slideshow 1.5s;
     }
 
-    h3{
+    #project-title-background{
+      // background: white;
+      // padding: 0.1em 1em;
       position: absolute;
       z-index: 5;
-      color: lightgrey;
-      font-weight: 600;
-      font-size: 3em;
       left: -50px;
       bottom: 100px;
       animation: titleSlide 2.5s;
-      font-family: 'PT Sans Narrow', sans-serif;
       margin-bottom: 10px;
+    }
+
+    h3{
+      color: lightgrey;
+      // color: #2d307a;
+      font-weight: 600;
+      font-size: 3em;
+      text-align: center;
+      font-family: 'PT Sans Narrow', sans-serif;
       font-style: italic;
+      margin: 0;
     }
 
     .project-buttons{
@@ -143,7 +151,7 @@
     color: #2d307a;
     margin-top: 20px;
     position: absolute;
-bottom: 0;
+    bottom: 0;
 
     svg{
       width: 14px;
@@ -158,7 +166,7 @@ bottom: 0;
 
   .project-details{
     width: 50%;
-    display: block;
+    // display: block;
     margin: 0 auto;
     position: absolute;
     z-index: 10;
