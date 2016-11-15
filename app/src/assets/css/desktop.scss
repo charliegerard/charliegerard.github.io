@@ -91,7 +91,6 @@ body{
 	animation-delay: 0.7s;
 }
 
-
 #outer-container #navbar a{
 	font-size: 10px;
 	font-weight: 200;
@@ -136,7 +135,6 @@ body{
 	margin-left: 20px;
 	width: 200px;
 	z-index: 20;
-	// letter-spacing: 4px;
 	opacity: 0;
 	animation: fadeIn 0.5s ease-in 1 forwards;
 	animation-delay: 0.5s;
@@ -155,16 +153,12 @@ body{
 #outer-container .description h1{
 	line-height: 30px;
 	color: rgb(45, 48, 122);
-	// font-family: 'Source Code Pro';
 	font-weight: 200;
 	font-size: 30px;
 	margin-bottom: 5px;
 	margin-top: 0px;
-	// font-family: 'Source Sans Pro', sans-serif;
 	font-family: 'PT Sans Narrow', sans-serif;
 	letter-spacing: 2px;
-
-	/*font-style: italic;*/
 }
 
 #outer-container .description h3{

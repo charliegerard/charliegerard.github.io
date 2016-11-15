@@ -1,20 +1,14 @@
 #about-container{
-  overflow: scroll;
-  // font-family: 'Source Code Pro';
+  overflow-y: scroll;
+  max-height: 700px;
   font-family: 'Source Sans Pro', sans-serif;
-  // margin-top: 5em;
 
   h1{
     font-size: 100px;
-    // font-weight: 200;
     color: rgb(45, 48, 122);
-    // font-weight: 200;
-    // letter-spacing: 0.3em;
     margin-bottom: 0;
     text-align: center;
     margin-top: 0;
-    // margin-left: 0.8em;
-    // font-family: 'Open Sans', sans-serif;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 100;
     letter-spacing: 15px;
@@ -22,8 +16,6 @@
 
   h2{
     text-align: center;
-    // font-family: 'Playfair Display', serif;
-    // display: inline-block;
     font-family: 'PT Sans Narrow', sans-serif;
     color: #2d307a;
   }
@@ -33,7 +25,6 @@
     height: 10em;
     display: block;
     margin: 0 auto;
-    // position: absolute;
     margin-top: 2em;
     margin-bottom: 2em;
     // left: 15%;
@@ -55,7 +46,6 @@
     margin-top: 6em;
 
     &:nth-of-type(2){
-      // width: 80%;
       margin-top: 6em;
 
       p{
@@ -69,7 +59,6 @@
     }
 
     #skills-block, #about-me-block{
-      // border-left: 2px solid #da2d2a;
       display: block;
       width: 85%;
       vertical-align: top;
@@ -173,7 +162,6 @@
   }
 
   #skills-block{
-    // padding-left: 1em;
 
     .skills{
       display: inline-block;
@@ -181,7 +169,6 @@
 
       h4{
         margin-top: 0;
-        // text-decoration: underline;
         margin-bottom: 10px;
       }
 
@@ -206,7 +193,6 @@
   display: block;
   margin: 0 auto;
   width: 90%;
-  margin-bottom: 2em;
 
   ul{
     list-style: none;
