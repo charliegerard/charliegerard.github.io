@@ -53,9 +53,7 @@ $(document).ready(function(){
 				var block = $('#contributions-block')[0].getBoundingClientRect()
 				var e = window.event;
 				var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-				// console.log(delta)
 				if(delta < 0){
-					// console.log(e.detail)
 					$('p.svg').fadeOut(1000);
 				} else if(delta > 0 && block.top>-1 && block.bottom <= $(window).height()){ //If scrolling back to top and contributions block not visible
 					$('p.svg').fadeIn(1000);
@@ -96,7 +94,7 @@ $(document).ready(function(){
 		  var outerContainer = $('#outer-container');
 		  outerContainer.addClass('outer-container-animation');
 
-			// threeJSAnimation();
+			threeJSAnimation();
 		}
 
 		function otherPagesBackground(){
