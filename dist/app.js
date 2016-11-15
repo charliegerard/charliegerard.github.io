@@ -14200,6 +14200,17 @@ module.exports = g;
 					$('p.svg').fadeIn(1000);
 				}
 			}
+
+			if(window.location.hash.includes('projects')){
+				var block = $('.project-details')[0].getBoundingClientRect()
+				var e = window.event;
+				var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+				if(delta < 0){
+					$('p.svg').fadeOut(1000);
+				} else if(delta > 0 && block.top>-1 && block.top >= $('#projects-container').height()){ //If scrolling back to top and contributions block not visible
+					$('p.svg').fadeIn(1000);
+				}
+			}
 	});
 
 	//Home page
