@@ -59,7 +59,7 @@
     }
 
     p.svg, #wipe-left{
-      display: none;
+      display: none !important;
     }
 
 
@@ -87,14 +87,14 @@
     }
 
     #previous{
-      top: 21%;
+      top: 19.5%;
       left: 1.5em;
       z-index: 10;
     }
 
     #next{
       right: 1.5em;
-      top: 21%;
+      top: 19.5%;
       z-index: 10;
     }
   }
@@ -105,6 +105,8 @@
   //******* ABOUT ********
 
   #about-container{
+    margin-bottom: 2em;
+
     h1{
       margin-left: 0;
       font-size: 75px;
@@ -245,4 +247,63 @@
 //     width: 120%;
 //   }
 //
+}
+
+//Tablet
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+  #projects-container{
+    .project-block{
+      width: 80%;
+      margin-top: 15%;
+
+      .project-buttons{
+        bottom: 25px;
+      }
+
+      h3{
+        bottom: 55px;
+      }
+    }
+
+    .project-details{
+      position: relative;
+      width: 80%;
+      top: 0;
+      left: 0;
+    }
+
+    p.svg{
+      display: none !important;
+    }
+
+    #previous{
+      left: 2em;
+      top: 49%;
+    }
+    #next{
+      right: 2em;
+      top: 48%;
+    }
+  }
+
+  #about-container{
+    margin-bottom: 2em;
+
+    .about-content-block, #contributions-block{
+      display: block;
+      width: 85%;
+
+      #about-me-block, #skills-block{
+        width: 100%;
+      }
+    }
+
+    .about-content-block:nth-of-type(2){
+      margin-top: 1em;
+    }
+
+    p.svg{
+      display: none !important;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 #projects-container{
   font-family: 'Source Sans Pro', sans-serif;
   overflow-y: scroll;
-  max-height: 700px;
+  // max-height: 700px;
 
   #wipe-left{
     width: 0px;
@@ -142,6 +142,8 @@
     font-size: 10px;
     color: #2d307a;
     margin-top: 20px;
+    position: absolute;
+bottom: 0;
 
     svg{
       width: 14px;

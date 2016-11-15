@@ -103,8 +103,9 @@
 
   #threejs-container{
     opacity: 0;
+		// display: none;
     animation: canvasAppear 1s ease;
-    animation-delay: 1.2s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
