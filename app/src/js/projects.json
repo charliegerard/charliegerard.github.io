@@ -15,7 +15,8 @@
             "technology": [
               "This game was created using HTML, CSS and JavaScript without any specific framework and is a desktop only experience.",
               "An additional feature could allow 2 users to play remotely using web sockets."
-            ]
+            ],
+            "link": "http://charliegerard.github.io/browser-pong"
         }
       },
       {
@@ -36,16 +37,18 @@
       {
         "id": 3,
         "title": "CODE IN THE PARK",
-        "url": "",
+        "url": "https://vimeo.com/180549893",
         "image": "./images/code-park.png",
         "description": "Intro video for the Code in the Park event.",
         "tags": ["creative coding", "Three.js"],
         "projectDescription": {
             "date": "June 2016",
-            "concept" : ["For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art."],
+            "concept" : ["For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art.",
+            "This event was sponsored by Yahoo for VIVID Ideas Sydney and gathered around 700+ people."],
             "images": [{"url":"./images/code-park2.png"}],
             "video": "https://player.vimeo.com/video/190437916",
-            "technology": ["The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."]
+            "technology": ["The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."],
+            "link": "https://vimeo.com/180549893"
         }
       },
       {
@@ -63,7 +66,8 @@
             "images": [{"url": "./images/emotiv2.png"}],
             "video": "",
             "technology": ["This project is open-source, all the code is available on Github. The technology used involves the node-gyp module, Node.js and C++ in the background.",
-            "As a result of this project, I started trying to control the Sphero using my eye movements and my thoughts. Due to a lack of time, I have not yet achieved this but this is a work in progress."]
+            "As a result of this project, I started trying to control the Sphero using my eye movements and my thoughts. Due to a lack of time, I have not yet achieved this but this is a work in progress."],
+            "link": "https://github.com/charliegerard/Epoc.js"
         }
       },
       {
@@ -152,7 +156,7 @@
             "images": [{"url": "./images/leapsync2.png"}, {"url": "./images/leapsync-gif.gif"}],
             "video": "",
             "technology": ["This project uses the Leap Motion controller and HTML/CSS/JavaScript for the interface."],
-            "link" : ""
+            "link" : "https://github.com/charliegerard/leapsync"
         }
       },
       {
