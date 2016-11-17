@@ -1,7 +1,6 @@
 var Backbone = require('backbone');
 var Home = require('./views/home');
 var About = require('./views/about');
-var Contact = require('./views/contact');
 var projects = require('./views/projects');
 import Project from './models/projectModel';
 import ProjectCollection from './models/projectCollection';

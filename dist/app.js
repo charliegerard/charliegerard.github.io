@@ -12400,7 +12400,6 @@ return jQuery;
 var Backbone = __webpack_require__(1);
 var Home = __webpack_require__(15);
 var About = __webpack_require__(13);
-var Contact = __webpack_require__(14);
 var projects = __webpack_require__(16);
 
 
@@ -14552,12 +14551,7 @@ module.exports = About;
 
 
 /***/ },
-/* 14 */
-/***/ function(module, exports) {
-
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/cgerard/Projects/Personal_Projects/Personal_projects_Github/charliegerard.github.io/app/src/js/views/contact.js'\n    at Error (native)");
-
-/***/ },
+/* 14 */,
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
