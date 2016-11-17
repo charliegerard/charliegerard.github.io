@@ -12,10 +12,10 @@ var Home = Backbone.View.extend({
     },
 
     render : function(){
-      var self = this;
-      // window.onload = function(){
-        self.$el.html(template);
-      // }
+      var descriptionBlock = document.getElementsByClassName('description')[0];
+      descriptionBlock.style.display = 'none'
+
+      this.$el.html(template);
     }
 });
 

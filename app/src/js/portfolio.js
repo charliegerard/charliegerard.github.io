@@ -92,7 +92,7 @@ Pace.on('done', function(){
 	});
 
 	//Home page
-	if(!window.location.hash){
+	if(!window.location.hash || window.location.hash === '#'){
 	  var descriptionBlock = document.getElementsByClassName('description')[0];
 	  descriptionBlock.style.display = 'none';
 
@@ -274,6 +274,7 @@ Pace.on('done', function(){
 		  $('.visit-button').slideUp();
 		  $('.svg').fadeOut();
 		  $('.project-block img').fadeOut("slow", function(){
+				router.navigate("#", true);
 		  });
 		}
 
@@ -287,6 +288,7 @@ Pace.on('done', function(){
 			 $('#navbar').fadeOut();
 			 $('#home-link').addClass('fade-left');
 			$('#home-link').bind("animationend", function(){
+				router.navigate("#", true);
 			})
 		}
 

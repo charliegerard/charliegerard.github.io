@@ -24,7 +24,6 @@
 		margin-right: -20px;
 	}
 
-
 	.link:hover{
 		transition-timing-function: ease-in;
 		transition: 0.5s;
@@ -50,7 +49,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  // background: pink;
+
   h1{
     z-index: 20;
     position: absolute;
@@ -71,6 +70,12 @@
   .outro-animation{
     animation: disappear 0.5s ease;
     animation-fill-mode: forwards;
+
+		-webkit-animation: disappear 0.5s ease;
+		-webkit-animation-fill-mode: forwards;
+
+		-moz-animation: disappear 0.5s ease;
+		-moz-animation-fill-mode: forwards;
   }
 
   .outro-animation-canvas{
@@ -142,6 +147,28 @@
 }
 
 @keyframes disappear {
+  from{
+    opacity: 1;
+    top: 25%;
+  }
+  to{
+    opacity: 0;
+    top: -5%;
+  }
+}
+
+@-webkit-keyframes disappear {
+  from{
+    opacity: 1;
+    top: 25%;
+  }
+  to{
+    opacity: 0;
+    top: -5%;
+  }
+}
+
+@-moz-keyframes disappear {
   from{
     opacity: 1;
     top: 25%;
