@@ -1,6 +1,9 @@
 import router from './router'
 
-$(document).ready(function(){
+Pace.on('start', function(){
+	// console.log('start')
+})
+Pace.on('done', function(){
 	var navbar = document.getElementById('navbar');
 	var navbarLinks = navbar.getElementsByClassName('link');
 

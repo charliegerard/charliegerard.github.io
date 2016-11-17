@@ -170,3 +170,50 @@ body{
 	margin-top: 5px;
 	font-style: italic;
 }
+
+
+
+// LOADER
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace.pace-inactive .pace-progress {
+  display: none;
+}
+
+.pace .pace-progress {
+  position: fixed;
+  z-index: 2000;
+  // top: 0;
+  // right: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  height: 7rem;
+  width: 7rem;
+
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  content: attr(data-progress-text);
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 7rem;
+  line-height: 1;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.19999999999999996);
+}
