@@ -12410,7 +12410,6 @@ var Router = Backbone.Router.extend({
     routes: {
         '' : 'home',
         'about': 'aboutView',
-        'contact': 'contactView',
         'projects': 'projectsView'
     }
 });
@@ -12425,11 +12424,6 @@ router.on('route:home', function() {
 router.on('route:aboutView', function(){
   var aboutView = new About();
   aboutView.render();
-})
-
-router.on('route:contactView', function(){
-  var contactView = new Contact();
-  contactView.render();
 })
 
 router.on('route:projectsView', function(){
@@ -14559,24 +14553,9 @@ module.exports = About;
 
 /***/ },
 /* 14 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-var template = __webpack_require__(36);
-var Backbone = __webpack_require__(1);
-
-var Contact = Backbone.View.extend({
-    el: '#container',
-    initialize: function()
-    {
-    },
-    render : function()
-    {
-        this.$el.html(template);
-    }
-});
-
-module.exports = Contact;
-
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/cgerard/Projects/Personal_Projects/Personal_projects_Github/charliegerard.github.io/app/src/js/views/contact.js'\n    at Error (native)");
 
 /***/ },
 /* 15 */
@@ -15823,12 +15802,7 @@ module.exports = exports['default'];
 
 
 /***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-module.exports = "<div id=\"contact-container\">\n  <h2>Contact</h2>\n\n</div>\n";
-
-/***/ },
+/* 36 */,
 /* 37 */
 /***/ function(module, exports) {
 

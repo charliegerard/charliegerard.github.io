@@ -11,7 +11,6 @@ var Router = Backbone.Router.extend({
     routes: {
         '' : 'home',
         'about': 'aboutView',
-        'contact': 'contactView',
         'projects': 'projectsView'
     }
 });
@@ -26,11 +25,6 @@ router.on('route:home', function() {
 router.on('route:aboutView', function(){
   var aboutView = new About();
   aboutView.render();
-})
-
-router.on('route:contactView', function(){
-  var contactView = new Contact();
-  contactView.render();
 })
 
 router.on('route:projectsView', function(){
