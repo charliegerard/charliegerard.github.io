@@ -206,7 +206,7 @@ function appendContextPath(contextPath, id) {
 
   // Set up Backbone appropriately for the environment. Start with AMD.
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(8), __webpack_require__(3), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(9), __webpack_require__(3), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
       // Export global even in AMD case in case this script is loaded with
       // others that may still expect a global Backbone.
       root.Backbone = factory(root, exports, _, $);
@@ -2111,7 +2111,7 @@ function appendContextPath(contextPath, id) {
   return Backbone;
 });
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
 
 /***/ },
 /* 2 */
@@ -12395,10 +12395,73 @@ return jQuery;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectModel__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_projectCollection__ = __webpack_require__(5);
+var Backbone = __webpack_require__(1);
+var Home = __webpack_require__(15);
+var About = __webpack_require__(13);
+var Contact = __webpack_require__(14);
+var projects = __webpack_require__(16);
+
+
+var projectsData = __webpack_require__(38);
+
+var Router = Backbone.Router.extend({
+    routes: {
+        '' : 'home',
+        'about': 'aboutView',
+        'contact': 'contactView',
+        'projects': 'projectsView'
+    }
+});
+
+var router = new Router();
+
+router.on('route:home', function() {
+    var homeView = new Home();
+    homeView.render();
+});
+
+router.on('route:aboutView', function(){
+  var aboutView = new About();
+  aboutView.render();
+})
+
+router.on('route:contactView', function(){
+  var contactView = new Contact();
+  contactView.render();
+})
+
+router.on('route:projectsView', function(){
+  var list = [];
+  projectsData[0].web.forEach(function(project){
+    list.push(new __WEBPACK_IMPORTED_MODULE_0__models_projectModel__["a" /* default */]({
+      id: project.id,
+      totalProjects: projectsData[0].web.length,
+      title: project.title,
+      image: project.image,
+      url: project.url,
+      description: project.description,
+      projectDescription: project.projectDescription
+    }))
+  })
+
+  var projectsView = new projects({model: __WEBPACK_IMPORTED_MODULE_0__models_projectModel__["a" /* default */], collection: new __WEBPACK_IMPORTED_MODULE_1__models_projectCollection__["a" /* default */](list)});
+  projectsView.render();
+})
+
+module.exports = router;
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_backbone___default = __WEBPACK_IMPORTED_MODULE_0_backbone__ && __WEBPACK_IMPORTED_MODULE_0_backbone__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0_backbone__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0_backbone__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0_backbone___default, 'a', __WEBPACK_IMPORTED_MODULE_0_backbone___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__projectModel__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__projectModel__ = __webpack_require__(6);
 
 
 
@@ -12413,7 +12476,7 @@ class ProjectCollection extends __WEBPACK_IMPORTED_MODULE_0_backbone__["Collecti
 
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12438,7 +12501,7 @@ class Project extends __WEBPACK_IMPORTED_MODULE_0_backbone__["Model"] {
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12549,7 +12612,7 @@ exports.logger = _logger2['default'];
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 // Create a simple path alias to allow browserify to resolve
@@ -12558,7 +12621,7 @@ module.exports = __webpack_require__(21)['default'];
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -14112,7 +14175,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 var g;
@@ -14137,10 +14200,16 @@ module.exports = g;
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function(){
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router___default = __WEBPACK_IMPORTED_MODULE_0__router__ && __WEBPACK_IMPORTED_MODULE_0__router__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__router__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__router__; };
+/* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__router___default, 'a', __WEBPACK_IMPORTED_MODULE_0__router___default);
+
+
+$(document).ready(function(){
 	var navbar = document.getElementById('navbar');
 	var navbarLinks = navbar.getElementsByClassName('link');
 
@@ -14154,6 +14223,20 @@ module.exports = g;
 	  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
 		return check;
 	}
+
+	$('#navbar .link a').click(function(e){
+		e.preventDefault();
+		var href = $(e.currentTarget).attr('href');
+		if(href === '#projects'){
+			__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('projects', true)
+		} else if(href === '#about'){
+			__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('about', true)
+		} else if(href.includes('blog')){
+			window.open(href)
+		} else if(href.includes('mailto')){
+			window.location = href
+		}
+	})
 
 	$('#projects').click(function(){
 		if(!window.location.hash){
@@ -14362,7 +14445,6 @@ module.exports = g;
 		  $('#home h1').addClass("outro-animation");
 		  $('#home h2').addClass("outro-animation-h2");
 		  $('#home h2').bind("animationend", function(){
-		    window.location.href = "#projects"
 		  });
 
 		  // $('#threejs-container canvas').addClass("outro-animation-canvas");
@@ -14375,7 +14457,6 @@ module.exports = g;
 		  $('#home h1').addClass("outro-animation");
 		  $('#home h2').addClass("outro-animation-h2");
 		  $('#home h2').bind("animationend", function(){
-		    window.location.href = "#about"
 		  });
 
 		  // $('#threejs-container canvas').addClass("outro-animation-canvas");
@@ -14390,7 +14471,6 @@ module.exports = g;
 		  $('.visit-button').slideUp();
 		  $('.svg').fadeOut();
 		  $('.project-block img').fadeOut("slow", function(){
-		      window.location.href = "#about"
 		  });
 		}
 
@@ -14400,7 +14480,6 @@ module.exports = g;
 		  $('.visit-button').slideUp();
 		  $('.svg').fadeOut();
 		  $('.project-block img').fadeOut("slow", function(){
-		      window.location.href = "/"
 		  });
 		}
 
@@ -14414,7 +14493,6 @@ module.exports = g;
 			 $('#navbar').fadeOut();
 			 $('#home-link').addClass('fade-left');
 			$('#home-link').bind("animationend", function(){
-				window.location.href = "/"
 			})
 		}
 
@@ -14425,75 +14503,11 @@ module.exports = g;
 			$('#contributions-block').addClass('fade-down');
 			$('p.svg').fadeOut();
 			$('#about-container h2').fadeOut("slow", function(){
-					 window.location.href = "#projects"
 			});
 		}
 })
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectModel__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_projectCollection__ = __webpack_require__(4);
-var Backbone = __webpack_require__(1);
-var Home = __webpack_require__(15);
-var About = __webpack_require__(13);
-var Contact = __webpack_require__(14);
-var projects = __webpack_require__(16);
-
-
-var projectsData = __webpack_require__(38);
-
-var Router = Backbone.Router.extend({
-    routes: {
-        '' : 'home',
-        'about': 'aboutView',
-        'contact': 'contactView',
-        'projects': 'projectsView'
-    }
-});
-
-var router = new Router();
-
-router.on('route:home', function() {
-    var homeView = new Home();
-    homeView.render();
-});
-
-router.on('route:aboutView', function(){
-  var aboutView = new About();
-  aboutView.render();
-})
-
-router.on('route:contactView', function(){
-  var contactView = new Contact();
-  contactView.render();
-})
-
-router.on('route:projectsView', function(){
-  var list = [];
-  projectsData[0].web.forEach(function(project){
-    list.push(new __WEBPACK_IMPORTED_MODULE_0__models_projectModel__["a" /* default */]({
-      id: project.id,
-      totalProjects: projectsData[0].web.length,
-      title: project.title,
-      image: project.image,
-      url: project.url,
-      description: project.description,
-      projectDescription: project.projectDescription
-    }))
-  })
-
-  var projectsView = new projects({model: __WEBPACK_IMPORTED_MODULE_0__models_projectModel__["a" /* default */], collection: new __WEBPACK_IMPORTED_MODULE_1__models_projectCollection__["a" /* default */](list)});
-  projectsView.render();
-})
-
-module.exports = router;
-
 
 /***/ },
 /* 12 */
@@ -14530,8 +14544,7 @@ var Backbone = __webpack_require__(1);
 
 var About = Backbone.View.extend({
     el: '#container',
-    initialize: function()
-    {
+    initialize: function(){
     },
     render : function(){
       var descriptionBlock = document.getElementsByClassName('description')[0];
@@ -14598,7 +14611,7 @@ module.exports = Home;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(_) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectCollection__ = __webpack_require__(4);
+/* WEBPACK VAR INJECTION */(function(_) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_projectCollection__ = __webpack_require__(5);
 'use strict'
 
 var Backbone = __webpack_require__(1);
@@ -14770,7 +14783,7 @@ var Projects = Backbone.View.extend({
 
 module.exports = Projects;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ },
 /* 17 */
@@ -14846,17 +14859,17 @@ module.exports = function() {
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(7);
+var Handlebars = __webpack_require__(8);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div id=\"about-container\">\n  <h2>ABOUT</h2>\n  <div class=\"about-content-block\">\n\n    <div id=\"intro-block\">\n      <h1>HELLO!</h1>\n      <h3 class=\"important-title\">I'M A CREATIVE TECHNOLOGIST</h3>\n      <img src=\"./images/charlie_gerard.jpg\" alt=\"Charlie Gerard\" class=\"profile-image\"/>\n      <div id=\"buttons\">\n        <div class=\"social-button\">\n          <a href=\"http://github.com/charliegerard\" target=\"_blank\">GITHUB</a>\n        </div>\n        <div class=\"social-button\">\n          <a href=\"http://twitter.com/charlie__gerard\" target=\"_blank\">TWITTER</a>\n        </div>\n        <div class=\"social-button\">\n          <a href=\"http://charliegerard.github.io/blog\" target=\"_blank\">BLOG</a>\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"about-content-block\">\n    <div id=\"about-me-block\">\n      <h3 class=\"important-title\">QUICK INTRO</h3>\n      <p>\n        I have a <span class=\"important-word\">background</span> in marketing and <span class=\"important-word\">advertising</span> and started my career as a <span class=\"important-word\">Digital Producer</span> in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took a course in Web Development.\n        I am now a <span class=\"important-word\">Software Developer / Consultant at ThoughtWorks</span> in Sydney. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with <span class=\"important-word\">electronics, creative coding</span> and love to bring any of my ideas to life with code.\n      </p>\n    </div>\n    <div id=\"skills-block\">\n      <h3 class=\"important-title\">MY SKILLS INCLUDE</h3>\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Front-End</h4>\n        <ul>\n          <li>HTML/CSS</li>\n          <li>JS</li>\n          <li>Angular.js</li>\n          <li>React.js</li>\n          <li>Backbone.js</li>\n          <li>THREE.js</li>\n          <li>WebVR</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Back-End</h4>\n        <ul>\n          <li>Node.js</li>\n          <li>Ruby</li>\n          <li>Python</li>\n          <li>Java</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Hardware</h4>\n        <ul>\n          <li>Arduino</li>\n          <li>Raspberry Pi</li>\n          <li>Leap Motion</li>\n          <li>Sphero</li>\n          <li>Particle Photon</li>\n          <li>Parrot AR Drone</li>\n          <li>Neurosky</li>\n          <li>Emotiv EPOC</li>\n          <li>Myo armband</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Other</h4>\n        <ul>\n          <li>Rapid prototyping</li>\n          <li>User testing</li>\n          <li>Project Management</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n\n  <p class=\"svg\">\n    scroll\n    <svg version=\"1.1\" id=\"svg-arrow-down\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 22 24\" style=\"enable-background:new 0 0 22 24;\" xml:space=\"preserve\">\n      <polygon style=\"fill:#000000;\" points=\"20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24\n            22,13.004 \"></polygon>\n    </svg>\n  </p>\n\n\n  <div id=\"contributions-block\">\n    <h3 class=\"important-title\">COMMUNITY CONTRIBUTIONS</h3>\n    <h4 class=\"important-title\">TALKS</h4>\n    <ul>\n      <li><a href=\"https://www.youtube.com/watch?v=hM5N_zDdgJM&feature=youtu.be\" target=\"_blank\">CampJS Jun. 2016 - Experimenting with motion control in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=7JBh7QF7CLU&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Apr.2016 - Creative coding in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=9rLnmHy44tM&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Nov.2015 - Nodebots</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=hkhzXr_iyAk&feature=youtu.be\" target=\"_blank\">SydJS Jul. 2014 - Getting rolling with Sphero</a></li>\n    </ul>\n\n    <h4 class=\"important-title\">ARTICLES</h4>\n    <ul>\n      <li><a href=\"http://blog.leapmotion.com/controlling-sphero-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling the Sphero with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"http://blog.leapmotion.com/controlling-parrot-ar-drone-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling a drone with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"https://medium.com/@spherodev_74007/makermonday-control-sphero-with-gestures-bf686444c21c#.gsnmxcolz\" target=\"_blank\">Sphero on Medium - Control Sphero with gestures</a></li>\n    </ul>\n  </div>\n</div>\n";
+    return "<div id=\"about-container\">\n  <h2>About</h2>\n  <div class=\"about-content-block\">\n\n    <div id=\"intro-block\">\n      <h1>HELLO!</h1>\n      <h3 class=\"important-title\">I'M A CREATIVE TECHNOLOGIST</h3>\n      <img src=\"./images/charlie_gerard.jpg\" alt=\"Charlie Gerard\" class=\"profile-image\"/>\n      <div id=\"buttons\">\n        <div class=\"social-button\">\n          <a href=\"http://github.com/charliegerard\" target=\"_blank\">GITHUB</a>\n        </div>\n        <div class=\"social-button\">\n          <a href=\"http://twitter.com/charlie__gerard\" target=\"_blank\">TWITTER</a>\n        </div>\n        <div class=\"social-button\">\n          <a href=\"http://charliegerard.github.io/blog\" target=\"_blank\">BLOG</a>\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"about-content-block\">\n    <div id=\"about-me-block\">\n      <h3 class=\"important-title\">QUICK INTRO</h3>\n      <p>\n        I have a <span class=\"important-word\">background</span> in marketing and <span class=\"important-word\">advertising</span> and started my career as a <span class=\"important-word\">Digital Producer</span> in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took a course in Web Development.\n        I am now a <span class=\"important-word\">Software Developer / Consultant at ThoughtWorks</span> in Sydney. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with <span class=\"important-word\">electronics, creative coding</span> and love to bring any of my ideas to life with code.\n      </p>\n    </div>\n    <div id=\"skills-block\">\n      <h3 class=\"important-title\">MY SKILLS INCLUDE</h3>\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Front-End</h4>\n        <ul>\n          <li>HTML/CSS</li>\n          <li>JS</li>\n          <li>Angular.js</li>\n          <li>React.js</li>\n          <li>Backbone.js</li>\n          <li>THREE.js</li>\n          <li>WebVR</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Back-End</h4>\n        <ul>\n          <li>Node.js</li>\n          <li>Ruby</li>\n          <li>Python</li>\n          <li>Java</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Hardware</h4>\n        <ul>\n          <li>Arduino</li>\n          <li>Raspberry Pi</li>\n          <li>Leap Motion</li>\n          <li>Sphero</li>\n          <li>Particle Photon</li>\n          <li>Parrot AR Drone</li>\n          <li>Neurosky</li>\n          <li>Emotiv EPOC</li>\n          <li>Myo armband</li>\n        </ul>\n      </div>\n\n      <div class=\"skills\">\n        <h4 class=\"important-title\">Other</h4>\n        <ul>\n          <li>Rapid prototyping</li>\n          <li>User testing</li>\n          <li>Project Management</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n\n  <p class=\"svg\">\n    scroll\n    <svg version=\"1.1\" id=\"svg-arrow-down\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 22 24\" style=\"enable-background:new 0 0 22 24;\" xml:space=\"preserve\">\n      <polygon style=\"fill:#000000;\" points=\"20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24\n            22,13.004 \"></polygon>\n    </svg>\n  </p>\n\n\n  <div id=\"contributions-block\">\n    <h3 class=\"important-title\">COMMUNITY CONTRIBUTIONS</h3>\n    <h4 class=\"important-title\">TALKS</h4>\n    <ul>\n      <li><a href=\"https://www.youtube.com/watch?v=hM5N_zDdgJM&feature=youtu.be\" target=\"_blank\">CampJS Jun. 2016 - Experimenting with motion control in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=7JBh7QF7CLU&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Apr.2016 - Creative coding in JavaScript</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=9rLnmHy44tM&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx\" target=\"_blank\">SydJS Nov.2015 - Nodebots</a></li>\n      <li><a href=\"https://www.youtube.com/watch?v=hkhzXr_iyAk&feature=youtu.be\" target=\"_blank\">SydJS Jul. 2014 - Getting rolling with Sphero</a></li>\n    </ul>\n\n    <h4 class=\"important-title\">ARTICLES</h4>\n    <ul>\n      <li><a href=\"http://blog.leapmotion.com/controlling-sphero-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling the Sphero with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"http://blog.leapmotion.com/controlling-parrot-ar-drone-leap-motion-cylon-js/\" target=\"_blank\">Leap Motion website - Controlling a drone with the Leap Motion in Cylon.js</a></li>\n      <li><a href=\"https://medium.com/@spherodev_74007/makermonday-control-sphero-with-gestures-bf686444c21c#.gsnmxcolz\" target=\"_blank\">Sphero on Medium - Control Sphero with gestures</a></li>\n    </ul>\n  </div>\n</div>\n";
 },"useData":true});
 
 /***/ },
 /* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(7);
+var Handlebars = __webpack_require__(8);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
     return "          <p>\n            "
@@ -14930,7 +14943,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
-var _handlebarsBase = __webpack_require__(6);
+var _handlebarsBase = __webpack_require__(7);
 
 var base = _interopRequireWildcard(_handlebarsBase);
 
@@ -15486,7 +15499,7 @@ exports['default'] = function (Handlebars) {
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL25vLWNvbmZsaWN0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O3FCQUNlLFVBQVMsVUFBVSxFQUFFOztBQUVsQyxNQUFJLElBQUksR0FBRyxPQUFPLE1BQU0sS0FBSyxXQUFXLEdBQUcsTUFBTSxHQUFHLE1BQU07TUFDdEQsV0FBVyxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUM7O0FBRWxDLFlBQVUsQ0FBQyxVQUFVLEdBQUcsWUFBVztBQUNqQyxRQUFJLElBQUksQ0FBQyxVQUFVLEtBQUssVUFBVSxFQUFFO0FBQ2xDLFVBQUksQ0FBQyxVQUFVLEdBQUcsV0FBVyxDQUFDO0tBQy9CO0FBQ0QsV0FBTyxVQUFVLENBQUM7R0FDbkIsQ0FBQztDQUNIIiwiZmlsZSI6Im5vLWNvbmZsaWN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyogZ2xvYmFsIHdpbmRvdyAqL1xuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24oSGFuZGxlYmFycykge1xuICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqL1xuICBsZXQgcm9vdCA9IHR5cGVvZiBnbG9iYWwgIT09ICd1bmRlZmluZWQnID8gZ2xvYmFsIDogd2luZG93LFxuICAgICAgJEhhbmRsZWJhcnMgPSByb290LkhhbmRsZWJhcnM7XG4gIC8qIGlzdGFuYnVsIGlnbm9yZSBuZXh0ICovXG4gIEhhbmRsZWJhcnMubm9Db25mbGljdCA9IGZ1bmN0aW9uKCkge1xuICAgIGlmIChyb290LkhhbmRsZWJhcnMgPT09IEhhbmRsZWJhcnMpIHtcbiAgICAgIHJvb3QuSGFuZGxlYmFycyA9ICRIYW5kbGViYXJzO1xuICAgIH1cbiAgICByZXR1cm4gSGFuZGxlYmFycztcbiAgfTtcbn1cbiJdfQ==
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
 
 /***/ },
 /* 34 */
@@ -15518,7 +15531,7 @@ var _exception = __webpack_require__(2);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _base = __webpack_require__(6);
+var _base = __webpack_require__(7);
 
 function checkRevision(compilerInfo) {
   var compilerRevision = compilerInfo && compilerInfo[0] || 1,
@@ -16436,8 +16449,8 @@ function updateLink(linkElement, obj) {
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-__webpack_require__(10);
 __webpack_require__(11);
+__webpack_require__(4);
 
 var Backbone = __webpack_require__(1);
 

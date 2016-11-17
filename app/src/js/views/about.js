@@ -3,8 +3,7 @@ var Backbone = require('backbone');
 
 var About = Backbone.View.extend({
     el: '#container',
-    initialize: function()
-    {
+    initialize: function(){
     },
     render : function(){
       var descriptionBlock = document.getElementsByClassName('description')[0];
