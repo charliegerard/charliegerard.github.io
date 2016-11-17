@@ -21,6 +21,23 @@
       },
       {
         "id": 2,
+        "title": "CODE IN THE PARK",
+        "url": "https://vimeo.com/180549893",
+        "image": "./images/code-park.png",
+        "description": "Intro video for the Code in the Park event.",
+        "tags": ["creative coding", "Three.js"],
+        "projectDescription": {
+            "date": "June 2016",
+            "concept" : ["For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art.",
+            "This event was sponsored by Yahoo for VIVID Ideas Sydney and gathered around 700+ people."],
+            "images": [{"url":"./images/code-park2.png"}],
+            "video": "https://player.vimeo.com/video/190437916",
+            "technology": ["The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and merged as a video using After Effects for the titles and sponsors logos."],
+            "link": "https://vimeo.com/180549893"
+        }
+      },
+      {
+        "id": 3,
         "title": "GESTURE CONTROLLED SPHERO",
         "url": "https://github.com/charliegerard/myo_sphero",
         "image": "./images/myo-sphero2.png",
@@ -35,59 +52,7 @@
         }
       },
       {
-        "id": 3,
-        "title": "CODE IN THE PARK",
-        "url": "https://vimeo.com/180549893",
-        "image": "./images/code-park.png",
-        "description": "Intro video for the Code in the Park event.",
-        "tags": ["creative coding", "Three.js"],
-        "projectDescription": {
-            "date": "June 2016",
-            "concept" : ["For their events `Code in the Park` and `Code in the Cinema` held in Sydney and Melbourne, General Assembly came to Daisy Smith and I to create an intro video showing what can be done with code. Being both passionate about creative coding, Daisy and I decided to put together a video showing how code can be used to make graphics and art.",
-            "This event was sponsored by Yahoo for VIVID Ideas Sydney and gathered around 700+ people."],
-            "images": [{"url":"./images/code-park2.png"}],
-            "video": "https://player.vimeo.com/video/190437916",
-            "technology": ["The video was put together by creating multiple small sketches using the Three.js framework, p5.js and Processing. These sketches were then recorded and marged as a video using After Effects for the titles and sponsors logos."],
-            "link": "https://vimeo.com/180549893"
-        }
-      },
-      {
         "id": 4,
-        "title": "EPOC.JS FRAMEWORK",
-        "url": "https://github.com/charliegerard/Epoc.js",
-        "image": "./images/emotiv.png",
-        "description": "WIP - A framework to use the Emotiv brain sensor in Node.js",
-        "tags": ["hardware", "Emotiv Epoc", "Node.js"],
-        "projectDescription": {
-            "date": "June 2016",
-            "concept" : ["The Emotiv EPOC brain sensor is a device tracking the user's brainwaves and allows them to interact with different interfaces to train their brain.",
-                        "As a developer, I wanted to use the data provided by the device to interact with interfaces or other devices. At the time, the only SDK available were written in Java and C++ which are languages I am not that familiar with. As I really wanted to be able to prototype for this device quickly, I built my own JavaScript framework for it. As a result, I can now get the data from the device and use JavaScript to build my projects."
-                      ],
-            "images": [{"url": "./images/emotiv2.png"}],
-            "video": "",
-            "technology": ["This project is open-source, all the code is available on Github. The technology used involves the node-gyp module, Node.js and C++ in the background.",
-            "As a result of this project, I started trying to control the Sphero using my eye movements and my thoughts. Due to a lack of time, I have not yet achieved this but this is a work in progress."],
-            "link": "https://github.com/charliegerard/Epoc.js"
-        }
-      },
-      {
-        "id": 5,
-        "title": "DRONE & NEUROSKY",
-        "url": "https://github.com/charliegerard/neurosky-drone",
-        "image": "./images/neurosky-drone.png",
-        "description": "Control the Parrot AR Drone with your mind using the Neurosky brain sensor",
-        "tags": ["hardware", "drone", "Neurosky", "Node.js"],
-        "projectDescription": {
-            "date": "March 2015",
-            "concept" : ["I started experimenting with brain waves with the Neurosky brain sensor. With 4 different channels, this device tracks the level of meditation and attention of the user. I wanted to use this data to see if I could interact with a drone using focus."],
-            "images": [],
-            "video": "",
-            "technology": ["Written using the Cylon.js framework, this project is entirely written in JavaScript and uses the Neurosky and Parrot AR drone modules."],
-            "link": "https://github.com/charliegerard/neurosky-drone"
-        }
-      },
-      {
-        "id": 6,
         "title": "PERSPECTIVE",
         "url": "https://charliegerard.github.io/Perspective/",
         "image": "./images/perspective.png",
@@ -105,7 +70,75 @@
         }
       },
       {
+        "id": 5,
+        "title": "EPOC.JS FRAMEWORK",
+        "url": "https://github.com/charliegerard/Epoc.js",
+        "image": "./images/emotiv.png",
+        "description": "WIP - A framework to use the Emotiv brain sensor in Node.js",
+        "tags": ["hardware", "Emotiv Epoc", "Node.js"],
+        "projectDescription": {
+            "date": "June 2016",
+            "concept" : ["The Emotiv EPOC brain sensor is a device tracking the user's brainwaves and allows them to interact with different interfaces to train their brain.",
+                        "As a developer, I wanted to use the data provided by the device to interact with interfaces or other devices. At the time, the only SDK available were written in Java and C++ which are languages I am not that familiar with. As I really wanted to be able to prototype for this device quickly, I built my own JavaScript framework for it. As a result, I can now get the data from the device and use JavaScript to build my projects."
+                      ],
+            "images": [{"url": "./images/emotiv2.png"}],
+            "video": "",
+            "technology": ["This project is open-source, all the code is available on Github. The technologies used involve the node-gyp module, Node.js and C++ in the background.",
+            "As a result of this project, I started trying to control the Sphero using my eye movements and my thoughts. Due to a lack of time, I have not yet achieved this but this is a work in progress."],
+            "link": "https://github.com/charliegerard/Epoc.js"
+        }
+      },
+      {
+        "id": 6,
+        "title": "SPHERO & LEAP MOTION",
+        "url": "https://github.com/charliegerard/leap_sphero",
+        "image": "./images/leap-sphero.png",
+        "description": "Control the Sphero with your hands using the Leap motion controller",
+        "tags": ["hardware", "sphero", "leap motion", "Node.js"],
+        "projectDescription": {
+            "date": "July 2014",
+            "concept" : ["The Sphero ball is a little robot usually controlled using an app on your mobile. As I was experimenting with the Leap Motion and Sphero seperately, I started wondering if I could actually use these 2 devices together. Controlling the Sphero using the movements of my hand over the Leap Motion seemed like an interesting experiment and also a more exciting way to interact with the robot than having to hold my phone."],
+            "images": [{"url": "./images/leap-sphero2.png"}, {"url": "./images/leap-sphero-video.gif"}],
+            "technology": ["This project was built using Node.js, the Leap.Js node module to have access to the Leap Motion data and the Sphero.js module to be able to control the robotic ball in JavaScript.", "Once the app is launched, you can also display a visualizer in the browser to see your hands moving over the Leap motion"],
+            "link": "https://github.com/charliegerard/leap_sphero"
+        }
+      },
+      {
         "id": 7,
+        "title": "DRONE & NEUROSKY",
+        "url": "https://github.com/charliegerard/neurosky-drone",
+        "image": "./images/neurosky-drone.png",
+        "description": "Control the Parrot AR Drone with your mind using the Neurosky brain sensor",
+        "tags": ["hardware", "drone", "Neurosky", "Node.js"],
+        "projectDescription": {
+            "date": "March 2015",
+            "concept" : ["I started experimenting with brain waves with the Neurosky brain sensor. With 4 different channels, this device tracks the level of meditation and attention of the user. I wanted to use this data to see if I could interact with a drone using focus."],
+            "images": [],
+            "video": "",
+            "technology": ["Written using the Cylon.js framework, this project is entirely written in JavaScript and uses the Neurosky and Parrot AR drone modules."],
+            "link": "https://github.com/charliegerard/neurosky-drone"
+        }
+      },
+      {
+        "id": 8,
+        "title": "TOUCH POSTER",
+        "url": "https://www.youtube.com/watch?v=Ks8xG4rcNxE",
+        "image": "./images/touch-poster.png",
+        "description": "WIP - Prototype of touch mirror",
+        "tags": ["hardware", "bare conductive", "music"],
+        "projectDescription": {
+          "date": "April 2016",
+          "concept" : ["After discovering Bare conductive, I knew I had to try it to understand how it all worked.",
+                      "I decided to build a prototype of interactive touch poster to try and turn something as mundane as a poster into an engaging experience."
+                    ],
+          "images": [{"url": "./images/touch-poster.JPG"}],
+          "video": "https://www.youtube.com/embed/Ks8xG4rcNxE",
+          "technology": ["This project uses conductive ink and a Bare conductive board with some sample sounds."],
+          "link": "https://www.youtube.com/watch?v=Ks8xG4rcNxE"
+        }
+      },
+      {
+        "id": 9,
         "title": "DRONE & LEAP MOTION",
         "url": "https://github.com/charliegerard/leap_drone",
         "image": "./images/leap-drone.png",
@@ -123,7 +156,7 @@
         }
       },
       {
-        "id": 8,
+        "id": 10,
         "title": "WEBVR EXPERIMENT",
         "url": "https://github.com/charliegerard/Threejs-VR",
         "image": "./images/threejs-vr.png",
@@ -141,9 +174,9 @@
         }
       },
       {
-        "id": 9,
+        "id": 11,
         "title": "LEAPSYNC",
-        "url": "https://github.com/charliegerard/leapsync",
+        "url": "http://charliegerard.github.io/leapsync/",
         "image": "./images/leapsync.png",
         "description": "Prototype build at the SheHacks hackathon - platform to teach sign language with the Leap motion.",
         "tags": ["web", "hardware", "Leap motion"],
@@ -160,22 +193,7 @@
         }
       },
       {
-        "id": 10,
-        "title": "SPHERO & LEAP MOTION",
-        "url": "https://github.com/charliegerard/leap_sphero",
-        "image": "./images/leap-sphero.png",
-        "description": "Control the Sphero with your hands using the Leap motion controller",
-        "tags": ["hardware", "sphero", "leap motion", "Node.js"],
-        "projectDescription": {
-            "date": "July 2014",
-            "concept" : ["The Sphero ball is a little robot usually controlled using an app on your mobile. As I was experimenting with the Leap Motion and Sphero seperately, I started wondering if I could actually use these 2 devices together. Controlling the Sphero using the movements of my hand over the Leap Motion seemed like an interesting experiment and also a more exciting way to interact with the robot than having to hold my phone."],
-            "images": [{"url": "./images/leap-sphero2.png"}, {"url": "./images/leap-sphero-video.gif"}],
-            "technology": ["This project was built using Node.js, the Leap.Js node module to have access to the Leap Motion data and the Sphero.js module to be able to control the robotic ball in JavaScript.", "Once the app is launched, you can also display a visualizer in the browser to see your hands moving over the Leap motion"],
-            "link": "https://github.com/charliegerard/leap_sphero"
-        }
-      },
-      {
-        "id": 11,
+        "id": 12,
         "title": "DRONE & MYO ARMBAND",
         "url": "https://github.com/charliegerard/myo_drone",
         "image": "./images/myo-drone.png",
@@ -188,24 +206,6 @@
             "video": "",
             "technology": ["Myo armband, Parrot AR Drone, Node.js"],
             "link": "https://github.com/charliegerard/myo_drone"
-        }
-      },
-      {
-        "id": 12,
-        "title": "TOUCH POSTER",
-        "url": "",
-        "image": "./images/touch-poster.png",
-        "description": "WIP - Prototype of touch mirror",
-        "tags": ["hardware", "bare conductive", "music"],
-        "projectDescription": {
-          "date": "April 2016",
-          "concept" : ["After discovering Bare conductive, I knew I had to try it to understand how it all worked.",
-                      "I decided to build a prototype of interactive touch poster to try and turn something as mondain as a poster into an unreached experience."
-                    ],
-          "images": [{"url": "./images/touch-poster.JPG"}],
-          "video": "https://www.youtube.com/embed/Ks8xG4rcNxE",
-          "technology": ["This project uses conductive ink and a Bare conductive board with some sample sounds."],
-          "link": "https://www.youtube.com/watch?v=Ks8xG4rcNxE"
         }
       }
     ]

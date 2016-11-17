@@ -193,7 +193,7 @@ body{
   z-index: 2000;
   // top: 0;
   // right: 0;
-	top: 50%;
+	top: calc(50% - 3.5rem);
 	left: 50%;
 	transform: translate(-50%, -50%);
   height: 7rem;
@@ -208,7 +208,7 @@ body{
   display: block;
   position: absolute;
   top: 0;
-  right: .5rem;
+  right: .2rem;
   content: attr(data-progress-text);
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
