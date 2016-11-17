@@ -14224,9 +14224,21 @@ Pace.on('done', function(){
 		e.preventDefault();
 		var href = $(e.currentTarget).attr('href');
 		if(href === '#projects'){
-			__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('projects', true)
+			if(window.location.hash === '' || window.location.hash === '#'){ //if coming from homepage
+				var threejsCanvas = $( '#threejs-container canvas' );
+				threejsCanvas.fadeOut();
+				clickOnProjectsLinkFromHomepage();
+			} else if(window.location.hash.includes('about')){
+				clickOnProjectsFromAboutPage();
+			}
 		} else if(href === '#about'){
-			__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('about', true)
+			if(window.location.hash === '' || window.location.hash === '#'){
+				var threejsCanvas = $( '#threejs-container canvas' );
+				threejsCanvas.fadeOut();
+				clickOnAboutLinkFromHomepage();
+			} else if(window.location.hash.includes('projects')){
+				clickOnAboutFromProjectsPage();
+			}
 		} else if(href.includes('blog')){
 			window.open(href)
 		} else if(href.includes('mailto')){
@@ -14234,30 +14246,19 @@ Pace.on('done', function(){
 		}
 	})
 
-	$('#projects').click(function(){
-		if(!window.location.hash){
-			var threejscontainer = $( '#threejs-container' );
-			threejscontainer.fadeOut();
-			threejscontainer.remove()
-			clickOnProjectsLinkFromHomepage();
-		} else if(window.location.hash.includes('#about')){
-			clickOnProjectsFromAboutPage();
-		}
-	})
-
-	$('#about').click(function(){
-		if(!window.location.hash){
-			clickOnAboutLinkFromHomepage();
-		} else if(window.location.hash.includes('projects')){
-			clickOnAboutFromProjectsPage();
-		}
-	})
-
-	$('#home-link .description').click(function(){
+	$('#home-link .description').click(function(e){
+		e.preventDefault();
 		if(window.location.hash.includes('projects')){
 			clickOnHomeFromProjectsPage();
+
 		} else if(window.location.hash.includes('#about')){
 			clickOnHomeFromAboutPage();
+			var checkExist = setInterval(function() {
+			 if ($('#threejs-container').length) {
+					threeJSAnimation();
+					clearInterval(checkExist);
+			 }
+		 }, 100); // check every 100ms
 		}
 	})
 
@@ -14294,7 +14295,7 @@ Pace.on('done', function(){
 	});
 
 	//Home page
-	if(!window.location.hash || window.location.hash === '#'){
+	if(window.location.hash === "" || window.location.hash === '#'){
 	  var descriptionBlock = document.getElementsByClassName('description')[0];
 	  descriptionBlock.style.display = 'none';
 
@@ -14308,23 +14309,23 @@ Pace.on('done', function(){
 	  otherPagesBackground();
 	}
 
-		function homepageBackgroundAnimation(){
-		  var appContainer = $('#app-container');
-		  appContainer.addClass('container-animation');
+	function homepageBackgroundAnimation(){
+	  var appContainer = $('#app-container');
+	  appContainer.addClass('container-animation');
 
-		  var outerContainer = $('#outer-container');
-		  outerContainer.addClass('outer-container-animation');
+	  var outerContainer = $('#outer-container');
+	  outerContainer.addClass('outer-container-animation');
 
-			threeJSAnimation();
-		}
+		threeJSAnimation();
+	}
 
-		function otherPagesBackground(){
-		  var appContainer = $('#app-container');
-		  appContainer.addClass('container-style');
+	function otherPagesBackground(){
+	  var appContainer = $('#app-container');
+	  appContainer.addClass('container-style');
 
-		  var outerContainer = $('#outer-container');
-		  outerContainer.addClass('outer-container-style');
-		}
+	  var outerContainer = $('#outer-container');
+	  outerContainer.addClass('outer-container-style');
+	}
 
 		function threeJSAnimation(){
 
@@ -14336,7 +14337,7 @@ Pace.on('done', function(){
 			 } else {
 				 var SEPARATION = ww/30
 			 }
-			 var AMOUNTX = 150, AMOUNTY = 80;
+			 var AMOUNTX = 120, AMOUNTY = 80;
 			 var particles, particle, count = 0;
 
 			 var mouseX = 0, mouseY = 0;
@@ -14348,7 +14349,6 @@ Pace.on('done', function(){
 			 animate();
 
 			 function init() {
-
 					 container = document.getElementById( 'threejs-container' );
 
 					 camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight,1,10000);
@@ -14441,24 +14441,16 @@ Pace.on('done', function(){
 		  $('#home h1').addClass("outro-animation");
 		  $('#home h2').addClass("outro-animation-h2");
 		  $('#home h2').bind("animationend", function(){
+				__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('projects', true)
 		  });
-
-		  // $('#threejs-container canvas').addClass("outro-animation-canvas");
-		  // $('#threejs-container canvas').bind("animationend", function(){
-		  //    window.location.href = "#projects"
-		  // });
 		}
 
 		function clickOnAboutLinkFromHomepage(){
 		  $('#home h1').addClass("outro-animation");
 		  $('#home h2').addClass("outro-animation-h2");
 		  $('#home h2').bind("animationend", function(){
+				__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('about', true)
 		  });
-
-		  // $('#threejs-container canvas').addClass("outro-animation-canvas");
-		  // $('#threejs-container canvas').bind("animationend", function(){
-		  //    window.location.href = "#about"
-		  // });
 		}
 
 		function clickOnAboutFromProjectsPage(){
@@ -14467,6 +14459,7 @@ Pace.on('done', function(){
 		  $('.visit-button').slideUp();
 		  $('.svg').fadeOut();
 		  $('.project-block img').fadeOut("slow", function(){
+				__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('about', true)
 		  });
 		}
 
@@ -14478,6 +14471,13 @@ Pace.on('done', function(){
 		  $('.project-block img').fadeOut("slow", function(){
 				__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate("#", true);
 		  });
+
+				var checkExist = setInterval(function() {
+			   if ($('#threejs-container').length) {
+					 	threeJSAnimation();
+			      clearInterval(checkExist);
+			   }
+			 }, 100); // check every 100ms
 		}
 
 		function clickOnHomeFromAboutPage(){
@@ -14501,6 +14501,7 @@ Pace.on('done', function(){
 			$('#contributions-block').addClass('fade-down');
 			$('p.svg').fadeOut();
 			$('#about-container h2').fadeOut("slow", function(){
+				__WEBPACK_IMPORTED_MODULE_0__router___default.a.navigate('projects', true)
 			});
 		}
 })

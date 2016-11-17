@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var merge = require('webpack-merge');
 var path = require('path');
+var autoprefixer = require('autoprefixer')
 
 const TARGET = process.env.npm_lifecycle_event;
 
@@ -22,6 +23,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loaders: ['style', 'css', 'sass']
+            },
+            {
+              test:   /\.css$/,
+              loader: "style-loader!css-loader!postcss-loader"
             },
             {
                 test: /\.html/,
@@ -46,6 +51,7 @@ module.exports = {
             }
         ]
     },
+    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
