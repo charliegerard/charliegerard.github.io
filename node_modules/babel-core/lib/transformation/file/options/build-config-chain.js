@@ -164,10 +164,10 @@ var ConfigChainBuilder = function () {
   };
 
   ConfigChainBuilder.prototype.mergeConfig = function mergeConfig(_ref) {
-    var options = _ref.options;
-    var alias = _ref.alias;
-    var loc = _ref.loc;
-    var dirname = _ref.dirname;
+    var options = _ref.options,
+        alias = _ref.alias,
+        loc = _ref.loc,
+        dirname = _ref.dirname;
 
     if (!options) {
       return false;

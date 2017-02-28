@@ -46,6 +46,11 @@ function optimise(decl) {
         }
         if (node.value === 'linear-gradient' || node.value === 'repeating-linear-gradient' || node.value === '-webkit-linear-gradient' || node.value === '-webkit-repeating-linear-gradient') {
             var _ret = function () {
+                if (!node.nodes.length) {
+                    return {
+                        v: false
+                    };
+                }
                 var args = getArguments(node);
                 if (node.nodes[0].value === 'to' && args[0].length === 3) {
                     node.nodes = node.nodes.slice(2);
@@ -82,6 +87,11 @@ function optimise(decl) {
         }
         if (node.value === 'radial-gradient' || node.value === 'repeating-radial-gradient' || node.value === '-webkit-radial-gradient' || node.value === '-webkit-repeating-radial-gradient') {
             var _ret2 = function () {
+                if (!node.nodes.length) {
+                    return {
+                        v: false
+                    };
+                }
                 var args = getArguments(node);
                 var lastStop = void 0;
                 args.forEach(function (arg) {

@@ -90,7 +90,7 @@ function filterFont(_ref4) {
             return r.remove();
         }
         families.forEach(function (family) {
-            if (!hasFont(family.value, values)) {
+            if (!hasFont(family.value.toLowerCase(), values)) {
                 r.remove();
             }
         });
@@ -130,7 +130,7 @@ exports.default = (0, _postcss.plugin)('postcss-discard-unused', function (opts)
                     counterStyleCache.values = addValues(counterStyleCache.values, node);
                 }
                 if (fontFace && node.parent.type === rule && /font(|-family)/.test(prop)) {
-                    fontCache.values = fontCache.values.concat(comma(node.value));
+                    fontCache.values = fontCache.values.concat(comma(node.value.toLowerCase()));
                 }
                 if (keyframes && /animation/.test(prop)) {
                     keyframesCache.values = addValues(keyframesCache.values, node);
