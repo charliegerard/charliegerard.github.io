@@ -48,6 +48,14 @@ module.exports = {
             {
               test: /\.hbs$/,
               loader: "handlebars-loader"
+            },
+            {
+              test: /\.js$/,
+              exclude: /(node_modules|bower_components)/,
+              loader: 'babel-loader',
+              query: {
+                presets: ['es2015']
+              }
             }
         ]
     },
@@ -58,6 +66,15 @@ module.exports = {
             jQuery:"jquery",
             Backbone: "backbone",
             _: "underscore"
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+          compressor: {
+              screw_ie8: true,
+              warnings: false
+          },
+          output: {
+              comments: false
+          }
         })
     ]
 };
