@@ -38,6 +38,7 @@
     "path": "0.12.*",
     "sass-loader": "^4.0.2",
     "underscore": "1.8.*",
+    "webpack": "^2.1.0-beta.19",
     "webpack-merge": "0.14.*"
   },
   "devDependencies": {
