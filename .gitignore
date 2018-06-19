@@ -1,1 +1,8 @@
 node_modules/
+_replicator/
+_users/
+binarydb/
+pouch__all_dbs__/
+skimdb/
+log.txt
+config.json
