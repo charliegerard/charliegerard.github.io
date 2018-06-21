@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="outer-container">
     <navbar></navbar>
     <content-container :contentToDisplay="contentToDisplay"></content-container>
   </div>
@@ -39,5 +39,32 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.outer-container{
+  min-height: 0;
+  background: white;
+  max-height: 700px;
+  overflow-y: scroll;
+  width: 0;
+  position: absolute;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: hidden;
+  animation: growOuterContainer 1s ease;
+  animation-fill-mode:forwards;
+}
+
+@keyframes growOuterContainer {
+  from{
+    width: 0;
+    height: 0;
+  }
+  to{
+    width: 95%;
+    min-height: 95%;
+  }
 }
 </style>
