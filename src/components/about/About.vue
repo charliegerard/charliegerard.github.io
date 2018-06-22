@@ -1,7 +1,115 @@
 <template>
-  <div class="navbar">
-    <p>About</p>
-  </div>
+  <section id="about-container">
+    <h2>About</h2>
+    <div class="about-content-block">
+      <div id="intro-block">
+        <h1>HELLO!</h1>
+        <h3 class="important-title">I'M A SOFTWARE DEVELOPER & CREATIVE TECHNOLOGIST</h3>
+        <img src="../../assets/charlie_gerard.jpg" alt="Charlie Gerard" class="profile-image"/>
+        <div id="buttons">
+          <button class="social-button">
+            <a href="http://github.com/charliegerard" class="social" target="_blank">GITHUB</a>
+          </button>
+          <button class="social-button">
+            <a href="http://twitter.com/devdevcharlie" class="social" target="_blank">TWITTER</a>
+          </button>
+          <button class="social-button">
+            <a href="http://charliegerard.github.io/blog" class="social" target="_blank">BLOG</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content-block">
+      <div id="about-me-block">
+        <h3 class="important-title">QUICK INTRO</h3>
+        <p>
+          Originally from France, I have a <span class="important-word">background</span> in marketing and <span class="important-word">advertising</span> and started my career as a <span class="important-word">Digital Producer</span> in a few agencies in Paris and Sydney. After a couple of years, I decided to follow my passion for technology, quit my job and took a course in Web Development.
+          I then worked as a <span class="important-word">Software Developer / Consultant at ThoughtWorks</span> in Sydney and am now a <span class="important-word">Creative Developer at the New York Times</span> in London. By day, I help various clients from startups to big corporates improve their software and by night, I tinker with <span class="important-word">electronics, creative coding</span> and love to bring any of my ideas to life with code.
+        </p>
+      </div>
+      <div id="skills-block">
+        <h3 class="important-title">MY SKILLS INCLUDE</h3>
+        <div class="skills">
+          <h4 class="important-title">Front-End</h4>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>JS</li>
+            <li>Angular.js</li>
+            <li>React.js</li>
+            <li>Backbone.js</li>
+            <li>THREE.js</li>
+            <li>WebVR</li>
+            <li>WebRTC & Web sockets</li>
+          </ul>
+        </div>
+
+        <div class="skills">
+          <h4 class="important-title">Back-End</h4>
+          <ul>
+            <li>Node.js</li>
+            <li>Ruby</li>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </div>
+
+        <div class="skills">
+          <h4 class="important-title">Hardware</h4>
+          <ul>
+            <li>Arduino</li>
+            <li>Raspberry Pi</li>
+            <li>Leap Motion</li>
+            <li>Sphero</li>
+            <li>Particle Photon</li>
+            <li>Parrot AR Drone</li>
+            <li>Neurosky</li>
+            <li>Emotiv EPOC</li>
+            <li>Myo armband</li>
+          </ul>
+        </div>
+
+        <div class="skills">
+          <h4 class="important-title">Other</h4>
+          <ul>
+            <li>Rapid prototyping</li>
+            <li>User testing</li>
+            <li>Project Management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="svg">
+      scroll
+      <svg version="1.1" id="svg-arrow-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 24" style="enable-background:new 0 0 22 24;" xml:space="preserve">
+        <polygon style="fill:#000000;" points="20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24
+              22,13.004 "></polygon>
+      </svg>
+    </p>
+
+    <div id="contributions-block">
+      <h3 class="important-title">COMMUNITY CONTRIBUTIONS</h3>
+      <h4 class="important-title">TALKS</h4>
+      <ul>
+        <li><a href="https://youtu.be/7KhFO-qCVyg" target="_blank">JSConfEU 2018 (Berlin) - Look mum, no hands! Mind control in JavaScript</a></li>
+        <li><a href="https://www.youtube.com/watch?v=xbkYjjPndWE&index=4&list=PL0CdgOSSGlBaxNkrUIHrhd1f3ch45f66_&t=5s" target="_blank">NodeConfEU 2017 (Dublin) - Look mum, no hands! Mind control in JavaScript</a></li>
+        <li><a href="https://youtu.be/4WbpKSh0FWk?t=6h46m50s" target="_blank">Web Rebels 2017 (Oslo) - Look mum, no hands! Mind control in JavaScript</a></li>
+        <li>UpFront Conf 2017 (Manchester) - WebVR and Creative coding in JavaScript</li>
+        <li><a href="https://www.youtube.com/watch?v=hM5N_zDdgJM&feature=youtu.be" target="_blank">CampJS Jun. 2016 - Experimenting with motion control in JavaScript</a></li>
+        <li><a href="https://www.youtube.com/watch?v=7JBh7QF7CLU&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx" target="_blank">SydJS Apr.2016 - Creative coding in JavaScript</a></li>
+        <li><a href="https://www.youtube.com/watch?v=9rLnmHy44tM&feature=youtu.be&list=PLpFfYLg21iwLQRpUdG7bTAPD4Y6p4FKQx" target="_blank">SydJS Nov.2015 - Nodebots</a></li>
+      </ul>
+
+      <h4 class="important-title">ARTICLES</h4>
+      <ul>
+        <li><a href="http://blog.leapmotion.com/controlling-sphero-leap-motion-cylon-js/" target="_blank">Leap Motion website - Controlling the Sphero with the Leap Motion in Cylon.js</a></li>
+        <li><a href="http://blog.leapmotion.com/controlling-parrot-ar-drone-leap-motion-cylon-js/" target="_blank">Leap Motion website - Controlling a drone with the Leap Motion in Cylon.js</a></li>
+        <li><a href="https://medium.com/@spherodev_74007/makermonday-control-sphero-with-gestures-bf686444c21c#.gsnmxcolz" target="_blank">Sphero on Medium - Control Sphero with gestures</a></li>
+      </ul>
+    </div>
+
+  </section>
 </template>
 
 <script>
@@ -25,19 +133,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style lang='scss' scoped>
+@import 'about.scss';
 </style>
