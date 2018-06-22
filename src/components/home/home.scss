@@ -1,0 +1,155 @@
+#home{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .outro-animation{
+    animation: disappear 0.5s ease;
+    animation-fill-mode: forwards;
+
+		-webkit-animation: disappear 0.5s ease;
+		-webkit-animation-fill-mode: forwards;
+
+		-moz-animation: disappear 0.5s ease;
+		-moz-animation-fill-mode: forwards;
+  }
+
+  .outro-animation-canvas{
+    animation: disappearCanvas 0.5s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+}
+
+h1.name{
+  z-index: 20;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  font-family: 'PT Sans Narrow';
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #2d307a;
+  opacity: 0;
+  animation: appear 1s ease;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+
+h2.title{
+  position: absolute;
+  // top: 20%;
+  z-index: 20;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow';
+  font-weight: 200;
+  color: #ff1c00;
+  opacity: 0;
+  animation: appearSubtitle 1s ease;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+}
+
+h2.outro-animation-h2{
+  animation: disappearh2 1s ease;
+  animation-fill-mode: forwards;
+  // animation-delay: 2s;
+}
+
+#threejs-container{
+  opacity: 0;
+  // display: none;
+  animation: canvasAppear 1s ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    top: -10px;
+  }
+  to{
+    opacity: 1;
+    top: 25%;
+  }
+}
+
+@keyframes appearSubtitle {
+  from{
+    opacity: 0;
+    top: -10px;
+  }
+  to{
+    opacity: 0.8;
+    top: 37%;
+  }
+}
+
+@keyframes canvasAppear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from{
+    opacity: 1;
+    top: 25%;
+  }
+  to{
+    opacity: 0;
+    top: -5%;
+  }
+}
+
+@-webkit-keyframes disappear {
+  from{
+    opacity: 1;
+    top: 25%;
+  }
+  to{
+    opacity: 0;
+    top: -5%;
+  }
+}
+
+@-moz-keyframes disappear {
+  from{
+    opacity: 1;
+    top: 25%;
+  }
+  to{
+    opacity: 0;
+    top: -5%;
+  }
+}
+
+@keyframes disappearh2 {
+  from{
+    opacity: 1;
+    top: 35%;
+  }
+  to{
+    opacity: 0;
+    top: -30px;
+  }
+}
+
+@keyframes disappearCanvas {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
