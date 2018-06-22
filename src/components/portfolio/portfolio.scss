@@ -61,3 +61,40 @@
     min-height: 95%;
   }
 }
+
+.outer-container .description{
+	display: inline-block;
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 200px;
+	z-index: 20;
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in 1 forwards;
+	animation-delay: 0.5s;
+}
+
+.outer-container .description h1{
+	line-height: 30px;
+	color: rgb(45, 48, 122);
+	font-weight: 200;
+	font-size: 30px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	letter-spacing: 2px;
+}
+
+.outer-container .description h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 12px;
+	margin-top: 5px;
+	font-style: italic;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
