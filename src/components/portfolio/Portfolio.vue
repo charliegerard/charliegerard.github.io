@@ -1,7 +1,15 @@
 <template>
-  <div class="outer-container">
-    <navbar></navbar>
-    <content-container :contentToDisplay="contentToDisplay"></content-container>
+  <div id="app-container" class="container-grow">
+    <div class="outer-container outer-container-grow">
+      <a href="#" id="home-link">
+        <div class="description">
+          <h1>CHARLIE GERARD</h1>
+          <h3>Developer</h3>
+        </div>
+      </a>
+      <navbar></navbar>
+      <content-container :contentToDisplay="contentToDisplay"></content-container>
+    </div>
   </div>
 </template>
 
@@ -29,8 +37,13 @@ export default {
         break
     }
     contentToDisplayOnReload = type
-    // if coming from reload
     next()
+  },
+  mounted () {
+    if (contentToDisplayOnReload === '') {
+      let homeLink = document.getElementById('home-link')
+      homeLink.style.display = 'none'
+    }
   },
   watch: {
     $route (to, from) {
