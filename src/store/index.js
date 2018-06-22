@@ -9,7 +9,6 @@ const store = new Vuex.Store({
   },
   mutations: {
     setContentType (state, contentType) {
-      console.log('do i get there', contentType)
       state.contentDisplayed = contentType
     }
   }

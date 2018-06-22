@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Portfolio from '@/components/Portfolio'
+import Portfolio from '@/components/portfolio/Portfolio'
 
 Vue.use(Router)
 
@@ -14,13 +14,13 @@ export default new Router({
       props: {content: ''}
     },
     {
-      path: '/projects',
+      path: '#projects',
       name: 'Projects',
       component: Portfolio,
       props: {content: 'Work'}
     },
     {
-      path: '/about',
+      path: '#about',
       name: 'About',
       component: Portfolio,
       props: {content: 'About'}
