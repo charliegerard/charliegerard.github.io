@@ -1,7 +1,5 @@
 #projects-container{
   font-family: 'Source Sans Pro', sans-serif;
-  // overflow-y: scroll;
-  // max-height: 700px;
 
   #wipe-left{
     width: 0px;
@@ -30,18 +28,6 @@
 
   .project-number{
     position: absolute;
-    // font-size: 50em;
-    // display: block;
-    // text-align: center;
-    // width: 100%;
-    // margin: 0 auto;
-    // color: lightgray;
-    // opacity: 0.2;
-    // letter-spacing: -50px;
-    // top: -88px;
-    // left: 100px;
-    // z-index: -1;
-    // font-family: 'Playfair Display', serif;
     font-size: 50em;
     display: block;
     text-align: center;
@@ -50,10 +36,7 @@
     color: lightgray;
     opacity: 0.2;
     letter-spacing: -50px;
-    /* top: -88px; */
-    /* left: 100px; */
     bottom: -150px;
-    /* top: 0; */
     z-index: -1;
     font-family: 'Source Sans Pro', serif;
     font-weight: 600;
@@ -74,8 +57,6 @@
     }
 
     #project-title-background{
-      // background: white;
-      // padding: 0.1em 1em;
       position: absolute;
       z-index: 5;
       left: -50px;
@@ -86,7 +67,6 @@
 
     h3{
       color: lightgrey;
-      // color: #2d307a;
       font-weight: 600;
       font-size: 3em;
       text-align: center;
@@ -169,7 +149,6 @@
 
   .project-details{
     width: 50%;
-    // display: block;
     margin: 0 auto;
     position: absolute;
     z-index: 10;
@@ -234,7 +213,6 @@
     transform: translateX(2000px);
   }
 }
-
 
 @keyframes slideshow {
   from{

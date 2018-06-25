@@ -1,10 +1,6 @@
 var webpack = require('webpack');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var merge = require('webpack-merge');
 var path = require('path');
 var autoprefixer = require('autoprefixer')
-
-const TARGET = process.env.npm_lifecycle_event;
 
 const PATHS = {
     app: path.join(__dirname, 'app'),
@@ -21,12 +17,13 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+              test: /\.scss$/,
+              loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
               test:   /\.css$/,
-              loader: "style-loader!css-loader!postcss-loader"
+              loader: "style-loader!css-loader!postcss-loader",
+              options: {minimize: true}
             },
             {
                 test: /\.html/,
@@ -74,7 +71,8 @@ module.exports = {
           },
           output: {
               comments: false
-          }
+          },
+          cache:true
         }),
         new webpack.LoaderOptionsPlugin({
           options: {

@@ -2,7 +2,6 @@ body{
 	margin: 0;
   width: 100%;
   background: white;
-	// overflow-y: scroll;
 }
 
 #app-container{
@@ -167,12 +166,11 @@ body{
 #outer-container .description span:nth-child(2){
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-	font-size: 12px;
+	font-size: 16px;
 	margin-top: 5px;
   font-style: italic;
   display: block;
 }
-
 
 
 // LOADER
@@ -193,8 +191,6 @@ body{
 .pace .pace-progress {
   position: fixed;
   z-index: 2000;
-  // top: 0;
-  // right: 0;
 	top: calc(50% - 3.5rem);
 	left: 50%;
 	transform: translate(-50%, -50%);

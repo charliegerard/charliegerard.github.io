@@ -1,8 +1,4 @@
 @media only screen and (max-width : 480px) {
-//   body{
-//     overflow: hidden;
-//   }
-
   #outer-container{
     .description{
       width: 130px;
@@ -23,7 +19,7 @@
     #navbar{
       .link{
         a{
-          font-size: 13px;
+          font-size: 16px;
         }
       }
     }
@@ -85,7 +81,6 @@
       margin: 0 auto;
       margin-top: 4em;
       margin-bottom: 2em;
-      // font-family: 'Roboto';
 
       img{
         width: 100%;
@@ -129,11 +124,6 @@
       display: block;
       margin: 0 auto;
       margin-top: 1em;
-    }
-
-    .about-content-block{
-      // display: block;
-      // width: 100%;
     }
 
     .about-content-block:nth-of-type(1){
@@ -191,88 +181,7 @@
       width: 90%;
       margin-top: 2em;
     }
-
-
   }
-//
-//   #container .description h1{
-//     line-height: 1em;
-//     display: inline;
-//     font-size: 20px;
-//   }
-//
-//   #background-3d{
-//   	position: fixed;
-//   	opacity: 0.3;
-//   }
-//
-//   #background-3d iframe{
-//   	border: none;
-//   }
-//
-//   #container{
-//     border: 5px solid rgb(26, 25, 169);
-//   }
-//
-//   #container #navbar{
-//     margin-right: 5px;
-//   }
-//
-//   #container #navbar a{
-//     font-size: 12px;
-//     margin-right: 7px;
-//   }
-//
-//   #container .description h3{
-//     font-size: 15px;
-//     margin-top: 0.5em;
-//   }
-//
-//   #about-block{
-//     margin: 0 auto;
-//     display: block;
-//   }
-//
-//   #about-block .content{
-//     width: 90%;
-//     margin: 0 auto;
-//     display: block;
-//   }
-//
-//   #about-block img{
-//     margin-bottom: 2em;
-//     margin-top: 2em;
-//     margin-left: 1em;
-//     width: 10em;
-//   }
-//
-//   #center{
-//     max-height: 75%;
-//     margin-top: 15%;
-//     width: 90%
-//   }
-//
-//   #center #projects-block, #center #about-block, #center #skills-block{
-//     width: 100%;
-//     display: block;
-//     margin: 0 auto;
-//   }
-//
-//   #center #projects-block .project{
-//     width: 100%;
-//     display: block;
-//     margin: 5px auto;
-//   }
-//
-//   #container .footer ul li{
-//     font-size: 12px;
-//   }
-//
-//   #container .footer{
-//     bottom: 0;
-//     width: 120%;
-//   }
-//
 }
 
 //Tablet

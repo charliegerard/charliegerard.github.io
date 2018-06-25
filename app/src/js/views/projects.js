@@ -1,7 +1,6 @@
 'use strict'
 
 var Backbone = require('backbone');
-import ProjectCollection from '../models/projectCollection';
 var projectDisplayed = 0;
 
 var Projects = Backbone.View.extend({
