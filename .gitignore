@@ -6,3 +6,5 @@ pouch__all_dbs__/
 skimdb/
 log.txt
 config.json
+ngrok
+.DS_Store

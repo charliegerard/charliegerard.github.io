@@ -112,6 +112,10 @@
     animation: canvasAppear 1s ease;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
+
+    canvas{
+      background: white;
+    }
   }
 }
 

@@ -22,7 +22,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'sass']
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
               test:   /\.css$/,
@@ -30,7 +30,7 @@ module.exports = {
             },
             {
                 test: /\.html/,
-                loader: "html"
+                loader: "html-loader"
             },
             {
                 test: /\.(woff2?|svg)$/,
@@ -42,9 +42,9 @@ module.exports = {
             },
             {
                 test: require.resolve("jquery"),
-                loader: "imports?jQuery=jquery"
+                loader: "imports-loader?jQuery=jquery"
             },
-            { test: /\.json$/, loader: 'json' },
+            { test: /\.json$/, loader: 'json-loader' },
             {
               test: /\.hbs$/,
               loader: "handlebars-loader"
@@ -59,7 +59,7 @@ module.exports = {
             }
         ]
     },
-    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
+    // postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -74,6 +74,14 @@ module.exports = {
           },
           output: {
               comments: false
+          }
+        }),
+        new webpack.LoaderOptionsPlugin({
+          options: {
+            context: __dirname,
+            postcss: [
+              autoprefixer
+            ]
           }
         })
     ]
