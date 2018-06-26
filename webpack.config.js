@@ -1,8 +1,9 @@
 var webpack = require('webpack');
 var path = require('path');
-const CompressionPlugin = require("compression-webpack-plugin");
+const glob = require('glob');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-var autoprefixer = require('autoprefixer')
+const PurifyCSSPlugin = require('purifycss-webpack');
+var autoprefixer = require('autoprefixer');
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -104,6 +105,10 @@ module.exports = {
   // postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
   plugins: [
     new ExtractTextPlugin("styles.css"),
+    new PurifyCSSPlugin({
+      // Give paths to parse for rules. These should be absolute!
+      paths: glob.sync(path.join(__dirname, 'index.html')),
+    }),
     new webpack.ProvidePlugin({
         $: "jquery",
         jQuery:"jquery",
@@ -127,11 +132,6 @@ module.exports = {
           autoprefixer
         ]
       }
-    }),
-    new CompressionPlugin({
-      test: /\.js/,
-      cache: true,
-      algorithm: "gzip"
     })
   ]
 };
