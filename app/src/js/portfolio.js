@@ -1,9 +1,8 @@
 import router from './router'
+import threeJSAnimation from './threeJsAnimation.js';
 
-Pace.on('start', function(){
-	// console.log('start')
-})
-Pace.on('done', function(){
+homepageBackgroundAnimation();
+
 	var navbar = document.getElementById('navbar');
 	var navbarLinks = navbar.getElementsByClassName('link');
 
@@ -114,7 +113,6 @@ Pace.on('done', function(){
 	  var outerContainer = $('#outer-container');
 	  outerContainer.addClass('outer-container-animation');
 
-		threeJSAnimation();
 	}
 
 	function otherPagesBackground(){
@@ -125,115 +123,7 @@ Pace.on('done', function(){
 	  outerContainer.addClass('outer-container-style');
 	}
 
-		function threeJSAnimation(){
 
-			 var ww = window.innerWidth;
-			 var container, stats;
-			 var camera, scene, renderer;
-			 if(window.mobilecheck() || window.innerWidth < 500){
-				  var SEPARATION = ww/10
-			 } else {
-				 var SEPARATION = ww/30
-			 }
-			 var AMOUNTX = 120, AMOUNTY = 80;
-			 var particles, particle, count = 0;
-
-			 var mouseX = 0, mouseY = 0;
-
-			 var windowHalfX = window.innerWidth /2;
-			 var windowHalfY = window.innerHeight /2;
-
-			 init();
-			 animate();
-
-			 function init() {
-					 container = document.getElementById( 'threejs-container' );
-
-					 camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight,1,10000);
-					 if(window.mobilecheck() || window.innerWidth < 500){
-
-						 camera.position.z = 1500;
-						 camera.position.y = 500;
-						 camera.position.x = 200;
-					 } else {
-						 camera.position.z = 2000;
-						 camera.position.y = 350;
-						 camera.position.x = 1000;
-					 }
-
-					 scene = new THREE.Scene();
-
-					 particles = new Array();
-
-					 var PI2 = Math.PI*2;
-					 var material = new THREE.SpriteCanvasMaterial( {
-
-							 color: 0x939393,
-							 opacity:0.5,
-							 program: function ( context ) {
-
-									 context.beginPath();
-									 //context.arc( 0, 0, 0.3, 0, PI2, true );
-									 context.arc(0, 0, 0.2, 0, PI2, true );
-									 context.fill();
-							 }
-
-					 } );
-
-					 var i = 0;
-
-					 for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-							 for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-									 particle = particles[ i ++ ] = new THREE.Sprite( material );
-									 particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION) / (Math.PI) );
-									 particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 10 );
-									 scene.add( particle );
-							 }//for iy
-					 }//for ix
-
-					 renderer = new THREE.CanvasRenderer({ alpha: true });
-					 renderer.setSize( window.innerWidth, window.innerHeight );
-					 renderer.setClearColor( 0xFFFFFF,0);
-					 container.appendChild( renderer.domElement );
-
-					 window.addEventListener( 'resize', onWindowResize, false );
-			 }
-
-			 function onWindowResize() {
-					 windowHalfX = window.innerWidth / 2;
-					 windowHalfY = window.innerHeight / 2;
-
-					 camera.aspect = window.innerWidth / window.innerHeight;
-					 camera.updateProjectionMatrix();
-
-					 renderer.setSize( window.innerWidth, window.innerHeight );
-			 }
-
-			 function animate() {
-					 requestAnimationFrame( animate );
-					 render();
-			 }
-
-			 function render() {
-					 camera.position.x += ( mouseX - camera.position.x ) * .005;
-					//  camera.position.y += ( mouseY - camera.position.y ) * .005;
-					//  camera.lookAt( scene.position );
-					 var i = 0;
-
-					 for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-							 for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-									 particle = particles[ i++ ];
-									 particle.position.y = ( Math.sin( ( ix + count ) * 0.20 ) * 50 ) +
-											 ( Math.sin( ( iy + count ) * 0.2 ) * 20 );
-									 particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 2 ) * 4 +
-											 ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
-							 }
-					 }
-
-					 renderer.render( scene, camera );
-					 count += 0.3;
-			 }
-		}
 
 		function clickOnProjectsLinkFromHomepage(){
 		  $('#home h1').addClass("outro-animation");
@@ -302,4 +192,4 @@ Pace.on('done', function(){
 				router.navigate('projects', true)
 			});
 		}
-})
+// })

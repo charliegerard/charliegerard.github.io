@@ -1,4 +1,5 @@
 var template = require('../../templates/home.html');
+import threeJsAnimation from '../threeJsAnimation';
 var Backbone = require('backbone');
 
 var Home = Backbone.View.extend({
@@ -16,6 +17,8 @@ var Home = Backbone.View.extend({
       descriptionBlock.style.display = 'none'
 
       this.$el.html(template);
+
+      threeJsAnimation();
     }
 });
 

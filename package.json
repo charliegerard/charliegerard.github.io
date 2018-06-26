@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "axe-core": "^3.0.3",
+    "compression-webpack-plugin": "^1.1.11",
     "copy-webpack-plugin": "3.0.*",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",

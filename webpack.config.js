@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+const CompressionPlugin = require("compression-webpack-plugin");
 var autoprefixer = require('autoprefixer')
 
 const PATHS = {
@@ -81,6 +82,11 @@ module.exports = {
               autoprefixer
             ]
           }
+        }),
+        new CompressionPlugin({
+          test: /\.js/,
+          cache: true,
+          algorithm: "gzip"
         })
     ]
 };

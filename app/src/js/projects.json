@@ -191,24 +191,6 @@
       },
       {
         "id": 12,
-        "title": "WEBVR EXPERIMENT",
-        "url": "https://github.com/charliegerard/Threejs-VR",
-        "image": "./images/threejs-vr.png",
-        "description": "First prototype of WebVR to be used in a Google Cardboard",
-        "tags": ["web", "Three.js"],
-        "projectDescription": {
-          "date": "December 2015",
-          "concept" : ["This mini project is my first attempt at creating a WebVR experiment. Displaying a procedural city, this project works on both desktop and mobile and is aiming at creating a feeling of flying over a city.",
-                      "On desktop, the interaction happens using the mouse, but on mobile, paired with a Google Cardboard, the user can move their head to look around the 3D landscape."
-                    ],
-          "images": [{"url": "./images/threejs-vr.gif"}],
-          "video": "",
-          "technology": ["Using Three.js for the graphics and interactions, this project experiments with the latest technologies in the browser."],
-          "link": "https://github.com/charliegerard/Threejs-VR"
-        }
-      },
-      {
-        "id": 13,
         "title": "LEAPSYNC",
         "url": "http://charliegerard.github.io/leapsync/",
         "image": "./images/leapsync.png",
@@ -227,7 +209,7 @@
         }
       },
       {
-        "id": 14,
+        "id": 13,
         "title": "DRONE & MYO ARMBAND",
         "url": "https://github.com/charliegerard/myo_drone",
         "image": "./images/myo-drone.png",
