@@ -1,8 +1,10 @@
+import isMobile from './isMobile';
+
 const threeJsAnimation = () => {
   const ww = window.innerWidth;
   let container, camera, scene, renderer;
 
-  let SEPARATION = (window.mobilecheck() || window.innerWidth < 500) ? ww/10 : ww/30;
+  let SEPARATION = (isMobile() || window.innerWidth < 500) ? ww/10 : ww/30;
 
   let AMOUNTX = 120, AMOUNTY = 80;
   let particles, particle, count = 0;
@@ -17,7 +19,7 @@ const threeJsAnimation = () => {
 
     camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight,1,10000);
 
-    if(window.mobilecheck() || window.innerWidth < 500){
+    if(isMobile() || window.innerWidth < 500){
       camera.position.set(200,500,1500);
     } else {
       camera.position.set(1000,350,2000);

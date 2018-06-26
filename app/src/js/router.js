@@ -44,4 +44,4 @@ router.on('route:projectsView', function(){
   projectsView.render();
 })
 
-module.exports = router;
+export default router;
