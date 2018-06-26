@@ -19,7 +19,6 @@ var Home = Backbone.View.extend({
       threeJsAnimation();
 
       this.handleNavigationAnimations();
-
     },
     handleNavigationAnimations: function(){
       $('#navbar .link a').click(e => {
