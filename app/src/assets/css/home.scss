@@ -1,33 +1,33 @@
 #navbar{
 	font-family: 'Source Sans Pro', sans-serif;
 	width: auto;
-  display: block !important;
+  display: block;
+	text-align: right;
+	margin-right: -20px;
+	margin-top: 20px;
+	position: relative;
+	float: right;
+	z-index: 20;
 
 	.link{
 		display: block;
 		float: right;
-		clear: both;
-		margin-right: -180px;
-		transition-timing-function: ease-out;
-		transition: 0.5s;
-		transform: translateX(180px);
-	}
+    clear: both;
+    opacity: 0;
+    transform: translateX(0);
 
-	@for $i from 1 through 4{
+    &:hover{
+      transition-timing-function: ease-in;
+      transition: 0.5s;
+      transform: translateX(-10px);
+    }
+  }
+
+  @for $i from 1 through 4{
 		.navbar-link-animation:nth-child(#{$i}) {
-			transition: all 1.2s #{$i * .3}s ease-in;
-			transform: translateX(-170px);
+      animation: 1s ease-in #{$i * .2}s navAppear;
+      animation-fill-mode: forwards;
 		}
-	}
-
-	.link-loaded{
-		margin-right: -20px;
-	}
-
-	.link:hover{
-		transition-timing-function: ease-in;
-		transition: 0.5s;
-		transform: translateX(-180px);
 	}
 
 	.line{
@@ -39,7 +39,21 @@
 		border: none;
 		color: #ccc;
 		height: 1px;
-	}
+  }
+
+  a{
+    font-size: 12px;
+    font-weight: 200;
+    color: rgb(255, 28, 0);
+    margin-right: 10px;
+    display: block;
+    margin-bottom: 5px;
+
+    &:hover{
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }
 
 
@@ -58,12 +72,11 @@
     width: 100%;
     text-align: center;
     font-weight: 800;
-    text-transform: uppercase;
     font-size: 50px;
     color: #2d307a;
     opacity: 0;
     animation: appear 1s ease;
-    animation-delay: 1.4s;
+    animation-delay: .7s;
     animation-fill-mode: forwards;
   }
 
@@ -93,7 +106,7 @@
     color: #ff1c00;
     opacity: 0;
     animation: appearSubtitle 1s ease;
-    animation-delay: 1.6s;
+    animation-delay: .9s;
     animation-fill-mode: forwards;
   }
 
@@ -105,12 +118,21 @@
   #threejs-container{
     opacity: 0;
     animation: canvasAppear 1s ease;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 
     canvas{
       background: white;
     }
+  }
+}
+
+@keyframes navAppear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
   }
 }
 

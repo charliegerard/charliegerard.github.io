@@ -10,8 +10,8 @@
 }
 
 .container-animation{
-	animation: grow 1s ease;
-	animation-fill-mode:forwards;
+	animation: grow .5s ease;
+	animation-fill-mode: forwards;
 }
 
 .container-style{
@@ -30,11 +30,6 @@
 	}
 }
 
-#outer-container a{
-	text-decoration: none;
-	color: black;
-}
-
 #outer-container{
 	min-height: 0;
 	background: white;
@@ -46,12 +41,20 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	overflow-x: hidden;
+  overflow-x: hidden;
+
+  a{
+    text-decoration: none;
+  }
+
+  a#home-link{
+    color: black;
+  }
 }
 
 .outer-container-animation{
 	animation: growOuterContainer 0.5s ease;
-	animation-delay: 0.5s;
+	animation-delay: 0.2s;
 	animation-fill-mode:forwards;
 }
 
@@ -71,36 +74,6 @@
 	}
 }
 
-#outer-container #navbar{
-	display: block;
-	text-align: right;
-	margin-right: -20px;
-	margin-top: 20px;
-	position: relative;
-	float: right;
-	z-index: 20;
-}
-
-#navbar.fade-right{
-	animation: fadeRight 0.3s ease;
-	animation-fill-mode: forwards;
-	animation-delay: 0.7s;
-}
-
-#outer-container #navbar a{
-	font-size: 12px;
-	font-weight: 200;
-	color: rgb(255, 28, 0);
-	margin-right: 10px;
-	display: block;
-	margin-bottom: 5px;
-}
-
-#outer-container #navbar a:hover{
-	text-decoration: none;
-	cursor: pointer;
-}
-
 #contributions-block ul li a{
 	color: rgb(26, 25, 169);
 }
@@ -113,15 +86,6 @@
   to {
     opacity: 1;
   }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn .5s ease-in 1 forwards;
-}
-
-.is-paused {
-  animation-play-state: paused;
 }
 
 #outer-container .description{
@@ -166,46 +130,3 @@
   display: block;
 }
 
-
-// LOADER
-
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.pace.pace-inactive .pace-progress {
-  display: none;
-}
-
-.pace .pace-progress {
-  position: fixed;
-  z-index: 2000;
-	top: calc(50% - 3.5rem);
-	left: 50%;
-	transform: translate(-50%, -50%);
-  height: 7rem;
-  width: 7rem;
-
-  -webkit-transform: translate3d(0, 0, 0) !important;
-  -ms-transform: translate3d(0, 0, 0) !important;
-  transform: translate3d(0, 0, 0) !important;
-}
-
-.pace .pace-progress:after {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: .2rem;
-  content: attr(data-progress-text);
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-size: 7rem;
-  line-height: 1;
-  text-align: right;
-  color: rgba(0, 0, 0, 0.19999999999999996);
-}

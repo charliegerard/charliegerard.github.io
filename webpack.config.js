@@ -1,8 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
-const glob = require('glob');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const PurifyCSSPlugin = require('purifycss-webpack');
 var autoprefixer = require('autoprefixer');
 
 const PATHS = {
@@ -105,10 +103,6 @@ module.exports = {
   // postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
   plugins: [
     new ExtractTextPlugin("styles.css"),
-    new PurifyCSSPlugin({
-      // Give paths to parse for rules. These should be absolute!
-      paths: glob.sync(path.join(__dirname, 'index.html')),
-    }),
     new webpack.ProvidePlugin({
         $: "jquery",
         jQuery:"jquery",

@@ -7,50 +7,52 @@
     color: #2d307a;
   }
 
-  img{
+  img.profile-image{
     width: 10em;
     height: 10em;
     display: block;
     margin: 0 auto;
     margin-top: 2em;
     margin-bottom: 2em;
+    -webkit-clip-path: circle(5em at center);
+    clip-path: circle(5em at center);
   }
 
-  .profile-image{
-     -webkit-clip-path: circle(5em at center);
-              clip-path: circle(5em at center);
-  }
-
-  .about-content-block:nth-of-type(1){
+  .about-content-block{
     display: inline-block;
     width: 48%;
     vertical-align: top;
-    margin: 0 auto;
-    margin-top: 6em;
+  }
+
+  .about-content-block:nth-of-type(1){
+    margin: 6em auto auto auto;
 
     #intro-block{
       display: block;
       width: 85%;
       margin: 0 auto;
       animation: appearLeft 1s ease;
-
-      .important-title{
-        width: 100%;
-      }
-    }
-
-    #intro-block.fade-left{
-      animation: fadeLeft 0.3s ease;
-      animation-fill-mode: forwards;
-    }
-
-    #intro-block{
       text-align: justify;
 
-      h2{
+      .fade-left{
+        animation: fadeLeft 0.3s ease;
+        animation-fill-mode: forwards;
+      }
+
+      h1, h2{
         letter-spacing: 4px;
-        margin-bottom: 1em;
         text-align: center;
+      }
+
+      h1{
+        color: #2d307a;
+        font-weight: 400;
+        margin: 0;
+        font-size: 80px;
+      }
+
+      h2{
+        margin-bottom: 1em;
         color: rgb(218, 45, 42);
         font-weight: 200;
       }
@@ -62,14 +64,11 @@
 
         .social-button{
           width: 31.5%;
-          margin-right: 1%;
-          margin-top: 1em;
-          margin-bottom: 1em;
+          margin: 1em 1% 1em auto;
           padding: 1em 0.5em;
           border: 2px solid rgb(45, 48, 122);
           display: inline-block;
           text-align: center;
-          position: relative;
           background: white;
           transition: all .3s ease;
 
@@ -84,7 +83,6 @@
             cursor: pointer;
             background:rgba(45, 48, 122, 1);
             transition: all .3s ease;
-
             a{
               color: white;
             }
@@ -97,11 +95,7 @@
     }
   }
 
-
   .about-content-block:nth-of-type(2){
-    display: inline-block;
-    width: 48%;
-    vertical-align: top;
     margin-top: 6.5em;
     position: absolute;
     opacity: 0;
@@ -109,43 +103,43 @@
     animation-fill-mode: forwards;
     animation-delay: 0.5s;
 
-    p{
+    #skills-block, #about-me-block{
       display: block;
+      width: 85%;
       margin: 0 auto;
-      text-align: justify;
-      color: #2d307a;
-      font-weight: 200;
-      margin-bottom: 2em;
+    }
+
+    #about-me-block{
+      h3{
+        margin-top: 0;
+      }
+
+      p{
+        margin: 0 auto;
+        text-align: justify;
+        color: #2d307a;
+        font-weight: 200;
+        margin-bottom: 2em;
+
+        span{
+          font-weight: 400;
+        }
+      }
+
+      .fade-right{
+        animation: fadeRight 0.3s ease;
+        animation-fill-mode: forwards;
+        animation-delay: 0.1s;
+      }
     }
   }
 
-  #skills-block, #about-me-block{
-    display: block;
-    width: 85%;
-    vertical-align: top;
-    margin: 0 auto;
-  }
-
-  #about-me-block{
-    h2{
-      margin-top: 0;
-    }
-
-    .important-word{
-      font-weight: 400;
-    }
-  }
-
-  #about-me-block.fade-right{
-    animation: fadeRight 0.3s ease;
-    animation-fill-mode: forwards;
-    animation-delay: 0.1s;
-  }
 
   #skills-block{
     .skills{
       display: inline-block;
       vertical-align: top;
+      margin-bottom: 1em;
 
       h4{
         margin-top: 0;
@@ -154,21 +148,22 @@
 
       ul{
         list-style: none;
-        margin: 0;
-        margin-right: 2em;
+        margin: 0 2em 0 0;
         padding: 0;
         font-weight: 200;
         color: #2d307a;
       }
     }
-  }
 
-  #skills-block.fade-right{
-    animation: fadeRight 0.3s ease;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
+    .fade-right{
+      animation: fadeRight 0.3s ease;
+      animation-fill-mode: forwards;
+      animation-delay: 0.3s;
+    }
   }
 }
+
+
 #contributions-block{
   display: block;
   margin: 0 auto;
@@ -182,7 +177,6 @@
     padding: 0;
     color: #2d307a;
     font-weight: 200;
-
   }
 }
 
@@ -198,11 +192,9 @@
   width: fit-content;
 }
 
-
 p.svg{
   font-family: sans-serif;
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 10px;
   color: #2d307a;

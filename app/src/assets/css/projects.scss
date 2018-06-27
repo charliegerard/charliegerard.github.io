@@ -1,25 +1,6 @@
 #projects-container{
   font-family: 'Source Sans Pro', sans-serif;
 
-  #wipe-left{
-    width: 0px;
-    height: 1000px;
-    background: white;
-    position: absolute;
-    top: 2em;
-    z-index: 5;
-  }
-
-  h1{
-    font-size: 100px;
-    font-weight: 200;
-    color: rgb(45, 48, 122);
-    font-weight: 200;
-    letter-spacing: 0.3em;
-    margin-bottom: 0;
-    margin-left: 0.8em;
-  }
-
   h2{
     text-align: center;
     font-family: 'PT Sans Narrow', sans-serif;
@@ -31,20 +12,19 @@
     font-size: 50em;
     display: block;
     text-align: center;
-    width: 100%;
     margin: 0 auto;
     color: lightgray;
     opacity: 0.2;
     letter-spacing: -50px;
-    bottom: -150px;
     z-index: -1;
-    font-family: 'Source Sans Pro', serif;
     font-weight: 600;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -35%);
   }
 
   .project-block{
     width: 65%;
-    display: block;
     margin: 0 auto;
     position: relative;
     margin-top: 6em;
@@ -63,16 +43,16 @@
       bottom: 100px;
       animation: titleSlide 2.5s;
       margin-bottom: 10px;
-    }
 
-    h3{
-      color: lightgrey;
-      font-weight: 600;
-      font-size: 3em;
-      text-align: center;
-      font-family: 'PT Sans Narrow', sans-serif;
-      font-style: italic;
-      margin: 0;
+      h3{
+        color: lightgrey;
+        font-weight: 600;
+        font-size: 3em;
+        text-align: center;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-style: italic;
+        margin: 0;
+      }
     }
 
     .project-buttons{
@@ -83,7 +63,7 @@
       z-index: 50;
 
       .visit-button{
-        display: inline-block;
+        display: block;
         border: 1px solid white;
         color: white;
         font-style: italic;
@@ -92,37 +72,27 @@
         font-weight: 200;
       }
     }
+  }
 
-    p{
-      position: absolute;
-      left: -40px;
-      top: 8em;
-      color: lightgrey;
-      animation: titleSlide 2.5s;
-      font-weight: 200;
-      font-size: 15px;
+  #next, #previous{
+    font-size: 12px;
+    position: absolute;
+    top: 52%;
+    letter-spacing: 2px;
+    border: none;
+
+    &:hover{
+      cursor: pointer;
+      text-decoration: underline;
     }
   }
 
-  #next{
-    font-size: 12px;
-    position: absolute;
-    top: 52%;
-    right: 4em;
-    letter-spacing: 2px;
-  }
-
-  #next:hover, #previous:hover{
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
   #previous{
-    position: absolute;
-    font-size: 12px;
-    top: 52%;
     left: 4em;
-    letter-spacing: 2px;
+  }
+
+  #next{
+    right: 4em;
   }
 
   p.svg{
@@ -148,7 +118,7 @@
   }
 
   .project-details{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     position: absolute;
     z-index: 10;
@@ -202,17 +172,6 @@
   }
 }
 
-@keyframes wipe {
-  0%{
-    transform: translateX(0);
-  }
-  50%{
-    transform: translateX(1000px);
-  }
-  100%{
-    transform: translateX(2000px);
-  }
-}
 
 @keyframes slideshow {
   from{

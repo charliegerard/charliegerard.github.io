@@ -9,11 +9,10 @@ const threeJsAnimation = () => {
   let AMOUNTX = 120, AMOUNTY = 50;
   let particles, particle, count = 0;
 
-  var spriteMap = new THREE.TextureLoader().load( 'app/src/images/particle.png' );
+  var spriteMap = new THREE.TextureLoader().load( 'app/src/images/particle.webp' );
 
   const init = () => {
-    container = document.getElementById( 'threejs-container' );
-
+    container = document.getElementById('threejs-container');
     camera = new THREE.PerspectiveCamera(90, ww / window.innerHeight,1,10000);
 
     if(isMobile() || ww < 500){
@@ -38,13 +37,12 @@ const threeJsAnimation = () => {
 
     for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
       for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-        // particle = particles[ i++ ] = new THREE.Sprite( material );
         particle = particles[ i++ ] = new THREE.Sprite( material );
         particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION) / (Math.PI) );
         particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 10 );
         scene.add( particle );
-      }//for iy
-    }//for ix
+      }
+    }
 
     renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setSize( ww, window.innerHeight );
@@ -55,14 +53,9 @@ const threeJsAnimation = () => {
   }
 
   const onWindowResize = () => {
-    let windowHalfX, windowHalfY;
-    windowHalfX = ww / 2;
-    windowHalfY = window.innerHeight / 2;
-
-    camera.aspect = ww / window.innerHeight;
+    camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-
-    renderer.setSize( ww, window.innerHeight );
+    renderer.setSize( window.innerWidth, window.innerHeight );
   }
 
   const animate = () => {
