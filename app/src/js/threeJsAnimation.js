@@ -72,7 +72,7 @@ const threeJsAnimation = () => {
         particle.position.y = ( Math.sin( ( ix + count ) * 0.20 ) * 50 ) +
             ( Math.sin( ( iy + count ) * 0.2 ) * 20 );
         particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 2 ) * 2 +
-            ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
+            ( Math.sin( ( iy + count ) * 0.3 ) + 2 ) * 2;
       }
     }
 
