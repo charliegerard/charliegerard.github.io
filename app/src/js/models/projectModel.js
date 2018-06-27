@@ -5,6 +5,7 @@ class Project extends Model {
     return {
       title: '',
       image: '',
+      srcset: '',
       url: '',
       description: '',
       projectDescription: ''

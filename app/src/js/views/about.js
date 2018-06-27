@@ -16,7 +16,7 @@ var About = Backbone.View.extend({
       this.arrowAnimation();
     },
     arrowAnimation: function(){
-      $('#outer-container').bind('mousewheel', e => {
+      $('#outer-container').on('mousewheel', function(){
         if(!isMobile()){
           var block = $('#contributions-block')[0].getBoundingClientRect()
           var e = window.event;

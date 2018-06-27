@@ -14,7 +14,10 @@
         </div>
       </a>
     </div>
-    <img src="{{projects.attributes.image}}" alt="" />
+    <img srcset="{{projects.attributes.srcset}}"
+         sizes="(max-width: 480px) 440px, 800px"
+         src="{{projects.attributes.image}}"
+         alt="{{projects.attributes.description}}"/>
   </div>
   <button id="next">[n]</button>
   <button id="previous">[p]</button>
@@ -41,7 +44,9 @@
     {{/each}}
 
     {{#if projects.attributes.projectDescription.images}}
-      <img src="{{projects.attributes.projectDescription.images.0.url}}" alt="" />
+      <img
+        src="{{projects.attributes.projectDescription.images.0.url}}"
+        alt="{{projects.attributes.description}}"/>
     {{/if}}
 
     <h4>Technology</h4>
@@ -53,7 +58,9 @@
 
     {{#if projects.attributes.projectDescription.images}}
       {{#if projects.attributes.projectDescription.images.1.url }}
-        <img src="{{projects.attributes.projectDescription.images.1.url}}" alt="" />
+        <img
+          src="{{projects.attributes.projectDescription.images.1.url}}"
+          alt="{{projects.attributes.description}}"/>
       {{/if}}
     {{/if}}
 

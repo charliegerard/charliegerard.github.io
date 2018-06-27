@@ -35,6 +35,7 @@ router.on('route:projectsView', function(){
       title: project.title,
       image: project.image,
       url: project.url,
+      srcset: project.srcset,
       description: project.description,
       projectDescription: project.projectDescription
     }))

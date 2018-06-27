@@ -52,14 +52,6 @@ module.exports = {
       { test: /\.(woff|woff2|eot|ttf)$/,
         loader: 'url-loader?limit=100000'
       },
-      // {
-      //   test: /\.svg$/,
-      //   loader: 'url?limit=10000'
-      // },
-      // {
-      //   test: /\.(ttf|eot)$/,
-      //   loader: 'file'
-      // },
       {
         test: require.resolve("jquery"),
         loader: "imports-loader?jQuery=jquery"

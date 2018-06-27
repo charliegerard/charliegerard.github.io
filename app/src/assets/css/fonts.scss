@@ -2,7 +2,8 @@
 @font-face {
 	font-family: 'PT Sans Narrow';
 	font-style: normal;
-	font-weight: 400;
+  font-weight: 400;
+  font-display: fallback;
 	src: url("../font/PtSansNarrow-Regular.eot");
 	src: local("PT Sans Narrow"),
 		local("PTSans-Narrow"),
@@ -16,7 +17,8 @@
 @font-face {
 	font-family: 'PT Sans Narrow';
 	font-style: normal;
-	font-weight: 700;
+  font-weight: 700;
+  font-display: fallback;
 	src: url("../font/PtSansNarrow-Bold.eot");
 	src: local("PT Sans Narrow Bold"),
 		local("PTSans-NarrowBold"),
@@ -30,7 +32,8 @@
 @font-face {
 	font-family: 'Source Sans Pro';
 	font-style: normal;
-	font-weight: 200;
+  font-weight: 200;
+  font-display: fallback;
 	src: url("../font/SourceSansPro-ExtraLight.eot");
 	src: local("Source Sans Pro ExtraLight"),
 		local("SourceSansPro-ExtraLight"),
@@ -44,7 +47,8 @@
 @font-face {
 	font-family: 'Source Sans Pro';
 	font-style: normal;
-	font-weight: 300;
+  font-weight: 300;
+  font-display: fallback;
 	src: url("../font/SourceSansPro-Light.eot");
 	src: local("Source Sans Pro Light"),
 		local("SourceSansPro-Light"),
@@ -58,7 +62,8 @@
 @font-face {
 	font-family: 'Source Sans Pro';
 	font-style: normal;
-	font-weight: 400;
+  font-weight: 400;
+  font-display: fallback;
 	src: url("../font/SourceSansPro-Regular.eot");
 	src: local("Source Sans Pro Regular"),
 		local("SourceSansPro-Regular"),
@@ -72,7 +77,8 @@
 @font-face {
 	font-family: 'Source Sans Pro';
 	font-style: normal;
-	font-weight: 600;
+  font-weight: 600;
+  font-display: fallback;
 	src: url("../font/SourceSansPro-SemiBold.eot");
 	src: local("Source Sans Pro SemiBold"),
 		local("SourceSansPro-SemiBold"),
