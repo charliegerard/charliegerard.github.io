@@ -13,22 +13,6 @@ var About = Backbone.View.extend({
       this.$el.html(template);
 
       this.handleNavigationAnimations();
-      this.arrowAnimation();
-    },
-    arrowAnimation: function(){
-      $('#outer-container').on('mousewheel', this.scrollEvent, {passive: true});
-    },
-    scrollEvent: function(){
-      if(!isMobile()){
-        var block = $('#contributions-block')[0].getBoundingClientRect()
-        var e = window.event;
-        var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        if(delta < 0){
-          $('p.svg').fadeOut(1000);
-        } else if(delta > 0 && block.top>-1 && block.bottom <= $(window).height()){ //If scrolling back to top and contributions block not visible
-          $('p.svg').fadeIn(1000);
-        }
-      }
     },
     handleNavigationAnimations: function(){
       $('#navbar .link a').click(e => {
@@ -51,7 +35,6 @@ var About = Backbone.View.extend({
       $('#contributions-block').addClass('fade-down');
       $('p.svg').fadeOut();
       $('#about-container h2').fadeOut("slow", function(){
-        $('#outer-container').off('mousewheel', this.scrollEvent, {passive: true});
         router.navigate(page, true)
       });
     },

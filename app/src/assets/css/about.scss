@@ -152,6 +152,7 @@
         padding: 0;
         font-weight: 200;
         color: #2d307a;
+        width: 53%;
       }
     }
 
@@ -190,29 +191,6 @@
   color: rgb(218, 45, 42);
   font-weight: 200;
   width: fit-content;
-}
-
-p.svg{
-  font-family: sans-serif;
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 10px;
-  color: #2d307a;
-  margin-top: 20px;
-  position: absolute;
-  display: block;
-  bottom: 0;
-  width: 100%;
-
-  svg{
-    width: 14px;
-    display: block;
-    margin: 10px auto;
-    -webkit-animation: bounce-arrow 2s infinite ease-in-out;
-    -moz-animation:    bounce-arrow 2s infinite ease-in-out;
-    -o-animation:      bounce-arrow 2s infinite ease-in-out;
-    animation:         bounce-arrow 2s infinite ease-in-out;
-  }
 }
 
 @keyframes appearLeft {

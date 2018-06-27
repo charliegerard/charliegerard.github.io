@@ -21,10 +21,6 @@
       left: 0;
     }
 
-    p.svg{
-      display: none !important;
-    }
-
     #previous{
       left: 2em;
       top: 49%;
@@ -59,11 +55,11 @@
     }
 
     #contributions-block{
-      width: 90%;
-    }
+      width: 75%;
 
-    p.svg{
-      display: none !important;
+      ul{
+        width: 100%;
+      }
     }
   }
 }

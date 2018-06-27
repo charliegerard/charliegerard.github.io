@@ -37,18 +37,11 @@ var Projects = Backbone.View.extend({
       return this;
     },
     arrowAnimation: function(){
-      $('#outer-container').on('mousewheel', this.scrollEvent, {passive: true});
+      $('#outer-container').on('mousewheel', this.scrollEvent);
     },
     scrollEvent: function(){
       if(!isMobile()){
-        var block = $('.project-details')[0].getBoundingClientRect()
-        var e = window.event;
-        var delta =  Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        if(delta < 0){
-          $('p.svg').fadeOut(1000);
-        } else if(delta > 0 && block.top>-1 && block.top >= $('#projects-container').height()){ //If scrolling back to top and contributions block not visible
-          $('p.svg').fadeIn(1000);
-        }
+        $('p.svg').fadeOut(1000);
       }
     },
     handleNavigationAnimations: function(){
@@ -71,7 +64,7 @@ var Projects = Backbone.View.extend({
       $('.visit-button').slideUp();
       $('.svg').fadeOut();
       $('.project-block img').fadeOut("slow", function(){
-        $('#outer-container').off('mousewheel', this.scrollEvent, {passive: true});
+        $('#outer-container').off('mousewheel', this.scrollEvent);
         router.navigate(page, true)
       });
     },
