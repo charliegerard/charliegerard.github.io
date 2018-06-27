@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 var autoprefixer = require('autoprefixer');
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -100,7 +101,6 @@ module.exports = {
       }
     ]
   },
-  // postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
   plugins: [
     new ExtractTextPlugin("styles.css"),
     new webpack.ProvidePlugin({
@@ -126,6 +126,12 @@ module.exports = {
           autoprefixer
         ]
       }
+    }),
+    new GoogleFontsPlugin({
+      fonts: [
+        { family: "PT Sans Narrow", variants: [ "400", "700" ] },
+        { family: "Source Sans Pro", variants: [ "200", "300", "400", "600" ] }
+      ]
     })
   ]
 };
