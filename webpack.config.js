@@ -2,7 +2,6 @@ var webpack = require('webpack');
 var path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 var autoprefixer = require('autoprefixer');
-const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -50,14 +49,17 @@ module.exports = {
           minimize: true
         }
       },
-      {
-        test: /\.(woff2?|svg)$/,
-        loader: 'url?limit=10000'
+      { test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'url-loader?limit=100000'
       },
-      {
-        test: /\.(ttf|eot)$/,
-        loader: 'file'
-      },
+      // {
+      //   test: /\.svg$/,
+      //   loader: 'url?limit=10000'
+      // },
+      // {
+      //   test: /\.(ttf|eot)$/,
+      //   loader: 'file'
+      // },
       {
         test: require.resolve("jquery"),
         loader: "imports-loader?jQuery=jquery"
@@ -126,12 +128,6 @@ module.exports = {
           autoprefixer
         ]
       }
-    }),
-    new GoogleFontsPlugin({
-      fonts: [
-        { family: "PT Sans Narrow", variants: [ "400", "700" ] },
-        { family: "Source Sans Pro", variants: [ "200", "300", "400", "600" ] }
-      ]
     })
   ]
 };
