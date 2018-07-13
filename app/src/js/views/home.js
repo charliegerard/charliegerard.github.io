@@ -21,17 +21,14 @@ var Home = Backbone.View.extend({
       this.handleNavigationAnimations();
     },
     handleNavigationAnimations: function(){
-      $('#navbar .link a').click(e => {
+      $('#navbar .link a#projects').click(e => {
         e.preventDefault();
-        var href = $(e.currentTarget).attr('href');
-        switch(href){
-          case '#projects':
-            this.goToPageFromHomePage('projects');
-            break;
-          case '#about':
-            this.goToPageFromHomePage('about');
-            break;
-        }
+        this.goToPageFromHomePage('projects');
+      })
+
+      $('#navbar .link a#about').click(e => {
+        e.preventDefault();
+        this.goToPageFromHomePage('about');
       })
     },
     initialAnimations: function(){

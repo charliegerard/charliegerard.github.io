@@ -45,12 +45,9 @@ var Projects = Backbone.View.extend({
       }
     },
     handleNavigationAnimations: function(){
-      $('#navbar .link a').click(e => {
+      $('#navbar .link a#about').click(e => {
         e.preventDefault();
-        var href = $(e.currentTarget).attr('href');
-        if(href === '#about'){
-          this.goToPageFromAboutPage('about');
-        }
+        this.goToPageFromAboutPage('about');
       });
 
       $('.description').click(e => {
