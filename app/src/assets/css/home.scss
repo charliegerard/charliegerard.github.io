@@ -23,7 +23,7 @@
     }
   }
 
-  @for $i from 1 through 4{
+  @for $i from 1 through 5{
 		.navbar-link-animation:nth-child(#{$i}) {
       animation: 1s ease-in #{$i * .2}s navAppear;
       animation-fill-mode: forwards;
