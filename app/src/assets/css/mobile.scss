@@ -180,6 +180,10 @@
     #contributions-block{
       width: 90%;
       margin-top: 2em;
+
+      ul{
+        width: 100%;
+      }
     }
   }
 }
@@ -246,6 +250,9 @@
 
     #contributions-block{
       width: 90%;
+      ul{
+        width: 100%;
+      }
     }
 
     p.svg{
