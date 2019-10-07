@@ -6,5 +6,6 @@ pouch__all_dbs__/
 skimdb/
 log.txt
 config.json
+package-lock.json
 ngrok
 .DS_Store

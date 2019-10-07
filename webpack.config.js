@@ -15,8 +15,11 @@ module.exports = {
     filename: 'app.js',
     publicPath: 'app/src/images'
   },
+  optimization: {
+    minimize: true
+  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
@@ -56,7 +59,6 @@ module.exports = {
         test: require.resolve("jquery"),
         loader: "imports-loader?jQuery=jquery"
       },
-      { test: /\.json$/, loader: 'json-loader' },
       {
         test: /\.hbs$/,
         loader: "handlebars-loader"
@@ -70,6 +72,7 @@ module.exports = {
         }
       },
       {
+        type: 'javascript/auto',
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           'file-loader',
@@ -92,7 +95,7 @@ module.exports = {
             },
           },
         ],
-      }
+      },
     ]
   },
   plugins: [
@@ -102,16 +105,6 @@ module.exports = {
         jQuery:"jquery",
         Backbone: "backbone",
         _: "underscore"
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-          screw_ie8: true,
-          warnings: false
-      },
-      output: {
-          comments: false
-      },
-      cache:true
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
