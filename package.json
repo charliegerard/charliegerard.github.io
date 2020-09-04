@@ -34,7 +34,7 @@
     "lodash": "^4.17.4",
     "minimatch": "^3.0.4",
     "node-dir": "^0.1.17",
-    "node-sass": "^3.10.1",
+    "node-sass": "^4.13.1",
     "object-assign": "^4.1.1",
     "path": "0.12.*",
     "react": "^16.2.0",
