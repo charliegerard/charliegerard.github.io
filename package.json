@@ -40,7 +40,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "sass-loader": "^4.0.2",
-    "underscore": "1.8.*",
+    "underscore": "1.12.*",
     "webpack": "4.2.0",
     "webpack-merge": "0.14.*"
   },
