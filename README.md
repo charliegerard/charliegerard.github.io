@@ -1,8 +1,0 @@
-# Portfolio
-
-Commands:
-
-```
-webpack --watch
-```
-
